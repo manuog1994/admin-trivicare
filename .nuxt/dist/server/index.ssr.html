@@ -1,0 +1,28 @@
+<!doctype html>
+<html {{ html_attrs }} lang="es">
+  <head {{ head_attrs }}>
+    <!-- Google Tag Manager -->
+    <script>!function(e,t,a,n,g){e[n]=e[n]||[],e[n].push({"gtm.start":(new Date).getTime(),event:"gtm.js"});var m=t.getElementsByTagName(a)[0],r=t.createElement(a);r.async=!0,r.src="https://www.googletagmanager.com/gtm.js?id=GTM-K446ZB4",m.parentNode.insertBefore(r,m)}(window,document,"script","dataLayer")</script>
+      <!-- End Google Tag Manager -->
+    {{ HEAD }}
+    <!-- add cache control con max-age-->
+    <meta http-equiv="Cache-Control" content="max-age=3600">
+    <!-- Google tag (gtag.js) -->
+    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id={{process.env.googleAnalyticsId}}"></script> -->
+     <!-- <script>
+        
+        // window.dataLayer = window.dataLayer || [];
+        // function gtag(){dataLayer.push(arguments);}
+        // gtag('js', new Date());
+
+        // gtag('config', 'G-6FYD0CCL8E');
+
+    </script> -->
+  </head>
+  <body {{ body_attrs }}>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K446ZB4" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+      <!-- End Google Tag Manager (noscript) -->
+    {{ APP }}
+  </body>
+</html>

@@ -1,0 +1,86 @@
+[
+  {
+    "name": "clients",
+    "path": "/clients",
+    "component": "/Users/manuel/wa/admin.trivicare.com/pages/clients.vue",
+    "chunkName": "pages/clients",
+    "_name": "_6a07d051"
+  },
+  {
+    "name": "coupons",
+    "path": "/coupons",
+    "component": "/Users/manuel/wa/admin.trivicare.com/pages/coupons.vue",
+    "chunkName": "pages/coupons",
+    "_name": "_49212654"
+  },
+  {
+    "name": "dashboard",
+    "path": "/dashboard",
+    "component": "/Users/manuel/wa/admin.trivicare.com/pages/dashboard.vue",
+    "chunkName": "pages/dashboard",
+    "_name": "_0f21e69d"
+  },
+  {
+    "name": "invoices",
+    "path": "/invoices",
+    "component": "/Users/manuel/wa/admin.trivicare.com/pages/invoices.vue",
+    "chunkName": "pages/invoices",
+    "_name": "_7b36e626"
+  },
+  {
+    "name": "login",
+    "path": "/login",
+    "component": "/Users/manuel/wa/admin.trivicare.com/pages/login.vue",
+    "chunkName": "pages/login",
+    "_name": "_2fd1d972"
+  },
+  {
+    "name": "my-account",
+    "path": "/my-account",
+    "component": "/Users/manuel/wa/admin.trivicare.com/pages/my-account.vue",
+    "chunkName": "pages/my-account",
+    "_name": "_583d1653"
+  },
+  {
+    "name": "orders",
+    "path": "/orders",
+    "component": "/Users/manuel/wa/admin.trivicare.com/pages/orders.vue",
+    "chunkName": "pages/orders",
+    "_name": "_6355852c"
+  },
+  {
+    "name": "products",
+    "path": "/products",
+    "component": "/Users/manuel/wa/admin.trivicare.com/pages/products.vue",
+    "chunkName": "pages/products",
+    "_name": "_3706cc6b"
+  },
+  {
+    "name": "search",
+    "path": "/search",
+    "component": "/Users/manuel/wa/admin.trivicare.com/pages/search.vue",
+    "chunkName": "pages/search",
+    "_name": "_0adb6e6f"
+  },
+  {
+    "name": "settings",
+    "path": "/settings",
+    "component": "/Users/manuel/wa/admin.trivicare.com/pages/settings.vue",
+    "chunkName": "pages/settings",
+    "_name": "_195c3faa"
+  },
+  {
+    "name": "product-slug",
+    "path": "/product/:slug?",
+    "component": "/Users/manuel/wa/admin.trivicare.com/pages/product/_slug.vue",
+    "chunkName": "pages/product/_slug",
+    "_name": "_ca4af21a"
+  },
+  {
+    "name": "index",
+    "path": "/",
+    "component": "/Users/manuel/wa/admin.trivicare.com/pages/index.vue",
+    "chunkName": "pages/index",
+    "_name": "_662a365b"
+  }
+]

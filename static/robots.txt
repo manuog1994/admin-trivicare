@@ -1,0 +1,22 @@
+# GENERAL SETTINGS
+user-agent: *
+
+# PRIVATE URLS
+
+disallow: /crud
+disallow: /orders/*
+disallow: /my-account
+disallow: /my-orders
+disallow: /orders-profile/*
+disallow: /checkout
+disallow: /wishlist
+disallow: /unsubscribe
+disallow: /forgot-password
+disallow: /cart
+disallow: /compare
+disallow: /success
+disallow: /notifications-center
+
+# SITEMAP
+Sitemap: https://trivicare.com/sitemap.xml
+

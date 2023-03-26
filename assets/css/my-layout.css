@@ -1,0 +1,28 @@
+.my-lauouts-enter-active,
+.my-lauouts-leave-active {
+  transition: opacity 0.2s;
+}
+.my-lauouts-enter,
+.my-lauouts-leave-active {
+  opacity: 0;
+}
+
+.bg-trivi-blue {
+  background-color: #2AB5B2;
+}
+
+.bg-trivi-red {
+  background-color: #E94B4C;
+}
+
+.bg-trivi-green {
+  background-color: #C6D42E;
+}
+
+.bg-trivi-orange {
+  background-color: #F9B34C;
+}
+
+.bg-trivi-purple {
+  background-color: #DD88B8;
+}

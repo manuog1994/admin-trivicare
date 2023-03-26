@@ -1,0 +1,19 @@
+{
+  "entry": "server.js",
+  "files": {
+    "pages/clients.js": "pages/clients.js",
+    "pages/coupons.js": "pages/coupons.js",
+    "pages/dashboard.js": "pages/dashboard.js",
+    "pages/index.js": "pages/index.js",
+    "pages/invoices.js": "pages/invoices.js",
+    "pages/login.js": "pages/login.js",
+    "pages/my-account.js": "pages/my-account.js",
+    "pages/orders.js": "pages/orders.js",
+    "pages/product/_slug.js": "pages/product/_slug.js",
+    "pages/products.js": "pages/products.js",
+    "pages/search.js": "pages/search.js",
+    "pages/settings.js": "pages/settings.js",
+    "server.js": "server.js"
+  },
+  "maps": {}
+}

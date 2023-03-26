@@ -1,0 +1,47 @@
+# Discovered Components
+
+This is an auto-generated list of components discovered by [nuxt/components](https://github.com/nuxt/components).
+
+You can directly use them in pages and other components without the need to import them.
+
+**Tip:** If a component is conditionally rendered with `v-if` and is big, it is better to use `Lazy` or `lazy-` prefix to lazy load.
+
+- `<Auth>` | `<auth>` (components/Auth.vue)
+- `<HeaderWithTopbar>` | `<header-with-topbar>` (components/HeaderWithTopbar.vue)
+- `<Login>` | `<login>` (components/Login.vue)
+- `<MobileBar>` | `<mobile-bar>` (components/MobileBar.vue)
+- `<MyAccountContainer>` | `<my-account-container>` (components/MyAccountContainer.vue)
+- `<Navigation>` | `<navigation>` (components/Navigation.vue)
+- `<OffCanvasMobileMenu>` | `<off-canvas-mobile-menu>` (components/OffCanvasMobileMenu.vue)
+- `<ProductDetailsDescriptionReview>` | `<product-details-description-review>` (components/ProductDetailsDescriptionReview.vue)
+- `<Register>` | `<register>` (components/Register.vue)
+- `<ResponsiveMobileMenu>` | `<responsive-mobile-menu>` (components/ResponsiveMobileMenu.vue)
+- `<Search>` | `<search>` (components/Search.vue)
+- `<TheFooter>` | `<the-footer>` (components/TheFooter.vue)
+- `<TheHeader>` | `<the-header>` (components/TheHeader.vue)
+- `<LoadersBigLoader>` | `<loaders-big-loader>` (components/loaders/BigLoader.vue)
+- `<LoadersSmallLoading>` | `<loaders-small-loading>` (components/loaders/SmallLoading.vue)
+- `<HeadersNavTop>` | `<headers-nav-top>` (components/headers/NavTop.vue)
+- `<HeadersSearch>` | `<headers-search>` (components/headers/Search.vue)
+- `<HeadersSideNav>` | `<headers-side-nav>` (components/headers/SideNav.vue)
+- `<DashboardAll>` | `<dashboard-all>` (components/dashboard/All.vue)
+- `<DashboardCoupons>` | `<dashboard-coupons>` (components/dashboard/Coupons.vue)
+- `<DashboardCreate>` | `<dashboard-create>` (components/dashboard/Create.vue)
+- `<DashboardEdit>` | `<dashboard-edit>` (components/dashboard/Edit.vue)
+- `<DashboardErrorModal>` | `<dashboard-error-modal>` (components/dashboard/ErrorModal.vue)
+- `<DashboardFormReview>` | `<dashboard-form-review>` (components/dashboard/FormReview.vue)
+- `<DashboardNav>` | `<dashboard-nav>` (components/dashboard/Nav.vue)
+- `<DashboardNewInvoice>` | `<dashboard-new-invoice>` (components/dashboard/NewInvoice.vue)
+- `<DashboardNewsletter>` | `<dashboard-newsletter>` (components/dashboard/Newsletter.vue)
+- `<DashboardSuccessInvoiceModal>` | `<dashboard-success-invoice-modal>` (components/dashboard/SuccessInvoiceModal.vue)
+- `<ProfileNewGuest>` | `<profile-new-guest>` (components/profile/NewGuest.vue)
+- `<ProfileNewProfile>` | `<profile-new-profile>` (components/profile/NewProfile.vue)
+- `<ProductDetailsWrapper>` | `<product-details-wrapper>` (components/product/ProductDetailsWrapper.vue)
+- `<ProductGridItem>` | `<product-grid-item>` (components/product/ProductGridItem.vue)
+- `<ProductGridItemTwo>` | `<product-grid-item-two>` (components/product/ProductGridItemTwo.vue)
+- `<ProductGridStyleThree>` | `<product-grid-style-three>` (components/product/ProductGridStyleThree.vue)
+- `<ProductWrapperCosmetics>` | `<product-wrapper-cosmetics>` (components/product/ProductWrapperCosmetics.vue)
+- `<OrdersModalTrack>` | `<orders-modal-track>` (components/orders/ModalTrack.vue)
+- `<OrdersNote>` | `<orders-note>` (components/orders/Note.vue)
+- `<Orders>` | `<orders>` (components/orders/Orders.vue)
+- `<OrdersHistory>` | `<orders-history>` (components/orders/OrdersHistory.vue)
