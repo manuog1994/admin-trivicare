@@ -41,26 +41,35 @@
   "TheHeader": {
     "description": "Auto imported from components/TheHeader.vue"
   },
-  "ClientsGuests": {
-    "description": "Auto imported from components/clients/Guests.vue"
-  },
-  "ClientsRegisteds": {
-    "description": "Auto imported from components/clients/Registeds.vue"
-  },
   "CouponsTable": {
     "description": "Auto imported from components/coupons/CouponsTable.vue"
   },
   "CouponsCreateCoupons": {
     "description": "Auto imported from components/coupons/CreateCoupons.vue"
   },
-  "HeadersNavTop": {
-    "description": "Auto imported from components/headers/NavTop.vue"
+  "DashboardErrorModal": {
+    "description": "Auto imported from components/dashboard/ErrorModal.vue"
   },
-  "HeadersSearch": {
-    "description": "Auto imported from components/headers/Search.vue"
+  "DashboardFormReview": {
+    "description": "Auto imported from components/dashboard/FormReview.vue"
   },
-  "HeadersSideNav": {
-    "description": "Auto imported from components/headers/SideNav.vue"
+  "DashboardNav": {
+    "description": "Auto imported from components/dashboard/Nav.vue"
+  },
+  "DashboardNewInvoice": {
+    "description": "Auto imported from components/dashboard/NewInvoice.vue"
+  },
+  "DashboardNewsletter": {
+    "description": "Auto imported from components/dashboard/Newsletter.vue"
+  },
+  "DashboardSuccessInvoiceModal": {
+    "description": "Auto imported from components/dashboard/SuccessInvoiceModal.vue"
+  },
+  "InvoicesInvoiceViewer": {
+    "description": "Auto imported from components/invoices/InvoiceViewer.vue"
+  },
+  "InvoicesTable": {
+    "description": "Auto imported from components/invoices/InvoicesTable.vue"
   },
   "LoadersBigLoader": {
     "description": "Auto imported from components/loaders/BigLoader.vue"
@@ -82,24 +91,6 @@
   },
   "OrdersHistory": {
     "description": "Auto imported from components/orders/OrdersHistory.vue"
-  },
-  "DashboardErrorModal": {
-    "description": "Auto imported from components/dashboard/ErrorModal.vue"
-  },
-  "DashboardFormReview": {
-    "description": "Auto imported from components/dashboard/FormReview.vue"
-  },
-  "DashboardNav": {
-    "description": "Auto imported from components/dashboard/Nav.vue"
-  },
-  "DashboardNewInvoice": {
-    "description": "Auto imported from components/dashboard/NewInvoice.vue"
-  },
-  "DashboardNewsletter": {
-    "description": "Auto imported from components/dashboard/Newsletter.vue"
-  },
-  "DashboardSuccessInvoiceModal": {
-    "description": "Auto imported from components/dashboard/SuccessInvoiceModal.vue"
   },
   "ProductCreateProduct": {
     "description": "Auto imported from components/product/CreateProduct.vue"
@@ -125,16 +116,28 @@
   "ProductProductsTable": {
     "description": "Auto imported from components/product/ProductsTable.vue"
   },
-  "InvoicesInvoiceViewer": {
-    "description": "Auto imported from components/invoices/InvoiceViewer.vue"
-  },
-  "InvoicesTable": {
-    "description": "Auto imported from components/invoices/InvoicesTable.vue"
-  },
   "ProfileNewGuest": {
     "description": "Auto imported from components/profile/NewGuest.vue"
   },
   "ProfileNewProfile": {
     "description": "Auto imported from components/profile/NewProfile.vue"
+  },
+  "ClientsGuests": {
+    "description": "Auto imported from components/clients/Guests.vue"
+  },
+  "ClientsRegisteds": {
+    "description": "Auto imported from components/clients/Registeds.vue"
+  },
+  "HeadersNavTop": {
+    "description": "Auto imported from components/headers/NavTop.vue"
+  },
+  "HeadersResults": {
+    "description": "Auto imported from components/headers/Results.vue"
+  },
+  "HeadersSearch": {
+    "description": "Auto imported from components/headers/Search.vue"
+  },
+  "HeadersSideNav": {
+    "description": "Auto imported from components/headers/SideNav.vue"
   }
 }

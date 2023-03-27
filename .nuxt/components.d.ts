@@ -9,63 +9,12 @@ declare module 'vue' {
     'NavBottom': typeof import("../components/NavBottom.vue")['default'],
     'Navigation': typeof import("../components/Navigation.vue")['default'],
     'OffCanvasMobileMenu': typeof import("../components/OffCanvasMobileMenu.vue")['default'],
-    'OrdersCom': typeof import("../components/OrdersCom.vue")['default'],
     'ProductDetailsDescriptionReview': typeof import("../components/ProductDetailsDescriptionReview.vue")['default'],
     'Register': typeof import("../components/Register.vue")['default'],
     'ResponsiveMobileMenu': typeof import("../components/ResponsiveMobileMenu.vue")['default'],
     'Search': typeof import("../components/Search.vue")['default'],
     'TheFooter': typeof import("../components/TheFooter.vue")['default'],
     'TheHeader': typeof import("../components/TheHeader.vue")['default'],
-    'DashboardErrorModal': typeof import("../components/dashboard/ErrorModal.vue")['default'],
-    'DashboardFormReview': typeof import("../components/dashboard/FormReview.vue")['default'],
-    'DashboardNav': typeof import("../components/dashboard/Nav.vue")['default'],
-    'DashboardNewInvoice': typeof import("../components/dashboard/NewInvoice.vue")['default'],
-    'DashboardNewsletter': typeof import("../components/dashboard/Newsletter.vue")['default'],
-    'DashboardSuccessInvoiceModal': typeof import("../components/dashboard/SuccessInvoiceModal.vue")['default'],
-    'HeadersNavTop': typeof import("../components/headers/NavTop.vue")['default'],
-    'HeadersSearch': typeof import("../components/headers/Search.vue")['default'],
-    'HeadersSideNav': typeof import("../components/headers/SideNav.vue")['default'],
-    'InvoicesInvoice': typeof import("../components/invoices/Invoice.vue")['default'],
-    'InvoicesInvoiceViewer': typeof import("../components/invoices/InvoiceViewer.vue")['default'],
-    'InvoicesTable': typeof import("../components/invoices/InvoicesTable.vue")['default'],
-    'LoadersBigLoader': typeof import("../components/loaders/BigLoader.vue")['default'],
-    'LoadersSmallLoading': typeof import("../components/loaders/SmallLoading.vue")['default'],
-    'OrdersModalTrack': typeof import("../components/orders/ModalTrack.vue")['default'],
-    'OrdersNote': typeof import("../components/orders/Note.vue")['default'],
-    'Orders': typeof import("../components/orders/Orders.vue")['default'],
-    'OrdersHistory': typeof import("../components/orders/OrdersHistory.vue")['default'],
-    'ProductCreateProduct': typeof import("../components/product/CreateProduct.vue")['default'],
-    'ProductEditProduct': typeof import("../components/product/EditProduct.vue")['default'],
-    'ProductDetailsWrapper': typeof import("../components/product/ProductDetailsWrapper.vue")['default'],
-    'ProductGridItem': typeof import("../components/product/ProductGridItem.vue")['default'],
-    'ProductGridItemTwo': typeof import("../components/product/ProductGridItemTwo.vue")['default'],
-    'ProductGridStyleThree': typeof import("../components/product/ProductGridStyleThree.vue")['default'],
-    'ProductWrapperCosmetics': typeof import("../components/product/ProductWrapperCosmetics.vue")['default'],
-    'ProductProductsTable': typeof import("../components/product/ProductsTable.vue")['default'],
-    'ClientsGuests': typeof import("../components/clients/Guests.vue")['default'],
-    'ClientsRegisteds': typeof import("../components/clients/Registeds.vue")['default'],
-    'Coupons': typeof import("../components/coupons/Coupons.vue")['default'],
-    'CouponsTable': typeof import("../components/coupons/CouponsTable.vue")['default'],
-    'CouponsCreateCoupons': typeof import("../components/coupons/CreateCoupons.vue")['default'],
-    'ProfileNewGuest': typeof import("../components/profile/NewGuest.vue")['default'],
-    'ProfileNewProfile': typeof import("../components/profile/NewProfile.vue")['default'],
-    'Auth': typeof import("../components/Auth.vue")['default'],
-    'HeaderWithTopbar': typeof import("../components/HeaderWithTopbar.vue")['default'],
-    'Login': typeof import("../components/Login.vue")['default'],
-    'MobileBar': typeof import("../components/MobileBar.vue")['default'],
-    'MyAccountContainer': typeof import("../components/MyAccountContainer.vue")['default'],
-    'NavBottom': typeof import("../components/NavBottom.vue")['default'],
-    'Navigation': typeof import("../components/Navigation.vue")['default'],
-    'OffCanvasMobileMenu': typeof import("../components/OffCanvasMobileMenu.vue")['default'],
-    'OrdersCom': typeof import("../components/OrdersCom.vue")['default'],
-    'ProductDetailsDescriptionReview': typeof import("../components/ProductDetailsDescriptionReview.vue")['default'],
-    'Register': typeof import("../components/Register.vue")['default'],
-    'ResponsiveMobileMenu': typeof import("../components/ResponsiveMobileMenu.vue")['default'],
-    'Search': typeof import("../components/Search.vue")['default'],
-    'TheFooter': typeof import("../components/TheFooter.vue")['default'],
-    'TheHeader': typeof import("../components/TheHeader.vue")['default'],
-    'ClientsGuests': typeof import("../components/clients/Guests.vue")['default'],
-    'ClientsRegisteds': typeof import("../components/clients/Registeds.vue")['default'],
     'CouponsTable': typeof import("../components/coupons/CouponsTable.vue")['default'],
     'CouponsCreateCoupons': typeof import("../components/coupons/CreateCoupons.vue")['default'],
     'DashboardErrorModal': typeof import("../components/dashboard/ErrorModal.vue")['default'],
@@ -74,103 +23,6 @@ declare module 'vue' {
     'DashboardNewInvoice': typeof import("../components/dashboard/NewInvoice.vue")['default'],
     'DashboardNewsletter': typeof import("../components/dashboard/Newsletter.vue")['default'],
     'DashboardSuccessInvoiceModal': typeof import("../components/dashboard/SuccessInvoiceModal.vue")['default'],
-    'LoadersBigLoader': typeof import("../components/loaders/BigLoader.vue")['default'],
-    'LoadersSmallLoading': typeof import("../components/loaders/SmallLoading.vue")['default'],
-    'ProductCreateProduct': typeof import("../components/product/CreateProduct.vue")['default'],
-    'ProductEditProduct': typeof import("../components/product/EditProduct.vue")['default'],
-    'ProductDetailsWrapper': typeof import("../components/product/ProductDetailsWrapper.vue")['default'],
-    'ProductGridItem': typeof import("../components/product/ProductGridItem.vue")['default'],
-    'ProductGridItemTwo': typeof import("../components/product/ProductGridItemTwo.vue")['default'],
-    'ProductGridStyleThree': typeof import("../components/product/ProductGridStyleThree.vue")['default'],
-    'ProductWrapperCosmetics': typeof import("../components/product/ProductWrapperCosmetics.vue")['default'],
-    'ProductProductsTable': typeof import("../components/product/ProductsTable.vue")['default'],
-    'InvoicesInvoice': typeof import("../components/invoices/Invoice.vue")['default'],
-    'InvoicesInvoiceViewer': typeof import("../components/invoices/InvoiceViewer.vue")['default'],
-    'InvoicesTable': typeof import("../components/invoices/InvoicesTable.vue")['default'],
-    'ProfileNewGuest': typeof import("../components/profile/NewGuest.vue")['default'],
-    'ProfileNewProfile': typeof import("../components/profile/NewProfile.vue")['default'],
-    'HeadersNavTop': typeof import("../components/headers/NavTop.vue")['default'],
-    'HeadersSearch': typeof import("../components/headers/Search.vue")['default'],
-    'HeadersSideNav': typeof import("../components/headers/SideNav.vue")['default'],
-    'OrdersModalTrack': typeof import("../components/orders/ModalTrack.vue")['default'],
-    'OrdersNote': typeof import("../components/orders/Note.vue")['default'],
-    'Orders': typeof import("../components/orders/Orders.vue")['default'],
-    'OrdersHistory': typeof import("../components/orders/OrdersHistory.vue")['default'],
-    'Auth': typeof import("../components/Auth.vue")['default'],
-    'HeaderWithTopbar': typeof import("../components/HeaderWithTopbar.vue")['default'],
-    'Login': typeof import("../components/Login.vue")['default'],
-    'MobileBar': typeof import("../components/MobileBar.vue")['default'],
-    'MyAccountContainer': typeof import("../components/MyAccountContainer.vue")['default'],
-    'NavBottom': typeof import("../components/NavBottom.vue")['default'],
-    'Navigation': typeof import("../components/Navigation.vue")['default'],
-    'OffCanvasMobileMenu': typeof import("../components/OffCanvasMobileMenu.vue")['default'],
-    'ProductDetailsDescriptionReview': typeof import("../components/ProductDetailsDescriptionReview.vue")['default'],
-    'Register': typeof import("../components/Register.vue")['default'],
-    'ResponsiveMobileMenu': typeof import("../components/ResponsiveMobileMenu.vue")['default'],
-    'Search': typeof import("../components/Search.vue")['default'],
-    'TheFooter': typeof import("../components/TheFooter.vue")['default'],
-    'TheHeader': typeof import("../components/TheHeader.vue")['default'],
-    'ClientsGuests': typeof import("../components/clients/Guests.vue")['default'],
-    'ClientsRegisteds': typeof import("../components/clients/Registeds.vue")['default'],
-    'CouponsTable': typeof import("../components/coupons/CouponsTable.vue")['default'],
-    'CouponsCreateCoupons': typeof import("../components/coupons/CreateCoupons.vue")['default'],
-    'HeadersNavTop': typeof import("../components/headers/NavTop.vue")['default'],
-    'HeadersSearch': typeof import("../components/headers/Search.vue")['default'],
-    'HeadersSideNav': typeof import("../components/headers/SideNav.vue")['default'],
-    'InvoicesInvoice': typeof import("../components/invoices/Invoice.vue")['default'],
-    'InvoicesInvoiceViewer': typeof import("../components/invoices/InvoiceViewer.vue")['default'],
-    'InvoicesTable': typeof import("../components/invoices/InvoicesTable.vue")['default'],
-    'LoadersBigLoader': typeof import("../components/loaders/BigLoader.vue")['default'],
-    'LoadersSmallLoading': typeof import("../components/loaders/SmallLoading.vue")['default'],
-    'OrdersModalTrack': typeof import("../components/orders/ModalTrack.vue")['default'],
-    'OrdersNote': typeof import("../components/orders/Note.vue")['default'],
-    'Orders': typeof import("../components/orders/Orders.vue")['default'],
-    'OrdersCom': typeof import("../components/orders/OrdersCom.vue")['default'],
-    'OrdersHistory': typeof import("../components/orders/OrdersHistory.vue")['default'],
-    'ProductCreateProduct': typeof import("../components/product/CreateProduct.vue")['default'],
-    'ProductEditProduct': typeof import("../components/product/EditProduct.vue")['default'],
-    'ProductDetailsWrapper': typeof import("../components/product/ProductDetailsWrapper.vue")['default'],
-    'ProductGridItem': typeof import("../components/product/ProductGridItem.vue")['default'],
-    'ProductGridItemTwo': typeof import("../components/product/ProductGridItemTwo.vue")['default'],
-    'ProductGridStyleThree': typeof import("../components/product/ProductGridStyleThree.vue")['default'],
-    'ProductWrapperCosmetics': typeof import("../components/product/ProductWrapperCosmetics.vue")['default'],
-    'ProductProductsTable': typeof import("../components/product/ProductsTable.vue")['default'],
-    'DashboardErrorModal': typeof import("../components/dashboard/ErrorModal.vue")['default'],
-    'DashboardFormReview': typeof import("../components/dashboard/FormReview.vue")['default'],
-    'DashboardNav': typeof import("../components/dashboard/Nav.vue")['default'],
-    'DashboardNewInvoice': typeof import("../components/dashboard/NewInvoice.vue")['default'],
-    'DashboardNewsletter': typeof import("../components/dashboard/Newsletter.vue")['default'],
-    'DashboardSuccessInvoiceModal': typeof import("../components/dashboard/SuccessInvoiceModal.vue")['default'],
-    'ProfileNewGuest': typeof import("../components/profile/NewGuest.vue")['default'],
-    'ProfileNewProfile': typeof import("../components/profile/NewProfile.vue")['default'],
-    'Auth': typeof import("../components/Auth.vue")['default'],
-    'HeaderWithTopbar': typeof import("../components/HeaderWithTopbar.vue")['default'],
-    'Login': typeof import("../components/Login.vue")['default'],
-    'MobileBar': typeof import("../components/MobileBar.vue")['default'],
-    'MyAccountContainer': typeof import("../components/MyAccountContainer.vue")['default'],
-    'NavBottom': typeof import("../components/NavBottom.vue")['default'],
-    'Navigation': typeof import("../components/Navigation.vue")['default'],
-    'OffCanvasMobileMenu': typeof import("../components/OffCanvasMobileMenu.vue")['default'],
-    'ProductDetailsDescriptionReview': typeof import("../components/ProductDetailsDescriptionReview.vue")['default'],
-    'Register': typeof import("../components/Register.vue")['default'],
-    'ResponsiveMobileMenu': typeof import("../components/ResponsiveMobileMenu.vue")['default'],
-    'Search': typeof import("../components/Search.vue")['default'],
-    'TheFooter': typeof import("../components/TheFooter.vue")['default'],
-    'TheHeader': typeof import("../components/TheHeader.vue")['default'],
-    'ClientsGuests': typeof import("../components/clients/Guests.vue")['default'],
-    'ClientsRegisteds': typeof import("../components/clients/Registeds.vue")['default'],
-    'CouponsTable': typeof import("../components/coupons/CouponsTable.vue")['default'],
-    'CouponsCreateCoupons': typeof import("../components/coupons/CreateCoupons.vue")['default'],
-    'DashboardErrorModal': typeof import("../components/dashboard/ErrorModal.vue")['default'],
-    'DashboardFormReview': typeof import("../components/dashboard/FormReview.vue")['default'],
-    'DashboardNav': typeof import("../components/dashboard/Nav.vue")['default'],
-    'DashboardNewInvoice': typeof import("../components/dashboard/NewInvoice.vue")['default'],
-    'DashboardNewsletter': typeof import("../components/dashboard/Newsletter.vue")['default'],
-    'DashboardSuccessInvoiceModal': typeof import("../components/dashboard/SuccessInvoiceModal.vue")['default'],
-    'HeadersNavTop': typeof import("../components/headers/NavTop.vue")['default'],
-    'HeadersSearch': typeof import("../components/headers/Search.vue")['default'],
-    'HeadersSideNav': typeof import("../components/headers/SideNav.vue")['default'],
-    'InvoicesInvoice': typeof import("../components/invoices/Invoice.vue")['default'],
     'InvoicesInvoiceViewer': typeof import("../components/invoices/InvoiceViewer.vue")['default'],
     'InvoicesTable': typeof import("../components/invoices/InvoicesTable.vue")['default'],
     'LoadersBigLoader': typeof import("../components/loaders/BigLoader.vue")['default'],
@@ -190,147 +42,12 @@ declare module 'vue' {
     'ProductProductsTable': typeof import("../components/product/ProductsTable.vue")['default'],
     'ProfileNewGuest': typeof import("../components/profile/NewGuest.vue")['default'],
     'ProfileNewProfile': typeof import("../components/profile/NewProfile.vue")['default'],
-    'Auth': typeof import("../components/Auth.vue")['default'],
-    'HeaderWithTopbar': typeof import("../components/HeaderWithTopbar.vue")['default'],
-    'Login': typeof import("../components/Login.vue")['default'],
-    'MobileBar': typeof import("../components/MobileBar.vue")['default'],
-    'MyAccountContainer': typeof import("../components/MyAccountContainer.vue")['default'],
-    'NavBottom': typeof import("../components/NavBottom.vue")['default'],
-    'Navigation': typeof import("../components/Navigation.vue")['default'],
-    'OffCanvasMobileMenu': typeof import("../components/OffCanvasMobileMenu.vue")['default'],
-    'ProductDetailsDescriptionReview': typeof import("../components/ProductDetailsDescriptionReview.vue")['default'],
-    'Register': typeof import("../components/Register.vue")['default'],
-    'ResponsiveMobileMenu': typeof import("../components/ResponsiveMobileMenu.vue")['default'],
-    'Search': typeof import("../components/Search.vue")['default'],
-    'TheFooter': typeof import("../components/TheFooter.vue")['default'],
-    'TheHeader': typeof import("../components/TheHeader.vue")['default'],
     'ClientsGuests': typeof import("../components/clients/Guests.vue")['default'],
     'ClientsRegisteds': typeof import("../components/clients/Registeds.vue")['default'],
-    'CouponsTable': typeof import("../components/coupons/CouponsTable.vue")['default'],
-    'CouponsCreateCoupons': typeof import("../components/coupons/CreateCoupons.vue")['default'],
     'HeadersNavTop': typeof import("../components/headers/NavTop.vue")['default'],
+    'HeadersResults': typeof import("../components/headers/Results.vue")['default'],
     'HeadersSearch': typeof import("../components/headers/Search.vue")['default'],
-    'HeadersSideNav': typeof import("../components/headers/SideNav.vue")['default'],
-    'LoadersBigLoader': typeof import("../components/loaders/BigLoader.vue")['default'],
-    'LoadersSmallLoading': typeof import("../components/loaders/SmallLoading.vue")['default'],
-    'OrdersModalTrack': typeof import("../components/orders/ModalTrack.vue")['default'],
-    'OrdersNote': typeof import("../components/orders/Note.vue")['default'],
-    'Orders': typeof import("../components/orders/Orders.vue")['default'],
-    'OrdersCom': typeof import("../components/orders/OrdersCom.vue")['default'],
-    'OrdersHistory': typeof import("../components/orders/OrdersHistory.vue")['default'],
-    'DashboardErrorModal': typeof import("../components/dashboard/ErrorModal.vue")['default'],
-    'DashboardFormReview': typeof import("../components/dashboard/FormReview.vue")['default'],
-    'DashboardNav': typeof import("../components/dashboard/Nav.vue")['default'],
-    'DashboardNewInvoice': typeof import("../components/dashboard/NewInvoice.vue")['default'],
-    'DashboardNewsletter': typeof import("../components/dashboard/Newsletter.vue")['default'],
-    'DashboardSuccessInvoiceModal': typeof import("../components/dashboard/SuccessInvoiceModal.vue")['default'],
-    'ProductCreateProduct': typeof import("../components/product/CreateProduct.vue")['default'],
-    'ProductEditProduct': typeof import("../components/product/EditProduct.vue")['default'],
-    'ProductDetailsWrapper': typeof import("../components/product/ProductDetailsWrapper.vue")['default'],
-    'ProductGridItem': typeof import("../components/product/ProductGridItem.vue")['default'],
-    'ProductGridItemTwo': typeof import("../components/product/ProductGridItemTwo.vue")['default'],
-    'ProductGridStyleThree': typeof import("../components/product/ProductGridStyleThree.vue")['default'],
-    'ProductWrapperCosmetics': typeof import("../components/product/ProductWrapperCosmetics.vue")['default'],
-    'ProductProductsTable': typeof import("../components/product/ProductsTable.vue")['default'],
-    'InvoicesInvoiceViewer': typeof import("../components/invoices/InvoiceViewer.vue")['default'],
-    'InvoicesTable': typeof import("../components/invoices/InvoicesTable.vue")['default'],
-    'ProfileNewGuest': typeof import("../components/profile/NewGuest.vue")['default'],
-    'ProfileNewProfile': typeof import("../components/profile/NewProfile.vue")['default']
-    'LazyAuth': typeof import("../components/Auth.vue")['default'],
-    'LazyHeaderWithTopbar': typeof import("../components/HeaderWithTopbar.vue")['default'],
-    'LazyLogin': typeof import("../components/Login.vue")['default'],
-    'LazyMobileBar': typeof import("../components/MobileBar.vue")['default'],
-    'LazyMyAccountContainer': typeof import("../components/MyAccountContainer.vue")['default'],
-    'LazyNavBottom': typeof import("../components/NavBottom.vue")['default'],
-    'LazyNavigation': typeof import("../components/Navigation.vue")['default'],
-    'LazyOffCanvasMobileMenu': typeof import("../components/OffCanvasMobileMenu.vue")['default'],
-    'LazyOrdersCom': typeof import("../components/OrdersCom.vue")['default'],
-    'LazyProductDetailsDescriptionReview': typeof import("../components/ProductDetailsDescriptionReview.vue")['default'],
-    'LazyRegister': typeof import("../components/Register.vue")['default'],
-    'LazyResponsiveMobileMenu': typeof import("../components/ResponsiveMobileMenu.vue")['default'],
-    'LazySearch': typeof import("../components/Search.vue")['default'],
-    'LazyTheFooter': typeof import("../components/TheFooter.vue")['default'],
-    'LazyTheHeader': typeof import("../components/TheHeader.vue")['default'],
-    'LazyDashboardErrorModal': typeof import("../components/dashboard/ErrorModal.vue")['default'],
-    'LazyDashboardFormReview': typeof import("../components/dashboard/FormReview.vue")['default'],
-    'LazyDashboardNav': typeof import("../components/dashboard/Nav.vue")['default'],
-    'LazyDashboardNewInvoice': typeof import("../components/dashboard/NewInvoice.vue")['default'],
-    'LazyDashboardNewsletter': typeof import("../components/dashboard/Newsletter.vue")['default'],
-    'LazyDashboardSuccessInvoiceModal': typeof import("../components/dashboard/SuccessInvoiceModal.vue")['default'],
-    'LazyHeadersNavTop': typeof import("../components/headers/NavTop.vue")['default'],
-    'LazyHeadersSearch': typeof import("../components/headers/Search.vue")['default'],
-    'LazyHeadersSideNav': typeof import("../components/headers/SideNav.vue")['default'],
-    'LazyInvoicesInvoice': typeof import("../components/invoices/Invoice.vue")['default'],
-    'LazyInvoicesInvoiceViewer': typeof import("../components/invoices/InvoiceViewer.vue")['default'],
-    'LazyInvoicesTable': typeof import("../components/invoices/InvoicesTable.vue")['default'],
-    'LazyLoadersBigLoader': typeof import("../components/loaders/BigLoader.vue")['default'],
-    'LazyLoadersSmallLoading': typeof import("../components/loaders/SmallLoading.vue")['default'],
-    'LazyOrdersModalTrack': typeof import("../components/orders/ModalTrack.vue")['default'],
-    'LazyOrdersNote': typeof import("../components/orders/Note.vue")['default'],
-    'LazyOrders': typeof import("../components/orders/Orders.vue")['default'],
-    'LazyOrdersHistory': typeof import("../components/orders/OrdersHistory.vue")['default'],
-    'LazyProductCreateProduct': typeof import("../components/product/CreateProduct.vue")['default'],
-    'LazyProductEditProduct': typeof import("../components/product/EditProduct.vue")['default'],
-    'LazyProductDetailsWrapper': typeof import("../components/product/ProductDetailsWrapper.vue")['default'],
-    'LazyProductGridItem': typeof import("../components/product/ProductGridItem.vue")['default'],
-    'LazyProductGridItemTwo': typeof import("../components/product/ProductGridItemTwo.vue")['default'],
-    'LazyProductGridStyleThree': typeof import("../components/product/ProductGridStyleThree.vue")['default'],
-    'LazyProductWrapperCosmetics': typeof import("../components/product/ProductWrapperCosmetics.vue")['default'],
-    'LazyProductProductsTable': typeof import("../components/product/ProductsTable.vue")['default'],
-    'LazyClientsGuests': typeof import("../components/clients/Guests.vue")['default'],
-    'LazyClientsRegisteds': typeof import("../components/clients/Registeds.vue")['default'],
-    'LazyCoupons': typeof import("../components/coupons/Coupons.vue")['default'],
-    'LazyCouponsTable': typeof import("../components/coupons/CouponsTable.vue")['default'],
-    'LazyCouponsCreateCoupons': typeof import("../components/coupons/CreateCoupons.vue")['default'],
-    'LazyProfileNewGuest': typeof import("../components/profile/NewGuest.vue")['default'],
-    'LazyProfileNewProfile': typeof import("../components/profile/NewProfile.vue")['default'],
-    'LazyAuth': typeof import("../components/Auth.vue")['default'],
-    'LazyHeaderWithTopbar': typeof import("../components/HeaderWithTopbar.vue")['default'],
-    'LazyLogin': typeof import("../components/Login.vue")['default'],
-    'LazyMobileBar': typeof import("../components/MobileBar.vue")['default'],
-    'LazyMyAccountContainer': typeof import("../components/MyAccountContainer.vue")['default'],
-    'LazyNavBottom': typeof import("../components/NavBottom.vue")['default'],
-    'LazyNavigation': typeof import("../components/Navigation.vue")['default'],
-    'LazyOffCanvasMobileMenu': typeof import("../components/OffCanvasMobileMenu.vue")['default'],
-    'LazyOrdersCom': typeof import("../components/OrdersCom.vue")['default'],
-    'LazyProductDetailsDescriptionReview': typeof import("../components/ProductDetailsDescriptionReview.vue")['default'],
-    'LazyRegister': typeof import("../components/Register.vue")['default'],
-    'LazyResponsiveMobileMenu': typeof import("../components/ResponsiveMobileMenu.vue")['default'],
-    'LazySearch': typeof import("../components/Search.vue")['default'],
-    'LazyTheFooter': typeof import("../components/TheFooter.vue")['default'],
-    'LazyTheHeader': typeof import("../components/TheHeader.vue")['default'],
-    'LazyClientsGuests': typeof import("../components/clients/Guests.vue")['default'],
-    'LazyClientsRegisteds': typeof import("../components/clients/Registeds.vue")['default'],
-    'LazyCouponsTable': typeof import("../components/coupons/CouponsTable.vue")['default'],
-    'LazyCouponsCreateCoupons': typeof import("../components/coupons/CreateCoupons.vue")['default'],
-    'LazyDashboardErrorModal': typeof import("../components/dashboard/ErrorModal.vue")['default'],
-    'LazyDashboardFormReview': typeof import("../components/dashboard/FormReview.vue")['default'],
-    'LazyDashboardNav': typeof import("../components/dashboard/Nav.vue")['default'],
-    'LazyDashboardNewInvoice': typeof import("../components/dashboard/NewInvoice.vue")['default'],
-    'LazyDashboardNewsletter': typeof import("../components/dashboard/Newsletter.vue")['default'],
-    'LazyDashboardSuccessInvoiceModal': typeof import("../components/dashboard/SuccessInvoiceModal.vue")['default'],
-    'LazyLoadersBigLoader': typeof import("../components/loaders/BigLoader.vue")['default'],
-    'LazyLoadersSmallLoading': typeof import("../components/loaders/SmallLoading.vue")['default'],
-    'LazyProductCreateProduct': typeof import("../components/product/CreateProduct.vue")['default'],
-    'LazyProductEditProduct': typeof import("../components/product/EditProduct.vue")['default'],
-    'LazyProductDetailsWrapper': typeof import("../components/product/ProductDetailsWrapper.vue")['default'],
-    'LazyProductGridItem': typeof import("../components/product/ProductGridItem.vue")['default'],
-    'LazyProductGridItemTwo': typeof import("../components/product/ProductGridItemTwo.vue")['default'],
-    'LazyProductGridStyleThree': typeof import("../components/product/ProductGridStyleThree.vue")['default'],
-    'LazyProductWrapperCosmetics': typeof import("../components/product/ProductWrapperCosmetics.vue")['default'],
-    'LazyProductProductsTable': typeof import("../components/product/ProductsTable.vue")['default'],
-    'LazyInvoicesInvoice': typeof import("../components/invoices/Invoice.vue")['default'],
-    'LazyInvoicesInvoiceViewer': typeof import("../components/invoices/InvoiceViewer.vue")['default'],
-    'LazyInvoicesTable': typeof import("../components/invoices/InvoicesTable.vue")['default'],
-    'LazyProfileNewGuest': typeof import("../components/profile/NewGuest.vue")['default'],
-    'LazyProfileNewProfile': typeof import("../components/profile/NewProfile.vue")['default'],
-    'LazyHeadersNavTop': typeof import("../components/headers/NavTop.vue")['default'],
-    'LazyHeadersSearch': typeof import("../components/headers/Search.vue")['default'],
-    'LazyHeadersSideNav': typeof import("../components/headers/SideNav.vue")['default'],
-    'LazyOrdersModalTrack': typeof import("../components/orders/ModalTrack.vue")['default'],
-    'LazyOrdersNote': typeof import("../components/orders/Note.vue")['default'],
-    'LazyOrders': typeof import("../components/orders/Orders.vue")['default'],
-    'LazyOrdersHistory': typeof import("../components/orders/OrdersHistory.vue")['default'],
+    'HeadersSideNav': typeof import("../components/headers/SideNav.vue")['default']
     'LazyAuth': typeof import("../components/Auth.vue")['default'],
     'LazyHeaderWithTopbar': typeof import("../components/HeaderWithTopbar.vue")['default'],
     'LazyLogin': typeof import("../components/Login.vue")['default'],
@@ -345,55 +62,6 @@ declare module 'vue' {
     'LazySearch': typeof import("../components/Search.vue")['default'],
     'LazyTheFooter': typeof import("../components/TheFooter.vue")['default'],
     'LazyTheHeader': typeof import("../components/TheHeader.vue")['default'],
-    'LazyClientsGuests': typeof import("../components/clients/Guests.vue")['default'],
-    'LazyClientsRegisteds': typeof import("../components/clients/Registeds.vue")['default'],
-    'LazyCouponsTable': typeof import("../components/coupons/CouponsTable.vue")['default'],
-    'LazyCouponsCreateCoupons': typeof import("../components/coupons/CreateCoupons.vue")['default'],
-    'LazyHeadersNavTop': typeof import("../components/headers/NavTop.vue")['default'],
-    'LazyHeadersSearch': typeof import("../components/headers/Search.vue")['default'],
-    'LazyHeadersSideNav': typeof import("../components/headers/SideNav.vue")['default'],
-    'LazyInvoicesInvoice': typeof import("../components/invoices/Invoice.vue")['default'],
-    'LazyInvoicesInvoiceViewer': typeof import("../components/invoices/InvoiceViewer.vue")['default'],
-    'LazyInvoicesTable': typeof import("../components/invoices/InvoicesTable.vue")['default'],
-    'LazyLoadersBigLoader': typeof import("../components/loaders/BigLoader.vue")['default'],
-    'LazyLoadersSmallLoading': typeof import("../components/loaders/SmallLoading.vue")['default'],
-    'LazyOrdersModalTrack': typeof import("../components/orders/ModalTrack.vue")['default'],
-    'LazyOrdersNote': typeof import("../components/orders/Note.vue")['default'],
-    'LazyOrders': typeof import("../components/orders/Orders.vue")['default'],
-    'LazyOrdersCom': typeof import("../components/orders/OrdersCom.vue")['default'],
-    'LazyOrdersHistory': typeof import("../components/orders/OrdersHistory.vue")['default'],
-    'LazyProductCreateProduct': typeof import("../components/product/CreateProduct.vue")['default'],
-    'LazyProductEditProduct': typeof import("../components/product/EditProduct.vue")['default'],
-    'LazyProductDetailsWrapper': typeof import("../components/product/ProductDetailsWrapper.vue")['default'],
-    'LazyProductGridItem': typeof import("../components/product/ProductGridItem.vue")['default'],
-    'LazyProductGridItemTwo': typeof import("../components/product/ProductGridItemTwo.vue")['default'],
-    'LazyProductGridStyleThree': typeof import("../components/product/ProductGridStyleThree.vue")['default'],
-    'LazyProductWrapperCosmetics': typeof import("../components/product/ProductWrapperCosmetics.vue")['default'],
-    'LazyProductProductsTable': typeof import("../components/product/ProductsTable.vue")['default'],
-    'LazyDashboardErrorModal': typeof import("../components/dashboard/ErrorModal.vue")['default'],
-    'LazyDashboardFormReview': typeof import("../components/dashboard/FormReview.vue")['default'],
-    'LazyDashboardNav': typeof import("../components/dashboard/Nav.vue")['default'],
-    'LazyDashboardNewInvoice': typeof import("../components/dashboard/NewInvoice.vue")['default'],
-    'LazyDashboardNewsletter': typeof import("../components/dashboard/Newsletter.vue")['default'],
-    'LazyDashboardSuccessInvoiceModal': typeof import("../components/dashboard/SuccessInvoiceModal.vue")['default'],
-    'LazyProfileNewGuest': typeof import("../components/profile/NewGuest.vue")['default'],
-    'LazyProfileNewProfile': typeof import("../components/profile/NewProfile.vue")['default'],
-    'LazyAuth': typeof import("../components/Auth.vue")['default'],
-    'LazyHeaderWithTopbar': typeof import("../components/HeaderWithTopbar.vue")['default'],
-    'LazyLogin': typeof import("../components/Login.vue")['default'],
-    'LazyMobileBar': typeof import("../components/MobileBar.vue")['default'],
-    'LazyMyAccountContainer': typeof import("../components/MyAccountContainer.vue")['default'],
-    'LazyNavBottom': typeof import("../components/NavBottom.vue")['default'],
-    'LazyNavigation': typeof import("../components/Navigation.vue")['default'],
-    'LazyOffCanvasMobileMenu': typeof import("../components/OffCanvasMobileMenu.vue")['default'],
-    'LazyProductDetailsDescriptionReview': typeof import("../components/ProductDetailsDescriptionReview.vue")['default'],
-    'LazyRegister': typeof import("../components/Register.vue")['default'],
-    'LazyResponsiveMobileMenu': typeof import("../components/ResponsiveMobileMenu.vue")['default'],
-    'LazySearch': typeof import("../components/Search.vue")['default'],
-    'LazyTheFooter': typeof import("../components/TheFooter.vue")['default'],
-    'LazyTheHeader': typeof import("../components/TheHeader.vue")['default'],
-    'LazyClientsGuests': typeof import("../components/clients/Guests.vue")['default'],
-    'LazyClientsRegisteds': typeof import("../components/clients/Registeds.vue")['default'],
     'LazyCouponsTable': typeof import("../components/coupons/CouponsTable.vue")['default'],
     'LazyCouponsCreateCoupons': typeof import("../components/coupons/CreateCoupons.vue")['default'],
     'LazyDashboardErrorModal': typeof import("../components/dashboard/ErrorModal.vue")['default'],
@@ -402,10 +70,6 @@ declare module 'vue' {
     'LazyDashboardNewInvoice': typeof import("../components/dashboard/NewInvoice.vue")['default'],
     'LazyDashboardNewsletter': typeof import("../components/dashboard/Newsletter.vue")['default'],
     'LazyDashboardSuccessInvoiceModal': typeof import("../components/dashboard/SuccessInvoiceModal.vue")['default'],
-    'LazyHeadersNavTop': typeof import("../components/headers/NavTop.vue")['default'],
-    'LazyHeadersSearch': typeof import("../components/headers/Search.vue")['default'],
-    'LazyHeadersSideNav': typeof import("../components/headers/SideNav.vue")['default'],
-    'LazyInvoicesInvoice': typeof import("../components/invoices/Invoice.vue")['default'],
     'LazyInvoicesInvoiceViewer': typeof import("../components/invoices/InvoiceViewer.vue")['default'],
     'LazyInvoicesTable': typeof import("../components/invoices/InvoicesTable.vue")['default'],
     'LazyLoadersBigLoader': typeof import("../components/loaders/BigLoader.vue")['default'],
@@ -425,52 +89,12 @@ declare module 'vue' {
     'LazyProductProductsTable': typeof import("../components/product/ProductsTable.vue")['default'],
     'LazyProfileNewGuest': typeof import("../components/profile/NewGuest.vue")['default'],
     'LazyProfileNewProfile': typeof import("../components/profile/NewProfile.vue")['default'],
-    'LazyAuth': typeof import("../components/Auth.vue")['default'],
-    'LazyHeaderWithTopbar': typeof import("../components/HeaderWithTopbar.vue")['default'],
-    'LazyLogin': typeof import("../components/Login.vue")['default'],
-    'LazyMobileBar': typeof import("../components/MobileBar.vue")['default'],
-    'LazyMyAccountContainer': typeof import("../components/MyAccountContainer.vue")['default'],
-    'LazyNavBottom': typeof import("../components/NavBottom.vue")['default'],
-    'LazyNavigation': typeof import("../components/Navigation.vue")['default'],
-    'LazyOffCanvasMobileMenu': typeof import("../components/OffCanvasMobileMenu.vue")['default'],
-    'LazyProductDetailsDescriptionReview': typeof import("../components/ProductDetailsDescriptionReview.vue")['default'],
-    'LazyRegister': typeof import("../components/Register.vue")['default'],
-    'LazyResponsiveMobileMenu': typeof import("../components/ResponsiveMobileMenu.vue")['default'],
-    'LazySearch': typeof import("../components/Search.vue")['default'],
-    'LazyTheFooter': typeof import("../components/TheFooter.vue")['default'],
-    'LazyTheHeader': typeof import("../components/TheHeader.vue")['default'],
     'LazyClientsGuests': typeof import("../components/clients/Guests.vue")['default'],
     'LazyClientsRegisteds': typeof import("../components/clients/Registeds.vue")['default'],
-    'LazyCouponsTable': typeof import("../components/coupons/CouponsTable.vue")['default'],
-    'LazyCouponsCreateCoupons': typeof import("../components/coupons/CreateCoupons.vue")['default'],
     'LazyHeadersNavTop': typeof import("../components/headers/NavTop.vue")['default'],
+    'LazyHeadersResults': typeof import("../components/headers/Results.vue")['default'],
     'LazyHeadersSearch': typeof import("../components/headers/Search.vue")['default'],
-    'LazyHeadersSideNav': typeof import("../components/headers/SideNav.vue")['default'],
-    'LazyLoadersBigLoader': typeof import("../components/loaders/BigLoader.vue")['default'],
-    'LazyLoadersSmallLoading': typeof import("../components/loaders/SmallLoading.vue")['default'],
-    'LazyOrdersModalTrack': typeof import("../components/orders/ModalTrack.vue")['default'],
-    'LazyOrdersNote': typeof import("../components/orders/Note.vue")['default'],
-    'LazyOrders': typeof import("../components/orders/Orders.vue")['default'],
-    'LazyOrdersCom': typeof import("../components/orders/OrdersCom.vue")['default'],
-    'LazyOrdersHistory': typeof import("../components/orders/OrdersHistory.vue")['default'],
-    'LazyDashboardErrorModal': typeof import("../components/dashboard/ErrorModal.vue")['default'],
-    'LazyDashboardFormReview': typeof import("../components/dashboard/FormReview.vue")['default'],
-    'LazyDashboardNav': typeof import("../components/dashboard/Nav.vue")['default'],
-    'LazyDashboardNewInvoice': typeof import("../components/dashboard/NewInvoice.vue")['default'],
-    'LazyDashboardNewsletter': typeof import("../components/dashboard/Newsletter.vue")['default'],
-    'LazyDashboardSuccessInvoiceModal': typeof import("../components/dashboard/SuccessInvoiceModal.vue")['default'],
-    'LazyProductCreateProduct': typeof import("../components/product/CreateProduct.vue")['default'],
-    'LazyProductEditProduct': typeof import("../components/product/EditProduct.vue")['default'],
-    'LazyProductDetailsWrapper': typeof import("../components/product/ProductDetailsWrapper.vue")['default'],
-    'LazyProductGridItem': typeof import("../components/product/ProductGridItem.vue")['default'],
-    'LazyProductGridItemTwo': typeof import("../components/product/ProductGridItemTwo.vue")['default'],
-    'LazyProductGridStyleThree': typeof import("../components/product/ProductGridStyleThree.vue")['default'],
-    'LazyProductWrapperCosmetics': typeof import("../components/product/ProductWrapperCosmetics.vue")['default'],
-    'LazyProductProductsTable': typeof import("../components/product/ProductsTable.vue")['default'],
-    'LazyInvoicesInvoiceViewer': typeof import("../components/invoices/InvoiceViewer.vue")['default'],
-    'LazyInvoicesTable': typeof import("../components/invoices/InvoicesTable.vue")['default'],
-    'LazyProfileNewGuest': typeof import("../components/profile/NewGuest.vue")['default'],
-    'LazyProfileNewProfile': typeof import("../components/profile/NewProfile.vue")['default']
+    'LazyHeadersSideNav': typeof import("../components/headers/SideNav.vue")['default']
   }
 }
 export const Auth: typeof import("../components/Auth.vue")['default']
@@ -481,63 +105,12 @@ export const MyAccountContainer: typeof import("../components/MyAccountContainer
 export const NavBottom: typeof import("../components/NavBottom.vue")['default']
 export const Navigation: typeof import("../components/Navigation.vue")['default']
 export const OffCanvasMobileMenu: typeof import("../components/OffCanvasMobileMenu.vue")['default']
-export const OrdersCom: typeof import("../components/OrdersCom.vue")['default']
 export const ProductDetailsDescriptionReview: typeof import("../components/ProductDetailsDescriptionReview.vue")['default']
 export const Register: typeof import("../components/Register.vue")['default']
 export const ResponsiveMobileMenu: typeof import("../components/ResponsiveMobileMenu.vue")['default']
 export const Search: typeof import("../components/Search.vue")['default']
 export const TheFooter: typeof import("../components/TheFooter.vue")['default']
 export const TheHeader: typeof import("../components/TheHeader.vue")['default']
-export const DashboardErrorModal: typeof import("../components/dashboard/ErrorModal.vue")['default']
-export const DashboardFormReview: typeof import("../components/dashboard/FormReview.vue")['default']
-export const DashboardNav: typeof import("../components/dashboard/Nav.vue")['default']
-export const DashboardNewInvoice: typeof import("../components/dashboard/NewInvoice.vue")['default']
-export const DashboardNewsletter: typeof import("../components/dashboard/Newsletter.vue")['default']
-export const DashboardSuccessInvoiceModal: typeof import("../components/dashboard/SuccessInvoiceModal.vue")['default']
-export const HeadersNavTop: typeof import("../components/headers/NavTop.vue")['default']
-export const HeadersSearch: typeof import("../components/headers/Search.vue")['default']
-export const HeadersSideNav: typeof import("../components/headers/SideNav.vue")['default']
-export const InvoicesInvoice: typeof import("../components/invoices/Invoice.vue")['default']
-export const InvoicesInvoiceViewer: typeof import("../components/invoices/InvoiceViewer.vue")['default']
-export const InvoicesTable: typeof import("../components/invoices/InvoicesTable.vue")['default']
-export const LoadersBigLoader: typeof import("../components/loaders/BigLoader.vue")['default']
-export const LoadersSmallLoading: typeof import("../components/loaders/SmallLoading.vue")['default']
-export const OrdersModalTrack: typeof import("../components/orders/ModalTrack.vue")['default']
-export const OrdersNote: typeof import("../components/orders/Note.vue")['default']
-export const Orders: typeof import("../components/orders/Orders.vue")['default']
-export const OrdersHistory: typeof import("../components/orders/OrdersHistory.vue")['default']
-export const ProductCreateProduct: typeof import("../components/product/CreateProduct.vue")['default']
-export const ProductEditProduct: typeof import("../components/product/EditProduct.vue")['default']
-export const ProductDetailsWrapper: typeof import("../components/product/ProductDetailsWrapper.vue")['default']
-export const ProductGridItem: typeof import("../components/product/ProductGridItem.vue")['default']
-export const ProductGridItemTwo: typeof import("../components/product/ProductGridItemTwo.vue")['default']
-export const ProductGridStyleThree: typeof import("../components/product/ProductGridStyleThree.vue")['default']
-export const ProductWrapperCosmetics: typeof import("../components/product/ProductWrapperCosmetics.vue")['default']
-export const ProductProductsTable: typeof import("../components/product/ProductsTable.vue")['default']
-export const ClientsGuests: typeof import("../components/clients/Guests.vue")['default']
-export const ClientsRegisteds: typeof import("../components/clients/Registeds.vue")['default']
-export const Coupons: typeof import("../components/coupons/Coupons.vue")['default']
-export const CouponsTable: typeof import("../components/coupons/CouponsTable.vue")['default']
-export const CouponsCreateCoupons: typeof import("../components/coupons/CreateCoupons.vue")['default']
-export const ProfileNewGuest: typeof import("../components/profile/NewGuest.vue")['default']
-export const ProfileNewProfile: typeof import("../components/profile/NewProfile.vue")['default']
-export const Auth: typeof import("../components/Auth.vue")['default']
-export const HeaderWithTopbar: typeof import("../components/HeaderWithTopbar.vue")['default']
-export const Login: typeof import("../components/Login.vue")['default']
-export const MobileBar: typeof import("../components/MobileBar.vue")['default']
-export const MyAccountContainer: typeof import("../components/MyAccountContainer.vue")['default']
-export const NavBottom: typeof import("../components/NavBottom.vue")['default']
-export const Navigation: typeof import("../components/Navigation.vue")['default']
-export const OffCanvasMobileMenu: typeof import("../components/OffCanvasMobileMenu.vue")['default']
-export const OrdersCom: typeof import("../components/OrdersCom.vue")['default']
-export const ProductDetailsDescriptionReview: typeof import("../components/ProductDetailsDescriptionReview.vue")['default']
-export const Register: typeof import("../components/Register.vue")['default']
-export const ResponsiveMobileMenu: typeof import("../components/ResponsiveMobileMenu.vue")['default']
-export const Search: typeof import("../components/Search.vue")['default']
-export const TheFooter: typeof import("../components/TheFooter.vue")['default']
-export const TheHeader: typeof import("../components/TheHeader.vue")['default']
-export const ClientsGuests: typeof import("../components/clients/Guests.vue")['default']
-export const ClientsRegisteds: typeof import("../components/clients/Registeds.vue")['default']
 export const CouponsTable: typeof import("../components/coupons/CouponsTable.vue")['default']
 export const CouponsCreateCoupons: typeof import("../components/coupons/CreateCoupons.vue")['default']
 export const DashboardErrorModal: typeof import("../components/dashboard/ErrorModal.vue")['default']
@@ -546,103 +119,6 @@ export const DashboardNav: typeof import("../components/dashboard/Nav.vue")['def
 export const DashboardNewInvoice: typeof import("../components/dashboard/NewInvoice.vue")['default']
 export const DashboardNewsletter: typeof import("../components/dashboard/Newsletter.vue")['default']
 export const DashboardSuccessInvoiceModal: typeof import("../components/dashboard/SuccessInvoiceModal.vue")['default']
-export const LoadersBigLoader: typeof import("../components/loaders/BigLoader.vue")['default']
-export const LoadersSmallLoading: typeof import("../components/loaders/SmallLoading.vue")['default']
-export const ProductCreateProduct: typeof import("../components/product/CreateProduct.vue")['default']
-export const ProductEditProduct: typeof import("../components/product/EditProduct.vue")['default']
-export const ProductDetailsWrapper: typeof import("../components/product/ProductDetailsWrapper.vue")['default']
-export const ProductGridItem: typeof import("../components/product/ProductGridItem.vue")['default']
-export const ProductGridItemTwo: typeof import("../components/product/ProductGridItemTwo.vue")['default']
-export const ProductGridStyleThree: typeof import("../components/product/ProductGridStyleThree.vue")['default']
-export const ProductWrapperCosmetics: typeof import("../components/product/ProductWrapperCosmetics.vue")['default']
-export const ProductProductsTable: typeof import("../components/product/ProductsTable.vue")['default']
-export const InvoicesInvoice: typeof import("../components/invoices/Invoice.vue")['default']
-export const InvoicesInvoiceViewer: typeof import("../components/invoices/InvoiceViewer.vue")['default']
-export const InvoicesTable: typeof import("../components/invoices/InvoicesTable.vue")['default']
-export const ProfileNewGuest: typeof import("../components/profile/NewGuest.vue")['default']
-export const ProfileNewProfile: typeof import("../components/profile/NewProfile.vue")['default']
-export const HeadersNavTop: typeof import("../components/headers/NavTop.vue")['default']
-export const HeadersSearch: typeof import("../components/headers/Search.vue")['default']
-export const HeadersSideNav: typeof import("../components/headers/SideNav.vue")['default']
-export const OrdersModalTrack: typeof import("../components/orders/ModalTrack.vue")['default']
-export const OrdersNote: typeof import("../components/orders/Note.vue")['default']
-export const Orders: typeof import("../components/orders/Orders.vue")['default']
-export const OrdersHistory: typeof import("../components/orders/OrdersHistory.vue")['default']
-export const Auth: typeof import("../components/Auth.vue")['default']
-export const HeaderWithTopbar: typeof import("../components/HeaderWithTopbar.vue")['default']
-export const Login: typeof import("../components/Login.vue")['default']
-export const MobileBar: typeof import("../components/MobileBar.vue")['default']
-export const MyAccountContainer: typeof import("../components/MyAccountContainer.vue")['default']
-export const NavBottom: typeof import("../components/NavBottom.vue")['default']
-export const Navigation: typeof import("../components/Navigation.vue")['default']
-export const OffCanvasMobileMenu: typeof import("../components/OffCanvasMobileMenu.vue")['default']
-export const ProductDetailsDescriptionReview: typeof import("../components/ProductDetailsDescriptionReview.vue")['default']
-export const Register: typeof import("../components/Register.vue")['default']
-export const ResponsiveMobileMenu: typeof import("../components/ResponsiveMobileMenu.vue")['default']
-export const Search: typeof import("../components/Search.vue")['default']
-export const TheFooter: typeof import("../components/TheFooter.vue")['default']
-export const TheHeader: typeof import("../components/TheHeader.vue")['default']
-export const ClientsGuests: typeof import("../components/clients/Guests.vue")['default']
-export const ClientsRegisteds: typeof import("../components/clients/Registeds.vue")['default']
-export const CouponsTable: typeof import("../components/coupons/CouponsTable.vue")['default']
-export const CouponsCreateCoupons: typeof import("../components/coupons/CreateCoupons.vue")['default']
-export const HeadersNavTop: typeof import("../components/headers/NavTop.vue")['default']
-export const HeadersSearch: typeof import("../components/headers/Search.vue")['default']
-export const HeadersSideNav: typeof import("../components/headers/SideNav.vue")['default']
-export const InvoicesInvoice: typeof import("../components/invoices/Invoice.vue")['default']
-export const InvoicesInvoiceViewer: typeof import("../components/invoices/InvoiceViewer.vue")['default']
-export const InvoicesTable: typeof import("../components/invoices/InvoicesTable.vue")['default']
-export const LoadersBigLoader: typeof import("../components/loaders/BigLoader.vue")['default']
-export const LoadersSmallLoading: typeof import("../components/loaders/SmallLoading.vue")['default']
-export const OrdersModalTrack: typeof import("../components/orders/ModalTrack.vue")['default']
-export const OrdersNote: typeof import("../components/orders/Note.vue")['default']
-export const Orders: typeof import("../components/orders/Orders.vue")['default']
-export const OrdersCom: typeof import("../components/orders/OrdersCom.vue")['default']
-export const OrdersHistory: typeof import("../components/orders/OrdersHistory.vue")['default']
-export const ProductCreateProduct: typeof import("../components/product/CreateProduct.vue")['default']
-export const ProductEditProduct: typeof import("../components/product/EditProduct.vue")['default']
-export const ProductDetailsWrapper: typeof import("../components/product/ProductDetailsWrapper.vue")['default']
-export const ProductGridItem: typeof import("../components/product/ProductGridItem.vue")['default']
-export const ProductGridItemTwo: typeof import("../components/product/ProductGridItemTwo.vue")['default']
-export const ProductGridStyleThree: typeof import("../components/product/ProductGridStyleThree.vue")['default']
-export const ProductWrapperCosmetics: typeof import("../components/product/ProductWrapperCosmetics.vue")['default']
-export const ProductProductsTable: typeof import("../components/product/ProductsTable.vue")['default']
-export const DashboardErrorModal: typeof import("../components/dashboard/ErrorModal.vue")['default']
-export const DashboardFormReview: typeof import("../components/dashboard/FormReview.vue")['default']
-export const DashboardNav: typeof import("../components/dashboard/Nav.vue")['default']
-export const DashboardNewInvoice: typeof import("../components/dashboard/NewInvoice.vue")['default']
-export const DashboardNewsletter: typeof import("../components/dashboard/Newsletter.vue")['default']
-export const DashboardSuccessInvoiceModal: typeof import("../components/dashboard/SuccessInvoiceModal.vue")['default']
-export const ProfileNewGuest: typeof import("../components/profile/NewGuest.vue")['default']
-export const ProfileNewProfile: typeof import("../components/profile/NewProfile.vue")['default']
-export const Auth: typeof import("../components/Auth.vue")['default']
-export const HeaderWithTopbar: typeof import("../components/HeaderWithTopbar.vue")['default']
-export const Login: typeof import("../components/Login.vue")['default']
-export const MobileBar: typeof import("../components/MobileBar.vue")['default']
-export const MyAccountContainer: typeof import("../components/MyAccountContainer.vue")['default']
-export const NavBottom: typeof import("../components/NavBottom.vue")['default']
-export const Navigation: typeof import("../components/Navigation.vue")['default']
-export const OffCanvasMobileMenu: typeof import("../components/OffCanvasMobileMenu.vue")['default']
-export const ProductDetailsDescriptionReview: typeof import("../components/ProductDetailsDescriptionReview.vue")['default']
-export const Register: typeof import("../components/Register.vue")['default']
-export const ResponsiveMobileMenu: typeof import("../components/ResponsiveMobileMenu.vue")['default']
-export const Search: typeof import("../components/Search.vue")['default']
-export const TheFooter: typeof import("../components/TheFooter.vue")['default']
-export const TheHeader: typeof import("../components/TheHeader.vue")['default']
-export const ClientsGuests: typeof import("../components/clients/Guests.vue")['default']
-export const ClientsRegisteds: typeof import("../components/clients/Registeds.vue")['default']
-export const CouponsTable: typeof import("../components/coupons/CouponsTable.vue")['default']
-export const CouponsCreateCoupons: typeof import("../components/coupons/CreateCoupons.vue")['default']
-export const DashboardErrorModal: typeof import("../components/dashboard/ErrorModal.vue")['default']
-export const DashboardFormReview: typeof import("../components/dashboard/FormReview.vue")['default']
-export const DashboardNav: typeof import("../components/dashboard/Nav.vue")['default']
-export const DashboardNewInvoice: typeof import("../components/dashboard/NewInvoice.vue")['default']
-export const DashboardNewsletter: typeof import("../components/dashboard/Newsletter.vue")['default']
-export const DashboardSuccessInvoiceModal: typeof import("../components/dashboard/SuccessInvoiceModal.vue")['default']
-export const HeadersNavTop: typeof import("../components/headers/NavTop.vue")['default']
-export const HeadersSearch: typeof import("../components/headers/Search.vue")['default']
-export const HeadersSideNav: typeof import("../components/headers/SideNav.vue")['default']
-export const InvoicesInvoice: typeof import("../components/invoices/Invoice.vue")['default']
 export const InvoicesInvoiceViewer: typeof import("../components/invoices/InvoiceViewer.vue")['default']
 export const InvoicesTable: typeof import("../components/invoices/InvoicesTable.vue")['default']
 export const LoadersBigLoader: typeof import("../components/loaders/BigLoader.vue")['default']
@@ -662,147 +138,12 @@ export const ProductWrapperCosmetics: typeof import("../components/product/Produ
 export const ProductProductsTable: typeof import("../components/product/ProductsTable.vue")['default']
 export const ProfileNewGuest: typeof import("../components/profile/NewGuest.vue")['default']
 export const ProfileNewProfile: typeof import("../components/profile/NewProfile.vue")['default']
-export const Auth: typeof import("../components/Auth.vue")['default']
-export const HeaderWithTopbar: typeof import("../components/HeaderWithTopbar.vue")['default']
-export const Login: typeof import("../components/Login.vue")['default']
-export const MobileBar: typeof import("../components/MobileBar.vue")['default']
-export const MyAccountContainer: typeof import("../components/MyAccountContainer.vue")['default']
-export const NavBottom: typeof import("../components/NavBottom.vue")['default']
-export const Navigation: typeof import("../components/Navigation.vue")['default']
-export const OffCanvasMobileMenu: typeof import("../components/OffCanvasMobileMenu.vue")['default']
-export const ProductDetailsDescriptionReview: typeof import("../components/ProductDetailsDescriptionReview.vue")['default']
-export const Register: typeof import("../components/Register.vue")['default']
-export const ResponsiveMobileMenu: typeof import("../components/ResponsiveMobileMenu.vue")['default']
-export const Search: typeof import("../components/Search.vue")['default']
-export const TheFooter: typeof import("../components/TheFooter.vue")['default']
-export const TheHeader: typeof import("../components/TheHeader.vue")['default']
 export const ClientsGuests: typeof import("../components/clients/Guests.vue")['default']
 export const ClientsRegisteds: typeof import("../components/clients/Registeds.vue")['default']
-export const CouponsTable: typeof import("../components/coupons/CouponsTable.vue")['default']
-export const CouponsCreateCoupons: typeof import("../components/coupons/CreateCoupons.vue")['default']
 export const HeadersNavTop: typeof import("../components/headers/NavTop.vue")['default']
+export const HeadersResults: typeof import("../components/headers/Results.vue")['default']
 export const HeadersSearch: typeof import("../components/headers/Search.vue")['default']
 export const HeadersSideNav: typeof import("../components/headers/SideNav.vue")['default']
-export const LoadersBigLoader: typeof import("../components/loaders/BigLoader.vue")['default']
-export const LoadersSmallLoading: typeof import("../components/loaders/SmallLoading.vue")['default']
-export const OrdersModalTrack: typeof import("../components/orders/ModalTrack.vue")['default']
-export const OrdersNote: typeof import("../components/orders/Note.vue")['default']
-export const Orders: typeof import("../components/orders/Orders.vue")['default']
-export const OrdersCom: typeof import("../components/orders/OrdersCom.vue")['default']
-export const OrdersHistory: typeof import("../components/orders/OrdersHistory.vue")['default']
-export const DashboardErrorModal: typeof import("../components/dashboard/ErrorModal.vue")['default']
-export const DashboardFormReview: typeof import("../components/dashboard/FormReview.vue")['default']
-export const DashboardNav: typeof import("../components/dashboard/Nav.vue")['default']
-export const DashboardNewInvoice: typeof import("../components/dashboard/NewInvoice.vue")['default']
-export const DashboardNewsletter: typeof import("../components/dashboard/Newsletter.vue")['default']
-export const DashboardSuccessInvoiceModal: typeof import("../components/dashboard/SuccessInvoiceModal.vue")['default']
-export const ProductCreateProduct: typeof import("../components/product/CreateProduct.vue")['default']
-export const ProductEditProduct: typeof import("../components/product/EditProduct.vue")['default']
-export const ProductDetailsWrapper: typeof import("../components/product/ProductDetailsWrapper.vue")['default']
-export const ProductGridItem: typeof import("../components/product/ProductGridItem.vue")['default']
-export const ProductGridItemTwo: typeof import("../components/product/ProductGridItemTwo.vue")['default']
-export const ProductGridStyleThree: typeof import("../components/product/ProductGridStyleThree.vue")['default']
-export const ProductWrapperCosmetics: typeof import("../components/product/ProductWrapperCosmetics.vue")['default']
-export const ProductProductsTable: typeof import("../components/product/ProductsTable.vue")['default']
-export const InvoicesInvoiceViewer: typeof import("../components/invoices/InvoiceViewer.vue")['default']
-export const InvoicesTable: typeof import("../components/invoices/InvoicesTable.vue")['default']
-export const ProfileNewGuest: typeof import("../components/profile/NewGuest.vue")['default']
-export const ProfileNewProfile: typeof import("../components/profile/NewProfile.vue")['default']
-export const LazyAuth: typeof import("../components/Auth.vue")['default']
-export const LazyHeaderWithTopbar: typeof import("../components/HeaderWithTopbar.vue")['default']
-export const LazyLogin: typeof import("../components/Login.vue")['default']
-export const LazyMobileBar: typeof import("../components/MobileBar.vue")['default']
-export const LazyMyAccountContainer: typeof import("../components/MyAccountContainer.vue")['default']
-export const LazyNavBottom: typeof import("../components/NavBottom.vue")['default']
-export const LazyNavigation: typeof import("../components/Navigation.vue")['default']
-export const LazyOffCanvasMobileMenu: typeof import("../components/OffCanvasMobileMenu.vue")['default']
-export const LazyOrdersCom: typeof import("../components/OrdersCom.vue")['default']
-export const LazyProductDetailsDescriptionReview: typeof import("../components/ProductDetailsDescriptionReview.vue")['default']
-export const LazyRegister: typeof import("../components/Register.vue")['default']
-export const LazyResponsiveMobileMenu: typeof import("../components/ResponsiveMobileMenu.vue")['default']
-export const LazySearch: typeof import("../components/Search.vue")['default']
-export const LazyTheFooter: typeof import("../components/TheFooter.vue")['default']
-export const LazyTheHeader: typeof import("../components/TheHeader.vue")['default']
-export const LazyDashboardErrorModal: typeof import("../components/dashboard/ErrorModal.vue")['default']
-export const LazyDashboardFormReview: typeof import("../components/dashboard/FormReview.vue")['default']
-export const LazyDashboardNav: typeof import("../components/dashboard/Nav.vue")['default']
-export const LazyDashboardNewInvoice: typeof import("../components/dashboard/NewInvoice.vue")['default']
-export const LazyDashboardNewsletter: typeof import("../components/dashboard/Newsletter.vue")['default']
-export const LazyDashboardSuccessInvoiceModal: typeof import("../components/dashboard/SuccessInvoiceModal.vue")['default']
-export const LazyHeadersNavTop: typeof import("../components/headers/NavTop.vue")['default']
-export const LazyHeadersSearch: typeof import("../components/headers/Search.vue")['default']
-export const LazyHeadersSideNav: typeof import("../components/headers/SideNav.vue")['default']
-export const LazyInvoicesInvoice: typeof import("../components/invoices/Invoice.vue")['default']
-export const LazyInvoicesInvoiceViewer: typeof import("../components/invoices/InvoiceViewer.vue")['default']
-export const LazyInvoicesTable: typeof import("../components/invoices/InvoicesTable.vue")['default']
-export const LazyLoadersBigLoader: typeof import("../components/loaders/BigLoader.vue")['default']
-export const LazyLoadersSmallLoading: typeof import("../components/loaders/SmallLoading.vue")['default']
-export const LazyOrdersModalTrack: typeof import("../components/orders/ModalTrack.vue")['default']
-export const LazyOrdersNote: typeof import("../components/orders/Note.vue")['default']
-export const LazyOrders: typeof import("../components/orders/Orders.vue")['default']
-export const LazyOrdersHistory: typeof import("../components/orders/OrdersHistory.vue")['default']
-export const LazyProductCreateProduct: typeof import("../components/product/CreateProduct.vue")['default']
-export const LazyProductEditProduct: typeof import("../components/product/EditProduct.vue")['default']
-export const LazyProductDetailsWrapper: typeof import("../components/product/ProductDetailsWrapper.vue")['default']
-export const LazyProductGridItem: typeof import("../components/product/ProductGridItem.vue")['default']
-export const LazyProductGridItemTwo: typeof import("../components/product/ProductGridItemTwo.vue")['default']
-export const LazyProductGridStyleThree: typeof import("../components/product/ProductGridStyleThree.vue")['default']
-export const LazyProductWrapperCosmetics: typeof import("../components/product/ProductWrapperCosmetics.vue")['default']
-export const LazyProductProductsTable: typeof import("../components/product/ProductsTable.vue")['default']
-export const LazyClientsGuests: typeof import("../components/clients/Guests.vue")['default']
-export const LazyClientsRegisteds: typeof import("../components/clients/Registeds.vue")['default']
-export const LazyCoupons: typeof import("../components/coupons/Coupons.vue")['default']
-export const LazyCouponsTable: typeof import("../components/coupons/CouponsTable.vue")['default']
-export const LazyCouponsCreateCoupons: typeof import("../components/coupons/CreateCoupons.vue")['default']
-export const LazyProfileNewGuest: typeof import("../components/profile/NewGuest.vue")['default']
-export const LazyProfileNewProfile: typeof import("../components/profile/NewProfile.vue")['default']
-export const LazyAuth: typeof import("../components/Auth.vue")['default']
-export const LazyHeaderWithTopbar: typeof import("../components/HeaderWithTopbar.vue")['default']
-export const LazyLogin: typeof import("../components/Login.vue")['default']
-export const LazyMobileBar: typeof import("../components/MobileBar.vue")['default']
-export const LazyMyAccountContainer: typeof import("../components/MyAccountContainer.vue")['default']
-export const LazyNavBottom: typeof import("../components/NavBottom.vue")['default']
-export const LazyNavigation: typeof import("../components/Navigation.vue")['default']
-export const LazyOffCanvasMobileMenu: typeof import("../components/OffCanvasMobileMenu.vue")['default']
-export const LazyOrdersCom: typeof import("../components/OrdersCom.vue")['default']
-export const LazyProductDetailsDescriptionReview: typeof import("../components/ProductDetailsDescriptionReview.vue")['default']
-export const LazyRegister: typeof import("../components/Register.vue")['default']
-export const LazyResponsiveMobileMenu: typeof import("../components/ResponsiveMobileMenu.vue")['default']
-export const LazySearch: typeof import("../components/Search.vue")['default']
-export const LazyTheFooter: typeof import("../components/TheFooter.vue")['default']
-export const LazyTheHeader: typeof import("../components/TheHeader.vue")['default']
-export const LazyClientsGuests: typeof import("../components/clients/Guests.vue")['default']
-export const LazyClientsRegisteds: typeof import("../components/clients/Registeds.vue")['default']
-export const LazyCouponsTable: typeof import("../components/coupons/CouponsTable.vue")['default']
-export const LazyCouponsCreateCoupons: typeof import("../components/coupons/CreateCoupons.vue")['default']
-export const LazyDashboardErrorModal: typeof import("../components/dashboard/ErrorModal.vue")['default']
-export const LazyDashboardFormReview: typeof import("../components/dashboard/FormReview.vue")['default']
-export const LazyDashboardNav: typeof import("../components/dashboard/Nav.vue")['default']
-export const LazyDashboardNewInvoice: typeof import("../components/dashboard/NewInvoice.vue")['default']
-export const LazyDashboardNewsletter: typeof import("../components/dashboard/Newsletter.vue")['default']
-export const LazyDashboardSuccessInvoiceModal: typeof import("../components/dashboard/SuccessInvoiceModal.vue")['default']
-export const LazyLoadersBigLoader: typeof import("../components/loaders/BigLoader.vue")['default']
-export const LazyLoadersSmallLoading: typeof import("../components/loaders/SmallLoading.vue")['default']
-export const LazyProductCreateProduct: typeof import("../components/product/CreateProduct.vue")['default']
-export const LazyProductEditProduct: typeof import("../components/product/EditProduct.vue")['default']
-export const LazyProductDetailsWrapper: typeof import("../components/product/ProductDetailsWrapper.vue")['default']
-export const LazyProductGridItem: typeof import("../components/product/ProductGridItem.vue")['default']
-export const LazyProductGridItemTwo: typeof import("../components/product/ProductGridItemTwo.vue")['default']
-export const LazyProductGridStyleThree: typeof import("../components/product/ProductGridStyleThree.vue")['default']
-export const LazyProductWrapperCosmetics: typeof import("../components/product/ProductWrapperCosmetics.vue")['default']
-export const LazyProductProductsTable: typeof import("../components/product/ProductsTable.vue")['default']
-export const LazyInvoicesInvoice: typeof import("../components/invoices/Invoice.vue")['default']
-export const LazyInvoicesInvoiceViewer: typeof import("../components/invoices/InvoiceViewer.vue")['default']
-export const LazyInvoicesTable: typeof import("../components/invoices/InvoicesTable.vue")['default']
-export const LazyProfileNewGuest: typeof import("../components/profile/NewGuest.vue")['default']
-export const LazyProfileNewProfile: typeof import("../components/profile/NewProfile.vue")['default']
-export const LazyHeadersNavTop: typeof import("../components/headers/NavTop.vue")['default']
-export const LazyHeadersSearch: typeof import("../components/headers/Search.vue")['default']
-export const LazyHeadersSideNav: typeof import("../components/headers/SideNav.vue")['default']
-export const LazyOrdersModalTrack: typeof import("../components/orders/ModalTrack.vue")['default']
-export const LazyOrdersNote: typeof import("../components/orders/Note.vue")['default']
-export const LazyOrders: typeof import("../components/orders/Orders.vue")['default']
-export const LazyOrdersHistory: typeof import("../components/orders/OrdersHistory.vue")['default']
 export const LazyAuth: typeof import("../components/Auth.vue")['default']
 export const LazyHeaderWithTopbar: typeof import("../components/HeaderWithTopbar.vue")['default']
 export const LazyLogin: typeof import("../components/Login.vue")['default']
@@ -817,55 +158,6 @@ export const LazyResponsiveMobileMenu: typeof import("../components/ResponsiveMo
 export const LazySearch: typeof import("../components/Search.vue")['default']
 export const LazyTheFooter: typeof import("../components/TheFooter.vue")['default']
 export const LazyTheHeader: typeof import("../components/TheHeader.vue")['default']
-export const LazyClientsGuests: typeof import("../components/clients/Guests.vue")['default']
-export const LazyClientsRegisteds: typeof import("../components/clients/Registeds.vue")['default']
-export const LazyCouponsTable: typeof import("../components/coupons/CouponsTable.vue")['default']
-export const LazyCouponsCreateCoupons: typeof import("../components/coupons/CreateCoupons.vue")['default']
-export const LazyHeadersNavTop: typeof import("../components/headers/NavTop.vue")['default']
-export const LazyHeadersSearch: typeof import("../components/headers/Search.vue")['default']
-export const LazyHeadersSideNav: typeof import("../components/headers/SideNav.vue")['default']
-export const LazyInvoicesInvoice: typeof import("../components/invoices/Invoice.vue")['default']
-export const LazyInvoicesInvoiceViewer: typeof import("../components/invoices/InvoiceViewer.vue")['default']
-export const LazyInvoicesTable: typeof import("../components/invoices/InvoicesTable.vue")['default']
-export const LazyLoadersBigLoader: typeof import("../components/loaders/BigLoader.vue")['default']
-export const LazyLoadersSmallLoading: typeof import("../components/loaders/SmallLoading.vue")['default']
-export const LazyOrdersModalTrack: typeof import("../components/orders/ModalTrack.vue")['default']
-export const LazyOrdersNote: typeof import("../components/orders/Note.vue")['default']
-export const LazyOrders: typeof import("../components/orders/Orders.vue")['default']
-export const LazyOrdersCom: typeof import("../components/orders/OrdersCom.vue")['default']
-export const LazyOrdersHistory: typeof import("../components/orders/OrdersHistory.vue")['default']
-export const LazyProductCreateProduct: typeof import("../components/product/CreateProduct.vue")['default']
-export const LazyProductEditProduct: typeof import("../components/product/EditProduct.vue")['default']
-export const LazyProductDetailsWrapper: typeof import("../components/product/ProductDetailsWrapper.vue")['default']
-export const LazyProductGridItem: typeof import("../components/product/ProductGridItem.vue")['default']
-export const LazyProductGridItemTwo: typeof import("../components/product/ProductGridItemTwo.vue")['default']
-export const LazyProductGridStyleThree: typeof import("../components/product/ProductGridStyleThree.vue")['default']
-export const LazyProductWrapperCosmetics: typeof import("../components/product/ProductWrapperCosmetics.vue")['default']
-export const LazyProductProductsTable: typeof import("../components/product/ProductsTable.vue")['default']
-export const LazyDashboardErrorModal: typeof import("../components/dashboard/ErrorModal.vue")['default']
-export const LazyDashboardFormReview: typeof import("../components/dashboard/FormReview.vue")['default']
-export const LazyDashboardNav: typeof import("../components/dashboard/Nav.vue")['default']
-export const LazyDashboardNewInvoice: typeof import("../components/dashboard/NewInvoice.vue")['default']
-export const LazyDashboardNewsletter: typeof import("../components/dashboard/Newsletter.vue")['default']
-export const LazyDashboardSuccessInvoiceModal: typeof import("../components/dashboard/SuccessInvoiceModal.vue")['default']
-export const LazyProfileNewGuest: typeof import("../components/profile/NewGuest.vue")['default']
-export const LazyProfileNewProfile: typeof import("../components/profile/NewProfile.vue")['default']
-export const LazyAuth: typeof import("../components/Auth.vue")['default']
-export const LazyHeaderWithTopbar: typeof import("../components/HeaderWithTopbar.vue")['default']
-export const LazyLogin: typeof import("../components/Login.vue")['default']
-export const LazyMobileBar: typeof import("../components/MobileBar.vue")['default']
-export const LazyMyAccountContainer: typeof import("../components/MyAccountContainer.vue")['default']
-export const LazyNavBottom: typeof import("../components/NavBottom.vue")['default']
-export const LazyNavigation: typeof import("../components/Navigation.vue")['default']
-export const LazyOffCanvasMobileMenu: typeof import("../components/OffCanvasMobileMenu.vue")['default']
-export const LazyProductDetailsDescriptionReview: typeof import("../components/ProductDetailsDescriptionReview.vue")['default']
-export const LazyRegister: typeof import("../components/Register.vue")['default']
-export const LazyResponsiveMobileMenu: typeof import("../components/ResponsiveMobileMenu.vue")['default']
-export const LazySearch: typeof import("../components/Search.vue")['default']
-export const LazyTheFooter: typeof import("../components/TheFooter.vue")['default']
-export const LazyTheHeader: typeof import("../components/TheHeader.vue")['default']
-export const LazyClientsGuests: typeof import("../components/clients/Guests.vue")['default']
-export const LazyClientsRegisteds: typeof import("../components/clients/Registeds.vue")['default']
 export const LazyCouponsTable: typeof import("../components/coupons/CouponsTable.vue")['default']
 export const LazyCouponsCreateCoupons: typeof import("../components/coupons/CreateCoupons.vue")['default']
 export const LazyDashboardErrorModal: typeof import("../components/dashboard/ErrorModal.vue")['default']
@@ -874,10 +166,6 @@ export const LazyDashboardNav: typeof import("../components/dashboard/Nav.vue")[
 export const LazyDashboardNewInvoice: typeof import("../components/dashboard/NewInvoice.vue")['default']
 export const LazyDashboardNewsletter: typeof import("../components/dashboard/Newsletter.vue")['default']
 export const LazyDashboardSuccessInvoiceModal: typeof import("../components/dashboard/SuccessInvoiceModal.vue")['default']
-export const LazyHeadersNavTop: typeof import("../components/headers/NavTop.vue")['default']
-export const LazyHeadersSearch: typeof import("../components/headers/Search.vue")['default']
-export const LazyHeadersSideNav: typeof import("../components/headers/SideNav.vue")['default']
-export const LazyInvoicesInvoice: typeof import("../components/invoices/Invoice.vue")['default']
 export const LazyInvoicesInvoiceViewer: typeof import("../components/invoices/InvoiceViewer.vue")['default']
 export const LazyInvoicesTable: typeof import("../components/invoices/InvoicesTable.vue")['default']
 export const LazyLoadersBigLoader: typeof import("../components/loaders/BigLoader.vue")['default']
@@ -897,50 +185,10 @@ export const LazyProductWrapperCosmetics: typeof import("../components/product/P
 export const LazyProductProductsTable: typeof import("../components/product/ProductsTable.vue")['default']
 export const LazyProfileNewGuest: typeof import("../components/profile/NewGuest.vue")['default']
 export const LazyProfileNewProfile: typeof import("../components/profile/NewProfile.vue")['default']
-export const LazyAuth: typeof import("../components/Auth.vue")['default']
-export const LazyHeaderWithTopbar: typeof import("../components/HeaderWithTopbar.vue")['default']
-export const LazyLogin: typeof import("../components/Login.vue")['default']
-export const LazyMobileBar: typeof import("../components/MobileBar.vue")['default']
-export const LazyMyAccountContainer: typeof import("../components/MyAccountContainer.vue")['default']
-export const LazyNavBottom: typeof import("../components/NavBottom.vue")['default']
-export const LazyNavigation: typeof import("../components/Navigation.vue")['default']
-export const LazyOffCanvasMobileMenu: typeof import("../components/OffCanvasMobileMenu.vue")['default']
-export const LazyProductDetailsDescriptionReview: typeof import("../components/ProductDetailsDescriptionReview.vue")['default']
-export const LazyRegister: typeof import("../components/Register.vue")['default']
-export const LazyResponsiveMobileMenu: typeof import("../components/ResponsiveMobileMenu.vue")['default']
-export const LazySearch: typeof import("../components/Search.vue")['default']
-export const LazyTheFooter: typeof import("../components/TheFooter.vue")['default']
-export const LazyTheHeader: typeof import("../components/TheHeader.vue")['default']
 export const LazyClientsGuests: typeof import("../components/clients/Guests.vue")['default']
 export const LazyClientsRegisteds: typeof import("../components/clients/Registeds.vue")['default']
-export const LazyCouponsTable: typeof import("../components/coupons/CouponsTable.vue")['default']
-export const LazyCouponsCreateCoupons: typeof import("../components/coupons/CreateCoupons.vue")['default']
 export const LazyHeadersNavTop: typeof import("../components/headers/NavTop.vue")['default']
+export const LazyHeadersResults: typeof import("../components/headers/Results.vue")['default']
 export const LazyHeadersSearch: typeof import("../components/headers/Search.vue")['default']
 export const LazyHeadersSideNav: typeof import("../components/headers/SideNav.vue")['default']
-export const LazyLoadersBigLoader: typeof import("../components/loaders/BigLoader.vue")['default']
-export const LazyLoadersSmallLoading: typeof import("../components/loaders/SmallLoading.vue")['default']
-export const LazyOrdersModalTrack: typeof import("../components/orders/ModalTrack.vue")['default']
-export const LazyOrdersNote: typeof import("../components/orders/Note.vue")['default']
-export const LazyOrders: typeof import("../components/orders/Orders.vue")['default']
-export const LazyOrdersCom: typeof import("../components/orders/OrdersCom.vue")['default']
-export const LazyOrdersHistory: typeof import("../components/orders/OrdersHistory.vue")['default']
-export const LazyDashboardErrorModal: typeof import("../components/dashboard/ErrorModal.vue")['default']
-export const LazyDashboardFormReview: typeof import("../components/dashboard/FormReview.vue")['default']
-export const LazyDashboardNav: typeof import("../components/dashboard/Nav.vue")['default']
-export const LazyDashboardNewInvoice: typeof import("../components/dashboard/NewInvoice.vue")['default']
-export const LazyDashboardNewsletter: typeof import("../components/dashboard/Newsletter.vue")['default']
-export const LazyDashboardSuccessInvoiceModal: typeof import("../components/dashboard/SuccessInvoiceModal.vue")['default']
-export const LazyProductCreateProduct: typeof import("../components/product/CreateProduct.vue")['default']
-export const LazyProductEditProduct: typeof import("../components/product/EditProduct.vue")['default']
-export const LazyProductDetailsWrapper: typeof import("../components/product/ProductDetailsWrapper.vue")['default']
-export const LazyProductGridItem: typeof import("../components/product/ProductGridItem.vue")['default']
-export const LazyProductGridItemTwo: typeof import("../components/product/ProductGridItemTwo.vue")['default']
-export const LazyProductGridStyleThree: typeof import("../components/product/ProductGridStyleThree.vue")['default']
-export const LazyProductWrapperCosmetics: typeof import("../components/product/ProductWrapperCosmetics.vue")['default']
-export const LazyProductProductsTable: typeof import("../components/product/ProductsTable.vue")['default']
-export const LazyInvoicesInvoiceViewer: typeof import("../components/invoices/InvoiceViewer.vue")['default']
-export const LazyInvoicesTable: typeof import("../components/invoices/InvoicesTable.vue")['default']
-export const LazyProfileNewGuest: typeof import("../components/profile/NewGuest.vue")['default']
-export const LazyProfileNewProfile: typeof import("../components/profile/NewProfile.vue")['default']
 export const componentNames: string[]

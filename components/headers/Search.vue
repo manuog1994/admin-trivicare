@@ -14,7 +14,7 @@
                     <div class="position-relative">
                         <div id="search-box" class="search-box" :class="{'active' : hidden == false}">
                             <div class="box-products" v-for="result in resultsMin" :key="result.id">
-                                <a :href="url" class="single-product">
+                                <a :href="url + '/orders-view/' + result.id" class="single-product">
                                     <div class="row w-100">
                                         <div class="col-6">
                                             <span>{{ result.user_profile.name == 'Guest' ? result?.guest?.name : result?.user_profile?.name }} {{ result.user_profile.lastname == 'Guest' ? result?.guest?.lastname : result?.user_profile?.lastname }}</span>
@@ -26,13 +26,13 @@
                                 </a>
                             </div>
                             <div v-if="results?.length > 6" class="box-products bg-trivi-purple">
-                                <a :href="url" class="single-product">
+                                <button @click="$router.push({path: '/search?', query: search})" class="single-product">
                                     <div class="row w-100">
                                         <div class="col-12 text-center">
                                             <span>Ver todos los resultados</span>
                                         </div>
                                     </div>
-                                </a>
+                                </button>
                             </div>
                         </div>
                     </div>
