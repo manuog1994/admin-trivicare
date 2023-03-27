@@ -1,11 +1,9 @@
 <template>
-    <div class="d-flew flex-row">
-        <div class="flex-fill">
-            <SideNav />
-            <NavTop />
-            <Search />
-            <Orders />    
-        </div>
+    <div>
+        <SideNav />
+        <NavTop />
+        <Search />
+        <Orders />    
     </div>
 </template>
 

@@ -1,0 +1,33 @@
+.main {
+  float: right;
+  width: 80%;
+  padding: 20px;
+  overflow-y: auto;
+}
+@media only screen and (max-width: 767px) {
+.main {
+    width: 100%;
+}
+}
+.main-search {
+  float: right;
+  width: 80%;
+  padding: 20px;
+}
+@media only screen and (max-width: 767px) {
+.main-search {
+    width: 100%;
+}
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ccc;
+}
+th {
+  background-color: #eee;
+}

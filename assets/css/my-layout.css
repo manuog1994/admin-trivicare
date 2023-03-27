@@ -26,3 +26,7 @@
 .bg-trivi-purple {
   background-color: #DD88B8;
 }
+
+button:hover {
+  background-color: #333 !important;
+}

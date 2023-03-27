@@ -1,5 +1,5 @@
 <template>
-    <div v-if="product.status == 'Publicado'" class="shop-area pt-100 pb-100">
+    <div class="shop-area pt-100 pb-100">
         <div class="container">
             <div class="row">
                 <div class="col-md-6">

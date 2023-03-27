@@ -1,6 +1,9 @@
 <template>
     <div>
         <SideNav />
+        <NavTop />
+        <Search />
+        <Registeds />
     </div>
 </template>
 
@@ -11,6 +14,9 @@
 
         components: {
             SideNav: () => import("@/components/headers/SideNav"),
+            NavTop: () => import("@/components/headers/NavTop"),
+            Search: () => import("@/components/headers/Search"),
+            Registeds: () => import("@/components/clients/Registeds"),
         },
 
 

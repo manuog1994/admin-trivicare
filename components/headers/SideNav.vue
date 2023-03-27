@@ -37,7 +37,7 @@ export default {
                     </n-link>
                 </li>
                 <li class="nav-item">
-                    <n-link class="nav-link" :class="{'active': isActive == '/orders'}" to="/orders">
+                    <n-link class="nav-link" :class="{'active': isActive == '/orders' || isActive == '/orders-history'}" to="/orders">
                         <i class="fa fa-shopping-cart icon-list"></i>
                         Pedidos
                     </n-link>
@@ -49,7 +49,7 @@ export default {
                     </n-link>
                 </li>
                 <li class="nav-item">
-                    <n-link class="nav-link" :class="{'active': isActive == '/clients'}" to="/clients">
+                    <n-link class="nav-link" :class="{'active': isActive == '/clients' || isActive == '/guests'}" to="/clients">
                         <i class="fa fa-users icon-list"></i>
                         Clientes
                     </n-link>
@@ -71,12 +71,12 @@ export default {
         <!-- Botón para cerrar la sesión posicionado al final de la barra -->
         <div class="position-absolute bottom-0 button-final">
             <div class="d-flex justify-content-around">
-                <button @click="logout" class="nav-link" to="/logout">
-                    <i class="fa fa-cog icon-size"></i>
-                </button>
                 <n-link class="nav-link" to="/settings">
-                    <i class="fa fa-sign-out icon-size"></i>
+                    <i class="fa fa-cog icon-size"></i>
                 </n-link>
+                <button @click="logout" class="nav-link" to="/logout">
+                    <i class="fa fa-sign-out icon-size"></i>
+                </button>
             </div>
         </div>
     </nav>
@@ -90,6 +90,7 @@ body {
 }
 
 .sidebar {
+    position: fixed;
 	float: left;
 	width: 20%;
 	background-color: #DD88B8;
@@ -140,7 +141,7 @@ body {
 }
 
 .button-final {
-    width: 20%;
+    width: 100%;
 }
 
 .icon-list {

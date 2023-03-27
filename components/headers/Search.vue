@@ -1,6 +1,6 @@
 <template>
     <client-only>
-        <div class="main mt-4 mt-md-0">
+        <div class="main-search mt-4 mt-md-0">
             <div class="row">
                 <div class="col-12">
                     <div class="input-group">
@@ -72,13 +72,16 @@
     }
 
     .box-products {
+        position: relative;
         display: flex;
         justify-content: center;
         width: auto;
         margin-bottom: 10px;
+        z-index: 1000;
     }
 
     .single-product{
+        position: relative;
         display: flex;
         align-items: center;
         width: 100%;
@@ -87,6 +90,7 @@
         color: #000;
         padding: 10px;
         border-radius: 5px;
+        z-index: 1001;
         transition: all 0.3s ease;
         &:hover {
             background: #f5f5f5;

@@ -7,7 +7,7 @@
                 <div class="description-review-topbar nav">
                     <a data-bs-toggle="tab" href="#des-details1">Información adicional</a>
                     <a class="active" data-bs-toggle="tab" href="#des-details2">Descripción</a>
-                    <a data-bs-toggle="tab" href="#des-details3">Valoraciones ( {{ product.reviews.length }} )</a>
+                    <a data-bs-toggle="tab" href="#des-details3">Valoraciones ( {{ product.reviews?.length }} )</a>
                 </div>
                 <div class="tab-content description-review-bottom">
                     <div id="des-details2" class="tab-pane active">
@@ -55,8 +55,8 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div v-if="reviews.length > 10" class="d-flex justify-content-center">
-                                    <pagination v-model="page" :records="reviews.length" :perPage="perPage" @paginate="myCallBack" />
+                                <div v-if="reviews?.length > 10" class="d-flex justify-content-center">
+                                    <pagination v-model="page" :records="reviews?.length" :perPage="perPage" @paginate="myCallBack" />
                                 </div>
                             </div>
                         </div>

@@ -1,6 +1,9 @@
 <template>
     <div>
         <SideNav />
+        <NavTop />
+        <Search />
+        <CouponsTable/>
     </div>
 </template>
 
@@ -11,12 +14,15 @@
 
         components: {
             SideNav: () => import("@/components/headers/SideNav"),
+            NavTop: () => import("@/components/headers/NavTop"),
+            CouponsTable: () => import("@/components/coupons/CouponsTable"),
+            Search: () => import("@/components/headers/Search"),
         },
 
 
         head() {
             return {
-                titleTemplate: 'Dashboard',          
+                titleTemplate: 'Cupones',          
             }
         },
         

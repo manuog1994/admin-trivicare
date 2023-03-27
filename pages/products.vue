@@ -1,6 +1,9 @@
 <template>
     <div>
         <SideNav />
+        <NavTop />
+        <Search />
+        <ProductsTable />
     </div>
 </template>
 
@@ -11,6 +14,9 @@
 
         components: {
             SideNav: () => import("@/components/headers/SideNav"),
+            NavTop: () => import("@/components/headers/NavTop"),
+            ProductsTable: () => import("@/components/product/ProductsTable"),
+            Search: () => import("@/components/headers/Search"),
         },
 
 

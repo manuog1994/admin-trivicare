@@ -113,7 +113,7 @@
 /******/
 /******/ 	var hotApplyOnUpdate = true;
 /******/ 	// eslint-disable-next-line no-unused-vars
-/******/ 	var hotCurrentHash = "805e4340c281fa8dc356";
+/******/ 	var hotCurrentHash = "6a8b70dae214c648ee00";
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule;
@@ -819,6 +819,11 @@
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
 /******/
+/******/ 	// object to store loaded CSS chunks
+/******/ 	var installedCssChunks = {
+/******/ 		"runtime": 0
+/******/ 	}
+/******/
 /******/ 	// object to store loaded and loading chunks
 /******/ 	// undefined = chunk not loaded, null = chunk preloaded/prefetched
 /******/ 	// Promise = chunk loading, 0 = chunk loaded
@@ -830,7 +835,7 @@
 /******/
 /******/ 	// script path function
 /******/ 	function jsonpScriptSrc(chunkId) {
-/******/ 		return __webpack_require__.p + "" + ({"pages/clients":"pages/clients","pages/coupons":"pages/coupons","pages/dashboard":"pages/dashboard","pages/index":"pages/index","pages/invoices":"pages/invoices","pages/login":"pages/login","pages/my-account":"pages/my-account","pages/orders":"pages/orders","pages/product/_slug":"pages/product/_slug","pages/products":"pages/products","pages/search":"pages/search","pages/settings":"pages/settings"}[chunkId]||chunkId) + ".js"
+/******/ 		return __webpack_require__.p + "" + ({"pages/clients":"pages/clients","pages/coupons":"pages/coupons","pages/guests":"pages/guests","pages/index":"pages/index","pages/invoices":"pages/invoices","pages/login":"pages/login","pages/my-account":"pages/my-account","pages/orders":"pages/orders","pages/orders-history":"pages/orders-history","pages/orders-view/_id":"pages/orders-view/_id","pages/product/_slug":"pages/product/_slug","pages/products":"pages/products","pages/search":"pages/search","pages/settings":"pages/settings"}[chunkId]||chunkId) + ".js"
 /******/ 	}
 /******/
 /******/ 	// The require function
@@ -865,6 +870,54 @@
 /******/ 	__webpack_require__.e = function requireEnsure(chunkId) {
 /******/ 		var promises = [];
 /******/
+/******/
+/******/ 		// extract-css-chunks-webpack-plugin CSS loading
+/******/ 		var supportsPreload = (function() { try { return document.createElement("link").relList.supports("preload"); } catch(e) { return false; }}());
+/******/ 		var cssChunks = {"pages/index":1,"pages/orders-view/_id":1};
+/******/ 		if(installedCssChunks[chunkId]) promises.push(installedCssChunks[chunkId]);
+/******/ 		else if(installedCssChunks[chunkId] !== 0 && cssChunks[chunkId]) {
+/******/ 			promises.push(installedCssChunks[chunkId] = new Promise(function(resolve, reject) {
+/******/ 				var href = "" + ({"pages/clients":"pages/clients","pages/coupons":"pages/coupons","pages/guests":"pages/guests","pages/index":"pages/index","pages/invoices":"pages/invoices","pages/login":"pages/login","pages/my-account":"pages/my-account","pages/orders":"pages/orders","pages/orders-history":"pages/orders-history","pages/orders-view/_id":"pages/orders-view/_id","pages/product/_slug":"pages/product/_slug","pages/products":"pages/products","pages/search":"pages/search","pages/settings":"pages/settings"}[chunkId]||chunkId) + ".css";
+/******/ 				var fullhref = __webpack_require__.p + href;
+/******/ 				var existingLinkTags = document.getElementsByTagName("link");
+/******/ 				for(var i = 0; i < existingLinkTags.length; i++) {
+/******/ 					var tag = existingLinkTags[i];
+/******/ 					var dataHref = tag.getAttribute("data-href") || tag.getAttribute("href");
+/******/ 					if((tag.rel === "stylesheet" || tag.rel === "preload") && (dataHref === href || dataHref === fullhref)) return resolve();
+/******/ 				}
+/******/ 				var existingStyleTags = document.getElementsByTagName("style");
+/******/ 				for(var i = 0; i < existingStyleTags.length; i++) {
+/******/ 					var tag = existingStyleTags[i];
+/******/ 					var dataHref = tag.getAttribute("data-href");
+/******/ 					if(dataHref === href || dataHref === fullhref) return resolve();
+/******/ 				}
+/******/ 				var linkTag = document.createElement("link");
+/******/ 				linkTag.rel = supportsPreload ? "preload": "stylesheet";
+/******/ 				supportsPreload ? linkTag.as = "style" : linkTag.type = "text/css";
+/******/ 				linkTag.onload = resolve;
+/******/ 				linkTag.onerror = function(event) {
+/******/ 					var request = event && event.target && event.target.src || fullhref;
+/******/ 					var err = new Error("Loading CSS chunk " + chunkId + " failed.\n(" + request + ")");
+/******/ 					err.code = "CSS_CHUNK_LOAD_FAILED";
+/******/ 					err.request = request;
+/******/ 					delete installedCssChunks[chunkId]
+/******/ 					linkTag.parentNode.removeChild(linkTag)
+/******/ 					reject(err);
+/******/ 				};
+/******/ 				linkTag.href = fullhref;
+/******/
+/******/ 				var head = document.getElementsByTagName("head")[0]; head.appendChild(linkTag)
+/******/ 			}).then(function() {
+/******/ 				installedCssChunks[chunkId] = 0;
+/******/ 				if(supportsPreload) {
+/******/ 					var execLinkTag = document.createElement("link");
+/******/ 					execLinkTag.href =  __webpack_require__.p + "" + ({"pages/clients":"pages/clients","pages/coupons":"pages/coupons","pages/guests":"pages/guests","pages/index":"pages/index","pages/invoices":"pages/invoices","pages/login":"pages/login","pages/my-account":"pages/my-account","pages/orders":"pages/orders","pages/orders-history":"pages/orders-history","pages/orders-view/_id":"pages/orders-view/_id","pages/product/_slug":"pages/product/_slug","pages/products":"pages/products","pages/search":"pages/search","pages/settings":"pages/settings"}[chunkId]||chunkId) + ".css";
+/******/ 					execLinkTag.rel = "stylesheet";
+/******/ 					execLinkTag.type = "text/css";
+/******/ 					document.body.appendChild(execLinkTag);
+/******/ 				}
+/******/ 			}));
+/******/ 		}
 /******/
 /******/ 		// JSONP chunk loading for javascript
 /******/

@@ -12,7 +12,7 @@ exports.modules = {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
-var render=function render(){var _vm=this,_c=_vm._self._c;return _c("div",{staticClass:"d-flew flex-row"},[_vm._ssrNode('<div class="flex-fill">',"</div>",[_c("SideNav"),_vm._ssrNode(" "),_c("NavTop"),_vm._ssrNode(" "),_c("Search"),_vm._ssrNode(" "),_c("Orders")],2)]);};var staticRenderFns=[];render._withStripped=true;
+var render=function render(){var _vm=this,_c=_vm._self._c;return _c("div",[_c("SideNav"),_vm._ssrNode(" "),_c("NavTop"),_vm._ssrNode(" "),_c("Search"),_vm._ssrNode(" "),_c("Orders")],2);};var staticRenderFns=[];render._withStripped=true;
 
 /***/ }),
 

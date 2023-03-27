@@ -14,11 +14,11 @@
     "_name": "_49212654"
   },
   {
-    "name": "dashboard",
-    "path": "/dashboard",
-    "component": "/Users/manuel/wa/admin.trivicare.com/pages/dashboard.vue",
-    "chunkName": "pages/dashboard",
-    "_name": "_0f21e69d"
+    "name": "guests",
+    "path": "/guests",
+    "component": "/Users/manuel/wa/admin.trivicare.com/pages/guests.vue",
+    "chunkName": "pages/guests",
+    "_name": "_648d363c"
   },
   {
     "name": "invoices",
@@ -49,6 +49,13 @@
     "_name": "_6355852c"
   },
   {
+    "name": "orders-history",
+    "path": "/orders-history",
+    "component": "/Users/manuel/wa/admin.trivicare.com/pages/orders-history.vue",
+    "chunkName": "pages/orders-history",
+    "_name": "_e1fd851a"
+  },
+  {
     "name": "products",
     "path": "/products",
     "component": "/Users/manuel/wa/admin.trivicare.com/pages/products.vue",
@@ -68,6 +75,13 @@
     "component": "/Users/manuel/wa/admin.trivicare.com/pages/settings.vue",
     "chunkName": "pages/settings",
     "_name": "_195c3faa"
+  },
+  {
+    "name": "orders-view-id",
+    "path": "/orders-view/:id?",
+    "component": "/Users/manuel/wa/admin.trivicare.com/pages/orders-view/_id.vue",
+    "chunkName": "pages/orders-view/_id",
+    "_name": "_1fcfb281"
   },
   {
     "name": "product-slug",

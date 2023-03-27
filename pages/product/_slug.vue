@@ -16,9 +16,7 @@
 <script>
 
     export default {
-        auth: false,
-
-        pageTransition: 'slide-fade',
+        auth: true,
 
         
         async asyncData({ store, params }) {

@@ -14,6 +14,9 @@
   "MyAccountContainer": {
     "description": "Auto imported from components/MyAccountContainer.vue"
   },
+  "NavBottom": {
+    "description": "Auto imported from components/NavBottom.vue"
+  },
   "Navigation": {
     "description": "Auto imported from components/Navigation.vue"
   },
@@ -38,11 +41,17 @@
   "TheHeader": {
     "description": "Auto imported from components/TheHeader.vue"
   },
-  "LoadersBigLoader": {
-    "description": "Auto imported from components/loaders/BigLoader.vue"
+  "ClientsGuests": {
+    "description": "Auto imported from components/clients/Guests.vue"
   },
-  "LoadersSmallLoading": {
-    "description": "Auto imported from components/loaders/SmallLoading.vue"
+  "ClientsRegisteds": {
+    "description": "Auto imported from components/clients/Registeds.vue"
+  },
+  "CouponsTable": {
+    "description": "Auto imported from components/coupons/CouponsTable.vue"
+  },
+  "CouponsCreateCoupons": {
+    "description": "Auto imported from components/coupons/CreateCoupons.vue"
   },
   "HeadersNavTop": {
     "description": "Auto imported from components/headers/NavTop.vue"
@@ -53,17 +62,26 @@
   "HeadersSideNav": {
     "description": "Auto imported from components/headers/SideNav.vue"
   },
-  "DashboardAll": {
-    "description": "Auto imported from components/dashboard/All.vue"
+  "LoadersBigLoader": {
+    "description": "Auto imported from components/loaders/BigLoader.vue"
   },
-  "DashboardCoupons": {
-    "description": "Auto imported from components/dashboard/Coupons.vue"
+  "LoadersSmallLoading": {
+    "description": "Auto imported from components/loaders/SmallLoading.vue"
   },
-  "DashboardCreate": {
-    "description": "Auto imported from components/dashboard/Create.vue"
+  "OrdersModalTrack": {
+    "description": "Auto imported from components/orders/ModalTrack.vue"
   },
-  "DashboardEdit": {
-    "description": "Auto imported from components/dashboard/Edit.vue"
+  "OrdersNote": {
+    "description": "Auto imported from components/orders/Note.vue"
+  },
+  "Orders": {
+    "description": "Auto imported from components/orders/Orders.vue"
+  },
+  "OrdersCom": {
+    "description": "Auto imported from components/orders/OrdersCom.vue"
+  },
+  "OrdersHistory": {
+    "description": "Auto imported from components/orders/OrdersHistory.vue"
   },
   "DashboardErrorModal": {
     "description": "Auto imported from components/dashboard/ErrorModal.vue"
@@ -83,11 +101,11 @@
   "DashboardSuccessInvoiceModal": {
     "description": "Auto imported from components/dashboard/SuccessInvoiceModal.vue"
   },
-  "ProfileNewGuest": {
-    "description": "Auto imported from components/profile/NewGuest.vue"
+  "ProductCreateProduct": {
+    "description": "Auto imported from components/product/CreateProduct.vue"
   },
-  "ProfileNewProfile": {
-    "description": "Auto imported from components/profile/NewProfile.vue"
+  "ProductEditProduct": {
+    "description": "Auto imported from components/product/EditProduct.vue"
   },
   "ProductDetailsWrapper": {
     "description": "Auto imported from components/product/ProductDetailsWrapper.vue"
@@ -104,16 +122,19 @@
   "ProductWrapperCosmetics": {
     "description": "Auto imported from components/product/ProductWrapperCosmetics.vue"
   },
-  "OrdersModalTrack": {
-    "description": "Auto imported from components/orders/ModalTrack.vue"
+  "ProductProductsTable": {
+    "description": "Auto imported from components/product/ProductsTable.vue"
   },
-  "OrdersNote": {
-    "description": "Auto imported from components/orders/Note.vue"
+  "InvoicesInvoiceViewer": {
+    "description": "Auto imported from components/invoices/InvoiceViewer.vue"
   },
-  "Orders": {
-    "description": "Auto imported from components/orders/Orders.vue"
+  "InvoicesTable": {
+    "description": "Auto imported from components/invoices/InvoicesTable.vue"
   },
-  "OrdersHistory": {
-    "description": "Auto imported from components/orders/OrdersHistory.vue"
+  "ProfileNewGuest": {
+    "description": "Auto imported from components/profile/NewGuest.vue"
+  },
+  "ProfileNewProfile": {
+    "description": "Auto imported from components/profile/NewProfile.vue"
   }
 }

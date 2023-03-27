@@ -6,14 +6,16 @@ import scrollBehavior from './router.scrollBehavior.js'
 
 const _6a07d051 = () => interopDefault(import('../pages/clients.vue' /* webpackChunkName: "pages/clients" */))
 const _49212654 = () => interopDefault(import('../pages/coupons.vue' /* webpackChunkName: "pages/coupons" */))
-const _0f21e69d = () => interopDefault(import('../pages/dashboard.vue' /* webpackChunkName: "pages/dashboard" */))
+const _648d363c = () => interopDefault(import('../pages/guests.vue' /* webpackChunkName: "pages/guests" */))
 const _7b36e626 = () => interopDefault(import('../pages/invoices.vue' /* webpackChunkName: "pages/invoices" */))
 const _2fd1d972 = () => interopDefault(import('../pages/login.vue' /* webpackChunkName: "pages/login" */))
 const _583d1653 = () => interopDefault(import('../pages/my-account.vue' /* webpackChunkName: "pages/my-account" */))
 const _6355852c = () => interopDefault(import('../pages/orders.vue' /* webpackChunkName: "pages/orders" */))
+const _e1fd851a = () => interopDefault(import('../pages/orders-history.vue' /* webpackChunkName: "pages/orders-history" */))
 const _3706cc6b = () => interopDefault(import('../pages/products.vue' /* webpackChunkName: "pages/products" */))
 const _0adb6e6f = () => interopDefault(import('../pages/search.vue' /* webpackChunkName: "pages/search" */))
 const _195c3faa = () => interopDefault(import('../pages/settings.vue' /* webpackChunkName: "pages/settings" */))
+const _1fcfb281 = () => interopDefault(import('../pages/orders-view/_id.vue' /* webpackChunkName: "pages/orders-view/_id" */))
 const _ca4af21a = () => interopDefault(import('../pages/product/_slug.vue' /* webpackChunkName: "pages/product/_slug" */))
 const _662a365b = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
 
@@ -37,9 +39,9 @@ export const routerOptions = {
     component: _49212654,
     name: "coupons"
   }, {
-    path: "/dashboard",
-    component: _0f21e69d,
-    name: "dashboard"
+    path: "/guests",
+    component: _648d363c,
+    name: "guests"
   }, {
     path: "/invoices",
     component: _7b36e626,
@@ -57,6 +59,10 @@ export const routerOptions = {
     component: _6355852c,
     name: "orders"
   }, {
+    path: "/orders-history",
+    component: _e1fd851a,
+    name: "orders-history"
+  }, {
     path: "/products",
     component: _3706cc6b,
     name: "products"
@@ -68,6 +74,10 @@ export const routerOptions = {
     path: "/settings",
     component: _195c3faa,
     name: "settings"
+  }, {
+    path: "/orders-view/:id?",
+    component: _1fcfb281,
+    name: "orders-view-id"
   }, {
     path: "/product/:slug?",
     component: _ca4af21a,

@@ -12,7 +12,7 @@ exports.modules = {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
-var render=function render(){var _vm=this,_c=_vm._self._c;return _c("div",[_c("SideNav")],1);};var staticRenderFns=[];render._withStripped=true;
+var render=function render(){var _vm=this,_c=_vm._self._c;return _c("div",[_c("SideNav"),_vm._ssrNode(" "),_c("NavTop"),_vm._ssrNode(" "),_c("Search"),_vm._ssrNode(" "),_c("CouponsTable")],2);};var staticRenderFns=[];render._withStripped=true;
 
 /***/ }),
 
@@ -25,7 +25,7 @@ var render=function render(){var _vm=this,_c=_vm._self._c;return _c("div",[_c("S
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ({auth:true,components:{SideNav:()=>Promise.resolve(/*! import() */).then(__webpack_require__.bind(null, /*! @/components/headers/SideNav */ "./components/headers/SideNav.vue"))},head(){return{titleTemplate:'Dashboard'};}});
+/* harmony default export */ __webpack_exports__["default"] = ({auth:true,components:{SideNav:()=>Promise.resolve(/*! import() */).then(__webpack_require__.bind(null, /*! @/components/headers/SideNav */ "./components/headers/SideNav.vue")),NavTop:()=>Promise.resolve(/*! import() */).then(__webpack_require__.bind(null, /*! @/components/headers/NavTop */ "./components/headers/NavTop.vue")),CouponsTable:()=>Promise.resolve(/*! import() */).then(__webpack_require__.bind(null, /*! @/components/coupons/CouponsTable */ "./components/coupons/CouponsTable.vue")),Search:()=>Promise.resolve(/*! import() */).then(__webpack_require__.bind(null, /*! @/components/headers/Search */ "./components/headers/Search.vue"))},head(){return{titleTemplate:'Cupones'};}});
 
 /***/ }),
 
