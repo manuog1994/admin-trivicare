@@ -47,21 +47,15 @@
             async login() {
                 try {
                     const formData = new FormData(this.$refs.loginform);
-                    await this.$auth.loginWith('laravelSanctum', {
+                    await this.$auth.loginWith('laravelJWT', {
                         data: formData
                     }).then(res => {
                         //console.log(res);
-                        //window.location.reload();
-                        this.errors = [];
-                        this.$modal.hide('loginModal');
-                        //this.$notify({ title: 'Bienvenid@ de nuevo!'})
+                        this.$router.push({ path: '/' });
                     });
                 } catch (error) {
                     this.errors = ['El correo electrónico o la contraseña son incorrectos.']; 
-                    //console.log(error.response.data)
-                    this.$axios.post('/api/error-message', {
-                        message: error.response.data.message
-                    })            
+                    console.log(error)         
                 }
             },
 

@@ -25,11 +25,7 @@ var render=function render(){var _vm=this,_c=_vm._self._c;return _c("client-only
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ({middleware:'auth',pageTransition:'slide-fade',components:{Auth:()=>Promise.resolve(/*! import() */).then(__webpack_require__.bind(null, /*! @/components/Auth */ "./components/Auth.vue"))},mounted(){this.$nextTick(()=>{this.$nuxt.$loading.start();setTimeout(()=>{this.$nuxt.$loading.finish();},2000);});var tituloOriginal=document.title;// Lo guardamos para restablecerlo
-window.onblur=function(){// Si el usuario se va a otro lado...
-document.title="Ey, vuelve aquí!";// Cambiamos el título
-};window.onfocus=function(){document.title=tituloOriginal;// Si el usuario vuelve restablecemos el título
-};},data(){return{searchChildren:''};},methods:{closeMenus(){this.searchOpacity(false);this.$root.$emit('closeMenu',this.closeMenu);},searchOpacity(searchFather){if(searchFather==true){document.getElementById("post-nav").classList.add("search-screen");}else{document.getElementById("post-nav").classList.remove("search-screen");}}},head(){return{titleTemplate:"Iniciar sesión / Regístrate | TriviCare Natural Cosmetics"// link: [
+/* harmony default export */ __webpack_exports__["default"] = ({auth:false,components:{Auth:()=>Promise.resolve(/*! import() */).then(__webpack_require__.bind(null, /*! @/components/Auth */ "./components/Auth.vue"))},data(){return{searchChildren:''};},methods:{closeMenus(){this.searchOpacity(false);this.$root.$emit('closeMenu',this.closeMenu);},searchOpacity(searchFather){if(searchFather==true){document.getElementById("post-nav").classList.add("search-screen");}else{document.getElementById("post-nav").classList.remove("search-screen");}}},head(){return{titleTemplate:"Iniciar sesión | Admin"// link: [
 //     { rel: 'cannonical', href: 'https://trivicare.com/login'},
 // ],
 };}});

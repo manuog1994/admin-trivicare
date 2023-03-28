@@ -1,6 +1,7 @@
 {
   "entry": "server.js",
   "files": {
+    "0.js": "0.js",
     "pages/clients.js": "pages/clients.js",
     "pages/coupons.js": "pages/coupons.js",
     "pages/guests.js": "pages/guests.js",
@@ -13,6 +14,7 @@
     "pages/orders.js": "pages/orders.js",
     "pages/product/_slug.js": "pages/product/_slug.js",
     "pages/products.js": "pages/products.js",
+    "pages/reviews.js": "pages/reviews.js",
     "pages/search.js": "pages/search.js",
     "pages/settings.js": "pages/settings.js",
     "server.js": "server.js"

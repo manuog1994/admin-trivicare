@@ -167,7 +167,7 @@ const render404Page = () => {
   /*
   ** Call global middleware (nuxt.config.js)
   */
-  let midd = ["auth","role"]
+  let midd = ["admin"]
     midd = midd.map((name) => {
       if (typeof name === 'function') {
         return name

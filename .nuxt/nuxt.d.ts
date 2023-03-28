@@ -9,6 +9,7 @@
 /// <reference types="@nuxtjs/auth-next" />
 /// <reference types="cookie-universal-nuxt" />
 /// <reference types="@nuxtjs/pwa" />
+/// <reference types="@nuxtjs/google-analytics" />
 /// <reference types="@nuxt/components" />
 /// <reference path="types/components.d.ts" />
 /// <reference path="types/schema.d.ts" />

@@ -1,6 +1,6 @@
 const middleware = {}
 
-middleware['role'] = require('../middleware/role.js')
-middleware['role'] = middleware['role'].default || middleware['role']
+middleware['admin'] = require('../middleware/admin.js')
+middleware['admin'] = middleware['admin'].default || middleware['admin']
 
 export default middleware

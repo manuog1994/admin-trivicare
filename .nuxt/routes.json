@@ -63,6 +63,13 @@
     "_name": "_3706cc6b"
   },
   {
+    "name": "reviews",
+    "path": "/reviews",
+    "component": "/Users/manuel/wa/admin.trivicare.com/pages/reviews.vue",
+    "chunkName": "pages/reviews",
+    "_name": "_751e0638"
+  },
+  {
     "name": "search",
     "path": "/search",
     "component": "/Users/manuel/wa/admin.trivicare.com/pages/search.vue",

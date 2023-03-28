@@ -2,7 +2,7 @@ import Middleware from './middleware'
 import { Auth, authMiddleware, ExpiredAuthSessionError } from '~auth/runtime'
 
 // Active schemes
-import { CookieScheme } from '~auth/runtime'
+import { LaravelJWTScheme } from '~auth/runtime'
 
 Middleware.auth = authMiddleware
 
@@ -33,63 +33,55 @@ export default function (ctx, inject) {
   "localStorage": {
     "prefix": "auth."
   },
-  "defaultStrategy": "laravelSanctum"
+  "defaultStrategy": "laravelJWT"
 }
 
   // Create a new Auth instance
   const $auth = new Auth(ctx, options)
 
   // Register strategies
-  // laravelSanctum
-  $auth.registerStrategy('laravelSanctum', new CookieScheme($auth, {
+  // laravelJWT
+  $auth.registerStrategy('laravelJWT', new LaravelJWTScheme($auth, {
   "url": "http://localhost:8000",
   "endpoints": {
-    "csrf": {
-      "withCredentials": true,
-      "headers": {
-        "X-Requested-With": "XMLHttpRequest",
-        "Content-Type": "application/json",
-        "Accept": "application/json"
-      },
-      "url": "http://localhost:8000/sanctum/csrf-cookie"
-    },
     "login": {
-      "withCredentials": true,
-      "headers": {
-        "X-Requested-With": "XMLHttpRequest",
-        "Content-Type": "application/json",
-        "Accept": "application/json"
-      },
-      "url": "http://localhost:8000/login",
+      "url": "http://localhost:8000/api/auth/login",
+      "method": "post"
+    },
+    "refresh": {
+      "url": "http://localhost:8000/api/auth/refresh",
       "method": "post"
     },
     "logout": {
-      "withCredentials": true,
-      "headers": {
-        "X-Requested-With": "XMLHttpRequest",
-        "Content-Type": "application/json",
-        "Accept": "application/json"
-      },
-      "url": "http://localhost:8000/logout"
+      "url": "http://localhost:8000/api/auth/logout",
+      "method": "post"
     },
     "user": {
-      "withCredentials": true,
-      "headers": {
-        "X-Requested-With": "XMLHttpRequest",
-        "Content-Type": "application/json",
-        "Accept": "application/json"
-      },
-      "url": "http://localhost:8000/api/user"
+      "url": "http://localhost:8000/api/auth/me",
+      "method": "get"
     },
-    "refresh": false
+    "redirect": {
+      "login": "/",
+      "logout": "/login"
+    }
   },
-  "name": "laravelSanctum",
-  "cookie": {
-    "name": "XSRF-TOKEN"
+  "token": {
+    "property": "access_token",
+    "maxAge": 3600
   },
+  "refreshToken": {
+    "property": false,
+    "data": false,
+    "maxAge": 1209600,
+    "required": false,
+    "tokenRequired": true
+  },
+  "name": "laravelJWT",
   "user": {
     "property": false
-  }
+  },
+  "clientId": false,
+  "grantType": false
 }))
 
   // Inject it to nuxt context as $auth

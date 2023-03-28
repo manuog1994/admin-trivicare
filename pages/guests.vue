@@ -10,9 +10,7 @@
 <script>
 
     export default {
-        auth: true,
-
-        components: {
+       components: {
             SideNav: () => import("@/components/headers/SideNav"),
             NavTop: () => import("@/components/headers/NavTop"),
             Search: () => import("@/components/headers/Search"),

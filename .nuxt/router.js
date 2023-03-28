@@ -13,6 +13,7 @@ const _583d1653 = () => interopDefault(import('../pages/my-account.vue' /* webpa
 const _6355852c = () => interopDefault(import('../pages/orders.vue' /* webpackChunkName: "pages/orders" */))
 const _e1fd851a = () => interopDefault(import('../pages/orders-history.vue' /* webpackChunkName: "pages/orders-history" */))
 const _3706cc6b = () => interopDefault(import('../pages/products.vue' /* webpackChunkName: "pages/products" */))
+const _751e0638 = () => interopDefault(import('../pages/reviews.vue' /* webpackChunkName: "pages/reviews" */))
 const _0adb6e6f = () => interopDefault(import('../pages/search.vue' /* webpackChunkName: "pages/search" */))
 const _195c3faa = () => interopDefault(import('../pages/settings.vue' /* webpackChunkName: "pages/settings" */))
 const _1fcfb281 = () => interopDefault(import('../pages/orders-view/_id.vue' /* webpackChunkName: "pages/orders-view/_id" */))
@@ -66,6 +67,10 @@ export const routerOptions = {
     path: "/products",
     component: _3706cc6b,
     name: "products"
+  }, {
+    path: "/reviews",
+    component: _751e0638,
+    name: "reviews"
   }, {
     path: "/search",
     component: _0adb6e6f,

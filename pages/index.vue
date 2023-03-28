@@ -3,18 +3,22 @@
         <SideNav />
         <NavTop />
         <Search />
+        <div class="main overflow-auto">
+            <GraphicMonths />
+            <DonutsProducts />
+        </div>
     </div>
 </template>
 
 <script>
 
     export default {
-        auth: true,
-
         components: {
             SideNav: () => import("@/components/headers/SideNav"),
             NavTop: () => import("@/components/headers/NavTop"),
             Search: () => import("@/components/headers/Search"),
+            GraphicMonths: () => import("@/components/dashboard/GraphicMonths"),
+            DonutsProducts: () => import("@/components/dashboard/DonutsProducts"),
         },
 
 

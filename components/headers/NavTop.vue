@@ -15,23 +15,26 @@
 
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav d-md-none">
-                    <li class="nav-item">
+                    <li class="nav-item-top">
                         <n-link class="nav-link active" aria-current="page" to="/">Dashboard</n-link>
                     </li>
-                    <li class="nav-item">
-                        <n-link class="nav-link" to="/orders">Pedidos</n-link>
+                    <li class="nav-item-top">
+                        <n-link class="nav-link-top" to="/orders">Pedidos</n-link>
                     </li>
-                    <li class="nav-item">
-                        <n-link class="nav-link" to="/products">Productos</n-link>
+                    <li class="nav-item-top">
+                        <n-link class="nav-link-top" to="/products">Productos</n-link>
                     </li>
-                    <li class="nav-item">
-                        <n-link class="nav-link" to="/clients">Clientes</n-link>
+                    <li class="nav-item-top">
+                        <n-link class="nav-link-top" to="/clients">Clientes</n-link>
                     </li>
-                    <li class="nav-item">
-                        <n-link class="nav-link" to="/invoices">Facturas</n-link>
+                    <li class="nav-item-top">
+                        <n-link class="nav-link-top" to="/invoices">Facturas</n-link>
                     </li>
-                    <li class="nav-item">
-                        <n-link class="nav-link" to="/coupons">Cupones</n-link>
+                    <li class="nav-item-top">
+                        <n-link class="nav-link-top" to="/coupons">Cupones</n-link>
+                    </li>
+                    <li class="nav-item-top">
+                        <n-link class="nav-link-top" to="/reviews">Valoraciones</n-link>
                     </li>
                 </ul>
             </div>
@@ -69,6 +72,28 @@ export default {
         width: 100%;
         margin-left: 0;
     }
+}
+
+.nav-link {
+	display: block;
+	padding: 10px;
+    margin-left: 0.5rem;
+	color: #333;
+	text-decoration: none;
+}
+
+.nav-link-top.active {
+    background-color: #fff;
+    color: #333;
+    margin: 0.2rem;
+    padding-left: 1rem;
+    border-radius: 5px;
+}
+.nav-link-top:hover {
+	color: #333;
+    margin-left: 0.5rem;
+    scale: 1.1;
+    transition: all 0.3s ease;
 }
 
 

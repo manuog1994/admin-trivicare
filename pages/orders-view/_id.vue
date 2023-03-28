@@ -9,9 +9,7 @@
 <script>
 
 export default {
-    auth: true,
-
-    components: {
+   components: {
         OrdersCom: () => import('@/components/orders/OrdersCom'),
     },
 

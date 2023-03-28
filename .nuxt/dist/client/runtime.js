@@ -113,7 +113,7 @@
 /******/
 /******/ 	var hotApplyOnUpdate = true;
 /******/ 	// eslint-disable-next-line no-unused-vars
-/******/ 	var hotCurrentHash = "3c1341077ca30fa27217";
+/******/ 	var hotCurrentHash = "0e262943108dd99705d5";
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule;
@@ -835,7 +835,7 @@
 /******/
 /******/ 	// script path function
 /******/ 	function jsonpScriptSrc(chunkId) {
-/******/ 		return __webpack_require__.p + "" + ({"pages/clients":"pages/clients","pages/coupons":"pages/coupons","pages/guests":"pages/guests","pages/index":"pages/index","pages/invoices":"pages/invoices","pages/login":"pages/login","pages/my-account":"pages/my-account","pages/orders":"pages/orders","pages/orders-history":"pages/orders-history","pages/orders-view/_id":"pages/orders-view/_id","pages/product/_slug":"pages/product/_slug","pages/products":"pages/products","pages/search":"pages/search","pages/settings":"pages/settings"}[chunkId]||chunkId) + ".js"
+/******/ 		return __webpack_require__.p + "" + ({"pages/clients":"pages/clients","pages/coupons":"pages/coupons","pages/guests":"pages/guests","pages/index":"pages/index","pages/invoices":"pages/invoices","pages/login":"pages/login","pages/my-account":"pages/my-account","pages/orders":"pages/orders","pages/orders-history":"pages/orders-history","pages/orders-view/_id":"pages/orders-view/_id","pages/product/_slug":"pages/product/_slug","pages/products":"pages/products","pages/reviews":"pages/reviews","pages/search":"pages/search","pages/settings":"pages/settings"}[chunkId]||chunkId) + ".js"
 /******/ 	}
 /******/
 /******/ 	// The require function
@@ -877,7 +877,7 @@
 /******/ 		if(installedCssChunks[chunkId]) promises.push(installedCssChunks[chunkId]);
 /******/ 		else if(installedCssChunks[chunkId] !== 0 && cssChunks[chunkId]) {
 /******/ 			promises.push(installedCssChunks[chunkId] = new Promise(function(resolve, reject) {
-/******/ 				var href = "" + ({"pages/clients":"pages/clients","pages/coupons":"pages/coupons","pages/guests":"pages/guests","pages/index":"pages/index","pages/invoices":"pages/invoices","pages/login":"pages/login","pages/my-account":"pages/my-account","pages/orders":"pages/orders","pages/orders-history":"pages/orders-history","pages/orders-view/_id":"pages/orders-view/_id","pages/product/_slug":"pages/product/_slug","pages/products":"pages/products","pages/search":"pages/search","pages/settings":"pages/settings"}[chunkId]||chunkId) + ".css";
+/******/ 				var href = "" + ({"pages/clients":"pages/clients","pages/coupons":"pages/coupons","pages/guests":"pages/guests","pages/index":"pages/index","pages/invoices":"pages/invoices","pages/login":"pages/login","pages/my-account":"pages/my-account","pages/orders":"pages/orders","pages/orders-history":"pages/orders-history","pages/orders-view/_id":"pages/orders-view/_id","pages/product/_slug":"pages/product/_slug","pages/products":"pages/products","pages/reviews":"pages/reviews","pages/search":"pages/search","pages/settings":"pages/settings"}[chunkId]||chunkId) + ".css";
 /******/ 				var fullhref = __webpack_require__.p + href;
 /******/ 				var existingLinkTags = document.getElementsByTagName("link");
 /******/ 				for(var i = 0; i < existingLinkTags.length; i++) {
@@ -911,7 +911,7 @@
 /******/ 				installedCssChunks[chunkId] = 0;
 /******/ 				if(supportsPreload) {
 /******/ 					var execLinkTag = document.createElement("link");
-/******/ 					execLinkTag.href =  __webpack_require__.p + "" + ({"pages/clients":"pages/clients","pages/coupons":"pages/coupons","pages/guests":"pages/guests","pages/index":"pages/index","pages/invoices":"pages/invoices","pages/login":"pages/login","pages/my-account":"pages/my-account","pages/orders":"pages/orders","pages/orders-history":"pages/orders-history","pages/orders-view/_id":"pages/orders-view/_id","pages/product/_slug":"pages/product/_slug","pages/products":"pages/products","pages/search":"pages/search","pages/settings":"pages/settings"}[chunkId]||chunkId) + ".css";
+/******/ 					execLinkTag.href =  __webpack_require__.p + "" + ({"pages/clients":"pages/clients","pages/coupons":"pages/coupons","pages/guests":"pages/guests","pages/index":"pages/index","pages/invoices":"pages/invoices","pages/login":"pages/login","pages/my-account":"pages/my-account","pages/orders":"pages/orders","pages/orders-history":"pages/orders-history","pages/orders-view/_id":"pages/orders-view/_id","pages/product/_slug":"pages/product/_slug","pages/products":"pages/products","pages/reviews":"pages/reviews","pages/search":"pages/search","pages/settings":"pages/settings"}[chunkId]||chunkId) + ".css";
 /******/ 					execLinkTag.rel = "stylesheet";
 /******/ 					execLinkTag.type = "text/css";
 /******/ 					document.body.appendChild(execLinkTag);

@@ -4,6 +4,7 @@ export default defineNuxtConfig({
         color: '#2AB5B2',
         height: '5px',
     },
+
     generate: {
         fallback: true
     },
@@ -46,7 +47,6 @@ export default defineNuxtConfig({
         '~/plugins/observe-visibility.js',
         '~/plugins/persistedState.client.js',
         '~/plugins/vue-progress-path.js',
-        '~/plugins/chart.js',
         { 
             src: '~/plugins/bootstrap-vue',
             mode: 'client'
@@ -100,18 +100,42 @@ export default defineNuxtConfig({
         ['@nuxtjs/component-cache', { maxAge: 1000 * 60 * 60 * 24 * 14 }],
         'cookie-universal-nuxt',
         '@nuxtjs/pwa',
+        '@nuxtjs/google-analytics'
     ],
+
+    googleAnalytics: {
+        id: 'G-6FYD0CCL8E'
+    },
 
     auth: {
         strategies: {
-            laravelSanctum: {
-                provider: 'laravel/sanctum',
+            laravelJWT: {
+                provider: 'laravelJWT',
                 url: process.env.BASE_URL || 'http://localhost:8000',
                 endpoints: {
                     login: {
-                        url: '/login', method: 'post'
+                        url: '/api/auth/login', method: 'post'
                     },
-                    refresh: false,
+                    logout: {
+                        url: '/api/auth/logout', method: 'post'
+                    },
+                    refresh: {
+                        url: '/api/auth/refresh', method: 'post'
+                    },
+                    user: {
+                        url: '/api/auth/me', method: 'get'
+                    },
+                    redirect: {
+                        login: '/',
+                        logout: '/login',
+                    },
+                },
+                token: {
+                    property: 'access_token',
+                    maxAge: 60 * 60
+                },
+                refreshToken: {
+                    maxAge: 20160 * 60
                 },
             },
 
@@ -125,7 +149,7 @@ export default defineNuxtConfig({
 
 
     router: {
-        middleware: ['auth', 'role'],
+        middleware: ['admin'],
     },
       
     pageTransition: {
@@ -155,12 +179,7 @@ export default defineNuxtConfig({
 
     env: {
         baseUrl: process.env.BASE_URL || 'http://localhost:8000',
-        googleAnalyticsId: process.env.GOOGLE_ANALYTICS_ID,
-        stripeKey: process.env.STRIPE_PK,
         url: process.env.URL || 'http://localhost:3000',
-        googleClientId: process.env.GOOGLE_CLIENT_ID,
-        universalToken: process.env.UNIVERSAL_TOKEN,
-        url_getnet: process.env.URL_GETNET,
     },
 
     image: {

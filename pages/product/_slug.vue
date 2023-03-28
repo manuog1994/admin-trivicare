@@ -16,9 +16,6 @@
 <script>
 
     export default {
-        auth: true,
-
-        
         async asyncData({ store, params }) {
             try {
                 const productDispatch = await store.dispatch('getProducts', {

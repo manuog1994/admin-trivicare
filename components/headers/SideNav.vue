@@ -66,6 +66,12 @@ export default {
                         Cupones
                     </n-link>
                 </li>
+                <li class="nav-item">
+                    <n-link class="nav-link" :class="{'active': isActive == '/reviews'}" to="/reviews">
+                        <i class="fa fa-star icon-list"></i>
+                        Valoraciones
+                    </n-link>
+                </li>
             </ul>
         </div>
         <!-- Botón para cerrar la sesión posicionado al final de la barra -->

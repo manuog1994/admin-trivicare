@@ -25,7 +25,7 @@ var render=function render(){var _vm=this,_c=_vm._self._c;return _c("div",[_c("S
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ({auth:true,components:{SideNav:()=>Promise.resolve(/*! import() */).then(__webpack_require__.bind(null, /*! @/components/headers/SideNav.vue */ "./components/headers/SideNav.vue")),Orders:()=>Promise.resolve(/*! import() */).then(__webpack_require__.bind(null, /*! @/components/orders/Orders.vue */ "./components/orders/Orders.vue")),Search:()=>Promise.resolve(/*! import() */).then(__webpack_require__.bind(null, /*! @/components/headers/Search.vue */ "./components/headers/Search.vue")),NavTop:()=>Promise.resolve(/*! import() */).then(__webpack_require__.bind(null, /*! @/components/headers/NavTop.vue */ "./components/headers/NavTop.vue"))}});
+/* harmony default export */ __webpack_exports__["default"] = ({components:{SideNav:()=>Promise.resolve(/*! import() */).then(__webpack_require__.bind(null, /*! @/components/headers/SideNav.vue */ "./components/headers/SideNav.vue")),Orders:()=>Promise.resolve(/*! import() */).then(__webpack_require__.bind(null, /*! @/components/orders/Orders.vue */ "./components/orders/Orders.vue")),Search:()=>Promise.resolve(/*! import() */).then(__webpack_require__.bind(null, /*! @/components/headers/Search.vue */ "./components/headers/Search.vue")),NavTop:()=>Promise.resolve(/*! import() */).then(__webpack_require__.bind(null, /*! @/components/headers/NavTop.vue */ "./components/headers/NavTop.vue"))}});
 
 /***/ }),
 

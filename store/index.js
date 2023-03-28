@@ -34,9 +34,7 @@ export const state = () => ({
     invoice_paper: false,
     note: '',
     newUserAddress: false,
-    bizumPage: false,
-    paypalPage: false,
-    transferBankPage: false,
+    buttonLogin: true
 })
 
 

@@ -199,7 +199,7 @@ export async function setContext (app, context) {
       payload: context.payload,
       error: context.error,
       base: app.router.options.base,
-      env: {"baseUrl":"http://localhost:8000","googleAnalyticsId":"G-6FYD0CCL8E","stripeKey":"pk_test_51M7hp1JHUqdFIZqmVk4sv7dtIe4N9zVPLxRu3DU6moGliUBJqxu5KUlESl07jLb2eowUB7hGCh4cCSHiWayluIeY00UJebhW39","url":"http://localhost:3000","googleClientId":"288482289152-9vv449mbp2s6fccoj7dbcbjp8g2g2bp0.apps.googleusercontent.com","universalToken":"uWXD5FxCRrP3PvBccY_DOlKx68nXE4jrCJAji4fvTK0wSDBMutn63In8bt_zHqo_jUY","url_getnet":"https://sis-t.redsys.es:25443/sis/realizarPago","URL":"http://localhost:3000","BASE_URL":"http://localhost:8000"}
+      env: {"baseUrl":"http://localhost:8000","url":"http://localhost:3000","URL":"http://localhost:3000","BASE_URL":"http://localhost:8000"}
     }
     // Only set once
 

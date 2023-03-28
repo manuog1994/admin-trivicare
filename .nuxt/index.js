@@ -18,6 +18,7 @@ import nuxt_plugin_appplugin_f5b631a2 from 'nuxt_plugin_appplugin_f5b631a2' // S
 import nuxt_plugin_configplugin_ecc79400 from 'nuxt_plugin_configplugin_ecc79400' // Source: ../node_modules/@nuxt/bridge/dist/runtime/config.plugin.mjs (mode: 'all')
 import nuxt_plugin_nitrobridgeserver_4f7f7077 from 'nuxt_plugin_nitrobridgeserver_4f7f7077' // Source: ./nitro-bridge.server.mjs (mode: 'server')
 import nuxt_plugin_nitrobridgeclient_03ea9e02 from 'nuxt_plugin_nitrobridgeclient_03ea9e02' // Source: ./nitro-bridge.client.mjs (mode: 'client')
+import nuxt_plugin_googleanalytics_6da6c663 from 'nuxt_plugin_googleanalytics_6da6c663' // Source: ./google-analytics.js (mode: 'client')
 import nuxt_plugin_workbox_d18cc382 from 'nuxt_plugin_workbox_d18cc382' // Source: ./workbox.js (mode: 'client')
 import nuxt_plugin_metaplugin_6e27935c from 'nuxt_plugin_metaplugin_6e27935c' // Source: ./pwa/meta.plugin.js (mode: 'all')
 import nuxt_plugin_iconplugin_64d84874 from 'nuxt_plugin_iconplugin_64d84874' // Source: ./pwa/icon.plugin.js (mode: 'all')
@@ -32,7 +33,6 @@ import nuxt_plugin_vuejspagiante_7edc93b2 from 'nuxt_plugin_vuejspagiante_7edc93
 import nuxt_plugin_observevisibility_b986de04 from 'nuxt_plugin_observevisibility_b986de04' // Source: ../plugins/observe-visibility.js (mode: 'all')
 import nuxt_plugin_persistedStateclient_3b127e9c from 'nuxt_plugin_persistedStateclient_3b127e9c' // Source: ../plugins/persistedState.client.js (mode: 'client')
 import nuxt_plugin_vueprogresspath_0eff6422 from 'nuxt_plugin_vueprogresspath_0eff6422' // Source: ../plugins/vue-progress-path.js (mode: 'all')
-import nuxt_plugin_chart_48b5b2cf from 'nuxt_plugin_chart_48b5b2cf' // Source: ../plugins/chart.js (mode: 'all')
 import nuxt_plugin_bootstrapvue_928a4c1e from 'nuxt_plugin_bootstrapvue_928a4c1e' // Source: ../plugins/bootstrap-vue (mode: 'client')
 import nuxt_plugin_vuetype_d25ba400 from 'nuxt_plugin_vuetype_d25ba400' // Source: ../plugins/vue-type.js (mode: 'client')
 import nuxt_plugin_vuestarrating_daf07ac8 from 'nuxt_plugin_vuestarrating_daf07ac8' // Source: ../plugins/vue-star-rating.js (mode: 'client')
@@ -257,6 +257,10 @@ async function createApp(ssrContext, config = {}) {
     await nuxt_plugin_nitrobridgeclient_03ea9e02(app.context, inject)
   }
 
+  if (process.client && typeof nuxt_plugin_googleanalytics_6da6c663 === 'function') {
+    await nuxt_plugin_googleanalytics_6da6c663(app.context, inject)
+  }
+
   if (process.client && typeof nuxt_plugin_workbox_d18cc382 === 'function') {
     await nuxt_plugin_workbox_d18cc382(app.context, inject)
   }
@@ -311,10 +315,6 @@ async function createApp(ssrContext, config = {}) {
 
   if (typeof nuxt_plugin_vueprogresspath_0eff6422 === 'function') {
     await nuxt_plugin_vueprogresspath_0eff6422(app.context, inject)
-  }
-
-  if (typeof nuxt_plugin_chart_48b5b2cf === 'function') {
-    await nuxt_plugin_chart_48b5b2cf(app.context, inject)
   }
 
   if (process.client && typeof nuxt_plugin_bootstrapvue_928a4c1e === 'function') {

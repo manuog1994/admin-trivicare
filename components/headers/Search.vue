@@ -13,7 +13,7 @@
                 <div class="col-12">
                     <div class="position-relative">
                         <div id="search-box" class="search-box" :class="{'active' : hidden == false}">
-                            <div class="box-products" v-for="result in resultsMin" :key="result.id">
+                            <div class="box-products" v-for="result in results" :key="result.id">
                                 <a :href="url + '/orders-view/' + result.id" class="single-product">
                                     <div class="row w-100">
                                         <div class="col-6">
@@ -24,15 +24,6 @@
                                         </div>
                                     </div>
                                 </a>
-                            </div>
-                            <div v-if="results?.length > 6" class="box-products bg-trivi-purple">
-                                <button @click="$router.push({path: '/search?', query: search})" class="single-product">
-                                    <div class="row w-100">
-                                        <div class="col-12 text-center">
-                                            <span>Ver todos los resultados</span>
-                                        </div>
-                                    </div>
-                                </button>
                             </div>
                         </div>
                     </div>
@@ -57,7 +48,7 @@
         top: 45%;
         left: 0;
         width: 100%;
-        height: max-content;
+        height: 300px;
         scroll-margin-right: 5px;
         scroll-behavior: auto;
         background: #fff;
@@ -68,16 +59,15 @@
         visibility: hidden;
         &.active {
             visibility: visible;
+            overflow-y: scroll;
         }
     }
 
-    .box-products {
+    .search-box.box-products {
         position: relative;
         display: flex;
         justify-content: center;
-        width: auto;
         margin-bottom: 10px;
-        z-index: 1000;
     }
 
     .single-product{
@@ -91,7 +81,6 @@
         padding: 10px;
         border-radius: 5px;
         z-index: 1001;
-        transition: all 0.3s ease;
         &:hover {
             background: #f5f5f5;
         }

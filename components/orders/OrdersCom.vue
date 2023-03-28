@@ -18,6 +18,7 @@
                     <p>Estado de pago: <strong>{{ getPaymentState(order) }}</strong></p>
                     <p>Método de pago: <strong>{{ order.payment_method }}</strong></p>
                     <p>Método de envío: <strong>{{ order.shipping_method }}</strong></p>
+                    <p v-if="order?.shipping_method == 'pickup-point' && order.pickup_point != null">Punto de recogida: <strong>{{ order.pickup_point }}</strong></p>
                 </div>
                 <div class="col-lg-4 mb-4">
                     <h4>Datos del cliente</h4>

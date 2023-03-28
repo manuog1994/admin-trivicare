@@ -1,7 +1,12 @@
 <template>
     <div>
-        <div class="main" v-if="!pdfViewer">
+        <div class="main" v-if="!newInvoice">
             <div>
+                <div v-if="selectedInvoices?.length == 0" class="d-flex justify-content-end">
+                    <button @click="newInvoice = true" class="btn bg-trivi-red text-white mb-2">
+                        <i class="fa fa-plus"></i>
+                    </button>
+                </div>
                 <div v-if="selectedInvoices?.length > 0" class="d-flex justify-content-end">
                     <button @click="downloadZip" class="btn bg-trivi-green text-white mb-2">
                         <i class="fa fa-download"></i>
@@ -95,10 +100,10 @@
                             <td>{{ invoice.order?.user_profile?.name == 'Guest' ? invoice.order?.guest?.name : invoice.order?.user_profile?.name }} {{ invoice.order?.user_profile?.lastname == 'Guest' ? invoice.order?.guest?.lastname : invoice.order?.user_profile?.lastname }}</td>
                             <td>{{ formatDate(invoice.created_at) }}</td>
                             <td>
-                                <a @click.prevent="changeView(invoice.id)" class="p-2">
+                                <!-- <a @click.prevent="changeView(invoice.id)" class="p-2">
                                     <i class="pe-7s-look"></i>
-                                </a>
-                                <a @click.prevent="getUrl(invoice)" class="p-2">
+                                </a> -->
+                                <a @click.prevent="getUrl(invoice)" class="btn bg-trivi-orange">
                                     <i class="pe-7s-download"></i>
                                 </a>
                             </td>
@@ -118,6 +123,7 @@
             </div>
         </div>
         <InvoiceViewer v-if="pdfViewer" :id="id" />
+        <NewInvoice v-if="newInvoice" />
     </div>
 </template>
 
@@ -138,7 +144,14 @@ export default {
             perPage: 10,
             pdfViewer: false,
             id: '',
+            newInvoice: false,
         }
+    },
+
+    beforeMount() {
+        this.$root.$on('closeNewInvoice', (data) => {
+            this.newInvoice = data;
+        });
     },
 
     mounted() {
@@ -147,6 +160,7 @@ export default {
 
     components: {
         InvoiceViewer: () => import('@/components/invoices/InvoiceViewer.vue'),
+        NewInvoice: () => import('@/components/invoices/NewInvoice.vue'),
     },
 
     computed: {
