@@ -17,20 +17,20 @@ declare module 'vue' {
     'TheHeader': typeof import("../components/TheHeader.vue")['default'],
     'ClientsGuests': typeof import("../components/clients/Guests.vue")['default'],
     'ClientsRegisteds': typeof import("../components/clients/Registeds.vue")['default'],
+    'CouponsTable': typeof import("../components/coupons/CouponsTable.vue")['default'],
+    'CouponsCreateCoupons': typeof import("../components/coupons/CreateCoupons.vue")['default'],
     'DashboardAnalyticsGoogle': typeof import("../components/dashboard/AnalyticsGoogle.vue")['default'],
     'DashboardDonutsProducts': typeof import("../components/dashboard/DonutsProducts.vue")['default'],
     'DashboardGraphicMonths': typeof import("../components/dashboard/GraphicMonths.vue")['default'],
-    'CouponsTable': typeof import("../components/coupons/CouponsTable.vue")['default'],
-    'CouponsCreateCoupons': typeof import("../components/coupons/CreateCoupons.vue")['default'],
+    'HeadersNavTop': typeof import("../components/headers/NavTop.vue")['default'],
+    'HeadersResults': typeof import("../components/headers/Results.vue")['default'],
+    'HeadersSearch': typeof import("../components/headers/Search.vue")['default'],
+    'HeadersSideNav': typeof import("../components/headers/SideNav.vue")['default'],
     'InvoicesErrorModal': typeof import("../components/invoices/ErrorModal.vue")['default'],
     'InvoicesInvoiceViewer': typeof import("../components/invoices/InvoiceViewer.vue")['default'],
     'InvoicesTable': typeof import("../components/invoices/InvoicesTable.vue")['default'],
     'InvoicesNewInvoice': typeof import("../components/invoices/NewInvoice.vue")['default'],
     'InvoicesSuccessInvoiceModal': typeof import("../components/invoices/SuccessInvoiceModal.vue")['default'],
-    'HeadersNavTop': typeof import("../components/headers/NavTop.vue")['default'],
-    'HeadersResults': typeof import("../components/headers/Results.vue")['default'],
-    'HeadersSearch': typeof import("../components/headers/Search.vue")['default'],
-    'HeadersSideNav': typeof import("../components/headers/SideNav.vue")['default'],
     'LoadersBigLoader': typeof import("../components/loaders/BigLoader.vue")['default'],
     'LoadersSmallLoading': typeof import("../components/loaders/SmallLoading.vue")['default'],
     'OrdersModalTrack': typeof import("../components/orders/ModalTrack.vue")['default'],
@@ -66,20 +66,20 @@ declare module 'vue' {
     'LazyTheHeader': typeof import("../components/TheHeader.vue")['default'],
     'LazyClientsGuests': typeof import("../components/clients/Guests.vue")['default'],
     'LazyClientsRegisteds': typeof import("../components/clients/Registeds.vue")['default'],
+    'LazyCouponsTable': typeof import("../components/coupons/CouponsTable.vue")['default'],
+    'LazyCouponsCreateCoupons': typeof import("../components/coupons/CreateCoupons.vue")['default'],
     'LazyDashboardAnalyticsGoogle': typeof import("../components/dashboard/AnalyticsGoogle.vue")['default'],
     'LazyDashboardDonutsProducts': typeof import("../components/dashboard/DonutsProducts.vue")['default'],
     'LazyDashboardGraphicMonths': typeof import("../components/dashboard/GraphicMonths.vue")['default'],
-    'LazyCouponsTable': typeof import("../components/coupons/CouponsTable.vue")['default'],
-    'LazyCouponsCreateCoupons': typeof import("../components/coupons/CreateCoupons.vue")['default'],
+    'LazyHeadersNavTop': typeof import("../components/headers/NavTop.vue")['default'],
+    'LazyHeadersResults': typeof import("../components/headers/Results.vue")['default'],
+    'LazyHeadersSearch': typeof import("../components/headers/Search.vue")['default'],
+    'LazyHeadersSideNav': typeof import("../components/headers/SideNav.vue")['default'],
     'LazyInvoicesErrorModal': typeof import("../components/invoices/ErrorModal.vue")['default'],
     'LazyInvoicesInvoiceViewer': typeof import("../components/invoices/InvoiceViewer.vue")['default'],
     'LazyInvoicesTable': typeof import("../components/invoices/InvoicesTable.vue")['default'],
     'LazyInvoicesNewInvoice': typeof import("../components/invoices/NewInvoice.vue")['default'],
     'LazyInvoicesSuccessInvoiceModal': typeof import("../components/invoices/SuccessInvoiceModal.vue")['default'],
-    'LazyHeadersNavTop': typeof import("../components/headers/NavTop.vue")['default'],
-    'LazyHeadersResults': typeof import("../components/headers/Results.vue")['default'],
-    'LazyHeadersSearch': typeof import("../components/headers/Search.vue")['default'],
-    'LazyHeadersSideNav': typeof import("../components/headers/SideNav.vue")['default'],
     'LazyLoadersBigLoader': typeof import("../components/loaders/BigLoader.vue")['default'],
     'LazyLoadersSmallLoading': typeof import("../components/loaders/SmallLoading.vue")['default'],
     'LazyOrdersModalTrack': typeof import("../components/orders/ModalTrack.vue")['default'],
@@ -117,20 +117,20 @@ export const TheFooter: typeof import("../components/TheFooter.vue")['default']
 export const TheHeader: typeof import("../components/TheHeader.vue")['default']
 export const ClientsGuests: typeof import("../components/clients/Guests.vue")['default']
 export const ClientsRegisteds: typeof import("../components/clients/Registeds.vue")['default']
+export const CouponsTable: typeof import("../components/coupons/CouponsTable.vue")['default']
+export const CouponsCreateCoupons: typeof import("../components/coupons/CreateCoupons.vue")['default']
 export const DashboardAnalyticsGoogle: typeof import("../components/dashboard/AnalyticsGoogle.vue")['default']
 export const DashboardDonutsProducts: typeof import("../components/dashboard/DonutsProducts.vue")['default']
 export const DashboardGraphicMonths: typeof import("../components/dashboard/GraphicMonths.vue")['default']
-export const CouponsTable: typeof import("../components/coupons/CouponsTable.vue")['default']
-export const CouponsCreateCoupons: typeof import("../components/coupons/CreateCoupons.vue")['default']
+export const HeadersNavTop: typeof import("../components/headers/NavTop.vue")['default']
+export const HeadersResults: typeof import("../components/headers/Results.vue")['default']
+export const HeadersSearch: typeof import("../components/headers/Search.vue")['default']
+export const HeadersSideNav: typeof import("../components/headers/SideNav.vue")['default']
 export const InvoicesErrorModal: typeof import("../components/invoices/ErrorModal.vue")['default']
 export const InvoicesInvoiceViewer: typeof import("../components/invoices/InvoiceViewer.vue")['default']
 export const InvoicesTable: typeof import("../components/invoices/InvoicesTable.vue")['default']
 export const InvoicesNewInvoice: typeof import("../components/invoices/NewInvoice.vue")['default']
 export const InvoicesSuccessInvoiceModal: typeof import("../components/invoices/SuccessInvoiceModal.vue")['default']
-export const HeadersNavTop: typeof import("../components/headers/NavTop.vue")['default']
-export const HeadersResults: typeof import("../components/headers/Results.vue")['default']
-export const HeadersSearch: typeof import("../components/headers/Search.vue")['default']
-export const HeadersSideNav: typeof import("../components/headers/SideNav.vue")['default']
 export const LoadersBigLoader: typeof import("../components/loaders/BigLoader.vue")['default']
 export const LoadersSmallLoading: typeof import("../components/loaders/SmallLoading.vue")['default']
 export const OrdersModalTrack: typeof import("../components/orders/ModalTrack.vue")['default']
@@ -166,20 +166,20 @@ export const LazyTheFooter: typeof import("../components/TheFooter.vue")['defaul
 export const LazyTheHeader: typeof import("../components/TheHeader.vue")['default']
 export const LazyClientsGuests: typeof import("../components/clients/Guests.vue")['default']
 export const LazyClientsRegisteds: typeof import("../components/clients/Registeds.vue")['default']
+export const LazyCouponsTable: typeof import("../components/coupons/CouponsTable.vue")['default']
+export const LazyCouponsCreateCoupons: typeof import("../components/coupons/CreateCoupons.vue")['default']
 export const LazyDashboardAnalyticsGoogle: typeof import("../components/dashboard/AnalyticsGoogle.vue")['default']
 export const LazyDashboardDonutsProducts: typeof import("../components/dashboard/DonutsProducts.vue")['default']
 export const LazyDashboardGraphicMonths: typeof import("../components/dashboard/GraphicMonths.vue")['default']
-export const LazyCouponsTable: typeof import("../components/coupons/CouponsTable.vue")['default']
-export const LazyCouponsCreateCoupons: typeof import("../components/coupons/CreateCoupons.vue")['default']
+export const LazyHeadersNavTop: typeof import("../components/headers/NavTop.vue")['default']
+export const LazyHeadersResults: typeof import("../components/headers/Results.vue")['default']
+export const LazyHeadersSearch: typeof import("../components/headers/Search.vue")['default']
+export const LazyHeadersSideNav: typeof import("../components/headers/SideNav.vue")['default']
 export const LazyInvoicesErrorModal: typeof import("../components/invoices/ErrorModal.vue")['default']
 export const LazyInvoicesInvoiceViewer: typeof import("../components/invoices/InvoiceViewer.vue")['default']
 export const LazyInvoicesTable: typeof import("../components/invoices/InvoicesTable.vue")['default']
 export const LazyInvoicesNewInvoice: typeof import("../components/invoices/NewInvoice.vue")['default']
 export const LazyInvoicesSuccessInvoiceModal: typeof import("../components/invoices/SuccessInvoiceModal.vue")['default']
-export const LazyHeadersNavTop: typeof import("../components/headers/NavTop.vue")['default']
-export const LazyHeadersResults: typeof import("../components/headers/Results.vue")['default']
-export const LazyHeadersSearch: typeof import("../components/headers/Search.vue")['default']
-export const LazyHeadersSideNav: typeof import("../components/headers/SideNav.vue")['default']
 export const LazyLoadersBigLoader: typeof import("../components/loaders/BigLoader.vue")['default']
 export const LazyLoadersSmallLoading: typeof import("../components/loaders/SmallLoading.vue")['default']
 export const LazyOrdersModalTrack: typeof import("../components/orders/ModalTrack.vue")['default']

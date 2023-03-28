@@ -149,7 +149,7 @@ export default defineNuxtConfig({
 
 
     router: {
-        middleware: ['admin'],
+        middleware: ['auth'],
     },
       
     pageTransition: {
