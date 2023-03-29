@@ -1,2 +1,20 @@
+# Ignorar la carpeta node_modules
+/node_modules
+
+# Ignorar la carpeta dist (a menos que desees alojar el sitio en GitHub Pages)
+/.nuxt/dist
+.nuxt/dist
+/dist
+# Ignorar el archivo .env
 .env
-/.env
+
+# Ignorar el archivo nuxt.config.js
+nuxt.config.js
+
+# Ignorar el archivo package-lock.json si se está utilizando yarn
+package.lock
+
+# Ignorar los archivos de respaldo y caché generados por Visual Studio Code
+.vscode/backup
+.vscode/settings.json
+

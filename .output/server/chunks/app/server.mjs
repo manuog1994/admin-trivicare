@@ -47,6 +47,7 @@ import 'scule';
 import 'unstorage';
 import 'fs';
 import 'pathe';
+import '../../../.nuxt/dist/api/ipx.js';
 import 'stream';
 import 'unenv/runtime/mock/proxy';
 import 'path';

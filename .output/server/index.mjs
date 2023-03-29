@@ -15,4 +15,5 @@ import 'unstorage';
 import 'fs';
 import 'pathe';
 import 'url';
+import '../../../../../.nuxt/dist/api/ipx.js';
 //# sourceMappingURL=index.mjs.map

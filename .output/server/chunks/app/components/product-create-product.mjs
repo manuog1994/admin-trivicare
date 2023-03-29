@@ -40,6 +40,7 @@ var modules = productCreateProduct$1.modules = {
     } }, mounted() {
       setTimeout(() => {
         this.getTags();
+        this.getCategories();
       }, 1e3);
     }, methods: { async getCategories() {
       await this.$store.dispatch("getCategories");
