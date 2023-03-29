@@ -41,18 +41,6 @@
   "TheHeader": {
     "description": "Auto imported from components/TheHeader.vue"
   },
-  "ClientsGuests": {
-    "description": "Auto imported from components/clients/Guests.vue"
-  },
-  "ClientsRegisteds": {
-    "description": "Auto imported from components/clients/Registeds.vue"
-  },
-  "CouponsTable": {
-    "description": "Auto imported from components/coupons/CouponsTable.vue"
-  },
-  "CouponsCreateCoupons": {
-    "description": "Auto imported from components/coupons/CreateCoupons.vue"
-  },
   "DashboardAnalyticsGoogle": {
     "description": "Auto imported from components/dashboard/AnalyticsGoogle.vue"
   },
@@ -74,6 +62,12 @@
   "HeadersSideNav": {
     "description": "Auto imported from components/headers/SideNav.vue"
   },
+  "ClientsGuests": {
+    "description": "Auto imported from components/clients/Guests.vue"
+  },
+  "ClientsRegisteds": {
+    "description": "Auto imported from components/clients/Registeds.vue"
+  },
   "InvoicesErrorModal": {
     "description": "Auto imported from components/invoices/ErrorModal.vue"
   },
@@ -94,21 +88,6 @@
   },
   "LoadersSmallLoading": {
     "description": "Auto imported from components/loaders/SmallLoading.vue"
-  },
-  "OrdersModalTrack": {
-    "description": "Auto imported from components/orders/ModalTrack.vue"
-  },
-  "OrdersNote": {
-    "description": "Auto imported from components/orders/Note.vue"
-  },
-  "Orders": {
-    "description": "Auto imported from components/orders/Orders.vue"
-  },
-  "OrdersCom": {
-    "description": "Auto imported from components/orders/OrdersCom.vue"
-  },
-  "OrdersHistory": {
-    "description": "Auto imported from components/orders/OrdersHistory.vue"
   },
   "ProductCreateProduct": {
     "description": "Auto imported from components/product/CreateProduct.vue"
@@ -134,11 +113,32 @@
   "ProductProductsTable": {
     "description": "Auto imported from components/product/ProductsTable.vue"
   },
+  "CouponsTable": {
+    "description": "Auto imported from components/coupons/CouponsTable.vue"
+  },
+  "CouponsCreateCoupons": {
+    "description": "Auto imported from components/coupons/CreateCoupons.vue"
+  },
   "ProfileNewGuest": {
     "description": "Auto imported from components/profile/NewGuest.vue"
   },
   "ProfileNewProfile": {
     "description": "Auto imported from components/profile/NewProfile.vue"
+  },
+  "OrdersModalTrack": {
+    "description": "Auto imported from components/orders/ModalTrack.vue"
+  },
+  "OrdersNote": {
+    "description": "Auto imported from components/orders/Note.vue"
+  },
+  "Orders": {
+    "description": "Auto imported from components/orders/Orders.vue"
+  },
+  "OrdersCom": {
+    "description": "Auto imported from components/orders/OrdersCom.vue"
+  },
+  "OrdersHistory": {
+    "description": "Auto imported from components/orders/OrdersHistory.vue"
   },
   "ReviewsNewReview": {
     "description": "Auto imported from components/reviews/NewReview.vue"
