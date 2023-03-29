@@ -138,6 +138,7 @@ export default {
     mounted() {
         setTimeout(() => {
             this.getTags();
+            this.getCategories();
         }, 1000);
     },
 
