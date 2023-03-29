@@ -119,7 +119,6 @@
                 </div>
             </div>
         </div>
-        <BigLoader v-if="loading" />
     </div>
 </template>
 
@@ -155,7 +154,6 @@ export default {
             singleProduct: {},
             tags: [],
             baseUrl: process.env.baseUrl,
-            loading: false,
             title: '',
         }
     },
@@ -164,14 +162,6 @@ export default {
         categories() {
             return this.$store.state.categories;
         },
-    },
-
-    components: {
-        BigLoader: () => import('@/components/loaders/BigLoader.vue'),
-    },
-
-    beforeMount() {
-        this.loading = true;
     },
 
     mounted() {
@@ -191,11 +181,11 @@ export default {
                             this.item = product
                         }
                     })
-                    this.loading = false;
+                    this.$root.$emit('loading', false);
                 })
                 .catch(error => {
                     console.log(error);
-                    this.loading = false;
+                    this.$root.$emit('loading', false);
                 })
         },
 

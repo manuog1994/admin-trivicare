@@ -151,6 +151,7 @@ export default {
             await this.$axios.get('api/tags')
                 .then(response => {
                     this.tags = response.data.data;
+                    this.$root.$emit('loading', false);
                 })
                 .catch(error => {
                     console.log(error);

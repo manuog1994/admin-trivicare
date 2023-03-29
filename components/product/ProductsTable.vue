@@ -66,7 +66,6 @@
             <!-- Crear nuevo producto -->
             <CreateProduct v-if="newProduct == true" />
         </div>
-        <BigLoader v-if="loading == true" />
     </div>
 </template>
 
@@ -78,7 +77,6 @@ export default {
 
     components: {
         EditProduct: () => import('~/components/product/EditProduct.vue'),
-        BigLoader: () => import('~/components/loaders/BigLoader.vue'),
         CreateProduct: () => import('~/components/product/CreateProduct.vue'),
     },
     data() {
@@ -102,7 +100,6 @@ export default {
     },
 
     beforeMount() {
-        this.loading = true;
         this.$root.$on('closeAdd', (data) => {
             this.newProduct = data;
         })
@@ -127,16 +124,18 @@ export default {
             await this.$axios.get('/api/products')
                 .then(response => {
                     this.products = response.data.data;
-                    this.loading = false;
+                    this.$root.$emit('loading', false);
                 })
         },
 
         onClick(product) {
+            this.$root.$emit('loading', true);
             this.edit = true;
             this.product = product;
         },
 
         onClickNew() {
+            this.$root.$emit('loading', true);
             this.newProduct = true;
         },
 
