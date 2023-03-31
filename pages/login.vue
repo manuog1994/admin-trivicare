@@ -18,22 +18,14 @@
         data() {
             return {
                 searchChildren: '',
+                loading: true,
             }
         },
 
-        methods: {
-            closeMenus() {
-                this.searchOpacity(false);
-                this.$root.$emit('closeMenu', this.closeMenu);
-            },
-
-            searchOpacity(searchFather) {
-                if (searchFather == true) {
-                    document.getElementById("post-nav").classList.add("search-screen");
-                } else {
-                    document.getElementById("post-nav").classList.remove("search-screen");
-                }
-            }
+        beforeMount() {
+            this.$root.$on('loading', (data) => {
+                this.loading = data;
+            });
         },
 
 

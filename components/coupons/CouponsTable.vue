@@ -96,8 +96,10 @@ export default {
             await this.$axios.get('/api/cupons')
                 .then(response => {
                     this.coupons = Object.values(response.data.data).flat();
+                    this.$root.$emit('loading', false)
                 }).catch(error => {
-                    console.log(error)
+                    //console.log(error)
+                    this.$root.$emit('loading', false)
                 })
         },
 

@@ -74,8 +74,10 @@ export default {
 
     methods: {
         async getGuests() {
+            this.$root.$emit('loading', true);
             const response = await this.$axios.get('/api/guests');
             this.guests = response.data.data;
+            this.$root.$emit('loading', false);
         },
 
         myCallback(page) {

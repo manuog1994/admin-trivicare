@@ -35,6 +35,9 @@
                                 <n-link :to="`/orders-view/${order.id}`" class="btn bg-trivi-blue">
                                     <i class="pe-7s-look"></i>
                                 </n-link>
+                                <n-link :to="`/order-edit/${order.id}`" class="btn bg-trivi-orange">
+                                    <i class="fa fa-edit"></i>
+                                </n-link>
                             </td>
                         </tr>
                     </tbody>
@@ -82,6 +85,7 @@ export default {
         async getOrders() {
             const response = await this.$axios.get('/api/orders' );
             this.orders = response.data.data;
+            this.$root.$emit('loading', false);
         },
 
         myCallback(page) {

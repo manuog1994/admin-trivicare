@@ -45,15 +45,18 @@
 export default {
     methods: {
         newCoupon() {
+            this.$root.$emit('loading', true);
             const data = new FormData(this.$refs.createCoupon);
 
             this.$axios.post('/api/cupons', data)
                 .then(() => {
                     this.$refs.createCoupon.reset();
                     this.$root.$emit('closeNewCoupon', false);
+                    this.$root.$emit('loading', false);
                     window.location.reload();
                 }).catch(error => {
                     console.log(error)
+                    this.$root.$emit('loading', false);
                 })
         },
     }

@@ -79,6 +79,7 @@ export default {
         async getOrders() {
             const response = await this.$axios.get('/api/orders?history[status]=' );
             this.orders = response.data.data;
+            this.$root.$emit('loading', false)
         },
 
         myCallback(page) {

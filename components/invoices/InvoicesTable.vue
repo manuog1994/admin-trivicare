@@ -203,6 +203,7 @@ export default {
 
     methods: {
         async getInvoices() {
+            this.$root.$emit('loading', true)
             const response = await this.$axios.get('/api/invoice');
             this.invoices = response.data.data;
             // Filtrar por dia
@@ -228,7 +229,7 @@ export default {
             }
 
             this.getYears();
-
+            this.$root.$emit('loading', false)
         },
 
         async getUrl(invoice){
@@ -297,7 +298,6 @@ export default {
         },
 
         async changeView(id) {
-            console.log(id);
             this.id = id;
         }
     },

@@ -86,7 +86,7 @@ export default {
             await this.$axios.get('/api/reviews')
             .then(response => {
                 this.reviews = response.data.reviews
-                //console.log(response)
+                this.$root.$emit('loading', false)
             })
         },
 

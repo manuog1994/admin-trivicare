@@ -161,6 +161,7 @@ export default {
         },
 
         async getProducts() {
+            this.$root.$emit('loading', true)
             await this.$store.dispatch('getProducts', {
                 page: '',
                 category: '',
@@ -172,6 +173,8 @@ export default {
             })
             const products = this.$store.getters.getProducts
             this.products = products.data
+
+            this.$root.$emit('loading', false)
         },
 
         addToCart(e) {

@@ -3,6 +3,9 @@
         <SideNav />
         <NavTop />
         <Search />
+        <div class="main">
+            <h2>No hay opciones de configuración disponibles</h2>
+        </div>
     </div>
 </template>
 

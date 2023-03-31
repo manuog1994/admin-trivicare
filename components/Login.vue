@@ -41,10 +41,12 @@
 
         mounted() {
             this.$axios.get('/sanctum/csrf-cookie');
+            this.$root.$emit('loading', false)
         },
 
         methods: {
             async login() {
+                this.$root.$emit('loading', true)
                 try {
                     const formData = new FormData(this.$refs.loginform);
                     await this.$auth.loginWith('laravelJWT', {
@@ -52,10 +54,12 @@
                     }).then(res => {
                         //console.log(res);
                         this.$router.push({ path: '/' });
+                        this.$root.$emit('loading', false)
                     });
                 } catch (error) {
                     this.errors = ['El correo electrónico o la contraseña son incorrectos.']; 
-                    console.log(error)         
+                    console.log(error)
+                    this.$root.$emit('loading', false)         
                 }
             },
 

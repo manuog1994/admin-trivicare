@@ -14,8 +14,8 @@ const _6355852c = () => interopDefault(import('../pages/orders.vue' /* webpackCh
 const _e1fd851a = () => interopDefault(import('../pages/orders-history.vue' /* webpackChunkName: "pages/orders-history" */))
 const _3706cc6b = () => interopDefault(import('../pages/products.vue' /* webpackChunkName: "pages/products" */))
 const _751e0638 = () => interopDefault(import('../pages/reviews.vue' /* webpackChunkName: "pages/reviews" */))
-const _0adb6e6f = () => interopDefault(import('../pages/search.vue' /* webpackChunkName: "pages/search" */))
 const _195c3faa = () => interopDefault(import('../pages/settings.vue' /* webpackChunkName: "pages/settings" */))
+const _2fba20ca = () => interopDefault(import('../pages/order-edit/_id.vue' /* webpackChunkName: "pages/order-edit/_id" */))
 const _1fcfb281 = () => interopDefault(import('../pages/orders-view/_id.vue' /* webpackChunkName: "pages/orders-view/_id" */))
 const _ca4af21a = () => interopDefault(import('../pages/product/_slug.vue' /* webpackChunkName: "pages/product/_slug" */))
 const _662a365b = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
@@ -72,13 +72,13 @@ export const routerOptions = {
     component: _751e0638,
     name: "reviews"
   }, {
-    path: "/search",
-    component: _0adb6e6f,
-    name: "search"
-  }, {
     path: "/settings",
     component: _195c3faa,
     name: "settings"
+  }, {
+    path: "/order-edit/:id?",
+    component: _2fba20ca,
+    name: "order-edit-id"
   }, {
     path: "/orders-view/:id?",
     component: _1fcfb281,

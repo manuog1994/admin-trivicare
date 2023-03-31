@@ -1,17 +1,21 @@
 <template>
-    <client-only>
-        <div class="shop-page-wrapper">
-            <OrdersCom />
-            <BigLoader v-if="loading" />
-        </div>
-    </client-only>
+    <div>
+        <SideNav />
+        <NavTop />
+        <Search />
+        <EditOrder />
+        <BigLoader v-if="loading" />
+    </div>
 </template>
 
 <script>
 
 export default {
    components: {
-        OrdersCom: () => import('@/components/orders/OrdersCom'),
+        SideNav: () => import('@/components/headers/SideNav'),
+        NavTop: () => import('@/components/headers/NavTop'),
+        Search: () => import('@/components/headers/Search'),
+        EditOrder: () => import('@/components/orders/EditOrder'),
         BigLoader: () => import('@/components/loaders/BigLoader'),
     },
 
@@ -30,7 +34,7 @@ export default {
 
     head() {
         return {
-            titleTemplate: 'Detalle del Pedido | Admin',
+            titleTemplate: 'Editar Pedido | Admin',
         };
     },
 

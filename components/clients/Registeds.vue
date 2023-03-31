@@ -72,10 +72,12 @@ export default {
 
     methods: {
         async getUserProfiles() {
+            this.$root.$emit('loading', true)
             const response = await this.$axios.get('/api/user-profile');
             this.profiles = response.data.data;
             // Devolver todos menos la primera fila de la tabla
             this.profiles.shift(1);
+            this.$root.$emit('loading', false)
         },
 
         myCallback(page) {

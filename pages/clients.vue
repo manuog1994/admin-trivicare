@@ -4,6 +4,7 @@
         <NavTop />
         <Search />
         <Registeds />
+        <BigLoader v-if="loading"/>
     </div>
 </template>
 
@@ -15,6 +16,19 @@
             NavTop: () => import("@/components/headers/NavTop"),
             Search: () => import("@/components/headers/Search"),
             Registeds: () => import("@/components/clients/Registeds"),
+            BigLoader: () => import("@/components/loaders/BigLoader"),
+        },
+
+        data() {
+            return {
+                loading: true,
+            }
+        },
+
+        beforeMount() {
+            this.$root.$on('loading', (data) => {
+                this.loading = data;
+            });
         },
 
 

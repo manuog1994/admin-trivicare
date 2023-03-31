@@ -6,6 +6,7 @@
         <div class="main overflow-auto">
             <GraphicMonths />
             <DonutsProducts />
+            <BigLoader v-if="loading"/>
         </div>
     </div>
 </template>
@@ -19,6 +20,19 @@
             Search: () => import("@/components/headers/Search"),
             GraphicMonths: () => import("@/components/dashboard/GraphicMonths"),
             DonutsProducts: () => import("@/components/dashboard/DonutsProducts"),
+            BigLoader: () => import("@/components/loaders/BigLoader"),
+        },
+
+        data() {
+            return {
+                loading: true,
+            }
+        },
+
+        beforeMount() {
+            this.$root.$on('loading', (data) => {
+                this.loading = data;
+            });
         },
 
 

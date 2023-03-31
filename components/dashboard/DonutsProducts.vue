@@ -34,6 +34,7 @@
 
     methods: {
         async getProducts() {
+            this.$root.$emit('loading', true)
             await this.$axios.get('/api/products')
                 .then(response => {
                     this.products = response.data.data
@@ -42,6 +43,7 @@
                         this.series.push(product.sold == null ? 0 : product.sold)
                         this.options.labels.push(product.name)
                     })
+                    this.$root.$emit('loading', false)
                 }
             )
         }

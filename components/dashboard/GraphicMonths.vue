@@ -51,6 +51,7 @@
 
     methods: {
         getOrders() {
+            this.$root.$emit('loading', true)
             this.$axios.get('/api/orders')
             .then(response => {
                 this.orders = response.data.data
@@ -78,6 +79,8 @@
                     name: 'series-1',
                     data: [this.jan, this.feb, this.mar, this.apr, this.may, this.jun, this.jul, this.aug, this.sep, this.oct, this.nov, this.dec]
                 }]
+
+                this.$root.$emit('loading', false)
             })
         }
     }

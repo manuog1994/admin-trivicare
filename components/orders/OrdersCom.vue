@@ -65,7 +65,7 @@
             </table>
         </div>
         <!-- Total del pedido -->
-        <div>
+        <div class="pb-100 mb-5">
             <div class="d-flex justify-content-start">
                 <div class="mt-2">
                     <h4>Nota del pedido: <strong>{{ order.note }}</strong></h4>
@@ -110,7 +110,7 @@
             <button @click="$modal.show('update-pay', order)" class="btn bg-trivi-orange text-white">
                 <i class="fa fa-credit-card icon-nav-order"></i>
             </button>
-            <button :class="{'disabled': order.email_sent ? false : true}" class="btn bg-trivi-green text-white" @click.prevent="getUrl(order)">
+            <button :class="{'disabled': order.invoice?.filename ? false : true}" class="btn bg-trivi-green text-white" @click.prevent="getUrl(order)">
                 <i class="fa fa-download icon-nav-order"></i>
             </button>
             <button @click="$router.push({path: '/orders'})" class="btn bg-trivi-red text-white">
@@ -193,8 +193,10 @@ export default {
 
     methods: {
         async getOrder() {
+            this.$root.$emit('loading', true);
             await this.$axios.get('/api/orders?filter[id]=' + this.id)
                 .then(response => {
+                    this.$root.$emit('loading', false);
                     const orders = response.data.data;
                     orders.map(order => {
                         if (order.id == this.id) {
@@ -205,6 +207,7 @@ export default {
                 })
                 .catch(error => {
                     //console.log(error)
+                    this.$root.$emit('loading', false);
                 })
         },
 
@@ -245,31 +248,40 @@ export default {
 
         async getUrl(order){
             //console.log(order);
+            this.$root.$emit('loading', true);
             let FileDownload = require('js-file-download');
             await this.$axios.get('/api/invoices/' + order.invoice.id, {
                 responseType: 'blob'
             }).then(response => {
                 FileDownload(response.data, order.invoice.filename);
+                this.$root.$emit('loading', false);
             });
         },
 
         async updateStatus() {
+            this.$root.$emit('loading', true);
             const status = this.$refs.formStatus.status.value;
             if (status == 3) {
                 this.$modal.hide('update-state')
                 this.$modal.show('modal-track', this.order.id);
+                this.$root.$emit('loading', false);
             } else {
                 await this.$axios.put('/api/orders/status/' + this.order.id, {
                     status: status
                 }).then(() => window.location.reload());
+                this.$root.$emit('loading', false);
             }
         },
 
         async updatePaid() {
+            this.$root.$emit('loading', true);
             const paid = this.$refs.formPaid.paid.value;
             await this.$axios.put('/api/orders/paid/' + this.order.id, {
                 paid: paid
-            }).then(() => window.location.reload());
+            }).then(() => {
+                window.location.reload()
+                this.$root.$emit('loading', false);
+            });
             
         },
 

@@ -5,6 +5,7 @@
         <Search />
         <ReviewTable v-if="!newReview" />
         <NewReview v-if="newReview"/>
+        <BigLoader v-if="loading"/>
     </div>
 </template>
 
@@ -15,6 +16,7 @@
         data() {
             return {
                 newReview: false,
+                loading: true,
             }
         },
 
@@ -24,11 +26,16 @@
             Search: () => import("@/components/headers/Search"),
             ReviewTable: () => import("@/components/reviews/ReviewTable"),
             NewReview: () => import("@/components/reviews/NewReview"),
+            BigLoader: () => import("@/components/loaders/BigLoader"),
         },
 
         beforeMount() {
             this.$root.$on('newReview', (data) => {
                 this.newReview = data
+            });
+
+            this.$root.$on('loading', (data) => {
+                this.loading = data;
             });
         },
 
