@@ -13,7 +13,7 @@
             <form class="row" ref="updateproduct" @submit="updateProduct">
                 <div class="col-12 mb-2">
                     <label for="title">Título</label>
-                    <input class="form-control" type="text" name="name" :value="item.name">
+                    <input class="form-control" type="text" name="name" :value="item.name" ref="name">
                 </div>
                 <div class="col-12 mb-2">
                     <label for="description">Descripción</label>
@@ -26,8 +26,12 @@
                         bullist numlist outdent indent | removeformat | help'}"></editor>
                 </div>            
                 <div class="col-12 mb-2">
-                    <label for="specifications">Especificaciones</label>
+                    <label for="specifications">Mini descripción</label>
                     <textarea class="form-control" name="specifications" id="specifications" :value="item.specifications" ref="specifications"></textarea>
+                </div>
+                <div class="col-12 mb-2">
+                    <label for="meta_description">Meta descripción</label>
+                    <textarea class="form-control" name="meta_description" id="meta_description" :value="item.meta_description" ref="meta_description"></textarea>
                 </div>
                 <div class="col-12 col-md-3 mb-2">
                     <label for="price">Precio</label>
@@ -147,6 +151,7 @@ export default {
                 new: '',
                 tags: '',
                 content: '',
+                meta_description: '',
             },
             images: [],
             inputTags: [],
@@ -202,18 +207,19 @@ export default {
 
         async updateProduct() {
             await this.$axios.put('/api/products/' + this.item.id, {
-                name: this.$refs.name.value,
-                description: this.item.description,
-                specifications: this.$refs.specifications.value,
-                price: this.$refs.price.value,
-                stock: this.$refs.stock.value,
-                barcode: this.$refs.barcode.value,
-                category_id: this.$refs.category_id.value,
-                slug: this.$refs.slug.value,
-                discount: this.$refs.discount.value,
-                weight: this.$refs.weight.value,
-                size: this.$refs.size.value,
-                dimensions: this.$refs.dimensions.value,
+                name: this.$refs.name?.value,
+                description: this.item?.description,
+                specifications: this.$refs.specifications?.value,
+                meta_description: this.$refs.meta_description?.value,
+                price: this.$refs.price?.value,
+                stock: this.$refs.stock?.value,
+                barcode: this.$refs.barcode?.value,
+                category_id: this.$refs.category_id?.value,
+                slug: this.$refs.slug?.value,
+                discount: this.$refs.discount?.value,
+                weight: this.$refs.weight?.value,
+                size: this.$refs.size?.value,
+                dimensions: this.$refs.dimensions?.value,
                 tags: JSON.stringify(this.inputTags),
             }).then((response) => {
                 console.log(response);

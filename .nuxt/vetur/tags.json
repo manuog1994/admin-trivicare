@@ -41,6 +41,18 @@
   "TheHeader": {
     "description": "Auto imported from components/TheHeader.vue"
   },
+  "ClientsGuests": {
+    "description": "Auto imported from components/clients/Guests.vue"
+  },
+  "ClientsRegisteds": {
+    "description": "Auto imported from components/clients/Registeds.vue"
+  },
+  "CouponsTable": {
+    "description": "Auto imported from components/coupons/CouponsTable.vue"
+  },
+  "CouponsCreateCoupons": {
+    "description": "Auto imported from components/coupons/CreateCoupons.vue"
+  },
   "DashboardAnalyticsGoogle": {
     "description": "Auto imported from components/dashboard/AnalyticsGoogle.vue"
   },
@@ -50,11 +62,17 @@
   "DashboardGraphicMonths": {
     "description": "Auto imported from components/dashboard/GraphicMonths.vue"
   },
-  "ClientsGuests": {
-    "description": "Auto imported from components/clients/Guests.vue"
+  "HeadersNavTop": {
+    "description": "Auto imported from components/headers/NavTop.vue"
   },
-  "ClientsRegisteds": {
-    "description": "Auto imported from components/clients/Registeds.vue"
+  "HeadersResults": {
+    "description": "Auto imported from components/headers/Results.vue"
+  },
+  "HeadersSearch": {
+    "description": "Auto imported from components/headers/Search.vue"
+  },
+  "HeadersSideNav": {
+    "description": "Auto imported from components/headers/SideNav.vue"
   },
   "InvoicesErrorModal": {
     "description": "Auto imported from components/invoices/ErrorModal.vue"
@@ -71,11 +89,11 @@
   "InvoicesSuccessInvoiceModal": {
     "description": "Auto imported from components/invoices/SuccessInvoiceModal.vue"
   },
-  "CouponsTable": {
-    "description": "Auto imported from components/coupons/CouponsTable.vue"
+  "LoadersBigLoader": {
+    "description": "Auto imported from components/loaders/BigLoader.vue"
   },
-  "CouponsCreateCoupons": {
-    "description": "Auto imported from components/coupons/CreateCoupons.vue"
+  "LoadersSmallLoading": {
+    "description": "Auto imported from components/loaders/SmallLoading.vue"
   },
   "OrdersEditOrder": {
     "description": "Auto imported from components/orders/EditOrder.vue"
@@ -94,30 +112,6 @@
   },
   "OrdersHistory": {
     "description": "Auto imported from components/orders/OrdersHistory.vue"
-  },
-  "HeadersNavTop": {
-    "description": "Auto imported from components/headers/NavTop.vue"
-  },
-  "HeadersResults": {
-    "description": "Auto imported from components/headers/Results.vue"
-  },
-  "HeadersSearch": {
-    "description": "Auto imported from components/headers/Search.vue"
-  },
-  "HeadersSideNav": {
-    "description": "Auto imported from components/headers/SideNav.vue"
-  },
-  "ProfileNewGuest": {
-    "description": "Auto imported from components/profile/NewGuest.vue"
-  },
-  "ProfileNewProfile": {
-    "description": "Auto imported from components/profile/NewProfile.vue"
-  },
-  "LoadersBigLoader": {
-    "description": "Auto imported from components/loaders/BigLoader.vue"
-  },
-  "LoadersSmallLoading": {
-    "description": "Auto imported from components/loaders/SmallLoading.vue"
   },
   "ProductCreateProduct": {
     "description": "Auto imported from components/product/CreateProduct.vue"
@@ -142,6 +136,12 @@
   },
   "ProductProductsTable": {
     "description": "Auto imported from components/product/ProductsTable.vue"
+  },
+  "ProfileNewGuest": {
+    "description": "Auto imported from components/profile/NewGuest.vue"
+  },
+  "ProfileNewProfile": {
+    "description": "Auto imported from components/profile/NewProfile.vue"
   },
   "ReviewsNewReview": {
     "description": "Auto imported from components/reviews/NewReview.vue"
