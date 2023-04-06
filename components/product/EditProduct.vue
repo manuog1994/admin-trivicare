@@ -13,7 +13,7 @@
             <form class="row" ref="updateproduct" @submit="updateProduct">
                 <div class="col-12 mb-2">
                     <label for="title">Título</label>
-                    <input class="form-control" type="text" name="name" v-model="item.name" ref="name">
+                    <input class="form-control" type="text" name="name" :value="item.name">
                 </div>
                 <div class="col-12 mb-2">
                     <label for="description">Descripción</label>
@@ -51,7 +51,7 @@
                 </div>
                 <div class="col-12 col-md-8 mb-2">
                     <label for="slug">Slug</label>
-                    <input class="form-control" type="text" name="slug" :value="slugify(item.name)" ref="slug">
+                    <input class="form-control" type="text" name="slug" :value="item.slug" ref="slug">
                 </div>
                 <div class="col-12 col-md-4 mb-2">
                     <label for="discount">Descuento</label>
@@ -284,16 +284,6 @@ export default {
         closeEdit() {
             this.$root.$emit('closeEdit', false);
         },
-
-        slugify(text) {
-            return text?.toString()
-                    .toLowerCase()
-                    .replace(/\s+/g, "-") // Replace spaces with -
-                    .replace(/[^\w-]+/g, "") // Remove all non-word chars
-                    .replace(/--+/g, "-") // Replace multiple - with single -
-                    .replace(/^-+/, "") // Trim - from start of text
-                    .replace(/-+$/, ""); // Trim - from end of text
-        }
     },
 }
 </script>
