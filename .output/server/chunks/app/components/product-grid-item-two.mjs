@@ -18,9 +18,9 @@ function _mergeNamespaces(n, m) {
 
 var productGridItemTwo$1 = {};
 
-var ids = productGridItemTwo$1.ids = [42];
+var ids = productGridItemTwo$1.ids = [43];
 var modules = productGridItemTwo$1.modules = {
-  133: function(module, __webpack_exports__, __webpack_require__) {
+  134: function(module, __webpack_exports__, __webpack_require__) {
     __webpack_require__.r(__webpack_exports__);
     var render = function render2() {
       var _vm = this, _c = _vm._self._c;
@@ -61,7 +61,7 @@ var modules = productGridItemTwo$1.modules = {
       false,
       null,
       null,
-      "e0c41652"
+      "619c6817"
     );
     __webpack_exports__["default"] = component.exports;
   }

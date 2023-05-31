@@ -18,7 +18,7 @@ function _mergeNamespaces(n, m) {
 
 var myAccountContainer$1 = {};
 
-var ids = myAccountContainer$1.ids = [31];
+var ids = myAccountContainer$1.ids = [32];
 var modules = myAccountContainer$1.modules = {
   103: function(module, __webpack_exports__, __webpack_require__) {
     __webpack_require__.r(__webpack_exports__);
@@ -31,7 +31,7 @@ var modules = myAccountContainer$1.modules = {
           });
         })(__WEBPACK_IMPORT_KEY__);
   },
-  125: function(module, __webpack_exports__, __webpack_require__) {
+  126: function(module, __webpack_exports__, __webpack_require__) {
     __webpack_require__.r(__webpack_exports__);
     var render = function render2() {
       var _vm = this, _c = _vm._self._c;
@@ -80,7 +80,7 @@ var modules = myAccountContainer$1.modules = {
     var external_sweetalert2_default = /* @__PURE__ */ __webpack_require__.n(external_sweetalert2_);
     var MyAccountContainervue_type_script_lang_js_ = { data() {
       return { email: "", old_password: "", password: "", password_confirmation: "", errors: [], disabled: true, checked: false };
-    }, components: { NewProfile: () => __webpack_require__.e(18).then(__webpack_require__.bind(null, 191)) }, mounted() {
+    }, components: { NewProfile: () => __webpack_require__.e(18).then(__webpack_require__.bind(null, 194)) }, mounted() {
       this.$nextTick(() => {
         this.$nuxt.$loading.start();
         setTimeout(() => {
@@ -167,7 +167,7 @@ var modules = myAccountContainer$1.modules = {
       false,
       injectStyles,
       "031eff57",
-      "084da3b3"
+      "049356f3"
     );
     __webpack_exports__["default"] = component.exports;
   },

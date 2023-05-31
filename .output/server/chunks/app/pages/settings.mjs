@@ -18,16 +18,16 @@ function _mergeNamespaces(n, m) {
 
 var settings$1 = {};
 
-var ids = settings$1.ids = [65, 48];
+var ids = settings$1.ids = [66, 49];
 var modules = settings$1.modules = {
-  160: function(module, __webpack_exports__, __webpack_require__) {
+  161: function(module, __webpack_exports__, __webpack_require__) {
     __webpack_require__.r(__webpack_exports__);
     var render = function render2() {
       var _vm = this, _c = _vm._self._c;
-      return _c("div", [_c("SideNav"), _vm._ssrNode(" "), _c("NavTop"), _vm._ssrNode(" "), _c("Search")], 2);
+      return _c("div", [_c("SideNav"), _vm._ssrNode(" "), _c("NavTop"), _vm._ssrNode(" "), _c("Search"), _vm._ssrNode(' <div class="main"><h2>No hay opciones de configuraci\xF3n disponibles</h2></div>')], 2);
     };
     var staticRenderFns = [];
-    var settingsvue_type_script_lang_js_ = { components: { SideNav: () => __webpack_require__.e(2).then(__webpack_require__.bind(null, 175)), NavTop: () => __webpack_require__.e(0).then(__webpack_require__.bind(null, 172)), Search: () => __webpack_require__.e(1).then(__webpack_require__.bind(null, 174)) }, head() {
+    var settingsvue_type_script_lang_js_ = { components: { SideNav: () => __webpack_require__.e(2).then(__webpack_require__.bind(null, 177)), NavTop: () => __webpack_require__.e(0).then(__webpack_require__.bind(null, 174)), Search: () => __webpack_require__.e(1).then(__webpack_require__.bind(null, 176)) }, head() {
       return { titleTemplate: "Ajustes" };
     } };
     var pages_settingsvue_type_script_lang_js_ = settingsvue_type_script_lang_js_;
@@ -39,7 +39,7 @@ var modules = settings$1.modules = {
       false,
       null,
       null,
-      "45808ab8"
+      "e59c2138"
     );
     __webpack_exports__["default"] = component.exports;
     installComponents(component, { Search: __webpack_require__(77).default });
@@ -94,7 +94,7 @@ var modules = settings$1.modules = {
       false,
       injectStyles,
       null,
-      "7be9673b"
+      "f29c0b0a"
     );
     __webpack_exports__["default"] = component.exports;
   },

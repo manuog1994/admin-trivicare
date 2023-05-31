@@ -18,14 +18,14 @@ function _mergeNamespaces(n, m) {
 
 var register$1 = {};
 
-var ids = register$1.ids = [46];
+var ids = register$1.ids = [47];
 var modules = register$1.modules = {
-  112: function(module, exports2) {
+  113: function(module, exports2) {
     module.exports = {};
   },
-  137: function(module, __webpack_exports__, __webpack_require__) {
+  139: function(module, __webpack_exports__, __webpack_require__) {
     __webpack_require__.r(__webpack_exports__);
-    var _node_modules_css_loader_dist_cjs_js_ref_5_oneOf_1_0_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_5_oneOf_1_1_node_modules_nuxt_components_dist_loader_js_ref_2_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Register_vue_vue_type_style_index_0_id_e821239a_prod_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(112);
+    var _node_modules_css_loader_dist_cjs_js_ref_5_oneOf_1_0_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_5_oneOf_1_1_node_modules_nuxt_components_dist_loader_js_ref_2_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Register_vue_vue_type_style_index_0_id_e821239a_prod_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(113);
     for (var __WEBPACK_IMPORT_KEY__ in _node_modules_css_loader_dist_cjs_js_ref_5_oneOf_1_0_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_5_oneOf_1_1_node_modules_nuxt_components_dist_loader_js_ref_2_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Register_vue_vue_type_style_index_0_id_e821239a_prod_lang_css___WEBPACK_IMPORTED_MODULE_0__)
       if (["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0)
         (function(key) {
@@ -34,7 +34,7 @@ var modules = register$1.modules = {
           });
         })(__WEBPACK_IMPORT_KEY__);
   },
-  165: function(module, __webpack_exports__, __webpack_require__) {
+  167: function(module, __webpack_exports__, __webpack_require__) {
     __webpack_require__.r(__webpack_exports__);
     var render = function render2() {
       var _vm = this, _c = _vm._self._c;
@@ -70,7 +70,7 @@ var modules = register$1.modules = {
     var components_Registervue_type_script_lang_js_ = Registervue_type_script_lang_js_;
     var componentNormalizer = __webpack_require__(2);
     function injectStyles(context) {
-      var style0 = __webpack_require__(137);
+      var style0 = __webpack_require__(139);
       if (style0.__inject__)
         style0.__inject__(context);
     }
@@ -81,7 +81,7 @@ var modules = register$1.modules = {
       false,
       injectStyles,
       null,
-      "0da93014"
+      "741c2b36"
     );
     __webpack_exports__["default"] = component.exports;
   }

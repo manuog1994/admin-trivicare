@@ -4,21 +4,21 @@ import { normalizeURL, decode } from 'ufo'
 import { interopDefault } from './utils'
 import scrollBehavior from './router.scrollBehavior.js'
 
-const _6a07d051 = () => interopDefault(import('../pages/clients.vue' /* webpackChunkName: "pages/clients" */))
-const _49212654 = () => interopDefault(import('../pages/coupons.vue' /* webpackChunkName: "pages/coupons" */))
-const _648d363c = () => interopDefault(import('../pages/guests.vue' /* webpackChunkName: "pages/guests" */))
-const _7b36e626 = () => interopDefault(import('../pages/invoices.vue' /* webpackChunkName: "pages/invoices" */))
-const _2fd1d972 = () => interopDefault(import('../pages/login.vue' /* webpackChunkName: "pages/login" */))
-const _583d1653 = () => interopDefault(import('../pages/my-account.vue' /* webpackChunkName: "pages/my-account" */))
-const _6355852c = () => interopDefault(import('../pages/orders.vue' /* webpackChunkName: "pages/orders" */))
-const _e1fd851a = () => interopDefault(import('../pages/orders-history.vue' /* webpackChunkName: "pages/orders-history" */))
-const _3706cc6b = () => interopDefault(import('../pages/products.vue' /* webpackChunkName: "pages/products" */))
-const _751e0638 = () => interopDefault(import('../pages/reviews.vue' /* webpackChunkName: "pages/reviews" */))
-const _195c3faa = () => interopDefault(import('../pages/settings.vue' /* webpackChunkName: "pages/settings" */))
-const _2fba20ca = () => interopDefault(import('../pages/order-edit/_id.vue' /* webpackChunkName: "pages/order-edit/_id" */))
-const _1fcfb281 = () => interopDefault(import('../pages/orders-view/_id.vue' /* webpackChunkName: "pages/orders-view/_id" */))
-const _ca4af21a = () => interopDefault(import('../pages/product/_slug.vue' /* webpackChunkName: "pages/product/_slug" */))
-const _662a365b = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
+const _489d7284 = () => interopDefault(import('../pages/clients.vue' /* webpackChunkName: "pages/clients" */))
+const _4d18e343 = () => interopDefault(import('../pages/coupons.vue' /* webpackChunkName: "pages/coupons" */))
+const _4500ecd5 = () => interopDefault(import('../pages/guests.vue' /* webpackChunkName: "pages/guests" */))
+const _f42c37c0 = () => interopDefault(import('../pages/invoices.vue' /* webpackChunkName: "pages/invoices" */))
+const _6f5ff1c2 = () => interopDefault(import('../pages/login.vue' /* webpackChunkName: "pages/login" */))
+const _4fc96cc6 = () => interopDefault(import('../pages/my-account.vue' /* webpackChunkName: "pages/my-account" */))
+const _4ac5e5c2 = () => interopDefault(import('../pages/orders.vue' /* webpackChunkName: "pages/orders" */))
+const _ba71bb34 = () => interopDefault(import('../pages/orders-history.vue' /* webpackChunkName: "pages/orders-history" */))
+const _0ae7b8c4 = () => interopDefault(import('../pages/products.vue' /* webpackChunkName: "pages/products" */))
+const _371a7351 = () => interopDefault(import('../pages/reviews.vue' /* webpackChunkName: "pages/reviews" */))
+const _463cd246 = () => interopDefault(import('../pages/settings.vue' /* webpackChunkName: "pages/settings" */))
+const _02af37f0 = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
+const _082e56e4 = () => interopDefault(import('../pages/order-edit/_id.vue' /* webpackChunkName: "pages/order-edit/_id" */))
+const _f6732824 = () => interopDefault(import('../pages/orders-view/_id.vue' /* webpackChunkName: "pages/orders-view/_id" */))
+const _0f1ab7a0 = () => interopDefault(import('../pages/product/_slug.vue' /* webpackChunkName: "pages/product/_slug" */))
 
 const emptyFn = () => {}
 
@@ -33,64 +33,64 @@ export const routerOptions = {
 
   routes: [{
     path: "/clients",
-    component: _6a07d051,
+    component: _489d7284,
     name: "clients"
   }, {
     path: "/coupons",
-    component: _49212654,
+    component: _4d18e343,
     name: "coupons"
   }, {
     path: "/guests",
-    component: _648d363c,
+    component: _4500ecd5,
     name: "guests"
   }, {
     path: "/invoices",
-    component: _7b36e626,
+    component: _f42c37c0,
     name: "invoices"
   }, {
     path: "/login",
-    component: _2fd1d972,
+    component: _6f5ff1c2,
     name: "login"
   }, {
     path: "/my-account",
-    component: _583d1653,
+    component: _4fc96cc6,
     name: "my-account"
   }, {
     path: "/orders",
-    component: _6355852c,
+    component: _4ac5e5c2,
     name: "orders"
   }, {
     path: "/orders-history",
-    component: _e1fd851a,
+    component: _ba71bb34,
     name: "orders-history"
   }, {
     path: "/products",
-    component: _3706cc6b,
+    component: _0ae7b8c4,
     name: "products"
   }, {
     path: "/reviews",
-    component: _751e0638,
+    component: _371a7351,
     name: "reviews"
   }, {
     path: "/settings",
-    component: _195c3faa,
+    component: _463cd246,
     name: "settings"
   }, {
+    path: "/",
+    component: _02af37f0,
+    name: "index"
+  }, {
     path: "/order-edit/:id?",
-    component: _2fba20ca,
+    component: _082e56e4,
     name: "order-edit-id"
   }, {
     path: "/orders-view/:id?",
-    component: _1fcfb281,
+    component: _f6732824,
     name: "orders-view-id"
   }, {
     path: "/product/:slug?",
-    component: _ca4af21a,
+    component: _0f1ab7a0,
     name: "product-slug"
-  }, {
-    path: "/",
-    component: _662a365b,
-    name: "index"
   }],
 
   fallback: false

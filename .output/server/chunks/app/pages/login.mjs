@@ -18,9 +18,9 @@ function _mergeNamespaces(n, m) {
 
 var login$1 = {};
 
-var ids = login$1.ids = [56, 23, 29];
+var ids = login$1.ids = [57, 23, 30];
 var modules = login$1.modules = {
-  124: function(module, __webpack_exports__, __webpack_require__) {
+  125: function(module, __webpack_exports__, __webpack_require__) {
     __webpack_require__.r(__webpack_exports__);
     var render = function render2() {
       var _vm = this, _c = _vm._self._c;
@@ -44,30 +44,25 @@ var modules = login$1.modules = {
       false,
       injectStyles,
       null,
-      "318361fb"
+      "7fd7c53b"
     );
     __webpack_exports__["default"] = component.exports;
     installComponents(component, { Login: __webpack_require__(87).default });
   },
-  153: function(module, __webpack_exports__, __webpack_require__) {
+  155: function(module, __webpack_exports__, __webpack_require__) {
     __webpack_require__.r(__webpack_exports__);
     var render = function render2() {
       var _vm = this, _c = _vm._self._c;
       return _c("client-only", [_c("Auth")], 1);
     };
     var staticRenderFns = [];
-    var loginvue_type_script_lang_js_ = { auth: false, components: { Auth: () => Promise.resolve().then(__webpack_require__.bind(null, 124)) }, data() {
-      return { searchChildren: "" };
-    }, methods: { closeMenus() {
-      this.searchOpacity(false);
-      this.$root.$emit("closeMenu", this.closeMenu);
-    }, searchOpacity(searchFather) {
-      if (searchFather == true) {
-        document.getElementById("post-nav").classList.add("search-screen");
-      } else {
-        document.getElementById("post-nav").classList.remove("search-screen");
-      }
-    } }, head() {
+    var loginvue_type_script_lang_js_ = { auth: false, components: { Auth: () => Promise.resolve().then(__webpack_require__.bind(null, 125)) }, data() {
+      return { searchChildren: "", loading: true };
+    }, beforeMount() {
+      this.$root.$on("loading", (data) => {
+        this.loading = data;
+      });
+    }, head() {
       return {
         titleTemplate: "Iniciar sesi\xF3n | Admin"
       };
@@ -82,11 +77,11 @@ var modules = login$1.modules = {
       staticRenderFns,
       false,
       injectStyles,
-      "93c797da",
-      "24525e90"
+      "6ed76a4f",
+      "db425810"
     );
     __webpack_exports__["default"] = component.exports;
-    installComponents(component, { Auth: __webpack_require__(124).default });
+    installComponents(component, { Auth: __webpack_require__(125).default });
   },
   87: function(module, __webpack_exports__, __webpack_require__) {
     __webpack_require__.r(__webpack_exports__);
@@ -101,15 +96,19 @@ var modules = login$1.modules = {
       return { disabled: false, errors: [] };
     }, computed: {}, mounted() {
       this.$axios.get("/sanctum/csrf-cookie");
+      this.$root.$emit("loading", false);
     }, methods: { async login() {
+      this.$root.$emit("loading", true);
       try {
         const formData = new FormData(this.$refs.loginform);
         await this.$auth.loginWith("laravelJWT", { data: formData }).then((res) => {
           this.$router.push({ path: "/" });
+          this.$root.$emit("loading", false);
         });
       } catch (error) {
         this.errors = ["El correo electr\xF3nico o la contrase\xF1a son incorrectos."];
         console.log(error);
+        this.$root.$emit("loading", false);
       }
     }, viewPass(id) {
       var x = document.getElementById(id);
@@ -128,7 +127,7 @@ var modules = login$1.modules = {
       false,
       null,
       null,
-      "43fb9726"
+      "7f98c834"
     );
     __webpack_exports__["default"] = component.exports;
   }

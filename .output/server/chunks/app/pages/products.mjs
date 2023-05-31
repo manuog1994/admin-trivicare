@@ -18,16 +18,23 @@ function _mergeNamespaces(n, m) {
 
 var products$1 = {};
 
-var ids = products$1.ids = [62, 48];
+var ids = products$1.ids = [64, 49];
 var modules = products$1.modules = {
-  157: function(module, __webpack_exports__, __webpack_require__) {
+  159: function(module, __webpack_exports__, __webpack_require__) {
     __webpack_require__.r(__webpack_exports__);
     var render = function render2() {
       var _vm = this, _c = _vm._self._c;
-      return _c("div", [_c("SideNav"), _vm._ssrNode(" "), _c("NavTop"), _vm._ssrNode(" "), _c("Search"), _vm._ssrNode(" "), _c("ProductsTable")], 2);
+      return _c("div", [_c("SideNav"), _vm._ssrNode(" "), _c("NavTop"), _vm._ssrNode(" "), _c("Search"), _vm._ssrNode(" "), _c("ProductsTable"), _vm._ssrNode(" "), _vm.loading ? _c("BigLoader") : _vm._e()], 2);
     };
     var staticRenderFns = [];
-    var productsvue_type_script_lang_js_ = { components: { SideNav: () => __webpack_require__.e(2).then(__webpack_require__.bind(null, 175)), NavTop: () => __webpack_require__.e(0).then(__webpack_require__.bind(null, 172)), ProductsTable: () => __webpack_require__.e(17).then(__webpack_require__.bind(null, 189)), Search: () => __webpack_require__.e(1).then(__webpack_require__.bind(null, 174)) }, head() {
+    var productsvue_type_script_lang_js_ = { components: { SideNav: () => __webpack_require__.e(2).then(__webpack_require__.bind(null, 177)), NavTop: () => __webpack_require__.e(0).then(__webpack_require__.bind(null, 174)), ProductsTable: () => __webpack_require__.e(17).then(__webpack_require__.bind(null, 192)), Search: () => __webpack_require__.e(1).then(__webpack_require__.bind(null, 176)), BigLoader: () => __webpack_require__.e(3).then(__webpack_require__.bind(null, 182)) }, data() {
+      return { loading: false };
+    }, beforeMount() {
+      this.loading = true;
+      this.$root.$on("loading", (data) => {
+        this.loading = data;
+      });
+    }, head() {
       return { titleTemplate: "Productos" };
     } };
     var pages_productsvue_type_script_lang_js_ = productsvue_type_script_lang_js_;
@@ -41,7 +48,7 @@ var modules = products$1.modules = {
       false,
       injectStyles,
       null,
-      "0a2b7136"
+      "aa4707b6"
     );
     __webpack_exports__["default"] = component.exports;
     installComponents(component, { Search: __webpack_require__(77).default });
@@ -96,7 +103,7 @@ var modules = products$1.modules = {
       false,
       injectStyles,
       null,
-      "7be9673b"
+      "f29c0b0a"
     );
     __webpack_exports__["default"] = component.exports;
   },

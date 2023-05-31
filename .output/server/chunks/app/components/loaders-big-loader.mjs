@@ -20,12 +20,12 @@ var loadersBigLoader$1 = {};
 
 var ids = loadersBigLoader$1.ids = [3];
 var modules = loadersBigLoader$1.modules = {
-  119: function(module, exports2) {
+  120: function(module, exports2) {
     module.exports = {};
   },
-  144: function(module, __webpack_exports__, __webpack_require__) {
+  146: function(module, __webpack_exports__, __webpack_require__) {
     __webpack_require__.r(__webpack_exports__);
-    var _node_modules_css_loader_dist_cjs_js_ref_5_oneOf_1_0_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_5_oneOf_1_1_node_modules_nuxt_components_dist_loader_js_ref_2_0_node_modules_vue_loader_lib_index_js_vue_loader_options_BigLoader_vue_vue_type_style_index_0_id_a967bb64_prod_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(119);
+    var _node_modules_css_loader_dist_cjs_js_ref_5_oneOf_1_0_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_5_oneOf_1_1_node_modules_nuxt_components_dist_loader_js_ref_2_0_node_modules_vue_loader_lib_index_js_vue_loader_options_BigLoader_vue_vue_type_style_index_0_id_a967bb64_prod_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(120);
     for (var __WEBPACK_IMPORT_KEY__ in _node_modules_css_loader_dist_cjs_js_ref_5_oneOf_1_0_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_5_oneOf_1_1_node_modules_nuxt_components_dist_loader_js_ref_2_0_node_modules_vue_loader_lib_index_js_vue_loader_options_BigLoader_vue_vue_type_style_index_0_id_a967bb64_prod_lang_css___WEBPACK_IMPORTED_MODULE_0__)
       if (["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0)
         (function(key) {
@@ -34,7 +34,7 @@ var modules = loadersBigLoader$1.modules = {
           });
         })(__WEBPACK_IMPORT_KEY__);
   },
-  180: function(module, __webpack_exports__, __webpack_require__) {
+  182: function(module, __webpack_exports__, __webpack_require__) {
     __webpack_require__.r(__webpack_exports__);
     var render = function render2() {
       var _vm = this, _c = _vm._self._c;
@@ -45,7 +45,7 @@ var modules = loadersBigLoader$1.modules = {
     var loaders_BigLoadervue_type_script_lang_js_ = BigLoadervue_type_script_lang_js_;
     var componentNormalizer = __webpack_require__(2);
     function injectStyles(context) {
-      var style0 = __webpack_require__(144);
+      var style0 = __webpack_require__(146);
       if (style0.__inject__)
         style0.__inject__(context);
     }
@@ -56,7 +56,7 @@ var modules = loadersBigLoader$1.modules = {
       false,
       injectStyles,
       null,
-      "01fbb93e"
+      "54cdefbe"
     );
     __webpack_exports__["default"] = component.exports;
   }

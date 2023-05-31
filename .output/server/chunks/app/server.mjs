@@ -47,7 +47,6 @@ import 'scule';
 import 'unstorage';
 import 'fs';
 import 'pathe';
-import '../../../.nuxt/dist/api/ipx.js';
 import 'stream';
 import 'unenv/runtime/mock/proxy';
 import 'path';
@@ -158,7 +157,7 @@ const require$$35 = /*@__PURE__*/getDefaultExportFromNamespaceIfNotNamed(imageMe
 	      } else {
 	        var promise = new Promise(function(resolve, reject) {
 	          installedChunkData = installedChunks[chunkId] = [resolve, reject];
-	          import('../rollup/_dynamic-require.mjs').then(r => r.default || r).then(dynamicRequire => dynamicRequire( ({ "0": "components/headers-nav-top", "1": "components/headers-search", "2": "components/headers-side-nav", "3": "components/loaders-big-loader", "4": "components/clients-guests", "5": "components/clients-registeds", "6": "components/coupons-create-coupons", "7": "components/dashboard-donuts-products", "8": "components/dashboard-graphic-months", "9": "components/headers-results", "10": "components/invoices-error-modal", "11": "components/invoices-invoice-viewer", "12": "components/invoices-new-invoice", "13": "components/invoices-success-invoice-modal", "14": "components/orders-modal-track", "15": "components/product-create-product", "16": "components/product-edit-product", "17": "components/product-products-table", "18": "components/profile-new-profile", "19": "components/reviews-new-review", "20": "components/reviews-review-table", "23": "components/auth", "24": "components/coupons-table", "25": "components/dashboard-analytics-google", "26": "components/header-with-topbar", "27": "components/invoices-table", "28": "components/loaders-small-loading", "29": "components/login", "30": "components/mobile-bar", "31": "components/my-account-container", "32": "components/nav-bottom", "33": "components/navigation", "34": "components/off-canvas-mobile-menu", "35": "components/orders", "36": "components/orders-com", "37": "components/orders-history", "38": "components/orders-note", "39": "components/product-details-description-review", "40": "components/product-details-wrapper", "41": "components/product-grid-item", "42": "components/product-grid-item-two", "43": "components/product-grid-style-three", "44": "components/product-wrapper-cosmetics", "45": "components/profile-new-guest", "46": "components/register", "47": "components/responsive-mobile-menu", "48": "components/search", "49": "components/the-footer", "50": "components/the-header", "51": "pages/clients", "52": "pages/coupons", "53": "pages/guests", "54": "pages/index", "55": "pages/invoices", "56": "pages/login", "57": "pages/my-account", "58": "pages/orders", "59": "pages/orders-history", "60": "pages/orders-view/_id", "61": "pages/product/_slug", "62": "pages/products", "63": "pages/reviews", "64": "pages/search", "65": "pages/settings" }[chunkId] || chunkId) + ".js")).then((chunk) => {
+	          import('../rollup/_dynamic-require.mjs').then(r => r.default || r).then(dynamicRequire => dynamicRequire( ({ "0": "components/headers-nav-top", "1": "components/headers-search", "2": "components/headers-side-nav", "3": "components/loaders-big-loader", "4": "components/clients-guests", "5": "components/clients-registeds", "6": "components/coupons-create-coupons", "7": "components/dashboard-donuts-products", "8": "components/dashboard-graphic-months", "9": "components/invoices-error-modal", "10": "components/invoices-invoice-viewer", "11": "components/invoices-new-invoice", "12": "components/invoices-success-invoice-modal", "13": "components/orders-edit-order", "14": "components/orders-modal-track", "15": "components/product-create-product", "16": "components/product-edit-product", "17": "components/product-products-table", "18": "components/profile-new-profile", "19": "components/reviews-new-review", "20": "components/reviews-review-table", "23": "components/auth", "24": "components/coupons-table", "25": "components/dashboard-analytics-google", "26": "components/header-with-topbar", "27": "components/headers-results", "28": "components/invoices-table", "29": "components/loaders-small-loading", "30": "components/login", "31": "components/mobile-bar", "32": "components/my-account-container", "33": "components/nav-bottom", "34": "components/navigation", "35": "components/off-canvas-mobile-menu", "36": "components/orders", "37": "components/orders-com", "38": "components/orders-history", "39": "components/orders-note", "40": "components/product-details-description-review", "41": "components/product-details-wrapper", "42": "components/product-grid-item", "43": "components/product-grid-item-two", "44": "components/product-grid-style-three", "45": "components/product-wrapper-cosmetics", "46": "components/profile-new-guest", "47": "components/register", "48": "components/responsive-mobile-menu", "49": "components/search", "50": "components/the-footer", "51": "components/the-header", "52": "pages/clients", "53": "pages/coupons", "54": "pages/guests", "55": "pages/index", "56": "pages/invoices", "57": "pages/login", "58": "pages/my-account", "59": "pages/order-edit/_id", "60": "pages/orders", "61": "pages/orders-history", "62": "pages/orders-view/_id", "63": "pages/product/_slug", "64": "pages/products", "65": "pages/reviews", "66": "pages/settings" }[chunkId] || chunkId) + ".js")).then((chunk) => {
 	            var moreModules = chunk.modules, chunkIds = chunk.ids;
 	            for (var moduleId in moreModules) {
 	              modules[moduleId] = moreModules[moduleId];
@@ -6633,6 +6632,9 @@ const require$$35 = /*@__PURE__*/getDefaultExportFromNamespaceIfNotNamed(imageMe
 	    __webpack_require__.d(components_namespaceObject, "LoadersSmallLoading", function() {
 	      return LoadersSmallLoading;
 	    });
+	    __webpack_require__.d(components_namespaceObject, "OrdersEditOrder", function() {
+	      return OrdersEditOrder;
+	    });
 	    __webpack_require__.d(components_namespaceObject, "OrdersModalTrack", function() {
 	      return OrdersModalTrack;
 	    });
@@ -6884,6 +6886,9 @@ const require$$35 = /*@__PURE__*/getDefaultExportFromNamespaceIfNotNamed(imageMe
 	      if (context.from) {
 	        app.context.from = fromRouteData;
 	      }
+	      if (context.error) {
+	        app.context.error = context.error;
+	      }
 	      app.context.next = context.next;
 	      app.context._redirected = false;
 	      app.context._errored = false;
@@ -6891,12 +6896,12 @@ const require$$35 = /*@__PURE__*/getDefaultExportFromNamespaceIfNotNamed(imageMe
 	      app.context.params = app.context.route.params || {};
 	      app.context.query = app.context.route.query || {};
 	    }
-	    function middlewareSeries(promises, appContext) {
-	      if (!promises.length || appContext._redirected || appContext._errored) {
+	    function middlewareSeries(promises, appContext, renderState) {
+	      if (!promises.length || appContext._redirected || appContext._errored || renderState && renderState.aborted) {
 	        return Promise.resolve();
 	      }
 	      return promisify(promises[0], appContext).then(() => {
-	        return middlewareSeries(promises.slice(1), appContext);
+	        return middlewareSeries(promises.slice(1), appContext, renderState);
 	      });
 	    }
 	    function promisify(fn, context) {
@@ -9042,25 +9047,25 @@ const require$$35 = /*@__PURE__*/getDefaultExportFromNamespaceIfNotNamed(imageMe
 	        });
 	      });
 	    };
-	    const _79ce9320 = () => interopDefault(__webpack_require__.e(51).then(__webpack_require__.bind(null, 149)));
-	    const _348052f5 = () => interopDefault(__webpack_require__.e(52).then(__webpack_require__.bind(null, 150)));
-	    const _3bf3bee3 = () => interopDefault(__webpack_require__.e(53).then(__webpack_require__.bind(null, 151)));
-	    const _e91f2aa4 = () => interopDefault(__webpack_require__.e(55).then(__webpack_require__.bind(null, 152)));
-	    const _01d3bb51 = () => interopDefault(__webpack_require__.e(56).then(__webpack_require__.bind(null, 153)));
-	    const _0dc887d4 = () => interopDefault(__webpack_require__.e(57).then(__webpack_require__.bind(null, 154)));
-	    const _5ce041a6 = () => interopDefault(__webpack_require__.e(58).then(__webpack_require__.bind(null, 155)));
-	    const _72f3f318 = () => interopDefault(__webpack_require__.e(59).then(__webpack_require__.bind(null, 156)));
-	    const _0012aa2c = () => interopDefault(__webpack_require__.e(62).then(__webpack_require__.bind(null, 157)));
-	    const _1e81e303 = () => interopDefault(__webpack_require__.e(63).then(__webpack_require__.bind(null, 158)));
-	    const _7915c870 = () => interopDefault(__webpack_require__.e(64).then(__webpack_require__.bind(null, 159)));
-	    const _3b2fc52a = () => interopDefault(__webpack_require__.e(65).then(__webpack_require__.bind(null, 160)));
-	    const _4e37ecc0 = () => interopDefault(__webpack_require__.e(60).then(__webpack_require__.bind(null, 161)));
-	    const _290819d2 = () => interopDefault(__webpack_require__.e(61).then(__webpack_require__.bind(null, 162)));
-	    const _382c183a = () => interopDefault(__webpack_require__.e(54).then(__webpack_require__.bind(null, 163)));
+	    const _489d7284 = () => interopDefault(__webpack_require__.e(52).then(__webpack_require__.bind(null, 151)));
+	    const _4d18e343 = () => interopDefault(__webpack_require__.e(53).then(__webpack_require__.bind(null, 152)));
+	    const _4500ecd5 = () => interopDefault(__webpack_require__.e(54).then(__webpack_require__.bind(null, 153)));
+	    const _f42c37c0 = () => interopDefault(__webpack_require__.e(56).then(__webpack_require__.bind(null, 154)));
+	    const _6f5ff1c2 = () => interopDefault(__webpack_require__.e(57).then(__webpack_require__.bind(null, 155)));
+	    const _4fc96cc6 = () => interopDefault(__webpack_require__.e(58).then(__webpack_require__.bind(null, 156)));
+	    const _4ac5e5c2 = () => interopDefault(__webpack_require__.e(60).then(__webpack_require__.bind(null, 157)));
+	    const _ba71bb34 = () => interopDefault(__webpack_require__.e(61).then(__webpack_require__.bind(null, 158)));
+	    const _0ae7b8c4 = () => interopDefault(__webpack_require__.e(64).then(__webpack_require__.bind(null, 159)));
+	    const _371a7351 = () => interopDefault(__webpack_require__.e(65).then(__webpack_require__.bind(null, 160)));
+	    const _463cd246 = () => interopDefault(__webpack_require__.e(66).then(__webpack_require__.bind(null, 161)));
+	    const _02af37f0 = () => interopDefault(__webpack_require__.e(55).then(__webpack_require__.bind(null, 162)));
+	    const _082e56e4 = () => interopDefault(__webpack_require__.e(59).then(__webpack_require__.bind(null, 163)));
+	    const _f6732824 = () => interopDefault(__webpack_require__.e(62).then(__webpack_require__.bind(null, 164)));
+	    const _0f1ab7a0 = () => interopDefault(__webpack_require__.e(63).then(__webpack_require__.bind(null, 165)));
 	    const emptyFn = () => {
 	    };
 	    vue_runtime["b"].use(VueRouter$1);
-	    const routerOptions = { mode: "history", base: "/", linkActiveClass: "nuxt-link-active", linkExactActiveClass: "nuxt-link-exact-active", scrollBehavior: router_scrollBehavior, routes: [{ path: "/clients", component: _79ce9320, name: "clients" }, { path: "/coupons", component: _348052f5, name: "coupons" }, { path: "/guests", component: _3bf3bee3, name: "guests" }, { path: "/invoices", component: _e91f2aa4, name: "invoices" }, { path: "/login", component: _01d3bb51, name: "login" }, { path: "/my-account", component: _0dc887d4, name: "my-account" }, { path: "/orders", component: _5ce041a6, name: "orders" }, { path: "/orders-history", component: _72f3f318, name: "orders-history" }, { path: "/products", component: _0012aa2c, name: "products" }, { path: "/reviews", component: _1e81e303, name: "reviews" }, { path: "/search", component: _7915c870, name: "search" }, { path: "/settings", component: _3b2fc52a, name: "settings" }, { path: "/orders-view/:id?", component: _4e37ecc0, name: "orders-view-id" }, { path: "/product/:slug?", component: _290819d2, name: "product-slug" }, { path: "/", component: _382c183a, name: "index" }], fallback: false };
+	    const routerOptions = { mode: "history", base: "/", linkActiveClass: "nuxt-link-active", linkExactActiveClass: "nuxt-link-exact-active", scrollBehavior: router_scrollBehavior, routes: [{ path: "/clients", component: _489d7284, name: "clients" }, { path: "/coupons", component: _4d18e343, name: "coupons" }, { path: "/guests", component: _4500ecd5, name: "guests" }, { path: "/invoices", component: _f42c37c0, name: "invoices" }, { path: "/login", component: _6f5ff1c2, name: "login" }, { path: "/my-account", component: _4fc96cc6, name: "my-account" }, { path: "/orders", component: _4ac5e5c2, name: "orders" }, { path: "/orders-history", component: _ba71bb34, name: "orders-history" }, { path: "/products", component: _0ae7b8c4, name: "products" }, { path: "/reviews", component: _371a7351, name: "reviews" }, { path: "/settings", component: _463cd246, name: "settings" }, { path: "/", component: _02af37f0, name: "index" }, { path: "/order-edit/:id?", component: _082e56e4, name: "order-edit-id" }, { path: "/orders-view/:id?", component: _f6732824, name: "orders-view-id" }, { path: "/product/:slug?", component: _0f1ab7a0, name: "product-slug" }], fallback: false };
 	    function createRouter(ssrContext, config) {
 	      const base = config._app && config._app.basePath || routerOptions.base;
 	      const router = new VueRouter$1({ ...routerOptions, base });
@@ -9143,7 +9148,7 @@ const require$$35 = /*@__PURE__*/getDefaultExportFromNamespaceIfNotNamed(imageMe
 	      false,
 	      injectStyles,
 	      "12a32de6",
-	      "652eebdc"
+	      "07c31f1c"
 	    );
 	    var layouts_error = error_component.exports;
 	    var components_nuxt = { name: "Nuxt", components: { NuxtChild: nuxt_child, NuxtError: layouts_error }, props: { nuxtChildKey: { type: String, default: void 0 }, keepAlive: Boolean, keepAliveProps: { type: Object, default: void 0 }, name: { type: String, default: "default" } }, errorCaptured(error) {
@@ -9292,7 +9297,7 @@ const require$$35 = /*@__PURE__*/getDefaultExportFromNamespaceIfNotNamed(imageMe
 	      false,
 	      nuxt_loading_injectStyles,
 	      null,
-	      "cac69372"
+	      "d23b2cf2"
 	    );
 	    var nuxt_loading = nuxt_loading_component.exports;
 	    __webpack_require__(53);
@@ -9326,7 +9331,7 @@ const require$$35 = /*@__PURE__*/getDefaultExportFromNamespaceIfNotNamed(imageMe
 	      false,
 	      null,
 	      null,
-	      "3f414c95"
+	      "e4d4a056"
 	    );
 	    var layouts_default = default_component.exports;
 	    var HomeSidebarMenuvue_type_template_id_d81b703a_render = function render() {
@@ -9356,7 +9361,7 @@ const require$$35 = /*@__PURE__*/getDefaultExportFromNamespaceIfNotNamed(imageMe
 	      false,
 	      null,
 	      null,
-	      "622315a0"
+	      "114b9870"
 	    );
 	    var HomeSidebarMenu = HomeSidebarMenu_component.exports;
 	    const layouts = { "_default": sanitizeComponent(layouts_default), "_HomeSidebarMenu": sanitizeComponent(HomeSidebarMenu) };
@@ -9475,55 +9480,56 @@ const require$$35 = /*@__PURE__*/getDefaultExportFromNamespaceIfNotNamed(imageMe
 	      }
 	      return moduleData;
 	    }
-	    const components_Auth = () => __webpack_require__.e(23).then(__webpack_require__.bind(null, 124)).then((c) => wrapFunctional(c.default || c));
+	    const components_Auth = () => __webpack_require__.e(23).then(__webpack_require__.bind(null, 125)).then((c) => wrapFunctional(c.default || c));
 	    const HeaderWithTopbar = () => __webpack_require__.e(26).then(__webpack_require__.bind(null, 100)).then((c) => wrapFunctional(c.default || c));
-	    const Login = () => __webpack_require__.e(29).then(__webpack_require__.bind(null, 87)).then((c) => wrapFunctional(c.default || c));
-	    const MobileBar = () => __webpack_require__.e(30).then(__webpack_require__.bind(null, 164)).then((c) => wrapFunctional(c.default || c));
-	    const MyAccountContainer = () => __webpack_require__.e(31).then(__webpack_require__.bind(null, 125)).then((c) => wrapFunctional(c.default || c));
-	    const NavBottom = () => __webpack_require__.e(32).then(__webpack_require__.bind(null, 129)).then((c) => wrapFunctional(c.default || c));
-	    const Navigation = () => __webpack_require__.e(33).then(__webpack_require__.bind(null, 88)).then((c) => wrapFunctional(c.default || c));
-	    const OffCanvasMobileMenu = () => __webpack_require__.e(34).then(__webpack_require__.bind(null, 82)).then((c) => wrapFunctional(c.default || c));
-	    const ProductDetailsDescriptionReview = () => __webpack_require__.e(39).then(__webpack_require__.bind(null, 131)).then((c) => wrapFunctional(c.default || c));
-	    const Register = () => __webpack_require__.e(46).then(__webpack_require__.bind(null, 165)).then((c) => wrapFunctional(c.default || c));
-	    const ResponsiveMobileMenu = () => __webpack_require__.e(47).then(__webpack_require__.bind(null, 83)).then((c) => wrapFunctional(c.default || c));
-	    const Search = () => __webpack_require__.e(48).then(__webpack_require__.bind(null, 77)).then((c) => wrapFunctional(c.default || c));
-	    const TheFooter = () => __webpack_require__.e(49).then(__webpack_require__.bind(null, 132)).then((c) => wrapFunctional(c.default || c));
-	    const TheHeader = () => __webpack_require__.e(50).then(__webpack_require__.bind(null, 101)).then((c) => wrapFunctional(c.default || c));
-	    const ClientsGuests = () => __webpack_require__.e(4).then(__webpack_require__.bind(null, 166)).then((c) => wrapFunctional(c.default || c));
-	    const ClientsRegisteds = () => __webpack_require__.e(5).then(__webpack_require__.bind(null, 167)).then((c) => wrapFunctional(c.default || c));
-	    const CouponsTable = () => __webpack_require__.e(24).then(__webpack_require__.bind(null, 122)).then((c) => wrapFunctional(c.default || c));
-	    const CouponsCreateCoupons = () => __webpack_require__.e(6).then(__webpack_require__.bind(null, 168)).then((c) => wrapFunctional(c.default || c));
-	    const DashboardAnalyticsGoogle = () => __webpack_require__.e(25).then(__webpack_require__.bind(null, 169)).then((c) => wrapFunctional(c.default || c));
-	    const DashboardDonutsProducts = () => __webpack_require__.e(7).then(__webpack_require__.bind(null, 170)).then((c) => wrapFunctional(c.default || c));
-	    const DashboardGraphicMonths = () => __webpack_require__.e(8).then(__webpack_require__.bind(null, 171)).then((c) => wrapFunctional(c.default || c));
-	    const HeadersNavTop = () => __webpack_require__.e(0).then(__webpack_require__.bind(null, 172)).then((c) => wrapFunctional(c.default || c));
-	    const HeadersResults = () => __webpack_require__.e(9).then(__webpack_require__.bind(null, 173)).then((c) => wrapFunctional(c.default || c));
-	    const HeadersSearch = () => __webpack_require__.e(1).then(__webpack_require__.bind(null, 174)).then((c) => wrapFunctional(c.default || c));
-	    const HeadersSideNav = () => __webpack_require__.e(2).then(__webpack_require__.bind(null, 175)).then((c) => wrapFunctional(c.default || c));
-	    const InvoicesErrorModal = () => __webpack_require__.e(10).then(__webpack_require__.bind(null, 176)).then((c) => wrapFunctional(c.default || c));
-	    const InvoicesInvoiceViewer = () => __webpack_require__.e(11).then(__webpack_require__.bind(null, 177)).then((c) => wrapFunctional(c.default || c));
-	    const InvoicesTable = () => __webpack_require__.e(27).then(__webpack_require__.bind(null, 123)).then((c) => wrapFunctional(c.default || c));
-	    const InvoicesNewInvoice = () => __webpack_require__.e(12).then(__webpack_require__.bind(null, 178)).then((c) => wrapFunctional(c.default || c));
-	    const InvoicesSuccessInvoiceModal = () => __webpack_require__.e(13).then(__webpack_require__.bind(null, 179)).then((c) => wrapFunctional(c.default || c));
-	    const LoadersBigLoader = () => __webpack_require__.e(3).then(__webpack_require__.bind(null, 180)).then((c) => wrapFunctional(c.default || c));
-	    const LoadersSmallLoading = () => __webpack_require__.e(28).then(__webpack_require__.bind(null, 181)).then((c) => wrapFunctional(c.default || c));
-	    const OrdersModalTrack = () => __webpack_require__.e(14).then(__webpack_require__.bind(null, 182)).then((c) => wrapFunctional(c.default || c));
-	    const OrdersNote = () => __webpack_require__.e(38).then(__webpack_require__.bind(null, 183)).then((c) => wrapFunctional(c.default || c));
-	    const Orders = () => __webpack_require__.e(35).then(__webpack_require__.bind(null, 126)).then((c) => wrapFunctional(c.default || c));
-	    const OrdersCom = () => __webpack_require__.e(36).then(__webpack_require__.bind(null, 128)).then((c) => wrapFunctional(c.default || c));
-	    const OrdersHistory = () => __webpack_require__.e(37).then(__webpack_require__.bind(null, 127)).then((c) => wrapFunctional(c.default || c));
-	    const ProductCreateProduct = () => __webpack_require__.e(15).then(__webpack_require__.bind(null, 184)).then((c) => wrapFunctional(c.default || c));
-	    const ProductEditProduct = () => __webpack_require__.e(16).then(__webpack_require__.bind(null, 185)).then((c) => wrapFunctional(c.default || c));
-	    const ProductDetailsWrapper = () => __webpack_require__.e(40).then(__webpack_require__.bind(null, 130)).then((c) => wrapFunctional(c.default || c));
-	    const ProductGridItem = () => __webpack_require__.e(41).then(__webpack_require__.bind(null, 186)).then((c) => wrapFunctional(c.default || c));
-	    const ProductGridItemTwo = () => __webpack_require__.e(42).then(__webpack_require__.bind(null, 133)).then((c) => wrapFunctional(c.default || c));
-	    const ProductGridStyleThree = () => __webpack_require__.e(43).then(__webpack_require__.bind(null, 187)).then((c) => wrapFunctional(c.default || c));
-	    const ProductWrapperCosmetics = () => __webpack_require__.e(44).then(__webpack_require__.bind(null, 188)).then((c) => wrapFunctional(c.default || c));
-	    const ProductProductsTable = () => __webpack_require__.e(17).then(__webpack_require__.bind(null, 189)).then((c) => wrapFunctional(c.default || c));
-	    const ProfileNewGuest = () => __webpack_require__.e(45).then(__webpack_require__.bind(null, 190)).then((c) => wrapFunctional(c.default || c));
-	    const ProfileNewProfile = () => __webpack_require__.e(18).then(__webpack_require__.bind(null, 191)).then((c) => wrapFunctional(c.default || c));
-	    const ReviewsNewReview = () => __webpack_require__.e(19).then(__webpack_require__.bind(null, 192)).then((c) => wrapFunctional(c.default || c));
-	    const ReviewsReviewTable = () => __webpack_require__.e(20).then(__webpack_require__.bind(null, 193)).then((c) => wrapFunctional(c.default || c));
+	    const Login = () => __webpack_require__.e(30).then(__webpack_require__.bind(null, 87)).then((c) => wrapFunctional(c.default || c));
+	    const MobileBar = () => __webpack_require__.e(31).then(__webpack_require__.bind(null, 166)).then((c) => wrapFunctional(c.default || c));
+	    const MyAccountContainer = () => __webpack_require__.e(32).then(__webpack_require__.bind(null, 126)).then((c) => wrapFunctional(c.default || c));
+	    const NavBottom = () => __webpack_require__.e(33).then(__webpack_require__.bind(null, 130)).then((c) => wrapFunctional(c.default || c));
+	    const Navigation = () => __webpack_require__.e(34).then(__webpack_require__.bind(null, 88)).then((c) => wrapFunctional(c.default || c));
+	    const OffCanvasMobileMenu = () => __webpack_require__.e(35).then(__webpack_require__.bind(null, 82)).then((c) => wrapFunctional(c.default || c));
+	    const ProductDetailsDescriptionReview = () => __webpack_require__.e(40).then(__webpack_require__.bind(null, 132)).then((c) => wrapFunctional(c.default || c));
+	    const Register = () => __webpack_require__.e(47).then(__webpack_require__.bind(null, 167)).then((c) => wrapFunctional(c.default || c));
+	    const ResponsiveMobileMenu = () => __webpack_require__.e(48).then(__webpack_require__.bind(null, 83)).then((c) => wrapFunctional(c.default || c));
+	    const Search = () => __webpack_require__.e(49).then(__webpack_require__.bind(null, 77)).then((c) => wrapFunctional(c.default || c));
+	    const TheFooter = () => __webpack_require__.e(50).then(__webpack_require__.bind(null, 133)).then((c) => wrapFunctional(c.default || c));
+	    const TheHeader = () => __webpack_require__.e(51).then(__webpack_require__.bind(null, 101)).then((c) => wrapFunctional(c.default || c));
+	    const ClientsGuests = () => __webpack_require__.e(4).then(__webpack_require__.bind(null, 168)).then((c) => wrapFunctional(c.default || c));
+	    const ClientsRegisteds = () => __webpack_require__.e(5).then(__webpack_require__.bind(null, 169)).then((c) => wrapFunctional(c.default || c));
+	    const CouponsTable = () => __webpack_require__.e(24).then(__webpack_require__.bind(null, 123)).then((c) => wrapFunctional(c.default || c));
+	    const CouponsCreateCoupons = () => __webpack_require__.e(6).then(__webpack_require__.bind(null, 170)).then((c) => wrapFunctional(c.default || c));
+	    const DashboardAnalyticsGoogle = () => __webpack_require__.e(25).then(__webpack_require__.bind(null, 171)).then((c) => wrapFunctional(c.default || c));
+	    const DashboardDonutsProducts = () => __webpack_require__.e(7).then(__webpack_require__.bind(null, 172)).then((c) => wrapFunctional(c.default || c));
+	    const DashboardGraphicMonths = () => __webpack_require__.e(8).then(__webpack_require__.bind(null, 173)).then((c) => wrapFunctional(c.default || c));
+	    const HeadersNavTop = () => __webpack_require__.e(0).then(__webpack_require__.bind(null, 174)).then((c) => wrapFunctional(c.default || c));
+	    const HeadersResults = () => __webpack_require__.e(27).then(__webpack_require__.bind(null, 175)).then((c) => wrapFunctional(c.default || c));
+	    const HeadersSearch = () => __webpack_require__.e(1).then(__webpack_require__.bind(null, 176)).then((c) => wrapFunctional(c.default || c));
+	    const HeadersSideNav = () => __webpack_require__.e(2).then(__webpack_require__.bind(null, 177)).then((c) => wrapFunctional(c.default || c));
+	    const InvoicesErrorModal = () => __webpack_require__.e(9).then(__webpack_require__.bind(null, 178)).then((c) => wrapFunctional(c.default || c));
+	    const InvoicesInvoiceViewer = () => __webpack_require__.e(10).then(__webpack_require__.bind(null, 179)).then((c) => wrapFunctional(c.default || c));
+	    const InvoicesTable = () => __webpack_require__.e(28).then(__webpack_require__.bind(null, 124)).then((c) => wrapFunctional(c.default || c));
+	    const InvoicesNewInvoice = () => __webpack_require__.e(11).then(__webpack_require__.bind(null, 180)).then((c) => wrapFunctional(c.default || c));
+	    const InvoicesSuccessInvoiceModal = () => __webpack_require__.e(12).then(__webpack_require__.bind(null, 181)).then((c) => wrapFunctional(c.default || c));
+	    const LoadersBigLoader = () => __webpack_require__.e(3).then(__webpack_require__.bind(null, 182)).then((c) => wrapFunctional(c.default || c));
+	    const LoadersSmallLoading = () => __webpack_require__.e(29).then(__webpack_require__.bind(null, 183)).then((c) => wrapFunctional(c.default || c));
+	    const OrdersEditOrder = () => __webpack_require__.e(13).then(__webpack_require__.bind(null, 184)).then((c) => wrapFunctional(c.default || c));
+	    const OrdersModalTrack = () => __webpack_require__.e(14).then(__webpack_require__.bind(null, 185)).then((c) => wrapFunctional(c.default || c));
+	    const OrdersNote = () => __webpack_require__.e(39).then(__webpack_require__.bind(null, 186)).then((c) => wrapFunctional(c.default || c));
+	    const Orders = () => __webpack_require__.e(36).then(__webpack_require__.bind(null, 127)).then((c) => wrapFunctional(c.default || c));
+	    const OrdersCom = () => __webpack_require__.e(37).then(__webpack_require__.bind(null, 129)).then((c) => wrapFunctional(c.default || c));
+	    const OrdersHistory = () => __webpack_require__.e(38).then(__webpack_require__.bind(null, 128)).then((c) => wrapFunctional(c.default || c));
+	    const ProductCreateProduct = () => __webpack_require__.e(15).then(__webpack_require__.bind(null, 187)).then((c) => wrapFunctional(c.default || c));
+	    const ProductEditProduct = () => __webpack_require__.e(16).then(__webpack_require__.bind(null, 188)).then((c) => wrapFunctional(c.default || c));
+	    const ProductDetailsWrapper = () => __webpack_require__.e(41).then(__webpack_require__.bind(null, 131)).then((c) => wrapFunctional(c.default || c));
+	    const ProductGridItem = () => __webpack_require__.e(42).then(__webpack_require__.bind(null, 189)).then((c) => wrapFunctional(c.default || c));
+	    const ProductGridItemTwo = () => __webpack_require__.e(43).then(__webpack_require__.bind(null, 134)).then((c) => wrapFunctional(c.default || c));
+	    const ProductGridStyleThree = () => __webpack_require__.e(44).then(__webpack_require__.bind(null, 190)).then((c) => wrapFunctional(c.default || c));
+	    const ProductWrapperCosmetics = () => __webpack_require__.e(45).then(__webpack_require__.bind(null, 191)).then((c) => wrapFunctional(c.default || c));
+	    const ProductProductsTable = () => __webpack_require__.e(17).then(__webpack_require__.bind(null, 192)).then((c) => wrapFunctional(c.default || c));
+	    const ProfileNewGuest = () => __webpack_require__.e(46).then(__webpack_require__.bind(null, 193)).then((c) => wrapFunctional(c.default || c));
+	    const ProfileNewProfile = () => __webpack_require__.e(18).then(__webpack_require__.bind(null, 194)).then((c) => wrapFunctional(c.default || c));
+	    const ReviewsNewReview = () => __webpack_require__.e(19).then(__webpack_require__.bind(null, 195)).then((c) => wrapFunctional(c.default || c));
+	    const ReviewsReviewTable = () => __webpack_require__.e(20).then(__webpack_require__.bind(null, 196)).then((c) => wrapFunctional(c.default || c));
 	    function wrapFunctional(options) {
 	      if (!options || !options.functional) {
 	        return options;
@@ -10156,7 +10162,7 @@ const require$$35 = /*@__PURE__*/getDefaultExportFromNamespaceIfNotNamed(imageMe
 	      false,
 	      null,
 	      null,
-	      "5a0d6930"
+	      "e5e16b30"
 	    );
 	    var nuxt_img = nuxt_img_component.exports;
 	    var nuxt_picturevue_type_template_id_310bdcc2_render = function render() {
@@ -10213,7 +10219,7 @@ const require$$35 = /*@__PURE__*/getDefaultExportFromNamespaceIfNotNamed(imageMe
 	      false,
 	      null,
 	      null,
-	      "7382e66b"
+	      "b87d28ba"
 	    );
 	    var nuxt_picture = nuxt_picture_component.exports;
 	    const operationsGenerator = createOperationsGenerator({ keyMap: { format: "f", fit: "fit", width: "w", height: "h", resize: "s", quality: "q", background: "b" }, joinWith: ",", formatter: (key, val) => Object(dist["a"])(key) + "_" + Object(dist["a"])(val) });

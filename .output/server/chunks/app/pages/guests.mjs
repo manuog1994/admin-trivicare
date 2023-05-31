@@ -18,16 +18,22 @@ function _mergeNamespaces(n, m) {
 
 var guests$1 = {};
 
-var ids = guests$1.ids = [53, 48];
+var ids = guests$1.ids = [54, 49];
 var modules = guests$1.modules = {
-  151: function(module, __webpack_exports__, __webpack_require__) {
+  153: function(module, __webpack_exports__, __webpack_require__) {
     __webpack_require__.r(__webpack_exports__);
     var render = function render2() {
       var _vm = this, _c = _vm._self._c;
-      return _c("div", [_c("SideNav"), _vm._ssrNode(" "), _c("NavTop"), _vm._ssrNode(" "), _c("Search"), _vm._ssrNode(" "), _c("Guests")], 2);
+      return _c("div", [_c("SideNav"), _vm._ssrNode(" "), _c("NavTop"), _vm._ssrNode(" "), _c("Search"), _vm._ssrNode(" "), _c("Guests"), _vm._ssrNode(" "), _vm.loading ? _c("BigLoader") : _vm._e()], 2);
     };
     var staticRenderFns = [];
-    var guestsvue_type_script_lang_js_ = { components: { SideNav: () => __webpack_require__.e(2).then(__webpack_require__.bind(null, 175)), NavTop: () => __webpack_require__.e(0).then(__webpack_require__.bind(null, 172)), Search: () => __webpack_require__.e(1).then(__webpack_require__.bind(null, 174)), Guests: () => __webpack_require__.e(4).then(__webpack_require__.bind(null, 166)) }, head() {
+    var guestsvue_type_script_lang_js_ = { components: { SideNav: () => __webpack_require__.e(2).then(__webpack_require__.bind(null, 177)), NavTop: () => __webpack_require__.e(0).then(__webpack_require__.bind(null, 174)), Search: () => __webpack_require__.e(1).then(__webpack_require__.bind(null, 176)), Guests: () => __webpack_require__.e(4).then(__webpack_require__.bind(null, 168)), BigLoader: () => __webpack_require__.e(3).then(__webpack_require__.bind(null, 182)) }, data() {
+      return { loading: true };
+    }, beforeMount() {
+      this.$root.$on("loading", (data) => {
+        this.loading = data;
+      });
+    }, head() {
       return { titleTemplate: "Invitados" };
     } };
     var pages_guestsvue_type_script_lang_js_ = guestsvue_type_script_lang_js_;
@@ -41,7 +47,7 @@ var modules = guests$1.modules = {
       false,
       injectStyles,
       null,
-      "5f595348"
+      "866889c8"
     );
     __webpack_exports__["default"] = component.exports;
     installComponents(component, { Search: __webpack_require__(77).default });
@@ -96,7 +102,7 @@ var modules = guests$1.modules = {
       false,
       injectStyles,
       null,
-      "7be9673b"
+      "f29c0b0a"
     );
     __webpack_exports__["default"] = component.exports;
   },

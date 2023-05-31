@@ -20,7 +20,7 @@ var profileNewProfile$1 = {};
 
 var ids = profileNewProfile$1.ids = [18];
 var modules = profileNewProfile$1.modules = {
-  191: function(module, __webpack_exports__, __webpack_require__) {
+  194: function(module, __webpack_exports__, __webpack_require__) {
     __webpack_require__.r(__webpack_exports__);
     var render = function render2() {
       var _vm = this, _c = _vm._self._c;
@@ -101,7 +101,7 @@ var modules = profileNewProfile$1.modules = {
       false,
       injectStyles,
       null,
-      "7f4a2da2"
+      "7b8fe0e2"
     );
     __webpack_exports__["default"] = component.exports;
   },

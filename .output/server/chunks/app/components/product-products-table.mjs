@@ -20,7 +20,7 @@ var productProductsTable$1 = {};
 
 var ids = productProductsTable$1.ids = [17];
 var modules = productProductsTable$1.modules = {
-  189: function(module, __webpack_exports__, __webpack_require__) {
+  192: function(module, __webpack_exports__, __webpack_require__) {
     __webpack_require__.r(__webpack_exports__);
     var render = function render2() {
       var _vm = this, _c = _vm._self._c;
@@ -28,15 +28,14 @@ var modules = productProductsTable$1.modules = {
         return _vm._ssrNode("<tr>", "</tr>", [_vm._ssrNode('<th scope="row">' + _vm._ssrEscape(_vm._s(product.id)) + "</th> "), _vm._ssrNode("<td>", "</td>", [_c("n-link", { attrs: { "to": `/product/${product.slug}` } }, [_vm._v(_vm._s(product.name))])], 1), _vm._ssrNode(" <td>" + _vm._ssrEscape(_vm._s(product.price) + " \u20AC") + "</td> " + (product.discount > 0 ? "<td>" + _vm._ssrEscape(_vm._s(product.discount) + " %") + "</td>" : "<td>-</td>") + " " + (product.sold > 0 ? "<td>" + _vm._ssrEscape(_vm._s(product.sold)) + "</td>" : "<td>-</td>") + " " + (product.stock > 0 ? "<td>" + _vm._ssrEscape(_vm._s(product.stock)) + "</td>" : "<td>-</td>") + ' <td><select name="status" class="form-select"><option>' + _vm._ssrEscape(_vm._s(product.status)) + "</option> " + (product.status === "Borrador" ? '<option value="Publicado">Publicado</option>' : '<option value="Borrador">Borrador</option>') + '</select></td> <td><div><button title="Editar producto" class="btn btn-warning btn-sm text-white"><i class="fa fa-edit"></i></button> <button title="Eliminar producto" class="btn btn-danger btn-sm text-white"><i class="fa fa-trash"></i></button></div></td>')], 2);
       }), 0) : _vm._ssrNode('<tbody><tr><td colspan="8">No hay productos.</td></tr></tbody>')], 2) : _vm._e(), _vm._ssrNode(" "), _vm.edit == false && _vm.newProduct == false ? _vm._ssrNode('<div class="d-flex justify-content-center mt-2">', "</div>", [_c("pagination", { attrs: { "records": _vm.products.length, "perPage": _vm.perPage }, on: { "paginate": _vm.myCallback }, model: { value: _vm.page, callback: function($$v) {
         _vm.page = $$v;
-      }, expression: "page" } })], 1) : _vm._e(), _vm._ssrNode(" "), _vm.edit == true ? _c("EditProduct", { attrs: { "product": _vm.product } }) : _vm._e(), _vm._ssrNode(" "), _vm.newProduct == true ? _c("CreateProduct") : _vm._e()], 2), _vm._ssrNode(" "), _vm.loading == true ? _c("BigLoader") : _vm._e()], 2);
+      }, expression: "page" } })], 1) : _vm._e(), _vm._ssrNode(" "), _vm.edit == true ? _c("EditProduct", { attrs: { "product": _vm.product } }) : _vm._e(), _vm._ssrNode(" "), _vm.newProduct == true ? _c("CreateProduct") : _vm._e()], 2)]);
     };
     var staticRenderFns = [];
     var external_sweetalert2_ = __webpack_require__(71);
     var external_sweetalert2_default = /* @__PURE__ */ __webpack_require__.n(external_sweetalert2_);
-    var ProductsTablevue_type_script_lang_js_ = { auth: true, components: { EditProduct: () => __webpack_require__.e(16).then(__webpack_require__.bind(null, 185)), BigLoader: () => __webpack_require__.e(3).then(__webpack_require__.bind(null, 180)), CreateProduct: () => __webpack_require__.e(15).then(__webpack_require__.bind(null, 184)) }, data() {
+    var ProductsTablevue_type_script_lang_js_ = { auth: true, components: { EditProduct: () => __webpack_require__.e(16).then(__webpack_require__.bind(null, 188)), CreateProduct: () => __webpack_require__.e(15).then(__webpack_require__.bind(null, 187)) }, data() {
       return { products: [], status: "", productId: "", yesterday: [], today: [], index: [], store: [], productsVisitors: [], cart: [], checkout: [], product: [], edit: false, newProduct: false, page: 1, perPage: 10 };
     }, beforeMount() {
-      this.loading = true;
       this.$root.$on("closeAdd", (data) => {
         this.newProduct = data;
       });
@@ -51,12 +50,14 @@ var modules = productProductsTable$1.modules = {
     } }, methods: { async getProducts() {
       await this.$axios.get("/api/products").then((response) => {
         this.products = response.data.data;
-        this.loading = false;
+        this.$root.$emit("loading", false);
       });
     }, onClick(product) {
+      this.$root.$emit("loading", true);
       this.edit = true;
       this.product = product;
     }, onClickNew() {
+      this.$root.$emit("loading", true);
       this.newProduct = true;
     }, async updateStatus(product) {
       if (product.status === "Publicado") {
@@ -90,7 +91,7 @@ var modules = productProductsTable$1.modules = {
       false,
       null,
       null,
-      "7d3550e7"
+      "9f6854b2"
     );
     __webpack_exports__["default"] = component.exports;
   }

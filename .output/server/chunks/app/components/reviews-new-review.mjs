@@ -20,7 +20,7 @@ var reviewsNewReview$1 = {};
 
 var ids = reviewsNewReview$1.ids = [19];
 var modules = reviewsNewReview$1.modules = {
-  192: function(module, __webpack_exports__, __webpack_require__) {
+  195: function(module, __webpack_exports__, __webpack_require__) {
     __webpack_require__.r(__webpack_exports__);
     var render = function render2() {
       var _vm = this, _c = _vm._self._c;
@@ -37,6 +37,7 @@ var modules = reviewsNewReview$1.modules = {
       await this.$store.dispatch("getProducts", { page: "", category: "", search: "", slug: "", sort: "", tag: "", status: 2 });
       const products = this.$store.getters.getProducts;
       this.products = products.data;
+      this.$root.$emit("loading", false);
     }, createReview() {
       const review = this.$refs.rating._data.selectedRating;
       const form = this.$refs.newReview;
@@ -62,7 +63,7 @@ var modules = reviewsNewReview$1.modules = {
       false,
       injectStyles,
       null,
-      "36e5cae1"
+      "0d7cafa1"
     );
     __webpack_exports__["default"] = component.exports;
   }

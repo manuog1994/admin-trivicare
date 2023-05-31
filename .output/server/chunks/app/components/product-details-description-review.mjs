@@ -18,7 +18,7 @@ function _mergeNamespaces(n, m) {
 
 var productDetailsDescriptionReview$1 = {};
 
-var ids = productDetailsDescriptionReview$1.ids = [39];
+var ids = productDetailsDescriptionReview$1.ids = [40];
 var modules = productDetailsDescriptionReview$1.modules = {
   107: function(module, __webpack_exports__, __webpack_require__) {
     __webpack_require__.r(__webpack_exports__);
@@ -31,7 +31,7 @@ var modules = productDetailsDescriptionReview$1.modules = {
           });
         })(__WEBPACK_IMPORT_KEY__);
   },
-  131: function(module, __webpack_exports__, __webpack_require__) {
+  132: function(module, __webpack_exports__, __webpack_require__) {
     __webpack_require__.r(__webpack_exports__);
     var render = function render2() {
       var _vm$product$reviews, _vm$reviews, _vm$reviews2;
@@ -70,7 +70,7 @@ var modules = productDetailsDescriptionReview$1.modules = {
       false,
       injectStyles,
       null,
-      "dc77c044"
+      "0de896c4"
     );
     __webpack_exports__["default"] = component.exports;
   },

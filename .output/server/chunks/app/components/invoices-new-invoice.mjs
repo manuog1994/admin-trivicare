@@ -18,23 +18,23 @@ function _mergeNamespaces(n, m) {
 
 var invoicesNewInvoice$1 = {};
 
-var ids = invoicesNewInvoice$1.ids = [12];
+var ids = invoicesNewInvoice$1.ids = [11];
 var modules = invoicesNewInvoice$1.modules = {
-  118: function(module, exports2) {
+  119: function(module, exports2) {
     module.exports = {};
   },
-  143: function(module, __webpack_exports__, __webpack_require__) {
+  145: function(module, __webpack_exports__, __webpack_require__) {
     __webpack_require__.r(__webpack_exports__);
-    var _node_modules_css_loader_dist_cjs_js_ref_5_oneOf_1_0_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_5_oneOf_1_1_node_modules_nuxt_components_dist_loader_js_ref_2_0_node_modules_vue_loader_lib_index_js_vue_loader_options_NewInvoice_vue_vue_type_style_index_0_id_19f3dc80_prod_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(118);
-    for (var __WEBPACK_IMPORT_KEY__ in _node_modules_css_loader_dist_cjs_js_ref_5_oneOf_1_0_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_5_oneOf_1_1_node_modules_nuxt_components_dist_loader_js_ref_2_0_node_modules_vue_loader_lib_index_js_vue_loader_options_NewInvoice_vue_vue_type_style_index_0_id_19f3dc80_prod_lang_css___WEBPACK_IMPORTED_MODULE_0__)
+    var _node_modules_css_loader_dist_cjs_js_ref_5_oneOf_1_0_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_5_oneOf_1_1_node_modules_nuxt_components_dist_loader_js_ref_2_0_node_modules_vue_loader_lib_index_js_vue_loader_options_NewInvoice_vue_vue_type_style_index_0_id_7f320daf_prod_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(119);
+    for (var __WEBPACK_IMPORT_KEY__ in _node_modules_css_loader_dist_cjs_js_ref_5_oneOf_1_0_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_5_oneOf_1_1_node_modules_nuxt_components_dist_loader_js_ref_2_0_node_modules_vue_loader_lib_index_js_vue_loader_options_NewInvoice_vue_vue_type_style_index_0_id_7f320daf_prod_lang_css___WEBPACK_IMPORTED_MODULE_0__)
       if (["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0)
         (function(key) {
           __webpack_require__.d(__webpack_exports__, key, function() {
-            return _node_modules_css_loader_dist_cjs_js_ref_5_oneOf_1_0_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_5_oneOf_1_1_node_modules_nuxt_components_dist_loader_js_ref_2_0_node_modules_vue_loader_lib_index_js_vue_loader_options_NewInvoice_vue_vue_type_style_index_0_id_19f3dc80_prod_lang_css___WEBPACK_IMPORTED_MODULE_0__[key];
+            return _node_modules_css_loader_dist_cjs_js_ref_5_oneOf_1_0_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_5_oneOf_1_1_node_modules_nuxt_components_dist_loader_js_ref_2_0_node_modules_vue_loader_lib_index_js_vue_loader_options_NewInvoice_vue_vue_type_style_index_0_id_7f320daf_prod_lang_css___WEBPACK_IMPORTED_MODULE_0__[key];
           });
         })(__WEBPACK_IMPORT_KEY__);
   },
-  178: function(module, __webpack_exports__, __webpack_require__) {
+  180: function(module, __webpack_exports__, __webpack_require__) {
     __webpack_require__.r(__webpack_exports__);
     var render = function render2() {
       var _vm = this, _c = _vm._self._c;
@@ -55,7 +55,7 @@ var modules = invoicesNewInvoice$1.modules = {
     var ciudades = __webpack_require__(99);
     var NewInvoicevue_type_script_lang_js_ = { data() {
       return { paises: [{ id: 28, name: "Espa\xF1a" }], ciudades, provincias, cities: [], cart: [], products: [], total: 0, discount: 0, total_discount: 0 };
-    }, components: { SuccessInvoiceModal: () => __webpack_require__.e(13).then(__webpack_require__.bind(null, 179)), ErrorModal: () => __webpack_require__.e(10).then(__webpack_require__.bind(null, 176)) }, mounted() {
+    }, components: { SuccessInvoiceModal: () => __webpack_require__.e(12).then(__webpack_require__.bind(null, 181)), ErrorModal: () => __webpack_require__.e(9).then(__webpack_require__.bind(null, 178)) }, mounted() {
       this.getProducts();
     }, methods: { getStates(e) {
       const country_name = e.target.value;
@@ -66,9 +66,11 @@ var modules = invoicesNewInvoice$1.modules = {
       const state_id = this.provincias.find((state) => state.name === states_name).id;
       this.cities = this.ciudades.data.filter((city) => city.id_state === state_id);
     }, async getProducts() {
+      this.$root.$emit("loading", true);
       await this.$store.dispatch("getProducts", { page: "", category: "", search: "", slug: "", sort: "", tag: "", status: "" });
       const products = this.$store.getters.getProducts;
       this.products = products.data;
+      this.$root.$emit("loading", false);
     }, addToCart(e) {
       const product_id = e.target.value;
       const product = this.products.find((product2) => product2.id == product_id);
@@ -119,7 +121,7 @@ var modules = invoicesNewInvoice$1.modules = {
     var invoices_NewInvoicevue_type_script_lang_js_ = NewInvoicevue_type_script_lang_js_;
     var componentNormalizer = __webpack_require__(2);
     function injectStyles(context) {
-      var style0 = __webpack_require__(143);
+      var style0 = __webpack_require__(145);
       if (style0.__inject__)
         style0.__inject__(context);
     }
@@ -130,7 +132,7 @@ var modules = invoicesNewInvoice$1.modules = {
       false,
       injectStyles,
       null,
-      "48cf48f3"
+      "5580049a"
     );
     __webpack_exports__["default"] = component.exports;
   },

@@ -18,9 +18,9 @@ function _mergeNamespaces(n, m) {
 
 var auth$1 = {};
 
-var ids = auth$1.ids = [23, 29];
+var ids = auth$1.ids = [23, 30];
 var modules = auth$1.modules = {
-  124: function(module, __webpack_exports__, __webpack_require__) {
+  125: function(module, __webpack_exports__, __webpack_require__) {
     __webpack_require__.r(__webpack_exports__);
     var render = function render2() {
       var _vm = this, _c = _vm._self._c;
@@ -44,7 +44,7 @@ var modules = auth$1.modules = {
       false,
       injectStyles,
       null,
-      "318361fb"
+      "7fd7c53b"
     );
     __webpack_exports__["default"] = component.exports;
     installComponents(component, { Login: __webpack_require__(87).default });
@@ -62,15 +62,19 @@ var modules = auth$1.modules = {
       return { disabled: false, errors: [] };
     }, computed: {}, mounted() {
       this.$axios.get("/sanctum/csrf-cookie");
+      this.$root.$emit("loading", false);
     }, methods: { async login() {
+      this.$root.$emit("loading", true);
       try {
         const formData = new FormData(this.$refs.loginform);
         await this.$auth.loginWith("laravelJWT", { data: formData }).then((res) => {
           this.$router.push({ path: "/" });
+          this.$root.$emit("loading", false);
         });
       } catch (error) {
         this.errors = ["El correo electr\xF3nico o la contrase\xF1a son incorrectos."];
         console.log(error);
+        this.$root.$emit("loading", false);
       }
     }, viewPass(id) {
       var x = document.getElementById(id);
@@ -89,7 +93,7 @@ var modules = auth$1.modules = {
       false,
       null,
       null,
-      "43fb9726"
+      "7f98c834"
     );
     __webpack_exports__["default"] = component.exports;
   }

@@ -18,7 +18,7 @@ function _mergeNamespaces(n, m) {
 
 var myAccount$1 = {};
 
-var ids = myAccount$1.ids = [57, 26, 31, 33, 34, 47, 48, 50];
+var ids = myAccount$1.ids = [58, 26, 32, 34, 35, 48, 49, 51];
 var modules = myAccount$1.modules = {
   100: function(module, __webpack_exports__, __webpack_require__) {
     __webpack_require__.r(__webpack_exports__);
@@ -117,7 +117,7 @@ var modules = myAccount$1.modules = {
       false,
       injectStyles,
       "9fd8ca2c",
-      "40ea98c4"
+      "04f7c7f8"
     );
     __webpack_exports__["default"] = component.exports;
     installComponents(component, { Search: __webpack_require__(77).default, Navigation: __webpack_require__(88).default, OffCanvasMobileMenu: __webpack_require__(82).default });
@@ -185,7 +185,7 @@ var modules = myAccount$1.modules = {
       false,
       injectStyles,
       "f449fa68",
-      "602f811b"
+      "435725db"
     );
     __webpack_exports__["default"] = component.exports;
     installComponents(component, { Search: __webpack_require__(77).default, OffCanvasMobileMenu: __webpack_require__(82).default });
@@ -201,7 +201,7 @@ var modules = myAccount$1.modules = {
           });
         })(__WEBPACK_IMPORT_KEY__);
   },
-  125: function(module, __webpack_exports__, __webpack_require__) {
+  126: function(module, __webpack_exports__, __webpack_require__) {
     __webpack_require__.r(__webpack_exports__);
     var render = function render2() {
       var _vm = this, _c = _vm._self._c;
@@ -250,7 +250,7 @@ var modules = myAccount$1.modules = {
     var external_sweetalert2_default = /* @__PURE__ */ __webpack_require__.n(external_sweetalert2_);
     var MyAccountContainervue_type_script_lang_js_ = { data() {
       return { email: "", old_password: "", password: "", password_confirmation: "", errors: [], disabled: true, checked: false };
-    }, components: { NewProfile: () => __webpack_require__.e(18).then(__webpack_require__.bind(null, 191)) }, mounted() {
+    }, components: { NewProfile: () => __webpack_require__.e(18).then(__webpack_require__.bind(null, 194)) }, mounted() {
       this.$nextTick(() => {
         this.$nuxt.$loading.start();
         setTimeout(() => {
@@ -337,11 +337,11 @@ var modules = myAccount$1.modules = {
       false,
       injectStyles,
       "031eff57",
-      "084da3b3"
+      "049356f3"
     );
     __webpack_exports__["default"] = component.exports;
   },
-  154: function(module, __webpack_exports__, __webpack_require__) {
+  156: function(module, __webpack_exports__, __webpack_require__) {
     __webpack_require__.r(__webpack_exports__);
     var render = function render2() {
       var _vm = this, _c = _vm._self._c;
@@ -350,7 +350,7 @@ var modules = myAccount$1.modules = {
     var staticRenderFns = [];
     var my_accountvue_type_script_lang_js_ = { data() {
       return { disabled: true, checked: false, searchChildren: "", unauthorized: "" };
-    }, components: { HeaderWithTopbar: () => Promise.resolve().then(__webpack_require__.bind(null, 100)), TheHeader: () => Promise.resolve().then(__webpack_require__.bind(null, 101)), MyAccountContainer: () => Promise.resolve().then(__webpack_require__.bind(null, 125)) }, mounted() {
+    }, components: { HeaderWithTopbar: () => Promise.resolve().then(__webpack_require__.bind(null, 100)), TheHeader: () => Promise.resolve().then(__webpack_require__.bind(null, 101)), MyAccountContainer: () => Promise.resolve().then(__webpack_require__.bind(null, 126)) }, mounted() {
       this.$nextTick(() => {
         this.$nuxt.$loading.start();
         setTimeout(() => {
@@ -394,10 +394,10 @@ var modules = myAccount$1.modules = {
       false,
       null,
       null,
-      "9da48a66"
+      "2d65bf8d"
     );
     __webpack_exports__["default"] = component.exports;
-    installComponents(component, { HeaderWithTopbar: __webpack_require__(100).default, TheHeader: __webpack_require__(101).default, MyAccountContainer: __webpack_require__(125).default });
+    installComponents(component, { HeaderWithTopbar: __webpack_require__(100).default, TheHeader: __webpack_require__(101).default, MyAccountContainer: __webpack_require__(126).default });
   },
   76: function(module, exports2) {
     module.exports = {};
@@ -449,7 +449,7 @@ var modules = myAccount$1.modules = {
       false,
       injectStyles,
       null,
-      "7be9673b"
+      "f29c0b0a"
     );
     __webpack_exports__["default"] = component.exports;
   },
@@ -498,7 +498,7 @@ var modules = myAccount$1.modules = {
       false,
       null,
       null,
-      "71c39ba5"
+      "03975f36"
     );
     __webpack_exports__["default"] = component.exports;
     installComponents(component, { ResponsiveMobileMenu: __webpack_require__(83).default });
@@ -602,7 +602,7 @@ var modules = myAccount$1.modules = {
       false,
       injectStyles,
       "c0e6631e",
-      "e8bbac70"
+      "e56fe5f0"
     );
     __webpack_exports__["default"] = component.exports;
   },
@@ -660,7 +660,7 @@ var modules = myAccount$1.modules = {
       false,
       injectStyles,
       null,
-      "7c75ffb2"
+      "4391f367"
     );
     __webpack_exports__["default"] = component.exports;
   },

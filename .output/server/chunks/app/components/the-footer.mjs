@@ -18,7 +18,7 @@ function _mergeNamespaces(n, m) {
 
 var theFooter$1 = {};
 
-var ids = theFooter$1.ids = [49];
+var ids = theFooter$1.ids = [50];
 var modules = theFooter$1.modules = {
   108: function(module, __webpack_exports__, __webpack_require__) {
     __webpack_require__.r(__webpack_exports__);
@@ -31,7 +31,7 @@ var modules = theFooter$1.modules = {
           });
         })(__WEBPACK_IMPORT_KEY__);
   },
-  132: function(module, __webpack_exports__, __webpack_require__) {
+  133: function(module, __webpack_exports__, __webpack_require__) {
     __webpack_require__.r(__webpack_exports__);
     var render = function render2() {
       var _vm = this, _c = _vm._self._c;
@@ -59,7 +59,7 @@ var modules = theFooter$1.modules = {
       false,
       injectStyles,
       "e1c80dd8",
-      "3efd1d29"
+      "2224c1e9"
     );
     __webpack_exports__["default"] = component.exports;
   },

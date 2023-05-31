@@ -18,20 +18,23 @@ function _mergeNamespaces(n, m) {
 
 var reviews$1 = {};
 
-var ids = reviews$1.ids = [63, 48];
+var ids = reviews$1.ids = [65, 49];
 var modules = reviews$1.modules = {
-  158: function(module, __webpack_exports__, __webpack_require__) {
+  160: function(module, __webpack_exports__, __webpack_require__) {
     __webpack_require__.r(__webpack_exports__);
     var render = function render2() {
       var _vm = this, _c = _vm._self._c;
-      return _c("div", [_c("SideNav"), _vm._ssrNode(" "), _c("NavTop"), _vm._ssrNode(" "), _c("Search"), _vm._ssrNode(" "), !_vm.newReview ? _c("ReviewTable") : _vm._e(), _vm._ssrNode(" "), _vm.newReview ? _c("NewReview") : _vm._e()], 2);
+      return _c("div", [_c("SideNav"), _vm._ssrNode(" "), _c("NavTop"), _vm._ssrNode(" "), _c("Search"), _vm._ssrNode(" "), !_vm.newReview ? _c("ReviewTable") : _vm._e(), _vm._ssrNode(" "), _vm.newReview ? _c("NewReview") : _vm._e(), _vm._ssrNode(" "), _vm.loading ? _c("BigLoader") : _vm._e()], 2);
     };
     var staticRenderFns = [];
     var reviewsvue_type_script_lang_js_ = { data() {
-      return { newReview: false };
-    }, components: { SideNav: () => __webpack_require__.e(2).then(__webpack_require__.bind(null, 175)), NavTop: () => __webpack_require__.e(0).then(__webpack_require__.bind(null, 172)), Search: () => __webpack_require__.e(1).then(__webpack_require__.bind(null, 174)), ReviewTable: () => __webpack_require__.e(20).then(__webpack_require__.bind(null, 193)), NewReview: () => __webpack_require__.e(19).then(__webpack_require__.bind(null, 192)) }, beforeMount() {
+      return { newReview: false, loading: true };
+    }, components: { SideNav: () => __webpack_require__.e(2).then(__webpack_require__.bind(null, 177)), NavTop: () => __webpack_require__.e(0).then(__webpack_require__.bind(null, 174)), Search: () => __webpack_require__.e(1).then(__webpack_require__.bind(null, 176)), ReviewTable: () => __webpack_require__.e(20).then(__webpack_require__.bind(null, 196)), NewReview: () => __webpack_require__.e(19).then(__webpack_require__.bind(null, 195)), BigLoader: () => __webpack_require__.e(3).then(__webpack_require__.bind(null, 182)) }, beforeMount() {
       this.$root.$on("newReview", (data) => {
         this.newReview = data;
+      });
+      this.$root.$on("loading", (data) => {
+        this.loading = data;
       });
     }, head() {
       return { titleTemplate: "Valoraciones" };
@@ -45,7 +48,7 @@ var modules = reviews$1.modules = {
       false,
       null,
       null,
-      "16153aaa"
+      "8ead242c"
     );
     __webpack_exports__["default"] = component.exports;
     installComponents(component, { Search: __webpack_require__(77).default });
@@ -100,7 +103,7 @@ var modules = reviews$1.modules = {
       false,
       injectStyles,
       null,
-      "7be9673b"
+      "f29c0b0a"
     );
     __webpack_exports__["default"] = component.exports;
   },

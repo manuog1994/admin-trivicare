@@ -18,7 +18,7 @@ function _mergeNamespaces(n, m) {
 
 var login$1 = {};
 
-var ids = login$1.ids = [29];
+var ids = login$1.ids = [30];
 var modules = login$1.modules = {
   87: function(module, __webpack_exports__, __webpack_require__) {
     __webpack_require__.r(__webpack_exports__);
@@ -33,15 +33,19 @@ var modules = login$1.modules = {
       return { disabled: false, errors: [] };
     }, computed: {}, mounted() {
       this.$axios.get("/sanctum/csrf-cookie");
+      this.$root.$emit("loading", false);
     }, methods: { async login() {
+      this.$root.$emit("loading", true);
       try {
         const formData = new FormData(this.$refs.loginform);
         await this.$auth.loginWith("laravelJWT", { data: formData }).then((res) => {
           this.$router.push({ path: "/" });
+          this.$root.$emit("loading", false);
         });
       } catch (error) {
         this.errors = ["El correo electr\xF3nico o la contrase\xF1a son incorrectos."];
         console.log(error);
+        this.$root.$emit("loading", false);
       }
     }, viewPass(id) {
       var x = document.getElementById(id);
@@ -60,7 +64,7 @@ var modules = login$1.modules = {
       false,
       null,
       null,
-      "43fb9726"
+      "7f98c834"
     );
     __webpack_exports__["default"] = component.exports;
   }

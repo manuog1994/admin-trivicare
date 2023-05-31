@@ -18,9 +18,9 @@ function _mergeNamespaces(n, m) {
 
 var invoices$1 = {};
 
-var ids = invoices$1.ids = [55, 27, 48];
+var ids = invoices$1.ids = [56, 28, 49];
 var modules = invoices$1.modules = {
-  123: function(module, __webpack_exports__, __webpack_require__) {
+  124: function(module, __webpack_exports__, __webpack_require__) {
     __webpack_require__.r(__webpack_exports__);
     var render = function render2() {
       var _vm$selectedInvoices, _vm$selectedInvoices2, _vm$selectedInvoices3, _vm$invoices;
@@ -77,7 +77,7 @@ var modules = invoices$1.modules = {
       });
     }, mounted() {
       this.getInvoices();
-    }, components: { InvoiceViewer: () => __webpack_require__.e(11).then(__webpack_require__.bind(null, 177)), NewInvoice: () => __webpack_require__.e(12).then(__webpack_require__.bind(null, 178)) }, computed: { paginatedItems() {
+    }, components: { InvoiceViewer: () => __webpack_require__.e(10).then(__webpack_require__.bind(null, 179)), NewInvoice: () => __webpack_require__.e(11).then(__webpack_require__.bind(null, 180)) }, computed: { paginatedItems() {
       const start = (this.page - 1) * parseInt(this.limit);
       return this.invoices.slice(start, start + parseInt(this.limit));
     } }, watch: { day() {
@@ -100,6 +100,7 @@ var modules = invoices$1.modules = {
       this.pdfViewer = true;
     } }, methods: {
       async getInvoices() {
+        this.$root.$emit("loading", true);
         const response = await this.$axios.get("/api/invoice");
         this.invoices = response.data.data;
         if (this.day != 0) {
@@ -121,6 +122,7 @@ var modules = invoices$1.modules = {
           });
         }
         this.getYears();
+        this.$root.$emit("loading", false);
       },
       async getUrl(invoice) {
         let FileDownload = __webpack_require__(70);
@@ -167,7 +169,6 @@ var modules = invoices$1.modules = {
         this.page = page;
       },
       async changeView(id) {
-        console.log(id);
         this.id = id;
       }
     } };
@@ -182,18 +183,24 @@ var modules = invoices$1.modules = {
       false,
       injectStyles,
       null,
-      "563ee0f2"
+      "f40e179c"
     );
     __webpack_exports__["default"] = component.exports;
   },
-  152: function(module, __webpack_exports__, __webpack_require__) {
+  154: function(module, __webpack_exports__, __webpack_require__) {
     __webpack_require__.r(__webpack_exports__);
     var render = function render2() {
       var _vm = this, _c = _vm._self._c;
-      return _c("div", [_c("SideNav"), _vm._ssrNode(" "), _c("NavTop"), _vm._ssrNode(" "), _c("Search"), _vm._ssrNode(" "), _c("InvoicesTable")], 2);
+      return _c("div", [_c("SideNav"), _vm._ssrNode(" "), _c("NavTop"), _vm._ssrNode(" "), _c("Search"), _vm._ssrNode(" "), _c("InvoicesTable"), _vm._ssrNode(" "), _vm.loading ? _c("BigLoader") : _vm._e()], 2);
     };
     var staticRenderFns = [];
-    var invoicesvue_type_script_lang_js_ = { components: { SideNav: () => __webpack_require__.e(2).then(__webpack_require__.bind(null, 175)), Search: () => __webpack_require__.e(1).then(__webpack_require__.bind(null, 174)), NavTop: () => __webpack_require__.e(0).then(__webpack_require__.bind(null, 172)), InvoicesTable: () => Promise.resolve().then(__webpack_require__.bind(null, 123)) } };
+    var invoicesvue_type_script_lang_js_ = { components: { SideNav: () => __webpack_require__.e(2).then(__webpack_require__.bind(null, 177)), Search: () => __webpack_require__.e(1).then(__webpack_require__.bind(null, 176)), NavTop: () => __webpack_require__.e(0).then(__webpack_require__.bind(null, 174)), InvoicesTable: () => Promise.resolve().then(__webpack_require__.bind(null, 124)), BigLoader: () => __webpack_require__.e(3).then(__webpack_require__.bind(null, 182)) }, data() {
+      return { loading: true };
+    }, beforeMount() {
+      this.$root.$on("loading", (data) => {
+        this.loading = data;
+      });
+    } };
     var pages_invoicesvue_type_script_lang_js_ = invoicesvue_type_script_lang_js_;
     var componentNormalizer = __webpack_require__(2);
     function injectStyles(context) {
@@ -205,10 +212,10 @@ var modules = invoices$1.modules = {
       false,
       injectStyles,
       null,
-      "f36ff032"
+      "363a3ca7"
     );
     __webpack_exports__["default"] = component.exports;
-    installComponents(component, { Search: __webpack_require__(77).default, InvoicesTable: __webpack_require__(123).default });
+    installComponents(component, { Search: __webpack_require__(77).default, InvoicesTable: __webpack_require__(124).default });
   },
   76: function(module, exports2) {
     module.exports = {};
@@ -260,7 +267,7 @@ var modules = invoices$1.modules = {
       false,
       injectStyles,
       null,
-      "7be9673b"
+      "f29c0b0a"
     );
     __webpack_exports__["default"] = component.exports;
   },

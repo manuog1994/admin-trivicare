@@ -18,7 +18,7 @@ function _mergeNamespaces(n, m) {
 
 var productDetailsWrapper$1 = {};
 
-var ids = productDetailsWrapper$1.ids = [40];
+var ids = productDetailsWrapper$1.ids = [41];
 var modules = productDetailsWrapper$1.modules = {
   106: function(module, __webpack_exports__, __webpack_require__) {
     __webpack_require__.r(__webpack_exports__);
@@ -31,7 +31,7 @@ var modules = productDetailsWrapper$1.modules = {
           });
         })(__WEBPACK_IMPORT_KEY__);
   },
-  130: function(module, __webpack_exports__, __webpack_require__) {
+  131: function(module, __webpack_exports__, __webpack_require__) {
     __webpack_require__.r(__webpack_exports__);
     var render = function render2() {
       var _vm = this, _c = _vm._self._c;
@@ -121,7 +121,7 @@ var modules = productDetailsWrapper$1.modules = {
       false,
       injectStyles,
       null,
-      "544e9edd"
+      "e41738c6"
     );
     __webpack_exports__["default"] = component.exports;
   },

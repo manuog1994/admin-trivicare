@@ -18,9 +18,9 @@ function _mergeNamespaces(n, m) {
 
 var ordersNote$1 = {};
 
-var ids = ordersNote$1.ids = [38];
+var ids = ordersNote$1.ids = [39];
 var modules = ordersNote$1.modules = {
-  183: function(module, __webpack_exports__, __webpack_require__) {
+  186: function(module, __webpack_exports__, __webpack_require__) {
     __webpack_require__.r(__webpack_exports__);
     var render = function render2() {
       var _vm = this, _c = _vm._self._c;
@@ -49,7 +49,7 @@ var modules = ordersNote$1.modules = {
       false,
       injectStyles,
       null,
-      "465f10ce"
+      "d6bc274e"
     );
     __webpack_exports__["default"] = component.exports;
   }

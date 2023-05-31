@@ -18,20 +18,20 @@ function _mergeNamespaces(n, m) {
 
 var coupons$1 = {};
 
-var ids = coupons$1.ids = [52, 24, 48];
+var ids = coupons$1.ids = [53, 24, 49];
 var modules = coupons$1.modules = {
   102: function(module, __webpack_exports__, __webpack_require__) {
     __webpack_require__.r(__webpack_exports__);
-    var _node_modules_css_loader_dist_cjs_js_ref_9_oneOf_1_0_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_9_oneOf_1_1_node_modules_sass_loader_dist_cjs_js_ref_9_oneOf_1_2_node_modules_sass_resources_loader_lib_loader_js_ref_9_oneOf_1_3_node_modules_nuxt_components_dist_loader_js_ref_2_0_node_modules_vue_loader_lib_index_js_vue_loader_options_CouponsTable_vue_vue_type_style_index_0_id_46207034_prod_lang_scss___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(89);
-    for (var __WEBPACK_IMPORT_KEY__ in _node_modules_css_loader_dist_cjs_js_ref_9_oneOf_1_0_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_9_oneOf_1_1_node_modules_sass_loader_dist_cjs_js_ref_9_oneOf_1_2_node_modules_sass_resources_loader_lib_loader_js_ref_9_oneOf_1_3_node_modules_nuxt_components_dist_loader_js_ref_2_0_node_modules_vue_loader_lib_index_js_vue_loader_options_CouponsTable_vue_vue_type_style_index_0_id_46207034_prod_lang_scss___WEBPACK_IMPORTED_MODULE_0__)
+    var _node_modules_css_loader_dist_cjs_js_ref_9_oneOf_1_0_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_9_oneOf_1_1_node_modules_sass_loader_dist_cjs_js_ref_9_oneOf_1_2_node_modules_sass_resources_loader_lib_loader_js_ref_9_oneOf_1_3_node_modules_nuxt_components_dist_loader_js_ref_2_0_node_modules_vue_loader_lib_index_js_vue_loader_options_CouponsTable_vue_vue_type_style_index_0_id_56a07be6_prod_lang_scss___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(89);
+    for (var __WEBPACK_IMPORT_KEY__ in _node_modules_css_loader_dist_cjs_js_ref_9_oneOf_1_0_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_9_oneOf_1_1_node_modules_sass_loader_dist_cjs_js_ref_9_oneOf_1_2_node_modules_sass_resources_loader_lib_loader_js_ref_9_oneOf_1_3_node_modules_nuxt_components_dist_loader_js_ref_2_0_node_modules_vue_loader_lib_index_js_vue_loader_options_CouponsTable_vue_vue_type_style_index_0_id_56a07be6_prod_lang_scss___WEBPACK_IMPORTED_MODULE_0__)
       if (["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0)
         (function(key) {
           __webpack_require__.d(__webpack_exports__, key, function() {
-            return _node_modules_css_loader_dist_cjs_js_ref_9_oneOf_1_0_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_9_oneOf_1_1_node_modules_sass_loader_dist_cjs_js_ref_9_oneOf_1_2_node_modules_sass_resources_loader_lib_loader_js_ref_9_oneOf_1_3_node_modules_nuxt_components_dist_loader_js_ref_2_0_node_modules_vue_loader_lib_index_js_vue_loader_options_CouponsTable_vue_vue_type_style_index_0_id_46207034_prod_lang_scss___WEBPACK_IMPORTED_MODULE_0__[key];
+            return _node_modules_css_loader_dist_cjs_js_ref_9_oneOf_1_0_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_9_oneOf_1_1_node_modules_sass_loader_dist_cjs_js_ref_9_oneOf_1_2_node_modules_sass_resources_loader_lib_loader_js_ref_9_oneOf_1_3_node_modules_nuxt_components_dist_loader_js_ref_2_0_node_modules_vue_loader_lib_index_js_vue_loader_options_CouponsTable_vue_vue_type_style_index_0_id_56a07be6_prod_lang_scss___WEBPACK_IMPORTED_MODULE_0__[key];
           });
         })(__WEBPACK_IMPORT_KEY__);
   },
-  122: function(module, __webpack_exports__, __webpack_require__) {
+  123: function(module, __webpack_exports__, __webpack_require__) {
     __webpack_require__.r(__webpack_exports__);
     var render = function render2() {
       var _vm$coupons;
@@ -43,7 +43,7 @@ var modules = coupons$1.modules = {
       }, expression: "page" } })], 1)], 2)], 2) : _vm._e(), _vm._ssrNode(" "), _vm.newCoupon == true ? _c("CreateCoupons") : _vm._e()], 2);
     };
     var staticRenderFns = [];
-    var CouponsTablevue_type_script_lang_js_ = { auth: true, components: { CreateCoupons: () => __webpack_require__.e(6).then(__webpack_require__.bind(null, 168)) }, data() {
+    var CouponsTablevue_type_script_lang_js_ = { auth: true, components: { CreateCoupons: () => __webpack_require__.e(6).then(__webpack_require__.bind(null, 170)) }, data() {
       return { coupons: [], page: 1, perPage: 10, newCoupon: false };
     }, beforeMount() {
       this.$root.$on("closeNewCoupon", (data) => {
@@ -57,8 +57,9 @@ var modules = coupons$1.modules = {
     } }, methods: { async getCoupons() {
       await this.$axios.get("/api/cupons").then((response) => {
         this.coupons = Object.values(response.data.data).flat();
+        this.$root.$emit("loading", false);
       }).catch((error) => {
-        console.log(error);
+        this.$root.$emit("loading", false);
       });
     }, async destroy(id) {
       await this.$axios.delete(`/api/cupons/${id}`).then(() => {
@@ -84,18 +85,24 @@ var modules = coupons$1.modules = {
       false,
       injectStyles,
       null,
-      "5c768956"
+      "5e1c6c96"
     );
     __webpack_exports__["default"] = component.exports;
   },
-  150: function(module, __webpack_exports__, __webpack_require__) {
+  152: function(module, __webpack_exports__, __webpack_require__) {
     __webpack_require__.r(__webpack_exports__);
     var render = function render2() {
       var _vm = this, _c = _vm._self._c;
-      return _c("div", [_c("SideNav"), _vm._ssrNode(" "), _c("NavTop"), _vm._ssrNode(" "), _c("Search"), _vm._ssrNode(" "), _c("CouponsTable")], 2);
+      return _c("div", [_c("SideNav"), _vm._ssrNode(" "), _c("NavTop"), _vm._ssrNode(" "), _c("Search"), _vm._ssrNode(" "), _c("CouponsTable"), _vm._ssrNode(" "), _vm.loading ? _c("BigLoader") : _vm._e()], 2);
     };
     var staticRenderFns = [];
-    var couponsvue_type_script_lang_js_ = { components: { SideNav: () => __webpack_require__.e(2).then(__webpack_require__.bind(null, 175)), NavTop: () => __webpack_require__.e(0).then(__webpack_require__.bind(null, 172)), CouponsTable: () => Promise.resolve().then(__webpack_require__.bind(null, 122)), Search: () => __webpack_require__.e(1).then(__webpack_require__.bind(null, 174)) }, head() {
+    var couponsvue_type_script_lang_js_ = { components: { SideNav: () => __webpack_require__.e(2).then(__webpack_require__.bind(null, 177)), NavTop: () => __webpack_require__.e(0).then(__webpack_require__.bind(null, 174)), CouponsTable: () => Promise.resolve().then(__webpack_require__.bind(null, 123)), Search: () => __webpack_require__.e(1).then(__webpack_require__.bind(null, 176)), BigLoader: () => __webpack_require__.e(3).then(__webpack_require__.bind(null, 182)) }, data() {
+      return { loading: true };
+    }, beforeMount() {
+      this.$root.$on("loading", (data) => {
+        this.loading = data;
+      });
+    }, head() {
       return { titleTemplate: "Cupones" };
     } };
     var pages_couponsvue_type_script_lang_js_ = couponsvue_type_script_lang_js_;
@@ -109,10 +116,10 @@ var modules = coupons$1.modules = {
       false,
       injectStyles,
       null,
-      "2c13aa9c"
+      "62b04448"
     );
     __webpack_exports__["default"] = component.exports;
-    installComponents(component, { Search: __webpack_require__(77).default, CouponsTable: __webpack_require__(122).default });
+    installComponents(component, { Search: __webpack_require__(77).default, CouponsTable: __webpack_require__(123).default });
   },
   76: function(module, exports2) {
     module.exports = {};
@@ -164,7 +171,7 @@ var modules = coupons$1.modules = {
       false,
       injectStyles,
       null,
-      "7be9673b"
+      "f29c0b0a"
     );
     __webpack_exports__["default"] = component.exports;
   },

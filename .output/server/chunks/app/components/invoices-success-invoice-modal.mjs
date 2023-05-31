@@ -18,9 +18,9 @@ function _mergeNamespaces(n, m) {
 
 var invoicesSuccessInvoiceModal$1 = {};
 
-var ids = invoicesSuccessInvoiceModal$1.ids = [13];
+var ids = invoicesSuccessInvoiceModal$1.ids = [12];
 var modules = invoicesSuccessInvoiceModal$1.modules = {
-  179: function(module, __webpack_exports__, __webpack_require__) {
+  181: function(module, __webpack_exports__, __webpack_require__) {
     __webpack_require__.r(__webpack_exports__);
     var render = function render2() {
       var _vm = this, _c = _vm._self._c;
@@ -43,7 +43,7 @@ var modules = invoicesSuccessInvoiceModal$1.modules = {
       false,
       injectStyles,
       null,
-      "2f29508d"
+      "7b57f3cd"
     );
     __webpack_exports__["default"] = component.exports;
   }

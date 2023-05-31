@@ -18,9 +18,9 @@ function _mergeNamespaces(n, m) {
 
 var invoicesTable$1 = {};
 
-var ids = invoicesTable$1.ids = [27];
+var ids = invoicesTable$1.ids = [28];
 var modules = invoicesTable$1.modules = {
-  123: function(module, __webpack_exports__, __webpack_require__) {
+  124: function(module, __webpack_exports__, __webpack_require__) {
     __webpack_require__.r(__webpack_exports__);
     var render = function render2() {
       var _vm$selectedInvoices, _vm$selectedInvoices2, _vm$selectedInvoices3, _vm$invoices;
@@ -77,7 +77,7 @@ var modules = invoicesTable$1.modules = {
       });
     }, mounted() {
       this.getInvoices();
-    }, components: { InvoiceViewer: () => __webpack_require__.e(11).then(__webpack_require__.bind(null, 177)), NewInvoice: () => __webpack_require__.e(12).then(__webpack_require__.bind(null, 178)) }, computed: { paginatedItems() {
+    }, components: { InvoiceViewer: () => __webpack_require__.e(10).then(__webpack_require__.bind(null, 179)), NewInvoice: () => __webpack_require__.e(11).then(__webpack_require__.bind(null, 180)) }, computed: { paginatedItems() {
       const start = (this.page - 1) * parseInt(this.limit);
       return this.invoices.slice(start, start + parseInt(this.limit));
     } }, watch: { day() {
@@ -100,6 +100,7 @@ var modules = invoicesTable$1.modules = {
       this.pdfViewer = true;
     } }, methods: {
       async getInvoices() {
+        this.$root.$emit("loading", true);
         const response = await this.$axios.get("/api/invoice");
         this.invoices = response.data.data;
         if (this.day != 0) {
@@ -121,6 +122,7 @@ var modules = invoicesTable$1.modules = {
           });
         }
         this.getYears();
+        this.$root.$emit("loading", false);
       },
       async getUrl(invoice) {
         let FileDownload = __webpack_require__(70);
@@ -167,7 +169,6 @@ var modules = invoicesTable$1.modules = {
         this.page = page;
       },
       async changeView(id) {
-        console.log(id);
         this.id = id;
       }
     } };
@@ -182,7 +183,7 @@ var modules = invoicesTable$1.modules = {
       false,
       injectStyles,
       null,
-      "563ee0f2"
+      "f40e179c"
     );
     __webpack_exports__["default"] = component.exports;
   }

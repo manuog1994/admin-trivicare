@@ -18,9 +18,9 @@ function _mergeNamespaces(n, m) {
 
 var ordersHistory$1 = {};
 
-var ids = ordersHistory$1.ids = [37];
+var ids = ordersHistory$1.ids = [38];
 var modules = ordersHistory$1.modules = {
-  127: function(module, __webpack_exports__, __webpack_require__) {
+  128: function(module, __webpack_exports__, __webpack_require__) {
     __webpack_require__.r(__webpack_exports__);
     var render = function render2() {
       var _vm = this, _c = _vm._self._c;
@@ -42,6 +42,7 @@ var modules = ordersHistory$1.modules = {
     } }, methods: { async getOrders() {
       const response = await this.$axios.get("/api/orders?history[status]=");
       this.orders = response.data.data;
+      this.$root.$emit("loading", false);
     }, myCallback(page) {
       this.page = page;
     } } };
@@ -56,7 +57,7 @@ var modules = ordersHistory$1.modules = {
       false,
       injectStyles,
       null,
-      "56e023d8"
+      "58860718"
     );
     __webpack_exports__["default"] = component.exports;
   }

@@ -20,7 +20,7 @@ var productCreateProduct$1 = {};
 
 var ids = productCreateProduct$1.ids = [15];
 var modules = productCreateProduct$1.modules = {
-  184: function(module, __webpack_exports__, __webpack_require__) {
+  187: function(module, __webpack_exports__, __webpack_require__) {
     __webpack_require__.r(__webpack_exports__);
     var render = function render2() {
       var _vm = this, _c = _vm._self._c;
@@ -47,6 +47,7 @@ var modules = productCreateProduct$1.modules = {
     }, async getTags() {
       await this.$axios.get("api/tags").then((response) => {
         this.tags = response.data.data;
+        this.$root.$emit("loading", false);
       }).catch((error) => {
         console.log(error);
       });
@@ -88,7 +89,7 @@ var modules = productCreateProduct$1.modules = {
       false,
       injectStyles,
       null,
-      "32409bf0"
+      "655720b0"
     );
     __webpack_exports__["default"] = component.exports;
   }

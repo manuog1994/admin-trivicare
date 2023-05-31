@@ -18,9 +18,9 @@ function _mergeNamespaces(n, m) {
 
 var ordersHistory$1 = {};
 
-var ids = ordersHistory$1.ids = [59, 37, 48];
+var ids = ordersHistory$1.ids = [61, 38, 49];
 var modules = ordersHistory$1.modules = {
-  127: function(module, __webpack_exports__, __webpack_require__) {
+  128: function(module, __webpack_exports__, __webpack_require__) {
     __webpack_require__.r(__webpack_exports__);
     var render = function render2() {
       var _vm = this, _c = _vm._self._c;
@@ -42,6 +42,7 @@ var modules = ordersHistory$1.modules = {
     } }, methods: { async getOrders() {
       const response = await this.$axios.get("/api/orders?history[status]=");
       this.orders = response.data.data;
+      this.$root.$emit("loading", false);
     }, myCallback(page) {
       this.page = page;
     } } };
@@ -56,18 +57,24 @@ var modules = ordersHistory$1.modules = {
       false,
       injectStyles,
       null,
-      "56e023d8"
+      "58860718"
     );
     __webpack_exports__["default"] = component.exports;
   },
-  156: function(module, __webpack_exports__, __webpack_require__) {
+  158: function(module, __webpack_exports__, __webpack_require__) {
     __webpack_require__.r(__webpack_exports__);
     var render = function render2() {
       var _vm = this, _c = _vm._self._c;
-      return _c("div", [_c("SideNav"), _vm._ssrNode(" "), _c("NavTop"), _vm._ssrNode(" "), _c("Search"), _vm._ssrNode(" "), _c("OrdersHistory")], 2);
+      return _c("div", [_c("SideNav"), _vm._ssrNode(" "), _c("NavTop"), _vm._ssrNode(" "), _c("Search"), _vm._ssrNode(" "), _c("OrdersHistory"), _vm._ssrNode(" "), _vm.loading ? _c("BigLoader") : _vm._e()], 2);
     };
     var staticRenderFns = [];
-    var orders_historyvue_type_script_lang_js_ = { components: { SideNav: () => __webpack_require__.e(2).then(__webpack_require__.bind(null, 175)), OrdersHistory: () => Promise.resolve().then(__webpack_require__.bind(null, 127)), Search: () => __webpack_require__.e(1).then(__webpack_require__.bind(null, 174)), NavTop: () => __webpack_require__.e(0).then(__webpack_require__.bind(null, 172)) } };
+    var orders_historyvue_type_script_lang_js_ = { components: { SideNav: () => __webpack_require__.e(2).then(__webpack_require__.bind(null, 177)), OrdersHistory: () => Promise.resolve().then(__webpack_require__.bind(null, 128)), Search: () => __webpack_require__.e(1).then(__webpack_require__.bind(null, 176)), NavTop: () => __webpack_require__.e(0).then(__webpack_require__.bind(null, 174)), BigLoader: () => __webpack_require__.e(3).then(__webpack_require__.bind(null, 182)) }, data() {
+      return { loading: true };
+    }, beforeMount() {
+      this.$root.$on("loading", (data) => {
+        this.loading = data;
+      });
+    } };
     var pages_orders_historyvue_type_script_lang_js_ = orders_historyvue_type_script_lang_js_;
     var componentNormalizer = __webpack_require__(2);
     function injectStyles(context) {
@@ -79,10 +86,10 @@ var modules = ordersHistory$1.modules = {
       false,
       injectStyles,
       null,
-      "0491d626"
+      "3e428ca6"
     );
     __webpack_exports__["default"] = component.exports;
-    installComponents(component, { Search: __webpack_require__(77).default, OrdersHistory: __webpack_require__(127).default });
+    installComponents(component, { Search: __webpack_require__(77).default, OrdersHistory: __webpack_require__(128).default });
   },
   76: function(module, exports2) {
     module.exports = {};
@@ -134,7 +141,7 @@ var modules = ordersHistory$1.modules = {
       false,
       injectStyles,
       null,
-      "7be9673b"
+      "f29c0b0a"
     );
     __webpack_exports__["default"] = component.exports;
   },

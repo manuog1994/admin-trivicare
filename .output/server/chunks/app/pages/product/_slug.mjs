@@ -18,7 +18,7 @@ function _mergeNamespaces(n, m) {
 
 var _slug$1 = {};
 
-var ids = _slug$1.ids = [61, 26, 32, 33, 34, 39, 40, 47, 48, 49, 50];
+var ids = _slug$1.ids = [63, 26, 33, 34, 35, 40, 41, 48, 49, 50, 51];
 var modules = _slug$1.modules = {
   100: function(module, __webpack_exports__, __webpack_require__) {
     __webpack_require__.r(__webpack_exports__);
@@ -117,7 +117,7 @@ var modules = _slug$1.modules = {
       false,
       injectStyles,
       "9fd8ca2c",
-      "40ea98c4"
+      "04f7c7f8"
     );
     __webpack_exports__["default"] = component.exports;
     installComponents(component, { Search: __webpack_require__(77).default, Navigation: __webpack_require__(88).default, OffCanvasMobileMenu: __webpack_require__(82).default });
@@ -185,7 +185,7 @@ var modules = _slug$1.modules = {
       false,
       injectStyles,
       "f449fa68",
-      "602f811b"
+      "435725db"
     );
     __webpack_exports__["default"] = component.exports;
     installComponents(component, { Search: __webpack_require__(77).default, OffCanvasMobileMenu: __webpack_require__(82).default });
@@ -234,7 +234,7 @@ var modules = _slug$1.modules = {
           });
         })(__WEBPACK_IMPORT_KEY__);
   },
-  129: function(module, __webpack_exports__, __webpack_require__) {
+  130: function(module, __webpack_exports__, __webpack_require__) {
     __webpack_require__.r(__webpack_exports__);
     var render = function render2() {
       var _vm = this, _c = _vm._self._c;
@@ -256,11 +256,11 @@ var modules = _slug$1.modules = {
       false,
       injectStyles,
       null,
-      "c76d282a"
+      "7f7110ab"
     );
     __webpack_exports__["default"] = component.exports;
   },
-  130: function(module, __webpack_exports__, __webpack_require__) {
+  131: function(module, __webpack_exports__, __webpack_require__) {
     __webpack_require__.r(__webpack_exports__);
     var render = function render2() {
       var _vm = this, _c = _vm._self._c;
@@ -350,11 +350,11 @@ var modules = _slug$1.modules = {
       false,
       injectStyles,
       null,
-      "544e9edd"
+      "e41738c6"
     );
     __webpack_exports__["default"] = component.exports;
   },
-  131: function(module, __webpack_exports__, __webpack_require__) {
+  132: function(module, __webpack_exports__, __webpack_require__) {
     __webpack_require__.r(__webpack_exports__);
     var render = function render2() {
       var _vm$product$reviews, _vm$reviews, _vm$reviews2;
@@ -393,11 +393,11 @@ var modules = _slug$1.modules = {
       false,
       injectStyles,
       null,
-      "dc77c044"
+      "0de896c4"
     );
     __webpack_exports__["default"] = component.exports;
   },
-  132: function(module, __webpack_exports__, __webpack_require__) {
+  133: function(module, __webpack_exports__, __webpack_require__) {
     __webpack_require__.r(__webpack_exports__);
     var render = function render2() {
       var _vm = this, _c = _vm._self._c;
@@ -425,11 +425,11 @@ var modules = _slug$1.modules = {
       false,
       injectStyles,
       "e1c80dd8",
-      "3efd1d29"
+      "2224c1e9"
     );
     __webpack_exports__["default"] = component.exports;
   },
-  162: function(module, __webpack_exports__, __webpack_require__) {
+  165: function(module, __webpack_exports__, __webpack_require__) {
     __webpack_require__.r(__webpack_exports__);
     var render = function render2() {
       var _vm = this, _c = _vm._self._c;
@@ -475,10 +475,10 @@ var modules = _slug$1.modules = {
       false,
       null,
       null,
-      "b2a24f8e"
+      "219f9b79"
     );
     __webpack_exports__["default"] = component.exports;
-    installComponents(component, { HeaderWithTopbar: __webpack_require__(100).default, TheHeader: __webpack_require__(101).default, NavBottom: __webpack_require__(129).default, ProductDetailsWrapper: __webpack_require__(130).default, ProductDetailsDescriptionReview: __webpack_require__(131).default, TheFooter: __webpack_require__(132).default });
+    installComponents(component, { HeaderWithTopbar: __webpack_require__(100).default, TheHeader: __webpack_require__(101).default, NavBottom: __webpack_require__(130).default, ProductDetailsWrapper: __webpack_require__(131).default, ProductDetailsDescriptionReview: __webpack_require__(132).default, TheFooter: __webpack_require__(133).default });
   },
   76: function(module, exports2) {
     module.exports = {};
@@ -530,7 +530,7 @@ var modules = _slug$1.modules = {
       false,
       injectStyles,
       null,
-      "7be9673b"
+      "f29c0b0a"
     );
     __webpack_exports__["default"] = component.exports;
   },
@@ -579,7 +579,7 @@ var modules = _slug$1.modules = {
       false,
       null,
       null,
-      "71c39ba5"
+      "03975f36"
     );
     __webpack_exports__["default"] = component.exports;
     installComponents(component, { ResponsiveMobileMenu: __webpack_require__(83).default });
@@ -683,7 +683,7 @@ var modules = _slug$1.modules = {
       false,
       injectStyles,
       "c0e6631e",
-      "e8bbac70"
+      "e56fe5f0"
     );
     __webpack_exports__["default"] = component.exports;
   },
@@ -741,7 +741,7 @@ var modules = _slug$1.modules = {
       false,
       injectStyles,
       null,
-      "7c75ffb2"
+      "4391f367"
     );
     __webpack_exports__["default"] = component.exports;
   },

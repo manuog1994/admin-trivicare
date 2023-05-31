@@ -18,7 +18,7 @@ function _mergeNamespaces(n, m) {
 
 var search$1 = {};
 
-var ids = search$1.ids = [48];
+var ids = search$1.ids = [49];
 var modules = search$1.modules = {
   76: function(module, exports2) {
     module.exports = {};
@@ -70,7 +70,7 @@ var modules = search$1.modules = {
       false,
       injectStyles,
       null,
-      "7be9673b"
+      "f29c0b0a"
     );
     __webpack_exports__["default"] = component.exports;
   },

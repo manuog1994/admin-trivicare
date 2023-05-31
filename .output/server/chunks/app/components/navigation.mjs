@@ -18,7 +18,7 @@ function _mergeNamespaces(n, m) {
 
 var navigation$1 = {};
 
-var ids = navigation$1.ids = [33];
+var ids = navigation$1.ids = [34];
 var modules = navigation$1.modules = {
   80: function(module, exports2) {
     module.exports = {};
@@ -71,7 +71,7 @@ var modules = navigation$1.modules = {
       false,
       injectStyles,
       null,
-      "7c75ffb2"
+      "4391f367"
     );
     __webpack_exports__["default"] = component.exports;
   }

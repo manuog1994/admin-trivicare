@@ -20,18 +20,19 @@ var dashboardGraphicMonths$1 = {};
 
 var ids = dashboardGraphicMonths$1.ids = [8];
 var modules = dashboardGraphicMonths$1.modules = {
-  171: function(module, __webpack_exports__, __webpack_require__) {
+  173: function(module, __webpack_exports__, __webpack_require__) {
     __webpack_require__.r(__webpack_exports__);
     var render = function render2() {
       var _vm = this, _c = _vm._self._c;
       return _c("div", { staticClass: "mb-2" }, [_vm._ssrNode('<div class="d-flex justify-content-center"><h3>Ventas por mes</h3></div> '), _vm._ssrNode('<div class="d-flex justify-content-center">', "</div>", [_c("apexchart", { staticStyle: { "width": "100%", "min-width": "300px", "max-width": "650px", "height": "30vh" }, attrs: { "type": "bar", "options": _vm.options, "series": _vm.series } })], 1)], 2);
     };
     var staticRenderFns = [];
-    var GraphicMonthsvue_type_script_lang_js_ = { name: "Donut", components: { [false]: () => __webpack_require__.e(21).then(__webpack_require__.t.bind(null, 148, 7)) }, data: function() {
+    var GraphicMonthsvue_type_script_lang_js_ = { name: "Donut", components: { [false]: () => __webpack_require__.e(21).then(__webpack_require__.t.bind(null, 150, 7)) }, data: function() {
       return { options: { chart: { id: "vuechart-example" }, xaxis: { categories: ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"] } }, series: [{ name: "series-1", data: [] }], orders: [], jan: [], feb: [], mar: [], apr: [], may: [], jun: [], jul: [], aug: [], sep: [], oct: [], nov: [], dec: [] };
     }, mounted() {
       this.getOrders();
     }, methods: { getOrders() {
+      this.$root.$emit("loading", true);
       this.$axios.get("/api/orders").then((response) => {
         this.orders = response.data.data;
         this.orders.filter((order) => {
@@ -51,6 +52,7 @@ var modules = dashboardGraphicMonths$1.modules = {
           }
         });
         this.series = [{ name: "series-1", data: [this.jan, this.feb, this.mar, this.apr, this.may, this.jun, this.jul, this.aug, this.sep, this.oct, this.nov, this.dec] }];
+        this.$root.$emit("loading", false);
       });
     } } };
     var dashboard_GraphicMonthsvue_type_script_lang_js_ = GraphicMonthsvue_type_script_lang_js_;
@@ -62,7 +64,7 @@ var modules = dashboardGraphicMonths$1.modules = {
       false,
       null,
       null,
-      "7cf517bd"
+      "447d6c7d"
     );
     __webpack_exports__["default"] = component.exports;
   }

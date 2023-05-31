@@ -18,14 +18,14 @@ function _mergeNamespaces(n, m) {
 
 var mobileBar$1 = {};
 
-var ids = mobileBar$1.ids = [30];
+var ids = mobileBar$1.ids = [31];
 var modules = mobileBar$1.modules = {
-  111: function(module, exports2) {
+  112: function(module, exports2) {
     module.exports = {};
   },
-  136: function(module, __webpack_exports__, __webpack_require__) {
+  138: function(module, __webpack_exports__, __webpack_require__) {
     __webpack_require__.r(__webpack_exports__);
-    var _node_modules_css_loader_dist_cjs_js_ref_5_oneOf_1_0_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_5_oneOf_1_1_node_modules_nuxt_components_dist_loader_js_ref_2_0_node_modules_vue_loader_lib_index_js_vue_loader_options_MobileBar_vue_vue_type_style_index_0_id_687633dc_prod_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(111);
+    var _node_modules_css_loader_dist_cjs_js_ref_5_oneOf_1_0_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_5_oneOf_1_1_node_modules_nuxt_components_dist_loader_js_ref_2_0_node_modules_vue_loader_lib_index_js_vue_loader_options_MobileBar_vue_vue_type_style_index_0_id_687633dc_prod_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(112);
     for (var __WEBPACK_IMPORT_KEY__ in _node_modules_css_loader_dist_cjs_js_ref_5_oneOf_1_0_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_5_oneOf_1_1_node_modules_nuxt_components_dist_loader_js_ref_2_0_node_modules_vue_loader_lib_index_js_vue_loader_options_MobileBar_vue_vue_type_style_index_0_id_687633dc_prod_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__)
       if (["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0)
         (function(key) {
@@ -34,7 +34,7 @@ var modules = mobileBar$1.modules = {
           });
         })(__WEBPACK_IMPORT_KEY__);
   },
-  164: function(module, __webpack_exports__, __webpack_require__) {
+  166: function(module, __webpack_exports__, __webpack_require__) {
     __webpack_require__.r(__webpack_exports__);
     var render = function render2() {
       var _vm = this, _c = _vm._self._c;
@@ -49,7 +49,7 @@ var modules = mobileBar$1.modules = {
     var components_MobileBarvue_type_script_lang_js_ = MobileBarvue_type_script_lang_js_;
     var componentNormalizer = __webpack_require__(2);
     function injectStyles(context) {
-      var style0 = __webpack_require__(136);
+      var style0 = __webpack_require__(138);
       if (style0.__inject__)
         style0.__inject__(context);
     }
@@ -60,7 +60,7 @@ var modules = mobileBar$1.modules = {
       false,
       injectStyles,
       "687633dc",
-      "6f3bd14e"
+      "5263760e"
     );
     __webpack_exports__["default"] = component.exports;
   }

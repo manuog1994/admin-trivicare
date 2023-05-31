@@ -18,7 +18,7 @@ function _mergeNamespaces(n, m) {
 
 var offCanvasMobileMenu$1 = {};
 
-var ids = offCanvasMobileMenu$1.ids = [34, 47];
+var ids = offCanvasMobileMenu$1.ids = [35, 48];
 var modules = offCanvasMobileMenu$1.modules = {
   79: function(module, exports2) {
     module.exports = {};
@@ -51,7 +51,7 @@ var modules = offCanvasMobileMenu$1.modules = {
       false,
       null,
       null,
-      "71c39ba5"
+      "03975f36"
     );
     __webpack_exports__["default"] = component.exports;
     installComponents(component, { ResponsiveMobileMenu: __webpack_require__(83).default });
@@ -155,7 +155,7 @@ var modules = offCanvasMobileMenu$1.modules = {
       false,
       injectStyles,
       "c0e6631e",
-      "e8bbac70"
+      "e56fe5f0"
     );
     __webpack_exports__["default"] = component.exports;
   }

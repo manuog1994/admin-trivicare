@@ -20,7 +20,7 @@ var reviewsReviewTable$1 = {};
 
 var ids = reviewsReviewTable$1.ids = [20];
 var modules = reviewsReviewTable$1.modules = {
-  193: function(module, __webpack_exports__, __webpack_require__) {
+  196: function(module, __webpack_exports__, __webpack_require__) {
     __webpack_require__.r(__webpack_exports__);
     var render = function render2() {
       var _vm = this, _c = _vm._self._c;
@@ -45,6 +45,7 @@ var modules = reviewsReviewTable$1.modules = {
     }, async getReviews() {
       await this.$axios.get("/api/reviews").then((response) => {
         this.reviews = response.data.reviews;
+        this.$root.$emit("loading", false);
       });
     }, filterProduct(id) {
       var _this$products;
@@ -73,7 +74,7 @@ var modules = reviewsReviewTable$1.modules = {
       false,
       injectStyles,
       null,
-      "7b80c9df"
+      "07f17e9f"
     );
     __webpack_exports__["default"] = component.exports;
   }

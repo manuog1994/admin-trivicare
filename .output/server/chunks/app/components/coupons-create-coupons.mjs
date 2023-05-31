@@ -20,7 +20,7 @@ var couponsCreateCoupons$1 = {};
 
 var ids = couponsCreateCoupons$1.ids = [6];
 var modules = couponsCreateCoupons$1.modules = {
-  168: function(module, __webpack_exports__, __webpack_require__) {
+  170: function(module, __webpack_exports__, __webpack_require__) {
     __webpack_require__.r(__webpack_exports__);
     var render = function render2() {
       var _vm = this, _c = _vm._self._c;
@@ -28,13 +28,16 @@ var modules = couponsCreateCoupons$1.modules = {
     };
     var staticRenderFns = [];
     var CreateCouponsvue_type_script_lang_js_ = { methods: { newCoupon() {
+      this.$root.$emit("loading", true);
       const data = new FormData(this.$refs.createCoupon);
       this.$axios.post("/api/cupons", data).then(() => {
         this.$refs.createCoupon.reset();
         this.$root.$emit("closeNewCoupon", false);
+        this.$root.$emit("loading", false);
         window.location.reload();
       }).catch((error) => {
         console.log(error);
+        this.$root.$emit("loading", false);
       });
     } } };
     var coupons_CreateCouponsvue_type_script_lang_js_ = CreateCouponsvue_type_script_lang_js_;
@@ -48,7 +51,7 @@ var modules = couponsCreateCoupons$1.modules = {
       false,
       injectStyles,
       null,
-      "2eeb91ac"
+      "6202166c"
     );
     __webpack_exports__["default"] = component.exports;
   }

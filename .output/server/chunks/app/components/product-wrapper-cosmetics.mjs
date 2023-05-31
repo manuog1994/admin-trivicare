@@ -18,9 +18,9 @@ function _mergeNamespaces(n, m) {
 
 var productWrapperCosmetics$1 = {};
 
-var ids = productWrapperCosmetics$1.ids = [44, 42];
+var ids = productWrapperCosmetics$1.ids = [45, 43];
 var modules = productWrapperCosmetics$1.modules = {
-  133: function(module, __webpack_exports__, __webpack_require__) {
+  134: function(module, __webpack_exports__, __webpack_require__) {
     __webpack_require__.r(__webpack_exports__);
     var render = function render2() {
       var _vm = this, _c = _vm._self._c;
@@ -61,11 +61,11 @@ var modules = productWrapperCosmetics$1.modules = {
       false,
       null,
       null,
-      "e0c41652"
+      "619c6817"
     );
     __webpack_exports__["default"] = component.exports;
   },
-  188: function(module, __webpack_exports__, __webpack_require__) {
+  191: function(module, __webpack_exports__, __webpack_require__) {
     __webpack_require__.r(__webpack_exports__);
     var render = function render2() {
       var _vm = this, _c = _vm._self._c;
@@ -76,7 +76,7 @@ var modules = productWrapperCosmetics$1.modules = {
       }), 0)]), _vm._ssrNode(" "), _vm._ssrNode('<div class="view-more text-center mt-20 toggle-btn2">', "</div>", [_c("n-link", { staticClass: "loadMore2", attrs: { "to": "/shop" } }, [_vm._v("VER M\xC1S PRODUCTOS")])], 1)], 2)], 2)])]);
     };
     var staticRenderFns = [];
-    var ProductWrapperCosmeticsvue_type_script_lang_js_ = { components: { ProductGridItemTwo: () => Promise.resolve().then(__webpack_require__.bind(null, 133)) }, data() {
+    var ProductWrapperCosmeticsvue_type_script_lang_js_ = { components: { ProductGridItemTwo: () => Promise.resolve().then(__webpack_require__.bind(null, 134)) }, data() {
       return { products: [], bestSold: [], newsProducts: [] };
     }, async mounted() {
       await this.getProducts();
@@ -130,10 +130,10 @@ var modules = productWrapperCosmetics$1.modules = {
       false,
       null,
       null,
-      "2c42021d"
+      "d8ecd246"
     );
     __webpack_exports__["default"] = component.exports;
-    installComponents(component, { ProductGridItemTwo: __webpack_require__(133).default });
+    installComponents(component, { ProductGridItemTwo: __webpack_require__(134).default });
   }
 };
 
