@@ -32,7 +32,7 @@
     <div class="mt-4">
         <a v-if="$auth.loggedIn == false" class="text-center" href="/login">Iniciar sesión</a>
         <div v-else class="mt-2">
-            <p>Hola, <strong>{{ getName() }}</strong></p>
+            <p>Hola, <strong>Nombre usuario</strong></p>
             <ul class="ms-2">
                 <li v-if="role == 'admin'">
                     <a href="/crud">PDC</a>
@@ -57,7 +57,6 @@
         <n-link to="/notifications-center">
             Notificaciones
         </n-link>
-        <span class="ms-2 bg-blue-color p-2 rounded-5">{{ notifications }}</span>
     </div>
 </div>
 </template>
@@ -130,8 +129,6 @@
                 return siblings;
             };
 
-            this.getRoles();
-
             const subMenuToggle = document.querySelectorAll('.submenu-toggle');
             subMenuToggle.forEach(function(btn) {
                 btn.addEventListener('click', function() {
@@ -153,8 +150,6 @@
                     }
                 })
             });
-
-            this.countNotifications();
         },
 
         methods: {
@@ -165,38 +160,6 @@
                 this.$notify({ title: 'Has cerrado sesión!'})
 
             },
-
-            getRoles() {
-                if(this.$auth.loggedIn == true) {
-                    const roles = this.$auth.user.roles;
-                    if(roles != null) {
-                        roles.map(role => {
-                            this.role = role.name;
-                        });
-                    }else {
-                        this.role = '';
-                    }
-                }
-            },
-
-            getName() {
-                if(this.$auth.loggedIn == true) {
-                    const space = ' ';
-                    const name = this.$auth.user.name;
-                    const arr = name.split(space);
-
-                    return arr[0];
-                }
-            },
-
-            countNotifications() {
-                if(this.$auth.loggedIn == true) {
-                    const notifications = this.$auth.user.notifications;
-                    if (notifications.read == false) {
-                        this.notifications = notifications.length;
-                    }
-                }
-            }
         }
     }
 </script>

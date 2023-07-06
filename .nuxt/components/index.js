@@ -1,53 +1,54 @@
-export const Auth = () => import('../../components/Auth.vue' /* webpackChunkName: "components/auth" */).then(c => wrapFunctional(c.default || c))
-export const HeaderWithTopbar = () => import('../../components/HeaderWithTopbar.vue' /* webpackChunkName: "components/header-with-topbar" */).then(c => wrapFunctional(c.default || c))
-export const Login = () => import('../../components/Login.vue' /* webpackChunkName: "components/login" */).then(c => wrapFunctional(c.default || c))
-export const MobileBar = () => import('../../components/MobileBar.vue' /* webpackChunkName: "components/mobile-bar" */).then(c => wrapFunctional(c.default || c))
-export const MyAccountContainer = () => import('../../components/MyAccountContainer.vue' /* webpackChunkName: "components/my-account-container" */).then(c => wrapFunctional(c.default || c))
-export const NavBottom = () => import('../../components/NavBottom.vue' /* webpackChunkName: "components/nav-bottom" */).then(c => wrapFunctional(c.default || c))
-export const Navigation = () => import('../../components/Navigation.vue' /* webpackChunkName: "components/navigation" */).then(c => wrapFunctional(c.default || c))
-export const OffCanvasMobileMenu = () => import('../../components/OffCanvasMobileMenu.vue' /* webpackChunkName: "components/off-canvas-mobile-menu" */).then(c => wrapFunctional(c.default || c))
-export const ProductDetailsDescriptionReview = () => import('../../components/ProductDetailsDescriptionReview.vue' /* webpackChunkName: "components/product-details-description-review" */).then(c => wrapFunctional(c.default || c))
-export const Register = () => import('../../components/Register.vue' /* webpackChunkName: "components/register" */).then(c => wrapFunctional(c.default || c))
-export const ResponsiveMobileMenu = () => import('../../components/ResponsiveMobileMenu.vue' /* webpackChunkName: "components/responsive-mobile-menu" */).then(c => wrapFunctional(c.default || c))
-export const Search = () => import('../../components/Search.vue' /* webpackChunkName: "components/search" */).then(c => wrapFunctional(c.default || c))
-export const TheFooter = () => import('../../components/TheFooter.vue' /* webpackChunkName: "components/the-footer" */).then(c => wrapFunctional(c.default || c))
-export const TheHeader = () => import('../../components/TheHeader.vue' /* webpackChunkName: "components/the-header" */).then(c => wrapFunctional(c.default || c))
-export const ClientsGuests = () => import('../../components/clients/Guests.vue' /* webpackChunkName: "components/clients-guests" */).then(c => wrapFunctional(c.default || c))
-export const ClientsRegisteds = () => import('../../components/clients/Registeds.vue' /* webpackChunkName: "components/clients-registeds" */).then(c => wrapFunctional(c.default || c))
-export const CouponsTable = () => import('../../components/coupons/CouponsTable.vue' /* webpackChunkName: "components/coupons-table" */).then(c => wrapFunctional(c.default || c))
-export const CouponsCreateCoupons = () => import('../../components/coupons/CreateCoupons.vue' /* webpackChunkName: "components/coupons-create-coupons" */).then(c => wrapFunctional(c.default || c))
-export const DashboardAnalyticsGoogle = () => import('../../components/dashboard/AnalyticsGoogle.vue' /* webpackChunkName: "components/dashboard-analytics-google" */).then(c => wrapFunctional(c.default || c))
-export const DashboardDonutsProducts = () => import('../../components/dashboard/DonutsProducts.vue' /* webpackChunkName: "components/dashboard-donuts-products" */).then(c => wrapFunctional(c.default || c))
-export const DashboardGraphicMonths = () => import('../../components/dashboard/GraphicMonths.vue' /* webpackChunkName: "components/dashboard-graphic-months" */).then(c => wrapFunctional(c.default || c))
-export const HeadersNavTop = () => import('../../components/headers/NavTop.vue' /* webpackChunkName: "components/headers-nav-top" */).then(c => wrapFunctional(c.default || c))
-export const HeadersResults = () => import('../../components/headers/Results.vue' /* webpackChunkName: "components/headers-results" */).then(c => wrapFunctional(c.default || c))
-export const HeadersSearch = () => import('../../components/headers/Search.vue' /* webpackChunkName: "components/headers-search" */).then(c => wrapFunctional(c.default || c))
-export const HeadersSideNav = () => import('../../components/headers/SideNav.vue' /* webpackChunkName: "components/headers-side-nav" */).then(c => wrapFunctional(c.default || c))
-export const InvoicesErrorModal = () => import('../../components/invoices/ErrorModal.vue' /* webpackChunkName: "components/invoices-error-modal" */).then(c => wrapFunctional(c.default || c))
-export const InvoicesInvoiceViewer = () => import('../../components/invoices/InvoiceViewer.vue' /* webpackChunkName: "components/invoices-invoice-viewer" */).then(c => wrapFunctional(c.default || c))
-export const InvoicesTable = () => import('../../components/invoices/InvoicesTable.vue' /* webpackChunkName: "components/invoices-table" */).then(c => wrapFunctional(c.default || c))
-export const InvoicesNewInvoice = () => import('../../components/invoices/NewInvoice.vue' /* webpackChunkName: "components/invoices-new-invoice" */).then(c => wrapFunctional(c.default || c))
-export const InvoicesSuccessInvoiceModal = () => import('../../components/invoices/SuccessInvoiceModal.vue' /* webpackChunkName: "components/invoices-success-invoice-modal" */).then(c => wrapFunctional(c.default || c))
-export const LoadersBigLoader = () => import('../../components/loaders/BigLoader.vue' /* webpackChunkName: "components/loaders-big-loader" */).then(c => wrapFunctional(c.default || c))
-export const LoadersSmallLoading = () => import('../../components/loaders/SmallLoading.vue' /* webpackChunkName: "components/loaders-small-loading" */).then(c => wrapFunctional(c.default || c))
-export const OrdersEditOrder = () => import('../../components/orders/EditOrder.vue' /* webpackChunkName: "components/orders-edit-order" */).then(c => wrapFunctional(c.default || c))
-export const OrdersModalTrack = () => import('../../components/orders/ModalTrack.vue' /* webpackChunkName: "components/orders-modal-track" */).then(c => wrapFunctional(c.default || c))
-export const OrdersNote = () => import('../../components/orders/Note.vue' /* webpackChunkName: "components/orders-note" */).then(c => wrapFunctional(c.default || c))
-export const Orders = () => import('../../components/orders/Orders.vue' /* webpackChunkName: "components/orders" */).then(c => wrapFunctional(c.default || c))
-export const OrdersCom = () => import('../../components/orders/OrdersCom.vue' /* webpackChunkName: "components/orders-com" */).then(c => wrapFunctional(c.default || c))
-export const OrdersHistory = () => import('../../components/orders/OrdersHistory.vue' /* webpackChunkName: "components/orders-history" */).then(c => wrapFunctional(c.default || c))
-export const ProductCreateProduct = () => import('../../components/product/CreateProduct.vue' /* webpackChunkName: "components/product-create-product" */).then(c => wrapFunctional(c.default || c))
-export const ProductEditProduct = () => import('../../components/product/EditProduct.vue' /* webpackChunkName: "components/product-edit-product" */).then(c => wrapFunctional(c.default || c))
-export const ProductDetailsWrapper = () => import('../../components/product/ProductDetailsWrapper.vue' /* webpackChunkName: "components/product-details-wrapper" */).then(c => wrapFunctional(c.default || c))
-export const ProductGridItem = () => import('../../components/product/ProductGridItem.vue' /* webpackChunkName: "components/product-grid-item" */).then(c => wrapFunctional(c.default || c))
-export const ProductGridItemTwo = () => import('../../components/product/ProductGridItemTwo.vue' /* webpackChunkName: "components/product-grid-item-two" */).then(c => wrapFunctional(c.default || c))
-export const ProductGridStyleThree = () => import('../../components/product/ProductGridStyleThree.vue' /* webpackChunkName: "components/product-grid-style-three" */).then(c => wrapFunctional(c.default || c))
-export const ProductWrapperCosmetics = () => import('../../components/product/ProductWrapperCosmetics.vue' /* webpackChunkName: "components/product-wrapper-cosmetics" */).then(c => wrapFunctional(c.default || c))
-export const ProductProductsTable = () => import('../../components/product/ProductsTable.vue' /* webpackChunkName: "components/product-products-table" */).then(c => wrapFunctional(c.default || c))
-export const ProfileNewGuest = () => import('../../components/profile/NewGuest.vue' /* webpackChunkName: "components/profile-new-guest" */).then(c => wrapFunctional(c.default || c))
-export const ProfileNewProfile = () => import('../../components/profile/NewProfile.vue' /* webpackChunkName: "components/profile-new-profile" */).then(c => wrapFunctional(c.default || c))
-export const ReviewsNewReview = () => import('../../components/reviews/NewReview.vue' /* webpackChunkName: "components/reviews-new-review" */).then(c => wrapFunctional(c.default || c))
-export const ReviewsReviewTable = () => import('../../components/reviews/ReviewTable.vue' /* webpackChunkName: "components/reviews-review-table" */).then(c => wrapFunctional(c.default || c))
+export { default as Auth } from '../../components/Auth.vue'
+export { default as HeaderWithTopbar } from '../../components/HeaderWithTopbar.vue'
+export { default as Login } from '../../components/Login.vue'
+export { default as MobileBar } from '../../components/MobileBar.vue'
+export { default as MyAccountContainer } from '../../components/MyAccountContainer.vue'
+export { default as NavBottom } from '../../components/NavBottom.vue'
+export { default as Navigation } from '../../components/Navigation.vue'
+export { default as OffCanvasMobileMenu } from '../../components/OffCanvasMobileMenu.vue'
+export { default as ProductDetailsDescriptionReview } from '../../components/ProductDetailsDescriptionReview.vue'
+export { default as Register } from '../../components/Register.vue'
+export { default as ResponsiveMobileMenu } from '../../components/ResponsiveMobileMenu.vue'
+export { default as Search } from '../../components/Search.vue'
+export { default as TheFooter } from '../../components/TheFooter.vue'
+export { default as TheHeader } from '../../components/TheHeader.vue'
+export { default as ClientsGuests } from '../../components/clients/Guests.vue'
+export { default as ClientsRegisteds } from '../../components/clients/Registeds.vue'
+export { default as DashboardAnalyticsGoogle } from '../../components/dashboard/AnalyticsGoogle.vue'
+export { default as DashboardDonutsProducts } from '../../components/dashboard/DonutsProducts.vue'
+export { default as DashboardGraphicMonths } from '../../components/dashboard/GraphicMonths.vue'
+export { default as CouponsTable } from '../../components/coupons/CouponsTable.vue'
+export { default as CouponsCreateCoupons } from '../../components/coupons/CreateCoupons.vue'
+export { default as HeadersNavTop } from '../../components/headers/NavTop.vue'
+export { default as HeadersResults } from '../../components/headers/Results.vue'
+export { default as HeadersSearch } from '../../components/headers/Search.vue'
+export { default as HeadersSideNav } from '../../components/headers/SideNav.vue'
+export { default as InvoicesErrorModal } from '../../components/invoices/ErrorModal.vue'
+export { default as InvoicesInvoiceViewer } from '../../components/invoices/InvoiceViewer.vue'
+export { default as InvoicesTable } from '../../components/invoices/InvoicesTable.vue'
+export { default as InvoicesNewInvoice } from '../../components/invoices/NewInvoice.vue'
+export { default as InvoicesSuccessInvoiceModal } from '../../components/invoices/SuccessInvoiceModal.vue'
+export { default as LoadersBigLoader } from '../../components/loaders/BigLoader.vue'
+export { default as LoadersSmallLoading } from '../../components/loaders/SmallLoading.vue'
+export { default as OrdersEditOrder } from '../../components/orders/EditOrder.vue'
+export { default as OrdersModalTrack } from '../../components/orders/ModalTrack.vue'
+export { default as OrdersNote } from '../../components/orders/Note.vue'
+export { default as Orders } from '../../components/orders/Orders.vue'
+export { default as OrdersCom } from '../../components/orders/OrdersCom.vue'
+export { default as OrdersHistory } from '../../components/orders/OrdersHistory.vue'
+export { default as ProductCreateProduct } from '../../components/product/CreateProduct.vue'
+export { default as ProductCreateVariation } from '../../components/product/CreateVariation.vue'
+export { default as ProductEditProduct } from '../../components/product/EditProduct.vue'
+export { default as ProductDetailsWrapper } from '../../components/product/ProductDetailsWrapper.vue'
+export { default as ProductGridItem } from '../../components/product/ProductGridItem.vue'
+export { default as ProductGridItemTwo } from '../../components/product/ProductGridItemTwo.vue'
+export { default as ProductGridStyleThree } from '../../components/product/ProductGridStyleThree.vue'
+export { default as ProductWrapperCosmetics } from '../../components/product/ProductWrapperCosmetics.vue'
+export { default as ProductProductsTable } from '../../components/product/ProductsTable.vue'
+export { default as ProfileNewGuest } from '../../components/profile/NewGuest.vue'
+export { default as ProfileNewProfile } from '../../components/profile/NewProfile.vue'
+export { default as ReviewsNewReview } from '../../components/reviews/NewReview.vue'
+export { default as ReviewsReviewTable } from '../../components/reviews/ReviewTable.vue'
 
 // nuxt/nuxt.js#8607
 function wrapFunctional(options) {

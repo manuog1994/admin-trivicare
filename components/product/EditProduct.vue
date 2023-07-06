@@ -112,7 +112,7 @@
                         <p>(<span class="fw-bold">¡IMPORTANTE!</span> Guardar los cambios antes de borrar o subir nuevas imágenes)</p>
                     </div>
                     <div class="col-3 text-center mb-3" v-for="image in item.images" :key="image.id">
-                        <img class="img-fluid" :src="baseUrl + '/' + image.path" :alt="product.name">
+                        <img class="img-fluid" :src="baseUrl + '/' + image.path + image.name + '.' + image.ext" :alt="product.name">
                         <a @click.prevent="deleteImage(image)">Eliminar <i class="fa fa-trash"></i></a>               
                     </div>
         

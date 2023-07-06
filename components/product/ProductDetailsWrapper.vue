@@ -15,7 +15,7 @@
                                     <p class="fst-italic">Haz doble click sobre la imagen para zoom</p>
                                 </div>
                                 <div v-else class="swiper-slide text-center" v-for="image in product.images" :key="'image-' + image.id">
-                                    <nuxt-img loading="lazy" class="principal" provider="customProvider" :src="image.path" alt="default" />
+                                    <nuxt-img loading="lazy" class="principal" provider="customProvider" :src="image.path + image.name + '.' + image.ext" alt="default" />
                                     <p class="fst-italic">Haz doble click sobre la imagen para zoom</p>
                                 </div>
                             </swiper>
@@ -24,7 +24,7 @@
                                     <nuxt-img loading="lazy" provider="customProvider" src="nuxt/default.webp" alt="default" width="100%" height="100%"/>
                                 </div>
                                 <div v-else class="thumb-img swiper-slide" v-for="image in product.images" :key="'imagetwo-' + image.id">
-                                    <nuxt-img loading="lazy" provider="customProvider" :src="image.path" alt="default" width="100%" height="100%"/>
+                                    <nuxt-img loading="lazy" provider="customProvider" :src="image.path + image.name + '.' + image.ext" alt="default" width="100%" height="100%"/>
                                 </div>
                             </swiper>
                         </div>
@@ -46,25 +46,38 @@
                         <div>
                             <p>{{ product.specifications }}</p>
                         </div>
-                        <div class="pro-details-size-color" v-if="product.variation">
+                        <div class="pro-details-size-color" v-if="product.variations">
+                            <div v-if="errorVariation">
+                                <p class="text-danger">
+                                    <i>Debes seleccionar el modelo, color o tamaño antes de añadirlo al carrito.</i>
+                                </p>
+                            </div>
                             <div class="pro-details-color-wrap">
-                                <h6 class="label">Color</h6>
-                                <div class="pro-details-color-content">
-                                    <label :class="item" class="radio" v-for="(item, index) in product.variation.color" :key="index" >
-                                        <input type="radio" name="colorGroup"/>
-                                        <span class="check-mark"></span>
-                                    </label>
+                                <div v-if="model?.length > 0">
+                                   <h6 class="label">Modelo</h6>
+                                    <div class="d-flex mb-4">
+                                        <div class="d-flex justify-content-around" v-for="modelo, index in model">
+                                            <button :id="'button-model' + index" class="btn btn-hover-blue border-black rounded-0 ms-2" :title="modelo" @click="setVariation">{{ modelo }}</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div v-if="color?.length > 0">
+                                   <h6 class="label">Color</h6>
+                                    <div class="d-flex mb-4">
+                                        <div class="d-flex justify-content-around" v-for="colores, index in color">
+                                            <button :id="'button-color' + index" class="btn btn-hover-blue border-black rounded-0 ms-2" :title="colores" @click="setVariation">{{ colores }}</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div v-if="size?.length > 0">
+                                   <h6 class="label">Tamaño</h6>
+                                    <div class="d-flex mb-4">
+                                        <div class="d-flex justify-content-around" v-for="tamanos, index in size">
+                                            <button :id="'button-size' + index" class="btn btn-hover-blue border-black rounded-0 ms-2" :title="tamanos" @click="setVariation">{{ tamanos }}</button>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <!-- <div class="pro-details-size-wrap">
-                                <h6 class="label">Size</h6>
-                                <div class="pro-details-size-content">
-                                    <label class="radio" v-for="(item, index) in product.variation.sizes" :key="index">
-                                        <input type="radio" name="sizeGroup" />
-                                        <span class="check-mark">{{ item }}</span>
-                                    </label>
-                                </div>
-                            </div> -->
                         </div>
                         <div v-if="product.stock > 0" class="pro-details-quality">
                             <div class="cart-plus-minus">
@@ -160,6 +173,14 @@
                 singleQuantity: 1,
                 categories: [],
                 tags: [],
+                model: [],
+                color: [],
+                size: [],
+                variation: '',
+                errorVariation: false,
+                selectVariation: false,
+                idButtonVariation: '',
+                imageVariation: [],
 
                 swiperOptionTop: {
                     loop: true,
@@ -191,7 +212,11 @@
                 const swiperThumbs = this.$refs.swiperThumbs.$swiper
                 swiperTop.controller.control = swiperThumbs
                 swiperThumbs.controller.control = swiperTop
-            })            
+            })
+            
+            this.getModels();
+            this.getColors();
+            this.getSizes();
         },
 
         methods: {
@@ -241,6 +266,61 @@
                 }
                 this.$store.dispatch('addToCompare', product)
             },
+
+            getModels() {
+                this.product.variations.map(el => {
+                    if(el.model !== '') {
+                        this.model.push(el.model);
+                    }
+                })
+            },
+
+            getColors() {
+                this.product.variations.map(el => {
+                    if(el.color !== ''){
+                        this.color.push(el.color);
+                    }
+                })
+            },
+
+            getSizes() {
+                this.product.variations.map(el => {
+                    if(el.size){
+                        this.size.push(el.size);
+                    }
+                })
+            },
+
+            setVariation(e) {
+                let id = e.target.id;
+                this.variation = e.target.title;
+                this.errorVariation = false;
+
+                if(id !== this.idButtonVariation && this.idButtonVariation !== '') {
+                    document.getElementById(this.idButtonVariation).classList.remove('bg-trivi-blue');
+                }
+                
+                //Marcar el botón según la id recibida
+                document.getElementById(id).classList.add('bg-trivi-blue');
+
+                this.idButtonVariation = id;
+
+                //Extraer variación según el título
+
+                this.product.variations.map(el => {
+                    if (el.model === e.target.title || el.color === e.target.title || el.size === e.target.title) {
+                        this.$axios.get('api/variations/' + el.id).then(res => {
+                            let response = res.data.data;
+                            response.map(element => {
+                                let imageVariation = element.image;
+                                let slide = document.querySelector('.swiper-slide-active');
+                                let imagen = slide.querySelector('img');
+                                imagen.src = process.env.baseUrl + '/' + imageVariation.path + imageVariation.name + '.' + imageVariation.ext;
+                            })
+                        })
+                    }
+                })
+            } 
 
         },
 

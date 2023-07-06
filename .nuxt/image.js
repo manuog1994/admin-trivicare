@@ -3,9 +3,9 @@ import { createImage} from '~image'
 import NuxtImg from '~image/components/nuxt-img.vue'
 import NuxtPicture from '~image/components/nuxt-picture.vue'
 
-import * as staticRuntime$42ec from '/var/www/admin-trivicare/node_modules/@nuxt/image/dist/runtime/providers/static.js'
-import * as ipxRuntime$52d4 from '/var/www/admin-trivicare/node_modules/@nuxt/image/dist/runtime/providers/ipx.js'
-import * as customProviderRuntime$9208 from '/var/www/admin-trivicare/providers/custom.js'
+import * as staticRuntime$e9cf from '/Users/manuel/wa/admin.trivicare.com/node_modules/@nuxt/image/dist/runtime/providers/static.js'
+import * as ipxRuntime$e7c7 from '/Users/manuel/wa/admin.trivicare.com/node_modules/@nuxt/image/dist/runtime/providers/ipx.js'
+import * as customProviderRuntime$0be0 from '/Users/manuel/wa/admin.trivicare.com/providers/custom.js'
 
 const imageOptions = {
   "screens": {
@@ -24,9 +24,9 @@ const imageOptions = {
 }
 
 imageOptions.providers = {
-  ['static']: { provider: staticRuntime$42ec, defaults: {} },
-  ['ipx']: { provider: ipxRuntime$52d4, defaults: {} },
-  ['customProvider']: { provider: customProviderRuntime$9208, defaults: {} }
+  ['static']: { provider: staticRuntime$e9cf, defaults: {} },
+  ['ipx']: { provider: ipxRuntime$e7c7, defaults: {} },
+  ['customProvider']: { provider: customProviderRuntime$0be0, defaults: {} }
 }
 
 Vue.component(NuxtImg.name, NuxtImg)

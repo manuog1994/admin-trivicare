@@ -22,7 +22,7 @@
                     </tr>
                 </thead>
                 <tbody v-if="products.length > 0">
-                    <tr v-for="product in products" :key="product.id">
+                    <tr v-for="product in paginatedItems" :key="product.id">
                     <th scope="row">{{ product.id }}</th>
                     <td><n-link :to="`/product/${product.slug}`">{{ product.name }}</n-link></td>
                     <td>{{ product.price }} &euro;</td>

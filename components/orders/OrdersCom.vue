@@ -49,7 +49,7 @@
                 </thead>
                 <tbody>
                     <tr v-for="product in this.products" :key="product.id">
-                        <td><strong>{{ product.name }}</strong></td>
+                        <td><strong>{{ product.name }} {{ product.variation != undefined ? `-- ${product.variation}` : '' }}</strong></td>
                         <td>{{ product.cartQuantity }}</td>
                         <td>
                             <span v-if="product.discount < 0">

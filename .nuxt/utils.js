@@ -192,14 +192,14 @@ export async function setContext (app, context) {
   if (!app.context) {
     app.context = {
       isStatic: process.static,
-      isDev: false,
+      isDev: true,
       isHMR: false,
       app,
       store: app.store,
       payload: context.payload,
       error: context.error,
       base: app.router.options.base,
-      env: {"baseUrl":"https://api.trivicare.com","url":"https://admin.trivicare.com","URL":"https://admin.trivicare.com","BASE_URL":"https://api.trivicare.com"}
+      env: {"baseUrl":"http://localhost:8000","url":"http://localhost:3000","URL":"http://localhost:3000","BASE_URL":"http://localhost:8000"}
     }
     // Only set once
 
@@ -276,31 +276,30 @@ export async function setContext (app, context) {
     app.context.from = fromRouteData
   }
 
-  if (context.error) {
-    app.context.error = context.error
-  }
-
   app.context.next = context.next
   app.context._redirected = false
   app.context._errored = false
-  app.context.isHMR = false
+  app.context.isHMR = Boolean(context.isHMR)
   app.context.params = app.context.route.params || {}
   app.context.query = app.context.route.query || {}
 }
 
-export function middlewareSeries (promises, appContext, renderState) {
-  if (!promises.length || appContext._redirected || appContext._errored || (renderState && renderState.aborted)) {
+export function middlewareSeries (promises, appContext) {
+  if (!promises.length || appContext._redirected || appContext._errored) {
     return Promise.resolve()
   }
   return promisify(promises[0], appContext)
     .then(() => {
-      return middlewareSeries(promises.slice(1), appContext, renderState)
+      return middlewareSeries(promises.slice(1), appContext)
     })
 }
 
 export function promisify (fn, context) {
   let promise
   if (fn.length === 2) {
+      console.warn('Callback-based asyncData, fetch or middleware calls are deprecated. ' +
+        'Please switch to promises or async/await syntax')
+
     // fn(context, callback)
     promise = new Promise((resolve) => {
       fn(context, function (err, data) {
