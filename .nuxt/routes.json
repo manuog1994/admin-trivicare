@@ -14,6 +14,20 @@
     "_name": "_49212654"
   },
   {
+    "name": "discounts",
+    "path": "/discounts",
+    "component": "/Users/manuel/wa/admin.trivicare.com/pages/discounts.vue",
+    "chunkName": "pages/discounts",
+    "_name": "_31eea05b"
+  },
+  {
+    "name": "gifts",
+    "path": "/gifts",
+    "component": "/Users/manuel/wa/admin.trivicare.com/pages/gifts.vue",
+    "chunkName": "pages/gifts",
+    "_name": "_8d4bab68"
+  },
+  {
     "name": "guests",
     "path": "/guests",
     "component": "/Users/manuel/wa/admin.trivicare.com/pages/guests.vue",
@@ -75,6 +89,13 @@
     "component": "/Users/manuel/wa/admin.trivicare.com/pages/settings.vue",
     "chunkName": "pages/settings",
     "_name": "_195c3faa"
+  },
+  {
+    "name": "variations",
+    "path": "/variations",
+    "component": "/Users/manuel/wa/admin.trivicare.com/pages/variations.vue",
+    "chunkName": "pages/variations",
+    "_name": "_2bf4a3f2"
   },
   {
     "name": "order-edit-id",

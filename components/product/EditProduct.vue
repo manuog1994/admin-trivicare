@@ -58,10 +58,6 @@
                     <input class="form-control" type="text" name="slug" :value="item.slug" ref="slug">
                 </div>
                 <div class="col-12 col-md-4 mb-2">
-                    <label for="discount">Descuento</label>
-                    <input class="form-control" type="number" name="discount" step=".01" :value="item.discount" ref="discount">
-                </div>
-                <div class="col-12 col-md-4 mb-2">
                     <label for="weight">Peso</label>
                     <input class="form-control" type="number" name="weight" step=".01" :value="item.weight" ref="weight">
                 </div>
@@ -69,7 +65,7 @@
                     <label for="size">Tamaño</label>
                     <input class="form-control" type="number" name="size" step=".01" :value="item.size" ref="size">
                 </div>
-                <div class="col-12 mb-2 pb-4 border-bottom-1">
+                <div class="col-12 col-md-4 mb-2 pb-4 border-bottom-1">
                     <label for="dimensions">Dimensiones</label>
                     <input class="form-control" type="text" name="dimensions" :value="item.dimensions" ref="dimensions">
                 </div>
@@ -144,7 +140,6 @@ export default {
                 category_id: '',
                 slug: '',
                 status: '',
-                discount: '',
                 weight: '',
                 size: '',
                 dimensions: '',
@@ -216,7 +211,6 @@ export default {
                 barcode: this.$refs.barcode?.value,
                 category_id: this.$refs.category_id?.value,
                 slug: this.$refs.slug?.value,
-                discount: this.$refs.discount?.value,
                 weight: this.$refs.weight?.value,
                 size: this.$refs.size?.value,
                 dimensions: this.$refs.dimensions?.value,

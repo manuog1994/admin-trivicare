@@ -67,6 +67,24 @@ export default {
                     </n-link>
                 </li>
                 <li class="nav-item">
+                    <n-link class="nav-link" :class="{'active': isActive == '/variations'}" to="/variations">
+                        <i class="fa fa-product-hunt icon-list"></i>
+                        Variaciones
+                    </n-link>
+                </li>
+                <li class="nav-item">
+                    <n-link class="nav-link" :class="{'active': isActive == '/discounts'}" to="/discounts">
+                        <i class="fa fa-money icon-list"></i>
+                        Descuentos
+                    </n-link>
+                </li>
+                <li class="nav-item">
+                    <n-link class="nav-link" :class="{'active': isActive == '/gifts'}" to="/gifts">
+                        <i class="fa fa-gift icon-list"></i>
+                        Regalos
+                    </n-link>
+                </li>
+                <li class="nav-item">
                     <n-link class="nav-link" :class="{'active': isActive == '/reviews'}" to="/reviews">
                         <i class="fa fa-star icon-list"></i>
                         Valoraciones

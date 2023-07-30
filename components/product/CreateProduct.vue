@@ -60,10 +60,6 @@
                             <input class="form-control" type="text" name="slug" :value="slugify(title)" required>
                         </div>
                         <div class="col-12 col-md-4 mb-2">
-                            <label for="discount">Descuento</label>
-                            <input class="form-control" type="number" name="discount" step=".01">
-                        </div>
-                        <div class="col-12 col-md-4 mb-2">
                             <label for="weight">Peso</label>
                             <input class="form-control" type="number" name="weight" step=".01" required>
                         </div>
@@ -71,7 +67,7 @@
                             <label for="size">Tamaño</label>
                             <input class="form-control" type="number" name="size" step=".01">
                         </div>
-                        <div class="col-12 border-bottom-1 mb-2 pb-4">
+                        <div class="col-12 col-md-4 border-bottom-1 mb-2 pb-4">
                             <label for="dimensions">Dimensiones</label>
                             <input class="form-control" type="text" name="dimensions" required>
                         </div>

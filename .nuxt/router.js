@@ -6,6 +6,8 @@ import scrollBehavior from './router.scrollBehavior.js'
 
 const _6a07d051 = () => interopDefault(import('../pages/clients.vue' /* webpackChunkName: "pages/clients" */))
 const _49212654 = () => interopDefault(import('../pages/coupons.vue' /* webpackChunkName: "pages/coupons" */))
+const _31eea05b = () => interopDefault(import('../pages/discounts.vue' /* webpackChunkName: "pages/discounts" */))
+const _8d4bab68 = () => interopDefault(import('../pages/gifts.vue' /* webpackChunkName: "pages/gifts" */))
 const _648d363c = () => interopDefault(import('../pages/guests.vue' /* webpackChunkName: "pages/guests" */))
 const _7b36e626 = () => interopDefault(import('../pages/invoices.vue' /* webpackChunkName: "pages/invoices" */))
 const _2fd1d972 = () => interopDefault(import('../pages/login.vue' /* webpackChunkName: "pages/login" */))
@@ -15,6 +17,7 @@ const _e1fd851a = () => interopDefault(import('../pages/orders-history.vue' /* w
 const _3706cc6b = () => interopDefault(import('../pages/products.vue' /* webpackChunkName: "pages/products" */))
 const _751e0638 = () => interopDefault(import('../pages/reviews.vue' /* webpackChunkName: "pages/reviews" */))
 const _195c3faa = () => interopDefault(import('../pages/settings.vue' /* webpackChunkName: "pages/settings" */))
+const _2bf4a3f2 = () => interopDefault(import('../pages/variations.vue' /* webpackChunkName: "pages/variations" */))
 const _2fba20ca = () => interopDefault(import('../pages/order-edit/_id.vue' /* webpackChunkName: "pages/order-edit/_id" */))
 const _1fcfb281 = () => interopDefault(import('../pages/orders-view/_id.vue' /* webpackChunkName: "pages/orders-view/_id" */))
 const _ca4af21a = () => interopDefault(import('../pages/product/_slug.vue' /* webpackChunkName: "pages/product/_slug" */))
@@ -39,6 +42,14 @@ export const routerOptions = {
     path: "/coupons",
     component: _49212654,
     name: "coupons"
+  }, {
+    path: "/discounts",
+    component: _31eea05b,
+    name: "discounts"
+  }, {
+    path: "/gifts",
+    component: _8d4bab68,
+    name: "gifts"
   }, {
     path: "/guests",
     component: _648d363c,
@@ -75,6 +86,10 @@ export const routerOptions = {
     path: "/settings",
     component: _195c3faa,
     name: "settings"
+  }, {
+    path: "/variations",
+    component: _2bf4a3f2,
+    name: "variations"
   }, {
     path: "/order-edit/:id?",
     component: _2fba20ca,
