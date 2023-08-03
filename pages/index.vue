@@ -12,7 +12,6 @@
 </template>
 
 <script>
-
     export default {
         components: {
             SideNav: () => import("@/components/headers/SideNav"),
@@ -33,6 +32,10 @@
             this.$root.$on('loading', (data) => {
                 this.loading = data;
             });
+        },
+
+        mounted() {
+            
         },
 
 

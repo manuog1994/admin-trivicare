@@ -42,22 +42,22 @@ export default function (ctx, inject) {
   // Register strategies
   // laravelJWT
   $auth.registerStrategy('laravelJWT', new LaravelJWTScheme($auth, {
-  "url": "http://localhost:8000",
+  "url": "http://api.trivicare.test",
   "endpoints": {
     "login": {
-      "url": "http://localhost:8000/api/auth/login",
+      "url": "http://api.trivicare.test/api/auth/login",
       "method": "post"
     },
     "refresh": {
-      "url": "http://localhost:8000/api/auth/refresh",
+      "url": "http://api.trivicare.test/api/auth/refresh",
       "method": "post"
     },
     "logout": {
-      "url": "http://localhost:8000/api/auth/logout",
+      "url": "http://api.trivicare.test/api/auth/logout",
       "method": "post"
     },
     "user": {
-      "url": "http://localhost:8000/api/auth/me",
+      "url": "http://api.trivicare.test/api/auth/me",
       "method": "get"
     },
     "redirect": {

@@ -22,14 +22,7 @@
                 isVisible: false,
             };
         },
-        methods: {
-            scrollToTop() {
-                window.scroll({
-                    top: 0,
-                    behavior: "smooth",
-                });
-            },
-        },
+
         mounted() {
             window.addEventListener("scroll", () => {
                 let scroll = window.scrollY;
@@ -40,7 +33,19 @@
                     this.isVisible = false;
                 }
             });
+
+
         },
+
+        methods: {
+            scrollToTop() {
+                window.scroll({
+                    top: 0,
+                    behavior: "smooth",
+                });
+            },
+        },
+
     };
 </script>
 

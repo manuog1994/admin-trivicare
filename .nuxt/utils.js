@@ -199,7 +199,7 @@ export async function setContext (app, context) {
       payload: context.payload,
       error: context.error,
       base: app.router.options.base,
-      env: {"baseUrl":"http://localhost:8000","url":"http://localhost:3000","URL":"http://localhost:3000","BASE_URL":"http://localhost:8000"}
+      env: {"baseUrl":"http://api.trivicare.test","url":"http://localhost:3000","URL":"http://localhost:3000","BASE_URL":"http://api.trivicare.test"}
     }
     // Only set once
 

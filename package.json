@@ -36,6 +36,7 @@
         "js-file-download": "^0.4.12",
         "nuxi": "^3.3.2",
         "nuxt-edge": "latest",
+        "pusher-js": "^8.3.0",
         "sweetalert2": "^11.4.33",
         "swiper": "^5.3.7",
         "vue": "^2.7.14",

@@ -1,5 +1,4 @@
-import Vue from 'vue';
 import Notifications from 'vue-notification';
+import Vue from 'vue';
 
 Vue.use(Notifications);
-
