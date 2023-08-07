@@ -59,7 +59,14 @@
                                 {{ (discountedPrice(product) * 1.21).toFixed(2) }} &euro;
                             </span>
                         </td>
-                        <td>{{ ((product.price_base * product.cartQuantity) * 1.21).toFixed(2) }} &euro;</td>
+                        <td>
+                            <span v-if="product.discount == null">
+                                {{ (product.price_base * product.cartQuantity * 1.21).toFixed(2) }} &euro;
+                            </span>
+                            <span v-else>
+                                {{ (discountedPrice(product) * product.cartQuantity * 1.21).toFixed(2) }} &euro;
+                            </span>
+                        </td>
                     </tr>
                 </tbody>
             </table>
