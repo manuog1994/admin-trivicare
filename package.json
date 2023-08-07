@@ -33,6 +33,7 @@
         "chart.js": "^4.2.1",
         "cookie-universal-nuxt": "^2.2.2",
         "core-js": "^3.21.1",
+        "firebase": "^10.1.0",
         "js-file-download": "^0.4.12",
         "nuxi": "^3.3.2",
         "nuxt-edge": "latest",

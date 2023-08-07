@@ -33,6 +33,7 @@ import nuxt_plugin_vuejspagiante_7edc93b2 from 'nuxt_plugin_vuejspagiante_7edc93
 import nuxt_plugin_observevisibility_b986de04 from 'nuxt_plugin_observevisibility_b986de04' // Source: ../plugins/observe-visibility.js (mode: 'all')
 import nuxt_plugin_persistedStateclient_3b127e9c from 'nuxt_plugin_persistedStateclient_3b127e9c' // Source: ../plugins/persistedState.client.js (mode: 'client')
 import nuxt_plugin_vueprogresspath_0eff6422 from 'nuxt_plugin_vueprogresspath_0eff6422' // Source: ../plugins/vue-progress-path.js (mode: 'all')
+import nuxt_plugin_firebase_34d6f55a from 'nuxt_plugin_firebase_34d6f55a' // Source: ../plugins/firebase.js (mode: 'client')
 import nuxt_plugin_notificationsssr_c12eda12 from 'nuxt_plugin_notificationsssr_c12eda12' // Source: ../plugins/notifications-ssr (mode: 'all')
 import nuxt_plugin_notificationsclient_6eb3b8c6 from 'nuxt_plugin_notificationsclient_6eb3b8c6' // Source: ../plugins/notifications-client (mode: 'client')
 import nuxt_plugin_pusher_4253ec9a from 'nuxt_plugin_pusher_4253ec9a' // Source: ../plugins/pusher.js (mode: 'client')
@@ -318,6 +319,10 @@ async function createApp(ssrContext, config = {}) {
 
   if (typeof nuxt_plugin_vueprogresspath_0eff6422 === 'function') {
     await nuxt_plugin_vueprogresspath_0eff6422(app.context, inject)
+  }
+
+  if (process.client && typeof nuxt_plugin_firebase_34d6f55a === 'function') {
+    await nuxt_plugin_firebase_34d6f55a(app.context, inject)
   }
 
   if (typeof nuxt_plugin_notificationsssr_c12eda12 === 'function') {
