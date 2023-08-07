@@ -212,7 +212,7 @@ export default {
         },
 
         discountedPrice(product) {
-            return product.price_base - (product.price_base * product.discount / 100)
+            return product.price_base - (product.price_base * product.discount?.discount / 100)
         },
 
         getState(order) {
