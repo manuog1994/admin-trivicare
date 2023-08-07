@@ -52,7 +52,7 @@
                         <td><strong>{{ product.name }} {{ product.variation != undefined ? `-- ${product.variation}` : '' }}</strong></td>
                         <td>{{ product.cartQuantity }}</td>
                         <td>
-                            <span v-if="product.discount < 0">
+                            <span v-if="product.discount == null">
                                 {{ (product.price_base * 1.21).toFixed(2) }} &euro;
                             </span>
                             <span v-else>
