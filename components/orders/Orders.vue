@@ -19,18 +19,21 @@
                         <th scope="">Cliente</th>
                         <th scope="">Fecha</th>
                         <th scope="">Estado</th>
+                        <th scope="">Total</th>
                         <th scope="">Acciones</th>
                         </tr>
                     </thead>
                     <tbody v-if="orders.length > 0">
                         <tr v-for="order in paginatedItems" :key="order.id">
-                            <td v-if="order.guest == null">{{ order.user_profile?.name }} {{ order.user_profile?.lastname }}</td>
+                            <td v-if="order.name != null">{{ order.name }} {{ order.lastname }}</td>
+                            <td v-else-if="order.guest == null">{{ order.user_profile?.name }} {{ order.user_profile?.lastname }}</td>
                             <td v-else>{{ order.guest?.name }} {{ order.guest?.lastname }}</td>
                             <td>{{ order.order_date }}</td>
                             <td v-if="order.paid == 'PENDIENTE'">Pendiente</td>
                             <td v-if="order.paid == 'PROCESANDO'">Procesando</td>
                             <td v-if="order.paid == 'PAGADO'">Pagado</td>
                             <td v-if="order.paid == 'RECHAZADO'">Rechazado</td>
+                            <td>{{ (Number((order.total * 1.21)) + Number(order?.shipping)).toFixed(2) }}</td>
                             <td>
                                 <n-link :to="`/orders-view/${order.id}`" class="btn bg-trivi-blue">
                                     <i class="pe-7s-look"></i>

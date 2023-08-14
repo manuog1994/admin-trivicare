@@ -25,7 +25,7 @@
                     </div>
                     <div class="col-12 col-md-6 mb-2">
                         <label for="phone">Teléfono</label>
-                        <input type="number" name="phone" id="phone" class="form-control">
+                        <input type="tel" name="phone" id="phone" class="form-control">
                     </div>
                     <div class="col-12 mb-2">
                         <label for="address">Dirección</label>
@@ -103,7 +103,7 @@
                     <div class="mt-5">
                         <label for="discount">Descuento</label>
                         <div class="d-flex">
-                            <input type="number" class="form-control" placeholder="Introduce el descuento" v-model="discount">
+                            <input type="number" class="form-control" placeholder="Introduce el descuento" v-model="discount" step="0.01">
                             <button class="ms-1 btn btn-primary" @click.prevent="applyDiscount">Aplicar</button>
                         </div>
                     </div>

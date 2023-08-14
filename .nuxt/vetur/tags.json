@@ -41,6 +41,12 @@
   "TheHeader": {
     "description": "Auto imported from components/TheHeader.vue"
   },
+  "CouponsTable": {
+    "description": "Auto imported from components/coupons/CouponsTable.vue"
+  },
+  "CouponsCreateCoupons": {
+    "description": "Auto imported from components/coupons/CreateCoupons.vue"
+  },
   "ClientsGuests": {
     "description": "Auto imported from components/clients/Guests.vue"
   },
@@ -56,11 +62,11 @@
   "DashboardGraphicMonths": {
     "description": "Auto imported from components/dashboard/GraphicMonths.vue"
   },
-  "CouponsTable": {
-    "description": "Auto imported from components/coupons/CouponsTable.vue"
+  "GiftsCreateGift": {
+    "description": "Auto imported from components/gifts/CreateGift.vue"
   },
-  "CouponsCreateCoupons": {
-    "description": "Auto imported from components/coupons/CreateCoupons.vue"
+  "GiftsTable": {
+    "description": "Auto imported from components/gifts/GiftsTable.vue"
   },
   "HeadersNavTop": {
     "description": "Auto imported from components/headers/NavTop.vue"
@@ -89,23 +95,35 @@
   "InvoicesSuccessInvoiceModal": {
     "description": "Auto imported from components/invoices/SuccessInvoiceModal.vue"
   },
+  "DiscountsCreateDiscount": {
+    "description": "Auto imported from components/discounts/CreateDiscount.vue"
+  },
+  "DiscountsTable": {
+    "description": "Auto imported from components/discounts/DiscountsTable.vue"
+  },
   "LoadersBigLoader": {
     "description": "Auto imported from components/loaders/BigLoader.vue"
   },
   "LoadersSmallLoading": {
     "description": "Auto imported from components/loaders/SmallLoading.vue"
   },
-  "GiftsCreateGift": {
-    "description": "Auto imported from components/gifts/CreateGift.vue"
+  "OrdersEditOrder": {
+    "description": "Auto imported from components/orders/EditOrder.vue"
   },
-  "GiftsTable": {
-    "description": "Auto imported from components/gifts/GiftsTable.vue"
+  "OrdersModalTrack": {
+    "description": "Auto imported from components/orders/ModalTrack.vue"
   },
-  "DiscountsCreateDiscount": {
-    "description": "Auto imported from components/discounts/CreateDiscount.vue"
+  "OrdersNote": {
+    "description": "Auto imported from components/orders/Note.vue"
   },
-  "DiscountsTable": {
-    "description": "Auto imported from components/discounts/DiscountsTable.vue"
+  "Orders": {
+    "description": "Auto imported from components/orders/Orders.vue"
+  },
+  "OrdersCom": {
+    "description": "Auto imported from components/orders/OrdersCom.vue"
+  },
+  "OrdersHistory": {
+    "description": "Auto imported from components/orders/OrdersHistory.vue"
   },
   "ProductCreateProduct": {
     "description": "Auto imported from components/product/CreateProduct.vue"
@@ -131,6 +149,12 @@
   "ProductProductsTable": {
     "description": "Auto imported from components/product/ProductsTable.vue"
   },
+  "ProfileNewGuest": {
+    "description": "Auto imported from components/profile/NewGuest.vue"
+  },
+  "ProfileNewProfile": {
+    "description": "Auto imported from components/profile/NewProfile.vue"
+  },
   "ReviewsNewReview": {
     "description": "Auto imported from components/reviews/NewReview.vue"
   },
@@ -142,29 +166,5 @@
   },
   "VariationsTable": {
     "description": "Auto imported from components/variations/VariationsTable.vue"
-  },
-  "ProfileNewGuest": {
-    "description": "Auto imported from components/profile/NewGuest.vue"
-  },
-  "ProfileNewProfile": {
-    "description": "Auto imported from components/profile/NewProfile.vue"
-  },
-  "OrdersEditOrder": {
-    "description": "Auto imported from components/orders/EditOrder.vue"
-  },
-  "OrdersModalTrack": {
-    "description": "Auto imported from components/orders/ModalTrack.vue"
-  },
-  "OrdersNote": {
-    "description": "Auto imported from components/orders/Note.vue"
-  },
-  "Orders": {
-    "description": "Auto imported from components/orders/Orders.vue"
-  },
-  "OrdersCom": {
-    "description": "Auto imported from components/orders/OrdersCom.vue"
-  },
-  "OrdersHistory": {
-    "description": "Auto imported from components/orders/OrdersHistory.vue"
   }
 }

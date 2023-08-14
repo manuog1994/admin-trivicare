@@ -85,6 +85,8 @@
                         </th>
                         <th scope="">Factura</th>
                         <th scope="">Cliente</th>
+                        <th scope="">Tipo</th>
+                        <th scope="">Total</th>
                         <th scope="">Fecha</th>
                         <th scope="">Acciones</th>
                         </tr>
@@ -97,7 +99,10 @@
                                 </div>
                             </td>
                             <td>{{ invoice.invoice_number }}</td>
-                            <td>{{ invoice.order?.user_profile?.name == 'Guest' ? invoice.order?.guest?.name : invoice.order?.user_profile?.name }} {{ invoice.order?.user_profile?.lastname == 'Guest' ? invoice.order?.guest?.lastname : invoice.order?.user_profile?.lastname }}</td>
+                            <td v-if="invoice.name != null">{{ invoice.name }} {{ invoice.lastname }}</td>
+                            <td v-else>{{ invoice.order?.user_profile?.name == 'Guest' ? invoice.order?.guest?.name : invoice.order?.user_profile?.name }} {{ invoice.order?.user_profile?.lastname == 'Guest' ? invoice.order?.guest?.lastname : invoice.order?.user_profile?.lastname }}</td>
+                            <td>{{ invoice.type }}</td>
+                            <td>{{ invoice?.total }}</td>
                             <td>{{ formatDate(invoice.created_at) }}</td>
                             <td>
                                 <!-- <a @click.prevent="changeView(invoice.id)" class="p-2">
