@@ -4,22 +4,23 @@
         <NavTop />
         <Search />
         <div class="main overflow-auto">
-            <GraphicMonths />
-            <DonutsProducts />
+            <VisitPagesCounter/>
+            <Sales/>
             <BigLoader v-if="loading"/>
         </div>
     </div>
 </template>
 
 <script>
+
     export default {
         components: {
             SideNav: () => import("@/components/headers/SideNav"),
             NavTop: () => import("@/components/headers/NavTop"),
             Search: () => import("@/components/headers/Search"),
-            GraphicMonths: () => import("@/components/dashboard/GraphicMonths"),
-            DonutsProducts: () => import("@/components/dashboard/DonutsProducts"),
+            VisitPagesCounter: () => import("@/components/dashboard/VisitPagesCounter"),
             BigLoader: () => import("@/components/loaders/BigLoader"),
+            Sales: () => import("@/components/dashboard/Sales"),
         },
 
         data() {
@@ -35,9 +36,8 @@
         },
 
         mounted() {
-            
+            this.$root.$emit('loading', false);
         },
-
 
         head() {
             return {
