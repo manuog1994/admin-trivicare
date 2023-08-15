@@ -27,6 +27,9 @@
             </div>
         </div>
         <div class="mt-5">
+            <h3>Por páginas</h3>
+        </div>
+        <div class="mt-4">
             <table>
                 <thead>
                     <tr>

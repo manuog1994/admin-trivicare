@@ -29,12 +29,16 @@
             </div>
         </div>
 
-        <div class="mt-5 mb-5">
+        <div class="mt-5">
+            <h3>Últimos pedidos</h3>
+        </div>
+        <div class="mt-4 mb-5">
             <table>
                 <thead>
                     <tr>
                         <th>Fecha</th>
                         <th>Cliente</th>
+                        <th>Pago</th>
                         <th>Importe</th>
                     </tr>
                 </thead>
@@ -43,7 +47,8 @@
                         <!-- Mostrar la fecha en formato dd-mm-YY hh:mm:ii -->
                         <td>{{ moment(order.created_at).locale('es').format('L') }}</td>
                         <td>{{ order.name }} {{ order.lastname }}</td>
-                        <td>{{ order.total }} €</td>
+                        <td>{{ order.paid }}</td>
+                        <td>{{ (order.total * 1.21).toFixed(2) }} €</td>
                     </tr>
                 </tbody>
             </table>
@@ -84,7 +89,7 @@
                 this.salesLastMonth = response.data.data.filter(order => new Date(order.created_at).getMonth() === lastMonth && new Date(order.created_at).getFullYear() === year && order.paid === 'PAGADO').reduce((acc, order) => acc + Number((Number((order.total * 1.21)) + Number(order?.shipping)).toFixed(2)), 0);
                 this.salesThisMonth = response.data.data.filter(order => new Date(order.created_at).getMonth() === month && new Date(order.created_at).getFullYear() === year && order.paid === 'PAGADO').reduce((acc, order) => acc + Number((Number((order.total * 1.21)) + Number(order?.shipping)).toFixed(2)), 0);
                 this.salesThisYear = response.data.data.filter(order => new Date(order.created_at).getFullYear() === year && order.paid === 'PAGADO').reduce((acc, order) => acc + Number((Number((order.total * 1.21)) + Number(order?.shipping)).toFixed(2)), 0);
-                this.lastFiveOrders = response.data.data.filter(order => order.paid === 'PAGADO').slice(0, 5);
+                this.lastFiveOrders = response.data.data.filter(order => order).slice(0, 5);
                 this.$root.$emit('loading', false);
             },
         },
