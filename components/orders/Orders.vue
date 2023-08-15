@@ -18,6 +18,8 @@
                         <tr>
                         <th scope="">Cliente</th>
                         <th scope="">Fecha</th>
+                        <th scope="">Pago</th>
+                        <th scope="">Envío</th>
                         <th scope="">Estado</th>
                         <th scope="">Total</th>
                         <th scope="">Acciones</th>
@@ -29,11 +31,13 @@
                             <td v-else-if="order.guest == null">{{ order.user_profile?.name }} {{ order.user_profile?.lastname }}</td>
                             <td v-else>{{ order.guest?.name }} {{ order.guest?.lastname }}</td>
                             <td>{{ order.order_date }}</td>
+                            <td class=" text-uppercase">{{ order.payment_method }}</td>
+                            <td class=" text-uppercase">{{ order.shipping_method }}</td>
                             <td v-if="order.paid == 'PENDIENTE'">Pendiente</td>
                             <td v-if="order.paid == 'PROCESANDO'">Procesando</td>
                             <td v-if="order.paid == 'PAGADO'">Pagado</td>
                             <td v-if="order.paid == 'RECHAZADO'">Rechazado</td>
-                            <td>{{ (Number((order.total * 1.21)) + Number(order?.shipping)).toFixed(2) }}</td>
+                            <td>{{ (Number((order.total * 1.21)) + Number(order?.shipping)).toFixed(2) }} &euro;</td>
                             <td>
                                 <n-link :to="`/orders-view/${order.id}`" class="btn bg-trivi-blue">
                                     <i class="pe-7s-look"></i>

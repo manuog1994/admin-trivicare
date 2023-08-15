@@ -22,17 +22,17 @@
                 </div>
                 <div class="col-lg-4 mb-4">
                     <h4>Datos del cliente</h4>
-                    <p>Nombre: <strong>{{ order.user_profile?.name == 'Guest' ?  order.guest?.name : order.user_profile?.name != null ? order.user_profile?.name : order.name }} {{ order.user_profile?.lastname == 'Guest' ?  order.guest?.lastname : order.user_profile?.lastname != null ? order.user_profile?.lastname : order.lastname }}</strong></p>
-                    <p>Correo: <strong>{{ order.user?.email == 'guest@guest.com' ? order.guest?.email : order.user?.email != null ? order.user?.email : order.email }}</strong></p>
-                    <p>Teléfono: <strong>{{ order.user_profile?.phone == 0 ? order.guest?.phone : order.user_profile?.phone != null ? order.user_profile.phone : order.phone  }}</strong></p>
-                    <p>DNI/NIE/NIF: <strong>{{ order.user_profile?.dni == '00000000A' ? order.guest?.dni : order.user_profile?.dni != null ? order.user_profile.dni : order.dni }}</strong></p>
+                    <p>Nombre: <strong>{{ order.name }} {{ order.lastname }}</strong></p>
+                    <p>Correo: <strong>{{ order.email }}</strong></p>
+                    <p>Teléfono: <strong>{{ order.phone  }}</strong></p>
+                    <p>DNI/NIE/NIF: <strong>{{ order.dni }}</strong></p>
                 </div>
                 <div class="col-lg-4 mb-4">
                     <h4>Datos de envío</h4>
-                    <p>Dirección: <strong>{{ order.user_profile?.address == 'Guest' ? order.guest?.address : order.user_profile?.address != null ? order.user_profile.address : order.address}}</strong></p>
-                    <p>Ciudad: <strong>{{ order.user_profile?.city == 'Guest' ? order.guest?.city : order.user_profile?.city != null ? order.user_profile.city : order.city }}</strong></p>
-                    <p>Provincia: <strong>{{ order.user_profile?.state == 'Guest' ? order.guest?.state : order.user_profile?.state != null ? order.user_profile.state : order.state }}</strong></p>
-                    <p>Código postal: <strong>{{ order.user_profile?.zipcode == 0 ? order.guest?.zipcode : order.user_profile?.zipcode != null ? order.user_profile.zipcode : order.zipcode}}</strong></p>
+                    <p>Dirección: <strong>{{ order.address}}</strong></p>
+                    <p>Ciudad: <strong>{{ order.city }}</strong></p>
+                    <p>Provincia: <strong>{{ order.state }}</strong></p>
+                    <p>Código postal: <strong>{{ order.zipcode}}</strong></p>
                 </div>
             </div>
         </div>

@@ -102,7 +102,7 @@
                             <td v-if="invoice.name != null">{{ invoice.name }} {{ invoice.lastname }}</td>
                             <td v-else>{{ invoice.order?.user_profile?.name == 'Guest' ? invoice.order?.guest?.name : invoice.order?.user_profile?.name }} {{ invoice.order?.user_profile?.lastname == 'Guest' ? invoice.order?.guest?.lastname : invoice.order?.user_profile?.lastname }}</td>
                             <td>{{ invoice.type }}</td>
-                            <td>{{ invoice?.total }}</td>
+                            <td>{{ invoice?.total }} &euro;</td>
                             <td>{{ formatDate(invoice.created_at) }}</td>
                             <td>
                                 <!-- <a @click.prevent="changeView(invoice.id)" class="p-2">

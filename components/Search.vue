@@ -14,17 +14,17 @@
                     <div class="position-relative">
                         <div id="search-box" class="search-box" :class="{'active' : hidden == false}">
                             <div class="box-products" v-for="product in products" :key="product.id">
-                                <a :href="url + '/product/' + product.slug" class="single-product">
-                                    <div v-if="product.images.length == 0">
+                                <a :href="url + '/product/' + product?.slug" class="single-product">
+                                    <div v-if="product.images?.length == 0">
                                         <nuxt-img provider="customProvider" src="nuxt/default.webp" alt="default" width="100px" />
                                     </div>
                                     <div v-else>
-                                        <nuxt-img provider="customProvider" :src="product.images[0].path" :alt="product.name" width="100px" />
+                                        <nuxt-img provider="customProvider" :src="product.images[0]?.path" :alt="product?.name" width="100px" />
                                     </div>
                                     <div class="ms-5">
-                                        <p>{{ product.name }}</p>
+                                        <p>{{ product?.name }}</p>
                                         <p>
-                                            <strong>{{ product.price }} &euro;</strong>
+                                            <strong>{{ product?.price }} &euro;</strong>
                                         </p>
                                     </div>
                                 </a>
@@ -129,8 +129,8 @@ export default {
                     tag: '',
                     status: 2,
                 })
-                const products = this.$store.getters.getProducts
-                this.products = products.data
+                const products = this.$store.getters?.getProducts
+                this.products = products?.data
                 //console.log(this.products)
             },
     }
