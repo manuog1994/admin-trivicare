@@ -1,10 +1,14 @@
-# Ignorar la carpeta node_modules
-
+# Dependencias
 node_modules
+npm-debug.log
 
-# Ignorar la carpeta dist (a menos que desees alojar el sitio en GitHub Pages)
+# Sistema operativo
+.DS_Store
+Thumbs.db
 
-.nuxt/dist
+# Nuxt.js
+.nuxt
+dist
 
 # Ignorar el archivo .env
 .env
@@ -19,3 +23,20 @@ package-lock.json
 
 .vscode/settings.json
 
+# Editor
+*.swp
+*.swo
+*.swn
+*.bak
+*.bak.*
+*.log
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# Otros
+*.log.*
+*.pid
+*.seed
+*.pid.lock
