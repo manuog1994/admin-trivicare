@@ -10,6 +10,7 @@
 <script>
 
 export default {
+    auth: true,
    components: {
         OrdersCom: () => import('@/components/orders/OrdersCom'),
         BigLoader: () => import('@/components/loaders/BigLoader'),

@@ -124,8 +124,6 @@
 
 <script>
 export default {
-    auth: true,
-
     props: ['product'],
 
     data() {

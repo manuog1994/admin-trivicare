@@ -63,7 +63,6 @@
 
 <script>
 export default {
-    auth: true,
  
 
     data() {

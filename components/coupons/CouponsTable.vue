@@ -56,8 +56,6 @@
 
 <script>
 export default {
-    auth: true,
-
     components: {
         CreateCoupons: () => import('@/components/coupons/CreateCoupons.vue'),
     },

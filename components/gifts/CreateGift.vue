@@ -49,9 +49,6 @@
 
 <script>
 export default {
-    auth: true,
-
-
     mounted() {
         this.$root.$emit('loading', false);
     },

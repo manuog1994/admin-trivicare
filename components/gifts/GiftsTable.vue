@@ -53,8 +53,6 @@
 import Swal from 'sweetalert2'
 
 export default {
-    auth: true,
-
     components: {
         CreateGift: () => import('~/components/gifts/CreateGift.vue'),
     },

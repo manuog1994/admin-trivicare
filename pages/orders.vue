@@ -10,6 +10,7 @@
 
 <script>
 export default {
+    auth: true,
     components: {
         SideNav: () => import("@/components/headers/SideNav.vue"),
         Orders: () => import("@/components/orders/Orders.vue"),

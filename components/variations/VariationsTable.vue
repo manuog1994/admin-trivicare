@@ -53,7 +53,6 @@
 import Swal from 'sweetalert2'
 
 export default {
-    auth: true,
 
     components: {
         CreateVariation: () => import('~/components/variations/CreateVariation.vue'),

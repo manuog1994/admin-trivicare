@@ -19,7 +19,6 @@
 
 <script>
 export default {
-    auth: true,
     name: 'Note',
 
     data() {

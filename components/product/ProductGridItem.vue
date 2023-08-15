@@ -89,7 +89,6 @@
 
 <script>
     export default {
-        auth: false,
         props: ["layout", "product"],
 
         data() {

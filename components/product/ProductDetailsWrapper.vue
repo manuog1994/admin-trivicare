@@ -165,7 +165,6 @@
 
 <script>
     export default {
-        auth: false,
         props: ['product'],
 
         data() {

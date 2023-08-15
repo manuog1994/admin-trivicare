@@ -77,7 +77,6 @@
 
 <script>
     export default {
-        auth: false,
         props: ['searchChildren'],
 
         components: {

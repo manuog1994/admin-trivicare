@@ -10,6 +10,7 @@
 
 <script>
 export default {
+    auth: true,
     components: {
         SideNav: () => import("@/components/headers/SideNav.vue"),
         Search: () => import("@/components/headers/Search.vue"),

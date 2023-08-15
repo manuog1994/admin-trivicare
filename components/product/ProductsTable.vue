@@ -73,8 +73,6 @@
 import Swal from 'sweetalert2'
 
 export default {
-    auth: true,
-
     components: {
         EditProduct: () => import('~/components/product/EditProduct.vue'),
         CreateProduct: () => import('~/components/product/CreateProduct.vue'),

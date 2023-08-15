@@ -58,8 +58,6 @@
 import Swal from 'sweetalert2'
 
 export default {
-    auth: true,
-
     components: {
         CreateDiscount: () => import('~/components/discounts/CreateDiscount.vue'),
     },

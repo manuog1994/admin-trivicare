@@ -12,12 +12,6 @@
     </client-only>
 </template>
 
-<script>
-export default {
-
-}
-</script>
-
 <style lang="scss">
 .custom-banner{
     display: flex;

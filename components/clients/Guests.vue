@@ -46,8 +46,6 @@
 
 <script>
 export default {
-    auth: true,
-
     data() {
         return {
             pagination: {},
