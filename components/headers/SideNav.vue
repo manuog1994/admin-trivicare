@@ -90,6 +90,12 @@ export default {
                         Valoraciones
                     </n-link>
                 </li>
+                <li class="nav-item">
+                    <n-link class="nav-link" :class="{'active': isActive == '/blog'}" to="/blog">
+                        <i class="fa fa-newspaper-o icon-list"></i>
+                        Blog
+                    </n-link>
+                </li>
             </ul>
         </div>
         <!-- Botón para cerrar la sesión posicionado al final de la barra -->
@@ -116,10 +122,9 @@ body {
 .sidebar {
     position: fixed;
 	float: left;
-	width: 20%;
+	width: 250px;
 	background-color: #DD88B8;
 	height: 100vh;
-    
 }
 
 .sidebar ul {
