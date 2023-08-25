@@ -16,7 +16,6 @@ export default {
             await this.$auth.logout();
             window.location.reload();
             this.$notify({ title: 'Has cerrado sesión!'})
-
         },
     }
 
@@ -99,7 +98,7 @@ export default {
             </ul>
         </div>
         <!-- Botón para cerrar la sesión posicionado al final de la barra -->
-        <div class="position-absolute bottom-0 button-final">
+        <div class="button-final">
             <div class="d-flex justify-content-around">
                 <n-link class="nav-link" to="/settings">
                     <i class="fa fa-cog icon-size"></i>
@@ -125,6 +124,13 @@ body {
 	width: 250px;
 	background-color: #DD88B8;
 	height: 100vh;
+    overflow-x: auto;
+
+    &.button-final {
+        position: fixed;
+        width: 95%;
+        bottom: 0;
+    }
 }
 
 .sidebar ul {
@@ -138,25 +144,27 @@ body {
 }
 
 .nav-link {
-	display: block;
-	padding: 10px;
-    margin-left: 0.5rem;
+	display: flex;
+    align-items: center;
+	padding: 0 10;
+    // margin-left: 0.5rem;
 	color: #fff;
 	text-decoration: none;
-}
 
-.nav-link.active {
-    background-color: #fff;
-    color: #333;
-    margin: 0.2rem;
-    padding-left: 1rem;
-    border-radius: 5px;
-}
-.nav-link:hover {
-	color: #333;
-    margin-left: 0.5rem;
-    scale: 1.1;
-    transition: all 0.3s ease;
+    &.active {
+        background-color: #fff;
+        color: #333;
+        // margin: 0.2rem;
+        // padding-left: 1rem;
+        border-radius: 5px;
+    }
+
+    &:hover {
+        color: #333;
+        // margin-left: 0.5rem;
+        scale: 1.1;
+        transition: all 0.3s ease;
+    }
 }
 
 .logo {
@@ -167,10 +175,6 @@ body {
 
 .icon-size {
     font-size: 1.5rem;
-}
-
-.button-final {
-    width: 100%;
 }
 
 .icon-list {

@@ -18,6 +18,14 @@ export default {
                 maxFilesize: 2,
                 acceptedFiles: 'image/*',
                 dictDefaultMessage: 'Arrastra las imágenes aquí para subirlas',
+                dictSizeError: 'El archivo es muy grande ({{filesize}}MiB). Tamaño máximo: {{maxFilesize}}MiB.',
+                dictInvalidFileType: 'No puedes subir archivos de este tipo',
+                dictRemoveFile: 'Eliminar',
+                dictCancelUpload: 'Cancelar',
+                dictCancelUploadConfirmation: '¿Estás seguro de que quieres cancelar esta carga?',
+                dictMaxFilesExceeded: 'No puedes subir más archivos',
+                addRemoveLinks: true,
+                clickable: true
             }
         }
     },

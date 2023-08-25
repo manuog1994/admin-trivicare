@@ -12,7 +12,7 @@
             </div>
             <ImagesGalery />
             <DropZone />
-            <form class="row mt-2" ref="updateproduct" @submit="updateProduct">
+            <form class="row mt-2" ref="updateproduct" @submit="updatePost">
                 <div class="col-12 mb-2">
                     <label for="imageUrl">URL Imagen Principal</label>
                     <input class="form-control" type="text" name="imageUrl" id="imageUrl" :value="item.imageUrl" ref="imageUrl" />
@@ -73,13 +73,15 @@
                     <label for="minTags">Mini Tags</label>
                     <input class="form-control" type="text" name="minTags" :value="JSONStringify(item.minTags)" ref="minTags">
                 </div>
+                <div class="mb-2">
+                    <button class="btn btn-primary" type="submit" title="Guardar">Guardar</button>
+                </div>
             </form>
         </div>
     </div>
 </template>
 
 <script>
-import VueTagsInput from '@johmun/vue-tags-input';
 import DropZone from '../DropZone.vue';
 import ImagesGalery from '../ImagesGalery.vue';
 export default {
@@ -101,14 +103,7 @@ export default {
                 tags: '',
                 minTags: '',
             },
-            images: [],
-            inputTags: [],
-            products: [],
-            singleProduct: {},
-            tags: [],
-            tag: '',
             baseUrl: process.env.baseUrl,
-            title: '',
         };
     },
     async mounted() {
@@ -131,15 +126,16 @@ export default {
                 this.$root.$emit('loading', false);
             });
         },
-        async updateProduct() {
+        async updatePost() {
             await this.$axios.put('/api/blogs/' + this.item.id, {
                 title: this.$refs.title.value,
                 description: this.$refs.description.value,
                 content: this.item.content,
                 imageUrl: this.$refs.imageUrl.value,
-                category: this.$refs.category.value,
+                category: this.JSONParse(this.$refs.category.value),
                 supplier: this.$refs.supplier.value,
                 tags: this.JSONParse(this.$refs.tags.value),
+                minTags: this.JSONParse(this.$refs.minTags.value),
             }).then((response) => {
                 console.log(response);
                 this.$notify({ title: 'El post se ha actualizado correctamente', type: 'success' });
@@ -149,57 +145,11 @@ export default {
                 this.$notify({ title: 'Ha ocurrido un error', type: 'error' });
             });
         },
-        deleteTag(tag) {
-            const tag_id = tag.id;
-            const product_id = this.item.id;
-            this.$axios.delete('/api/products/' + product_id + '/tags/' + tag_id)
-                .then((response) => {
-                this.getProducts();
-                this.$notify({ title: 'El tag se ha eliminado correctamente', type: 'success' });
-            })
-                .catch((error) => {
-                console.log(error);
-                this.$notify({ title: 'Ha ocurrido un error', type: 'error' });
-            });
-        },
-        deleteImage(image) {
-            const image_id = image.id;
-            this.$axios.delete('/api/images/' + image_id)
-                .then((response) => {
-                this.getProducts();
-                this.$notify({ title: 'La imagen se ha eliminado correctamente', type: 'success' });
-            })
-                .catch((error) => {
-                console.log(error);
-                this.$notify({ title: 'Ha ocurrido un error', type: 'error' });
-            });
-        },
-        async updateImage(e) {
-            this.images = e.target.files;
-            let formData = new FormData();
-            const images = this.images;
-            for (let i = 0; i < images.length; i++) {
-                formData.append('images[]', images[i]);
-            }
-            formData.append('product_id', this.item.id);
-            await this.$axios.post('/api/images', formData, {
-                headers: {
-                    'Content-Type': 'multipart/form-data'
-                }
-            }).then((response) => {
-                console.log(response);
-                this.images = [];
-                this.$refs.file.value = '';
-                this.getProducts();
-                this.$notify({ title: 'La imagen se ha subido correctamente!' });
-            }).catch((error) => {
-                console.log(error);
-                this.$notify({ title: 'Ha ocurrido un error al subir la imagen!' });
-            });
-        },
+
         closeEdit() {
             this.$root.$emit('closeEdit', false);
         },
+        
         JSONStringify(data) {
             //eliminar [] y "" de los tags
             data = data.replace(/"/g, '');

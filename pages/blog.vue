@@ -38,7 +38,7 @@
 
         head() {
             return {
-                titleTemplate: 'Productos',          
+                titleTemplate: 'Blog',          
             }
         },
         

@@ -14,7 +14,6 @@
                     <th scope="col">#</th>
                     <th scope="col">Producto(s)</th>
                     <th scope="col">Precio</th>
-                    <th scope="col">Descuento</th>
                     <th scope="col">Vendido(s)</th>
                     <th scope="col">Stock</th>
                     <th scope="col">Estado</th>
@@ -26,8 +25,6 @@
                     <th scope="row">{{ product.id }}</th>
                     <td><n-link :to="`/product/${product.slug}`">{{ product.name }}</n-link></td>
                     <td>{{ product.price }} &euro;</td>
-                    <td v-if="product.discount > 0">{{ product.discount }} %</td>
-                    <td v-else>-</td>
                     <td v-if="product.sold > 0">{{ product.sold }}</td>
                     <td v-else>-</td>
                     <td v-if="product.stock > 0">{{ product.stock }}</td>
