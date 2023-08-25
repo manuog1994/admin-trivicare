@@ -71,7 +71,7 @@
                 </div>
                 <div class="col-12 col-md-4 mb-2 pb-4 border-bottom-1">
                     <label for="minTags">Mini Tags</label>
-                    <input class="form-control" type="text" name="minTags" :value="JSONStringify(item.minTags)" ref="minTags">
+                    <input class="form-control" type="text" name="minTags" :value="item.minTags" ref="minTags">
                 </div>
                 <div class="mb-2">
                     <button class="btn btn-primary" type="submit" title="Guardar">Guardar</button>
@@ -131,11 +131,16 @@ export default {
                 title: this.$refs.title.value,
                 description: this.$refs.description.value,
                 content: this.item.content,
+                author: this.$refs.author.value,
+                slug: this.$refs.slug.value,
+                date: this.$refs.date.value,
+                keywords: this.$refs.keywords.value,
+                metaDescription: this.$refs.metaDescription.value,
                 imageUrl: this.$refs.imageUrl.value,
-                category: this.JSONParse(this.$refs.category.value),
+                category: JSON.stringify(this.JSONParse(this.$refs.category.value)),
                 supplier: this.$refs.supplier.value,
-                tags: this.JSONParse(this.$refs.tags.value),
-                minTags: this.JSONParse(this.$refs.minTags.value),
+                tags: JSON.stringify(this.JSONParse(this.$refs.tags.value)),
+                minTags: this.$refs.minTags.value,
             }).then((response) => {
                 console.log(response);
                 this.$notify({ title: 'El post se ha actualizado correctamente', type: 'success' });
@@ -166,7 +171,7 @@ export default {
             return data;
         },
     },
-    components: { DropZone }
+    components: { DropZone, ImagesGalery },
 }
 </script>
 

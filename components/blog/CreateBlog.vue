@@ -1,209 +1,156 @@
 <template>
-    <div class="main w-100">
-        <div class="row">
-            <div class="mb-4 d-inline-block">
+    <div>
+        <div class="main w-100">
+            <div class="mb-2 d-inline-block w-100">
                 <div class="d-flex justify-content-end">
                     <button @click="closeAdd" class="btn bg-trivi-red text-white">
                         <i class="fa fa-close"></i>
                         Cerrar
                     </button>
                 </div>
-                <h1>Añadir producto</h1>
+                <h2>Crear Post</h2>
             </div>
-            <div class="col-12">
-                 <div class="m-auto">
-                    <form class="row" ref="productform" @submit.prevent="newProduct">
-                        <div class="col-12 mb-2">
-                            <label for="title">Título</label>
-                            <input class="form-control" type="text" name="name" v-model="title" required>
-                        </div>
-                        <div class="col-12 mb-2">
-                            <label for="description">Descripción</label>
-                            <editor api-key="8e7yeojh0bqgf51hmsdm12zbmuqh7yjs010wttlmc8yzgm6o" v-model="content" :init="{height: 500, menubar: true, plugins: [
-                                'advlist autolink lists link image charmap print preview anchor',
-                                'searchreplace visualblocks code fullscreen',
-                                'insertdatetime media table paste code help wordcount'
-                              ], toolbar: 'undo redo | formatselect | bold italic backcolor | \
-                                alignleft aligncenter alignright alignjustify | \
-                                bullist numlist outdent indent | removeformat | help'}"></editor>
-                        </div>
-                        <div class="col-12 mb-2">
-                            <label for="specifications">Mini Descripción</label>
-                            <textarea class="form-control" name="specifications" id="specifications" required></textarea>
-                        </div>
-                        <div class="col-12 mb-2">
-                            <label for="specifications">Meta Descripción</label>
-                            <textarea class="form-control" name="meta_description" id="meta_description" required></textarea>
-                        </div>
-                        <div class="col-12 col-md-3 mb-2">
-                            <label for="price">Precio</label>
-                            <input class="form-control" type="number" name="price" step=".01" required>
-                        </div>
-                        <div class="col-12 col-md-3 mb-2">
-                            <label for="stock">
-                                Stock
-                            </label>
-                            <input class="form-control" type="number" name="stock" required>
-                        </div>
-                        <div class="col-12 col-md-6 mb-2">
-                            <label for="barcode">Código de Barras</label>
-                            <input class="form-control" type="number" name="barcode" required>
-                        </div>
-                        <div class="col-12 col-md-4 mb-2">
-                            <label for="category">Categoría</label>
-                            <select class="form-select" name="category_id" required>
-                                <option v-for="category in categories" :key="category.id" :value="category.id">{{ category.name }}</option>
-                            </select>
-                        </div>
-                        <div class="col-12 col-md-8 mb-2">
-                            <label for="slug">Slug</label>
-                            <input class="form-control" type="text" name="slug" :value="slugify(title)" required>
-                        </div>
-                        <div class="col-12 col-md-4 mb-2">
-                            <label for="weight">Peso</label>
-                            <input class="form-control" type="number" name="weight" step=".01" required>
-                        </div>
-                        <div class="col-12 col-md-4 mb-2">
-                            <label for="size">Tamaño</label>
-                            <input class="form-control" type="number" name="size" step=".01">
-                        </div>
-                        <div class="col-12 col-md-4 border-bottom-1 mb-2 pb-4">
-                            <label for="dimensions">Dimensiones</label>
-                            <input class="form-control" type="text" name="dimensions" required>
-                        </div>
-
-                        <!-- Form Activos -->
-                        <div class="border-bottom-1 mb-3">
-                            <div>
-                                <h2 class="mt-3">Activos</h2>
-                            </div>
-                            <div class="row mt-2 mb-2">
-                                <div class="form-check col-6 col-md-3 mb-2" v-for="tag in tags" :key="tag.id">
-                                    <input class="form-check-input" type="checkbox" :value="tag.id" id="flexCheckDefault" v-model="inputTag">
-                                    <label class="form-check-label" for="flexCheckDefault">
-                                        {{ tag.name }}
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Form Imágenes -->
-                        <div class="border-bottom-1 mb-4 pb-3">
-                            <div class="row">
-                                <div class="mb-2">
-                                    <h2>Imágenes</h2>
-                                </div>
-                                <div class="mb-2">
-                                    <label for="images">Imágenes</label>
-                                    <input class="form-control" type="file" name="files" @change="groupImages" multiple>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="mb-5">
-                            <button class="btn btn-primary" type="submit" title="Crear Producto">Crear Producto</button>
-                        </div>
-                    </form>
+            <ImagesGalery />
+            <DropZone />
+            <form class="row mt-2" ref="updateproduct" @submit.prevent="createPost">
+                <div class="col-12 mb-2">
+                    <label for="imageUrl">URL Imagen Principal</label>
+                    <input class="form-control" type="text" name="imageUrl" id="imageUrl" ref="imageUrl" />
                 </div>
-            </div>
+                <div class="col-12 mb-2">
+                    <label for="title">Título</label>
+                    <input class="form-control" type="text" name="name" ref="title">
+                </div>
+                <div class="col-12 mb-2">
+                    <label for="title">Descripción</label>
+                    <input class="form-control" type="text" name="description" ref="description">
+                </div>
+                <div class="col-12 mb-2">
+                    <label for="content">Contenido</label>
+                    <editor api-key="8e7yeojh0bqgf51hmsdm12zbmuqh7yjs010wttlmc8yzgm6o" v-model="content" :init="{height: 500, menubar: true, plugins: [
+                        'advlist autolink lists link image charmap print preview anchor',
+                        'searchreplace visualblocks code fullscreen',
+                        'insertdatetime media table paste code help wordcount'
+                        ], toolbar: 'undo redo | formatselect | bold italic backcolor | \
+                        alignleft aligncenter alignright alignjustify | \
+                        bullist numlist outdent indent | removeformat | help'}"></editor>
+                </div>            
+                <div class="col-12 mb-2">
+                    <label for="category">Categorías</label>
+                    <input type="text" class="form-control" name="category" id="category" ref="category" />
+                </div>
+                <div class="col-12 col-md-3 mb-2">
+                    <label for="supplier">Mod</label>
+                    <input class="form-control" type="text" name="supplier" ref="supplier">
+                </div>
+                <div class="col-12 col-md-3 mb-2">
+                    <label for="author">
+                        Autor
+                    </label>
+                    <input class="form-control" type="text" name="author" ref="author">
+                </div>
+                <div class="col-12 col-md-6 mb-2">
+                    <label for="date">Fecha</label>
+                    <input class="form-control" type="date" name="date" ref="date" :value="dateToday">
+                </div>
+                <div class="col-12 col-md-4 mb-2">
+                    <label for="slug">Slug</label>
+                    <input class="form-control" type="text" name="slug" ref="slug">
+                </div>
+                <div class="col-12 col-md-8 mb-2">
+                    <label for="keywords">Palabras Clave</label>
+                    <input class="form-control" type="text" name="keywords" ref="keywords">
+                </div>
+                <div class="col-12 col-md-4 mb-2">
+                    <label for="metaDescription">Meta Descripción</label>
+                    <input class="form-control" type="text" name="metaDescription" ref="metaDescription">
+                </div>
+                <div class="col-12 col-md-4 mb-2">
+                    <label for="tags">Tags</label>
+                    <input class="form-control" type="text" name="tags" ref="tags">
+                </div>
+                <div class="col-12 col-md-4 mb-2 pb-4 border-bottom-1">
+                    <label for="minTags">Mini Tags</label>
+                    <input class="form-control" type="text" name="minTags" ref="minTags">
+                </div>
+                <div class="mb-2">
+                    <button class="btn btn-primary" type="submit" title="Guardar">Guardar</button>
+                </div>
+            </form>
         </div>
     </div>
 </template>
 
 <script>
+import DropZone from '../DropZone.vue';
+import ImagesGalery from '../ImagesGalery.vue';
+import moment from 'moment';
 export default {
+    props: ['post'],
     data() {
         return {
-            inputTag: [],
-            images: [],
-            tags: [],
+            baseUrl: process.env.baseUrl,
             content: '',
-            title: '',
-        }
+            moment: moment,
+            dateToday: '',
+        };
     },
-
-    computed: {
-        categories() {
-            return this.$store.state.categories;
-        },
+    components: {
+        DropZone,
+        ImagesGalery,
     },
 
     mounted() {
-        setTimeout(() => {
-            this.getTags();
-            this.getCategories();
-        }, 1000);
+        let today = new Date();
+
+        // Obtener los componentes de la fecha
+        let year = today.getFullYear();
+        let month = String(today.getMonth() + 1).padStart(2, '0');
+        let day = String(today.getDate()).padStart(2, '0');
+
+        // Formatear la fecha en el formato deseado (YYYY-MM-DD)
+        this.dateToday = `${year}-${month}-${day}`;
     },
 
     methods: {
-        async getCategories() {
-            await this.$store.dispatch('getCategories')
-        },
-
-        async getTags() {
-            await this.$axios.get('api/tags')
-                .then(response => {
-                    this.tags = response.data.data;
-                    this.$root.$emit('loading', false);
-                })
-                .catch(error => {
-                    console.log(error);
-                })
-        },
-
-        groupImages(e) {
-            this.images = e.target.files;
-        },
-
-        async newProduct() {
-            if (this.$refs.productform.checkValidity()) {
-                this.$refs.productform.classList.remove('was-validated');
-                const formData = new FormData(this.$refs.productform);
-                formData.append('tags', JSON.stringify(this.inputTag));
-                formData.append('description', this.content)
-                const images = this.images;
-                for (let i = 0; i < images.length; i++) {
-                    formData.append('images[]', images[i]);
-                }
-                await this.$axios.post('/api/products/', formData, {
-                    headers: {
-                        'Content-Type': 'multipart/form-data',
-                        'Access-Control-Allow-Origin': '*',
-                    },
-                }).then((response) => {
-                        this.$refs.productform.reset();
-                        this.$notify({ title: 'El producto se ha creado correctamente', type: 'success' });
-                    })
-                    .catch((error) => {
-                        console.log(error);
-                        this.$notify({ title: 'Ha ocurrido un error', type: 'error' });
-                    })
-            } else {
-                this.$refs.productform.classList.add('was-validated');
-            }
+        async createPost() {
+            await this.$axios.post('/api/blogs', {
+                title: this.$refs.title.value,
+                description: this.$refs.description.value,
+                content: this.content,
+                author: this.$refs.author.value,
+                date: this.$refs.date.value,
+                slug: this.$refs.slug.value,
+                keywords: this.$refs.keywords.value,
+                metaDescription: this.$refs.metaDescription.value,
+                imageUrl: this.$refs.imageUrl.value,
+                category: JSON.stringify(this.JSONParse(this.$refs.category.value)) ,
+                supplier: this.$refs.supplier.value,
+                tags: JSON.stringify(this.JSONParse(this.$refs.tags.value)),
+                minTags: this.$refs.minTags.value,
+            }).then((response) => {
+                console.log(response);
+                this.$notify({ title: 'El post se ha creado correctamente', type: 'success' });
+            }).catch((error) => {
+                console.log(error);
+                this.$notify({ title: 'Ha ocurrido un error', type: 'error' });
+            });
         },
 
         closeAdd() {
             this.$root.$emit('closeAdd', false);
         },
-
-        slugify(text) {
-            return text
-                .toString()
-                .toLowerCase()
-                .replace(/\s+/g, "-") // Replace spaces with -
-                .replace(/[^\w-]+/g, "") // Remove all non-word chars
-                .replace(/--+/g, "-") // Replace multiple - with single -
-                .replace(/^-+/, "") // Trim - from start of text
-                .replace(/-+$/, ""); // Trim - from end of text
-        }
-
-    }
-
+        
+        //proceso inverso a JSONStringify
+        JSONParse(data) {
+            //eliminar los espacios
+            data = data.replace(/ /g, '');
+            //meter en un array los tags
+            data = data.split(',');
+            return data;
+        },
+    },
 
 }
 </script>
 
-<style>
-
-</style>
