@@ -13,7 +13,7 @@ export default {
     data() {
         return {
             dropzoneOptions: {
-                url: 'http://api.trivicare.com/api/images-post',
+                url: process.env.baseUrl + '/api/images-post',
                 paramName: 'file',
                 maxFilesize: 2,
                 acceptedFiles: 'image/*',
