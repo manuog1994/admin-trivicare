@@ -95,6 +95,12 @@ export default {
                         Blog
                     </n-link>
                 </li>
+                <li class="nav-item">
+                    <n-link class="nav-link" :class="{'active': isActive == '/sellers'}" to="/sellers">
+                        <i class="fa fa-user icon-list"></i>
+                        Vendedores
+                    </n-link>
+                </li>
             </ul>
         </div>
         <!-- Botón para cerrar la sesión posicionado al final de la barra -->
