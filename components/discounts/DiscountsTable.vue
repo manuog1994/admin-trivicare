@@ -11,23 +11,22 @@
             <table class="table" v-if="edit == false && newDiscount == false">
                 <thead>
                     <tr>
-                    <th scope="col">#</th>
                     <th scope="col">Producto(s)</th>
                     <th scope="col">Original</th>
                     <th scope="col">Con descuento</th>
-                    <th scope="col">Porcentaje</th>
+                    <th scope="col">Porcentaje</th>                    
+                    <th scope="col">Desde</th>
                     <th scope="col">Hasta</th>
                     <th scope="col">Acciones</th>
                     </tr>
                 </thead>
                 <tbody v-if="discounts?.length > 0">
                     <tr v-for="discount in paginatedItems" :key="discount.id">
-                    <th scope="row">{{ discount.id }}</th>
                     <td><n-link :to="`/product/${discount?.product?.slug}`">{{ discount?.product?.name }}</n-link></td>
                     <td>{{ (discount?.product?.price_base * 1.21).toFixed(2) }} &euro;</td>
                     <td>{{ ((discount?.product?.price_base - (discount?.product?.price_base * discount?.discount / 100)) * 1.21).toFixed(2) }} &euro;</td>
                     <td>{{ discount?.discount }} &percnt;</td>
-                    <!-- fecha final con formato dd-MM-YY -->
+                    <td>{{ formatDate(discount.start_date) }}</td>
                     <td>{{ formatDate(discount.end_date) }}</td>
                     <td>
                         <div>
@@ -49,7 +48,7 @@
                 <pagination v-model="page" :records="discounts?.length" :perPage="perPage" @paginate="myCallback"></pagination>
             </div>
             <!-- Crear nuevo variacion -->
-            <CreateDiscount v-if="newDiscount == true" />
+            <CreateDiscount v-if="newDiscount == true"/>
         </div>
     </div>
 </template>
@@ -87,6 +86,9 @@ export default {
         })
         this.$root.$on('closeEdit', (data) => {
             this.edit = data;
+        })
+        this.$root.$on('getDiscounts', (data) => {
+            this.getDiscounts();
         })
     },
 

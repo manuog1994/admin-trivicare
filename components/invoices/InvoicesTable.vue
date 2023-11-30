@@ -105,11 +105,14 @@
                             <td>{{ invoice?.total }} &euro;</td>
                             <td>{{ formatDate(invoice.created_at) }}</td>
                             <td>
-                                <!-- <a @click.prevent="changeView(invoice.id)" class="p-2">
+                                <a :href="invoice.url" class="btn bg-primary rounded-2" target="_blank">
                                     <i class="pe-7s-look"></i>
-                                </a> -->
+                                </a>
                                 <a @click.prevent="getUrl(invoice)" class="btn bg-trivi-orange">
                                     <i class="pe-7s-download"></i>
+                                </a>
+                                <a @click.prevent="deleteInvoice(invoice)" class="btn bg-danger">
+                                    <i class="pe-7s-trash"></i>
                                 </a>
                             </td>
     
@@ -133,6 +136,7 @@
 </template>
 
 <script>
+import Swal from 'sweetalert2';
 export default {
     data() {
         return {
@@ -302,6 +306,40 @@ export default {
 
         async changeView(id) {
             this.id = id;
+        },
+
+        async deleteInvoice(invoice) {
+            Swal.fire({
+                title: '¿Estás seguro que quieres eliminar esta factura?',
+                text: "¡No podrás revertir esto!",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#d33',
+                cancelButtonColor: '#3085d6',
+                confirmButtonText: 'Sí, bórralo',
+                cancelButtonText: 'Cancelar'
+            }).then(async (result) => {
+                if (result.isConfirmed) {
+                    this.$root.$emit('loading', true)
+                    await this.$axios.delete('/api/invoice/' + invoice.id)
+                    .then(response => {
+                        console.log(response.data);
+                        this.getInvoices();
+                        Swal.fire(
+                            '¡Eliminado!',
+                            'La factura ha sido eliminada.',
+                            'success'
+                        )
+                    }).catch(error => {
+                        Swal.fire(
+                            '¡Error!',
+                            'La factura no ha podido ser eliminada.',
+                            'error'
+                        )
+                    })
+                    this.$root.$emit('loading', false)
+                }
+            })
         }
     },
 }

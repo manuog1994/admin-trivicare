@@ -40,6 +40,12 @@
                         </div>
                         <div class="col-12 col-md-3 mb-2">
                             <label for="stock">
+                                Desde
+                            </label>
+                            <input class="form-control" type="date" name="start_date" required>
+                        </div>
+                        <div class="col-12 col-md-3 mb-2">
+                            <label for="stock">
                                 Hasta
                             </label>
                             <input class="form-control" type="date" name="end_date" required>
@@ -101,7 +107,8 @@ export default {
                     },
                 }).then((response) => {
                         this.$refs.discountform.reset();
-                        this.$notify({ title: 'El variación se ha creado correctamente', type: 'success' });
+                        this.$notify({ title: 'El descuento se ha creado correctamente', type: 'success' });
+                        this.$root.$emit('getDiscounts', true);
                     })
                     .catch((error) => {
                         console.log(error);

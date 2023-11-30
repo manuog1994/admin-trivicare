@@ -11,7 +11,6 @@
             <table class="table" v-if="edit == false && newProduct == false">
                 <thead>
                     <tr>
-                    <th scope="col">#</th>
                     <th scope="col">Producto(s)</th>
                     <th scope="col">Precio</th>
                     <th scope="col">Vendido(s)</th>
@@ -22,7 +21,6 @@
                 </thead>
                 <tbody v-if="products.length > 0">
                     <tr v-for="product in paginatedItems" :key="product.id">
-                    <th scope="row">{{ product.id }}</th>
                     <td><n-link :to="`/product/${product.slug}`">{{ product.name }}</n-link></td>
                     <td>{{ product.price }} &euro;</td>
                     <td v-if="product.sold > 0">{{ product.sold }}</td>
